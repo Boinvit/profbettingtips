@@ -1,0 +1,5 @@
+// Paste each jackpot below: one "#" header line, then one match per line. Lines starting // are ignored.
+// Header:   # Mega Jackpot Pro | closes 2026-10-24 18:00 | prize KES 300,000,000     (times are EAT)
+// Match:    1. Arsenal vs Chelsea
+// Result:   2. Man City - Liverpool | 2-1     (optional; only if the feed can't settle it)
+// Edit this file on GitHub; the agent picks it up on its next run (or run the workflow manually).
