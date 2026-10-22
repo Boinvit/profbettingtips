@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Professional Betting Tips</title>
+  <meta name="description" content="Terms for using this website.">
+  <meta property="og:image" content="/assets/images/icon.png">
+  <meta name="theme-color" content="#07090F">
+  <link rel="icon" type="image/png" href="/assets/images/icon.png">
+  <link rel="apple-touch-icon" href="/assets/images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body data-page="terms">
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon"><img src="/assets/images/pbtlogo.png" alt="PBT logo" width="28" height="28"></div>
+        <div class="nav-logo-text">Pro<span>Betting</span>Tips</div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/daily.html">Daily Odds</a>
+        <a href="/weekend.html">Weekend Odds</a>
+        <a href="/monthly.html">Monthly Odds</a>
+        <a href="/highlights.html">Highlights</a>
+        <a href="/pricing.html">Premium</a>
+      </div>
+      <div class="nav-actions">
+        <button id="nav-login-btn" class="btn btn-outline btn-sm" onclick="openAuthModal('login')">Sign In</button>
+        <div id="nav-user-menu" class="hidden flex items-center gap-8">
+          <a href="/account.html" class="btn btn-ghost btn-sm" id="nav-user-name">Account</a>
+          <button class="btn btn-outline btn-sm" onclick="signOut()">Out</button>
+        </div>
+        <button id="hamburger" class="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="/">🏠 Home</a>
+    <a href="/daily.html">⚽ Daily Odds</a>
+    <a href="/weekend.html">📅 Weekend Odds</a>
+    <a href="/monthly.html">📆 Monthly Odds</a>
+    <a href="/highlights.html">🎬 Highlights</a>
+    <a href="/pricing.html">⭐ Premium</a>
+    <a href="/account.html">👤 My Account</a>
+  </div>
+
+  <div class="ticker-bar">
+    <div class="ticker-label">⚽ Today</div>
+    <div class="ticker-track">
+      <div class="ticker-content" id="ticker-content">
+        <span class="ticker-item">Loading today's matches...</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="max-width:820px;">
+    <div class="page-title"><h1>Terms of Service</h1><p>Please read before using the site.</p></div>
+    <div class="doc" style="line-height:1.75;color:var(--text-2);margin-bottom:60px;">
+
+      <p><em>Last updated 22 October 2026.</em></p>
+      <h3 style="color:var(--text)">1. Information only</h3>
+      <p>All content is general information and opinion produced by a statistical model. It is not financial, investment or betting advice, and no outcome is guaranteed.</p>
+      <h3 style="color:var(--text);margin-top:20px;">2. Your responsibility</h3>
+      <p>You decide whether and how to bet. Only bet money you can afford to lose. You must be 18 or older, and you are responsible for obeying the gambling laws where you live.</p>
+      <h3 style="color:var(--text);margin-top:20px;">3. No liability</h3>
+      <p>To the fullest extent permitted by law, we are not liable for any loss arising from use of this website or reliance on its predictions.</p>
+      <h3 style="color:var(--text);margin-top:20px;">4. Third parties</h3>
+      <p>Predictions use data from third-party sources, and the site links to other websites. We do not control them and are not responsible for their content or accuracy.</p>
+      <h3 style="color:var(--text);margin-top:20px;">5. Changes</h3>
+      <p>We may change these terms and the site at any time, including introducing paid plans. Continued use means you accept the updated terms.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:0">
+            <div class="nav-logo-icon"><img src="/assets/images/pbtlogo.png" alt="PBT logo" width="28" height="28"></div>
+            <div class="nav-logo-text">Pro<span>Betting</span>Tips</div>
+          </div>
+          <p>Expert football betting tips backed by 9 years of track record. Trusted by bettors across Africa.</p>
+          <div class="disclaimer">
+            ⚠️ <strong>Disclaimer:</strong> Betting involves risk. Tips are for informational purposes only. Please gamble responsibly. Only bet what you can afford to lose. 18+
+          </div>
+          <a href="https://facebook.com/ProffesionalBettingTips" target="_blank" class="btn btn-fb btn-sm">Follow us on Facebook</a>
+        </div>
+
+        <div>
+          <div class="footer-heading">Odds Categories</div>
+          <div class="footer-links">
+            <a href="/daily.html">Daily Odds</a>
+            <a href="/weekend.html">Weekend Odds</a>
+            <a href="/monthly.html">Monthly Odds</a>
+            <a href="/highlights.html">Match Highlights</a>
+            <a href="/pricing.html">Premium Plans</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Account</div>
+          <div class="footer-links">
+            <a href="/account.html">My Account</a>
+            <a href="#" onclick="openAuthModal('signup')">Create Account</a>
+            <a href="#" onclick="openAuthModal('login')">Sign In</a>
+            <a href="/pricing.html">Buy Premium</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Info</div>
+          <div class="footer-links">
+            <a href="/about.html">About Us</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2016–2025 Professional Betting Tips. All rights reserved.</span>
+        <span>Built for winners 🏆</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

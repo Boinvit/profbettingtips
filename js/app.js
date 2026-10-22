@@ -699,9 +699,15 @@ async function initOpenMode() {
   // add a link to the Prediction Lab in the navigation
   document.querySelectorAll('.nav-links, #mobile-nav').forEach((nav) => { if (!nav.querySelector('a[href="/lab.html"]')) { const a = document.createElement('a'); a.href = '/lab.html'; a.textContent = '🧪 Prediction Lab'; nav.appendChild(a); } });
 
-  const sub = document.querySelector('.page-title p'); if (sub) sub.textContent = 'Model-driven predictions for upcoming matches, updated every few hours. Every prediction is graded against the real result in the Prediction Lab.';
+  const sub = document.querySelector('.page-title p'); if (sub && ['daily', 'home'].includes(document.body.dataset.page)) sub.textContent = 'Model-driven predictions for upcoming matches, updated every few hours. Every prediction is graded against the real result in the Prediction Lab.';
+  // footer columns whose links are all hidden (Account) disappear too
+  document.querySelectorAll('.footer-links').forEach((fl) => { if ([...fl.children].every((a) => a.classList.contains('gate-hidden'))) hide(fl.parentElement); });
   const page = document.body.dataset.page;
   const tips = await loadLabTips();
+  const tk = document.getElementById('ticker-content');
+  if (tk && tips.length) { const items = tips.slice(0, 10); tk.innerHTML = [...items, ...items].map((t) => `<span class="ticker-item">${labEsc(t.home)} <span class="vs">vs</span> ${labEsc(t.away)} &nbsp;|&nbsp; <span class="odds">${LAB_PICK[t.pk.x12]}</span> &nbsp;·&nbsp; ${eatTime(t.kickoff)}</span>`).join(''); }
+  else if (tk) tk.innerHTML = '<span class="ticker-item">Predictions appear here after the next agent run</span>';
+  if (['weekend', 'monthly', 'highlights'].includes(page)) { await renderListingPage(page); return; }
   const grid = document.getElementById('free-tips-grid');
   if (page === 'daily' && grid) {
     const days = [...new Set(tips.map((t) => eatDay(t.kickoff)))].sort();
@@ -723,6 +729,74 @@ async function initOpenMode() {
       el.querySelectorAll('.odd-chip .value').forEach((n, i) => { if (odds[i]) n.textContent = (+odds[i]).toFixed(2); });
     }
   }
-  const track = document.getElementById('ticker-content');
-  if (track && tips.length) { const items = tips.slice(0, 10); track.innerHTML = [...items, ...items].map((t) => `<span class="ticker-item">${labEsc(t.home)} <span class="vs">vs</span> ${labEsc(t.away)} &nbsp;|&nbsp; <span class="odds">${LAB_PICK[t.pk.x12]}</span> &nbsp;·&nbsp; ${eatTime(t.kickoff)}</span>`).join(''); }
+}
+
+// ── Weekend / Monthly / Highlights pages (open mode) ──────────
+const labJson = async (f, fb) => { try { const r = await fetch('data/' + f + '?t=' + Date.now()); return r.ok ? await r.json() : fb; } catch { return fb; } };
+const eatLong = (iso) => new Date(iso).toLocaleDateString('en-KE', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Africa/Nairobi' });
+const pctTxt = (x) => (x == null ? '–' : Math.round(x * 100) + '%');
+
+function groupByDay(list, card) {
+  let out = '', cur = '';
+  for (const p of list) {
+    const d = eatDay(p.kickoff);
+    if (d !== cur) { cur = d; out += `<h3 style="margin:26px 0 12px;font-family:var(--font-head);letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);">${labEsc(eatLong(p.kickoff))}</h3><div class="tips-grid">`; }
+    out += card(p);
+    const next = list[list.indexOf(p) + 1];
+    if (!next || eatDay(next.kickoff) !== cur) out += '</div>';
+  }
+  return out;
+}
+function buildResultCard(p) {
+  const ok = p.ok?.x12, pk = p.pk;
+  return `
+  <div class="tip-card">
+    <div class="tip-card-header"><span class="league-tag">${labEsc(LAB_COMP[p.comp] || p.comp)}</span><span class="tip-time">${eatDay(p.kickoff).slice(5)}</span></div>
+    <div class="tip-body">
+      <div class="tip-teams"><span class="home">${labEsc(p.home)}</span><span class="vs-small">${p.result.hg}–${p.result.ag}</span><span class="away">${labEsc(p.away)}</span></div>
+      <div class="tip-meta">
+        <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">${LAB_PICK[pk.x12]}</div></div>
+        <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">${Math.round(pk.x12p * 100)}%</div></div>
+        <div class="tip-meta-item"><div class="key">Safer</div><div class="val">${pk.dc} ${p.ok?.dc ? '✓' : '✗'}</div></div>
+        <div class="tip-meta-item"><div class="key">Result</div><div class="val ${ok ? 'green' : ''}">${ok ? '✓ WIN' : '✗ LOSS'}</div></div>
+      </div>
+    </div>
+  </div>`;
+}
+const kpi = (l, v, sub = '') => `<div class="tip-card" style="padding:14px 16px;"><div class="key" style="font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-2)">${l}</div><div class="val gold" style="font-size:28px;font-family:var(--font-head);font-weight:800">${v}</div><div style="font-size:12px;color:var(--text-3)">${sub}</div></div>`;
+
+async function renderListingPage(page) {
+  const box = document.getElementById('page-content'); if (!box) return;
+  const all = await labJson('recent.json', []);
+  const upcoming = all.filter((p) => p.status === 'pending' && new Date(p.kickoff) > Date.now()).sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+  const settled = all.filter((p) => p.status === 'settled').sort((a, b) => b.kickoff.localeCompare(a.kickoff));
+  const stats = await labJson('stats.json', null);
+  const empty = (msg) => `<div class="tip-card" style="padding:24px;text-align:center;color:var(--text-2)">${msg}</div>`;
+
+  if (page === 'weekend') {
+    const e = new Date(Date.now() + 3 * 3600000), dow = e.getUTCDay();            // EAT = UTC+3
+    const sinceFri = dow >= 5 ? dow - 5 : dow + 2;
+    const fri = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate() - sinceFri, 15, 0));   // Fri 18:00 EAT
+    const inWeekendNow = dow === 6 || dow === 0 || (dow === 1 && e.getUTCHours() < 6) || (dow === 5 && e.getUTCHours() >= 18);
+    const startAt = inWeekendNow || dow === 5 ? fri : new Date(fri.getTime() + 7 * 86400000);
+    const end = new Date(startAt.getTime() + 60 * 3600000);                              // to Mon 06:00 EAT
+    const list = upcoming.filter((p) => { const t = new Date(p.kickoff); return t >= startAt && t < end; });
+    box.innerHTML = list.length ? groupByDay(list, buildLabCard)
+      : empty(upcoming.length ? `Weekend fixtures are not published yet. The next predictions are for ${labEsc(eatLong(upcoming[0].kickoff))}. Check <a href="/daily.html" style="color:var(--gold)">Daily Odds</a>.` : 'No predictions yet. They appear after the agent\'s next run.');
+  }
+
+  if (page === 'monthly') {
+    const g = stats?.settled ? `<div class="tips-grid" style="margin-bottom:8px">${kpi('Graded predictions', stats.settled, stats.pending + ' pending')}${kpi('1X2 accuracy', pctTxt(stats.markets.x12.acc), stats.markets.x12.correct + ' of ' + stats.markets.x12.n)}${kpi('Double chance', pctTxt(stats.markets.dc.acc), 'safer pick')}${kpi('Over/Under 2.5', pctTxt(stats.markets.ou.acc), '')}</div><p class="text-muted" style="font-size:13px;margin-bottom:8px;">Track record since testing began. Small samples are noisy; see the <a href="/lab.html#accuracy" style="color:var(--gold)">Prediction Lab</a> for calibration and detail.</p>` : empty('The track record appears here once the first predictions have been graded.');
+    box.innerHTML = g + (upcoming.length ? '<h2 style="margin:30px 0 4px;">Upcoming predictions</h2>' + groupByDay(upcoming, buildLabCard) : empty('No upcoming predictions yet.'));
+  }
+
+  if (page === 'highlights') {
+    const best = settled.filter((p) => p.ok?.x12).sort((a, b) => b.pk.x12p - a.pk.x12p).slice(0, 6);
+    const jp = (await labJson('jackpots.json', [])).filter((j) => j.games.some((x) => x.result));
+    let out = '';
+    if (best.length) out += `<h2 style="margin:0 0 12px;">Best calls</h2><div class="tips-grid">${best.map(buildResultCard).join('')}</div>`;
+    if (jp.length) out += '<h2 style="margin:30px 0 12px;">Jackpot results</h2><div class="tips-grid">' + jp.map((j) => { const d = j.games.filter((x) => x.result); return kpi(labEsc(j.name), d.filter((x) => x.ok.x12).length + ' / ' + d.length, 'straight picks right (' + d.filter((x) => x.ok.dc).length + ' with double chance)'); }).join('') + '</div>';
+    if (settled.length) out += `<h2 style="margin:30px 0 12px;">Recent results</h2><div class="tips-grid">${settled.slice(0, 30).map(buildResultCard).join('')}</div>`;
+    box.innerHTML = out || empty('Results appear here once matches have finished and been graded.');
+  }
 }

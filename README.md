@@ -67,5 +67,9 @@ During testing everything is open: no sign-in, no locked tips, no checkout, and 
 predictions. To switch gating back on after the testing month, set `PREMIUM_GATING: true` in `js/app.js`
 (and fill in the Supabase/Paystack keys there).
 
+Pages: Home, Daily, Weekend, Monthly, Highlights (all driven by `data/recent.json`), plus Pricing and Account (placeholders that say
+"free during testing"), About, Contact, Terms and Privacy. Review the Terms and Privacy text before launch; they are plain-language templates, not legal advice.
+When gating returns, Pricing/Account need real checkout and account flows wired in.
+
 ### Going public
 Remove `<meta name="robots" content="noindex">` from `lab.html` and add a nav link once the Accuracy tab has a few hundred graded games.
