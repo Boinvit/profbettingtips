@@ -30,6 +30,11 @@ and any team names it could not match.
 2. Actions -> "Prediction agent" -> Run workflow, tick **backfill** (trains on 3 seasons; a few minutes).
 3. Optional: add a `FOOTBALL_DATA_API_KEY` secret (free at football-data.org) for fresher results.
 
+### Running on your own computer (no GitHub Actions needed)
+`node agent/local-run.mjs --backfill` runs the scraper and agent locally, commits `data/`, and pushes; Vercel redeploys.
+Run it without `--backfill` every 6 hours via cron (Linux/Mac) or Task Scheduler (Windows). One-time: `npm i playwright && npx playwright install chromium`.
+A Kenyan home connection is also the most reliable way to reach SportPesa.
+
 ### SportPesa scraping
 SportPesa renders its pages in the browser, so the scraper drives a real Chromium, records the JSON the page loads
 and the visible text, and extracts "Team A vs Team B" fixtures. **It has not been run against the live site yet.**
