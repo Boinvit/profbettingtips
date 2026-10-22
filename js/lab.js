@@ -1,4 +1,5 @@
 /* Prediction Lab — static viewer. Reads /data/*.json written by the agent (no backend). */
+import { predict, picks, newState } from '../agent/lib/model.mjs';
 (() => {
   const TZ = 'Africa/Nairobi';
   const $ = (s) => document.querySelector(s);
@@ -32,7 +33,65 @@
     if (n && (n.h?.adj || n.a?.adj)) bits.push(`<span class="warn" title="${esc([...(n.h?.headlines || []), ...(n.a?.headlines || [])].join(' | '))}">⚠ team news</span>`);
     return bits.length ? `<div class="note x">${bits.join(' · ')}</div>` : '';
   };
+  // ---- Matchup: any two teams, same model as the agent, run in the browser ----
+  let mu = { home: '', away: '', neutral: false, odds: ['', '', ''], out: '' };
+  const idByName = () => Object.fromEntries(Object.entries(data.ratings?.teams || {}).map(([id, t]) => [t.n.toLowerCase(), id]));
+  const poissonTop = (lh, la) => { const f = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]; const pm = (l, k) => Math.exp(-l) * l ** k / f[k]; const r = []; for (let i = 0; i < 7; i++) for (let j = 0; j < 7; j++) r.push([`${i}–${j}`, pm(lh, i) * pm(la, j)]); return r.sort((a, b) => b[1] - a[1]).slice(0, 3); };
+  const formDots = (f) => (f || '').split('').map((c) => `<span class="chip ${c === 'W' ? 'ok' : c === 'L' ? 'no' : ''}">${c}</span>`).join('') || '–';
+  async function analyse() {
+    const R = data.ratings, ids = idByName();
+    const hid = ids[mu.home.trim().toLowerCase()], aid = ids[mu.away.trim().toLowerCase()];
+    if (!hid || !aid) { mu.out = `<div class="empty">Pick both teams from the suggestions. Teams the model has fewer than 3 matches for aren't listed.</div>`; return; }
+    if (hid === aid) { mu.out = `<div class="empty">Choose two different teams.</div>`; return; }
+    const H = R.teams[hid], A = R.teams[aid];
+    const s = newState();
+    for (const [id, t] of [[hid, H], [aid, A]]) { s.elo[id] = t.e; s.att[id] = t.a; s.def[id] = t.d; s.n[id] = t.g; s.form[id] = t.f || ''; }
+    s.lg = R.lg;
+    const params = { ...R.params, ...(mu.neutral ? { homeAdv: 0 } : {}) };
+    const ctx = {};
+    const od = mu.odds.map(parseFloat); if (od.every((x) => x > 1.01)) ctx.odds = od;
+    if (H.ce && A.ce) ctx.clubDiff = H.ce - A.ce;
+    const nw = data.news || {}; ctx.newsH = nw[hid]?.adj || 0; ctx.newsA = nw[aid]?.adj || 0;
+    const comp = H.c || 'X';
+    const p = predict(s, params, comp, hid, aid, ctx), pk = picks(p), p0 = predict(s, params, comp, hid, aid);
+    const top = poissonTop(p.xgH, p.xgA);
+    // head to head (lazy-load history)
+    if (!data.matches) data.matches = await get('matches.json', []);
+    const h2h = data.matches.filter((m) => (m.h === hid && m.a === aid) || (m.h === aid && m.a === hid)).slice(-6).reverse();
+    const lastRows = (t) => t.l.map((x) => `<tr><td>${x.d}</td><td style="text-align:left">${x.home ? 'vs' : '@'} ${esc(x.o)}</td><td>${x.gf}–${x.ga}</td><td><span class="chip ${x.gf > x.ga ? 'ok' : x.gf < x.ga ? 'no' : ''}">${x.gf > x.ga ? 'W' : x.gf < x.ga ? 'L' : 'D'}</span></td></tr>`).join('');
+    const why = [];
+    const dE = H.e - A.e + (mu.neutral ? 0 : params.homeAdv);
+    why.push(`Rating gap: ${esc(H.n)} ${H.e} vs ${esc(A.n)} ${A.e}${mu.neutral ? ' (neutral venue)' : ` (+${Math.round(params.homeAdv)} for home advantage → ${dE > 0 ? '+' : ''}${Math.round(dE)} in favour of ${dE >= 0 ? esc(H.n) : esc(A.n)})`}.`);
+    why.push(`Scoring strength (1.00 = league average): ${esc(H.n)} attack ${H.a.toFixed(2)} / defence ${H.d.toFixed(2)}; ${esc(A.n)} attack ${A.a.toFixed(2)} / defence ${A.d.toFixed(2)}. Lower defence is better.`);
+    why.push(`Expected goals: ${p.xgH.toFixed(2)} – ${p.xgA.toFixed(2)}. Most likely scores: ${top.map((t) => `${t[0]} (${pct(t[1], 0)})`).join(', ')}.`);
+    if (ctx.odds) why.push(`Your bookmaker odds were blended in (${pct(R.params.wOdds, 0)} weight, learned from history).`);
+    if (ctx.clubDiff != null) why.push(`ClubElo agrees on the direction: ${H.ce} vs ${A.ce}.`);
+    for (const [id, t] of [[hid, H], [aid, A]]) { const n = nw[id]; if (n && n.headlines?.length) why.push(`News on ${esc(t.n)}: ${n.headlines.map(esc).join(' | ')} (rating ${n.adj > 0 ? '+' : ''}${n.adj}).`); }
+    if (Math.min(H.g, A.g) < 10) why.push('<span class="warn">Limited match history for one team, so treat this with extra caution.</span>');
+    if (H.c !== A.c) why.push('<span class="warn">Teams are from different competitions; ratings are less comparable across leagues.</span>');
+    mu.out = `<div class="panel"><h3>${esc(H.n)} vs ${esc(A.n)}</h3>${probBar({ h: p.pH, d: p.pD, a: p.pA })}
+      <p style="margin:12px 0"><span class="chip main">${esc(label('x12', pk))} ${pct(pk.x12p)}</span> <span class="chip">${esc(label('dc', pk))} ${pct(pk.dcp)}</span> <span class="chip">${esc(label('ou', pk))} ${pct(pk.oup)}</span> <span class="chip">${esc(label('bt', pk))} ${pct(pk.btp)}</span></p>
+      <p class="note">Plain model (no odds/news): H ${pct(p0.pH)} · D ${pct(p0.pD)} · A ${pct(p0.pA)}. Confidence is the model's own estimate; check the Accuracy tab for how reliable that has been.</p></div>
+      <div class="panel"><h3>Why</h3><ul style="padding-left:18px;color:var(--text-2);line-height:1.7">${why.map((w) => `<li>${w}</li>`).join('')}</ul></div>
+      <div class="panel"><h3>Form</h3><p>${esc(H.n)}: ${formDots(H.f)}<br>${esc(A.n)}: ${formDots(A.f)}</p>
+        <table class="tbl"><thead><tr><th colspan="4" style="text-align:left">${esc(H.n)} recent</th></tr></thead><tbody>${lastRows(H)}</tbody></table>
+        <table class="tbl" style="margin-top:12px"><thead><tr><th colspan="4" style="text-align:left">${esc(A.n)} recent</th></tr></thead><tbody>${lastRows(A)}</tbody></table></div>
+      <div class="panel"><h3>Head to head</h3>${h2h.length ? `<table class="tbl"><tbody>${h2h.map((m) => `<tr><td>${m.d.slice(0, 10)}</td><td style="text-align:left">${esc(R.teams[m.h]?.n || '')} ${m.hg}–${m.ag} ${esc(R.teams[m.a]?.n || '')}</td></tr>`).join('')}</tbody></table>` : '<p class="note">No meetings in the stored history.</p>'}</div>`;
+  }
+
   const views = {
+    matchup() {
+      const R = data.ratings;
+      if (!R || !Object.keys(R.teams || {}).length) return `<div class="empty">The model has no team ratings yet. They appear after the agent's first run.</div>`;
+      const opts = Object.values(R.teams).sort((a, b) => a.n.localeCompare(b.n)).map((t) => `<option value="${esc(t.n)}">`).join('');
+      return `<datalist id="teams">${opts}</datalist>
+        <form class="panel mu" id="mu-form"><h3>Compare any two teams</h3>
+          <div class="mu-grid"><label>Home team<input list="teams" id="mu-h" value="${esc(mu.home)}" placeholder="e.g. Arsenal" autocomplete="off"></label>
+          <label>Away team<input list="teams" id="mu-a" value="${esc(mu.away)}" placeholder="e.g. Chelsea" autocomplete="off"></label></div>
+          <div class="mu-grid"><label>Odds 1 (optional)<input id="mu-o1" inputmode="decimal" value="${esc(mu.odds[0])}" placeholder="2.10"></label><label>Odds X<input id="mu-o2" inputmode="decimal" value="${esc(mu.odds[1])}" placeholder="3.40"></label><label>Odds 2<input id="mu-o3" inputmode="decimal" value="${esc(mu.odds[2])}" placeholder="3.60"></label></div>
+          <label class="chk"><input type="checkbox" id="mu-n" ${mu.neutral ? 'checked' : ''}> Neutral venue</label>
+          <button class="btn btn-gold" type="submit" style="margin-top:10px">Analyse match</button></form>${mu.out}`;
+    },
     upcoming() {
       const now = Date.now();
       const all = data.recent.filter((p) => p.status === 'pending' && new Date(p.kickoff) > now);
@@ -136,10 +195,15 @@
     history.replaceState(null, '', '#' + tab);
   }
 
+  document.getElementById('view').addEventListener('submit', async (e) => {
+    if (e.target.id !== 'mu-form') return; e.preventDefault();
+    mu = { home: $('#mu-h').value, away: $('#mu-a').value, neutral: $('#mu-n').checked, odds: [$('#mu-o1').value, $('#mu-o2').value, $('#mu-o3').value], out: '' };
+    await analyse(); show('matchup');
+  });
   document.getElementById('view').addEventListener('click', (e) => { const b = e.target.closest('[data-filter]'); if (b) { filter = b.dataset.filter; show('upcoming'); } });
   document.getElementById('tabs').addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b) show(b.dataset.tab); });
-  Promise.all([get('recent.json', []), get('stats.json', null), get('jackpots.json', []), get('model.json', {}), get('sources.json', {})]).then(([recent, stats, jackpots, model, sources]) => {
-    Object.assign(data, { recent, stats, jackpots, model, sources });
+  Promise.all([get('recent.json', []), get('stats.json', null), get('jackpots.json', []), get('model.json', {}), get('sources.json', {}), get('ratings.json', null), get('news.json', {})]).then(([recent, stats, jackpots, model, sources, ratings, news]) => {
+    Object.assign(data, { recent, stats, jackpots, model, sources, ratings, news });
     $('#stamp').textContent = model.updated ? `Last agent run: ${new Date(model.updated).toLocaleString('en-KE', { timeZone: TZ })} EAT · model v${model.v}` : 'Agent has not run yet.';
     show(location.hash.slice(1) || 'upcoming');
   });

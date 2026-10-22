@@ -149,6 +149,10 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   health.push({ source: 'SportPesa', ok: (feed.listed?.length || 0) + (feed.scrapedJackpots?.length || 0) > 0,
     detail: `${feed.listed?.length || 0} listed games, ${feed.scrapedJackpots?.length || 0} jackpot(s)${sp.scrapedAt ? `, scraped ${sp.scrapedAt}` : ''}` });
   const sources = { updated: now.toISOString(), health, unmatchedListed: unmatched.slice(0, 40), unknownJackpotTeams: jpUnknown.slice(0, 40) };
+  // ratings snapshot so the browser can run the same model for ANY two teams (Matchup tab)
+  const last = {}; for (let i = matches.length - 1; i >= 0; i--) { const m = matches[i]; for (const [t, o, gf, ga, home] of [[m.h, m.a, m.hg, m.ag, 1], [m.a, m.h, m.ag, m.hg, 0]]) { const l = (last[t] ||= []); if (l.length < 6) l.push({ d: m.d.slice(0, 10), o: registry.names[o], gf, ga, home }); } }
+  const teamsOut = {}; for (const id of Object.keys(state.elo)) if (state.n[id] >= 3) teamsOut[id] = { n: registry.names[id], e: Math.round(state.elo[id]), a: +state.att[id].toFixed(3), d: +state.def[id].toFixed(3), g: state.n[id], f: state.form[id], c: leagueOf.get(id), ce: club.has(id) ? Math.round(club.get(id)) : undefined, l: last[id] || [] };
+  save('ratings.json', { updated: now.toISOString(), v: model.v, params: model.params, lg: state.lg, teams: teamsOut });
   save('teams.json', registry.names); save('matches.json', matches); save('predictions.json', preds); save('recent.json', recent);
   save('jackpots.json', jackpots, true); save('stats.json', stats, true); save('model.json', model, true); save('sources.json', sources, true); save('news.json', newsCache);
   log(`stats: ${stats.settled} settled, 1X2 accuracy ${stats.markets.x12.acc ?? 'n/a'}`);

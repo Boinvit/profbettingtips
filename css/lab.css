@@ -48,3 +48,8 @@ svg.chart { width:100%; height:auto; aspect-ratio:640/180; display:block; }
 .tag { font-family:var(--font-mono); font-size:11px; color:var(--green); border:1px solid rgba(34,197,94,.45); border-radius:4px; padding:0 5px; }
 .note.x { grid-column: 1 / 4; margin-top:2px; font-size:12px; } .row .m .note.x { grid-column:auto; }
 .filters { margin: 0 0 10px; display:flex; gap:6px; flex-wrap:wrap; } .filters .chip { cursor:pointer; margin:0; }
+
+.mu-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:10px 0; }
+.mu label { display:block; font-size:12px; color:var(--text-2); text-transform:uppercase; letter-spacing:.06em; }
+.mu input[type=text], .mu input:not([type]), .mu input[list], .mu input[inputmode] { display:block; width:100%; margin-top:4px; padding:10px 12px; background:var(--bg-3); border:1px solid var(--border-2); border-radius:var(--radius); color:var(--text); font-size:16px; }
+.mu .chk { display:flex; gap:8px; align-items:center; text-transform:none; letter-spacing:0; font-size:14px; } .mu .chk input { width:auto; margin:0; }
