@@ -1,0 +1,10 @@
+{
+  "sportpesa": {
+    "jackpots": [
+      { "name": "SportPesa Mega Jackpot Pro", "url": "https://www.ke.sportpesa.com/en/mega-jackpot-pro" }
+    ],
+    "lists": [
+      { "name": "Football", "url": "https://www.ke.sportpesa.com/en/sports-betting/football-1/" }
+    ]
+  }
+}

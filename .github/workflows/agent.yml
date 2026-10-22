@@ -1,0 +1,66 @@
+name: Prediction agent
+
+on:
+  schedule:
+    - cron: '15 */6 * * *'      # every 6 hours (UTC)
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: 'Backfill 3 seasons of history to train the model (use once, first run)'
+        type: boolean
+        default: false
+  push:
+    paths: ['data/jackpots/inbox.txt', 'data/config.json', 'data/aliases.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prediction-agent
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Unit tests
+        run: node --test agent/test/jackpot.test.mjs agent/test/sources.test.mjs
+
+      - name: Install browser for SportPesa scrape
+        run: |
+          npm install --no-save --no-package-lock playwright@1.49.1
+          npx playwright install --with-deps chromium
+
+      - name: Scrape SportPesa (listed matches + jackpots)
+        continue-on-error: true      # a blocked/changed page must never stop the rest of the agent
+        run: node agent/scrape-sportpesa.mjs
+
+      - name: Run agent (results, odds, ratings, news -> learn -> predict)
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}   # optional
+        run: node agent/run.mjs ${{ inputs.backfill && '--backfill' || '' }}
+
+      - name: Save scrape diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-debug
+          path: debug/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Commit data
+        run: |
+          git config user.name  "pbt-agent"
+          git config user.email "pbt-agent@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "data: agent update $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push
