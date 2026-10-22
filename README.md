@@ -62,5 +62,10 @@ e.g. `{"man utd": "manchester united"}`.
 - `node --test agent/test/jackpot.test.mjs agent/test/sources.test.mjs` parsers (CSV, odds, ClubElo, RSS, SportPesa shapes), name matching, jackpot settlement
 - `node agent/test/simulate.mjs` 300-day synthetic world with a fake clock; checks learning, calibration, name merging, and that no prediction is ever edited after kickoff
 
+### Premium gating (currently OFF)
+During testing everything is open: no sign-in, no locked tips, no checkout, and the home/daily pages show the Prediction Lab's
+predictions. To switch gating back on after the testing month, set `PREMIUM_GATING: true` in `js/app.js`
+(and fill in the Supabase/Paystack keys there).
+
 ### Going public
 Remove `<meta name="robots" content="noindex">` from `lab.html` and add a nav link once the Accuracy tab has a few hundred graded games.

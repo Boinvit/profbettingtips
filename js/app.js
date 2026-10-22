@@ -8,13 +8,19 @@ const CONFIG = {
   SUPABASE_ANON_KEY: 'YOUR_SUPABASE_ANON_KEY',
   PAYSTACK_PUBLIC_KEY: 'YOUR_PAYSTACK_PUBLIC_KEY',
   PAYPAL_CLIENT_ID: 'YOUR_PAYPAL_CLIENT_ID',
+  // Premium gating is OFF during the testing period (sole user). Set to true to bring back sign-in, locked tips and
+  // checkout exactly as before (requires the Supabase + Paystack keys above to be filled in).
+  PREMIUM_GATING: false,
   SITE_NAME: 'Professional Betting Tips',
   FACEBOOK_PAGE: 'https://facebook.com/ProffesionalBettingTips',
 };
 
 // ── Supabase Client ─────────────────────────────────────────
-const { createClient } = supabase;
-const sb = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY);
+let sb = null;
+if (CONFIG.PREMIUM_GATING) {
+  const { createClient } = supabase;
+  sb = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY);
+}
 
 // ── State ────────────────────────────────────────────────────
 let currentUser = null;
@@ -22,6 +28,7 @@ let userProfile = null;
 
 // ── Init ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
+  if (!CONFIG.PREMIUM_GATING) { await initOpenMode(); return; }
   await initAuth();
   initNavHighlight();
   initMobileNav();
@@ -112,6 +119,7 @@ async function signOut() {
 
 // ── Login / Signup Modal ─────────────────────────────────────
 function openAuthModal(mode = 'login') {
+  if (!CONFIG.PREMIUM_GATING) return;
   const modal = document.getElementById('auth-modal');
   if (!modal) return;
   modal.classList.add('open');
@@ -317,6 +325,7 @@ let selectedCategory = 'daily';
 let selectedPayment = 'paystack';
 
 function openCheckoutModal(category = 'daily', plan = 'standard') {
+  if (!CONFIG.PREMIUM_GATING) return;
   if (!currentUser) {
     openAuthModal('login');
     return;
@@ -630,11 +639,90 @@ async function loadTicker() {
   track.innerHTML = items;
 }
 
-document.addEventListener('DOMContentLoaded', loadTicker);
+if (CONFIG.PREMIUM_GATING) document.addEventListener('DOMContentLoaded', loadTicker);
 
 // ── URL Params (auto-open login modal) ────────────────────────
 window.addEventListener('load', () => {
+  if (!CONFIG.PREMIUM_GATING) return;
   const params = new URLSearchParams(window.location.search);
   if (params.get('login')) openAuthModal('login');
   if (params.get('signup')) openAuthModal('signup');
 });
+
+
+// ════════════════════════════════════════════════════════════
+// OPEN MODE (PREMIUM_GATING = false): everything visible, no sign-in, no checkout.
+// Tips come from the Prediction Lab data files (data/recent.json) instead of Supabase.
+// ════════════════════════════════════════════════════════════
+const LAB_COMP = { PL: 'Premier League', ELC: 'Championship', BL1: 'Bundesliga', SA: 'Serie A', PD: 'La Liga', FL1: 'Ligue 1', DED: 'Eredivisie', PPL: 'Primeira Liga', CL: 'Champions League', BSA: 'Brasileirão',
+  E0: 'Premier League', E1: 'Championship', E2: 'League One', E3: 'League Two', EC: 'National League', SC0: 'Scottish Premiership', D1: 'Bundesliga', D2: '2. Bundesliga', I1: 'Serie A', I2: 'Serie B', SP1: 'La Liga', SP2: 'La Liga 2', F1: 'Ligue 1', F2: 'Ligue 2', N1: 'Eredivisie', B1: 'Belgian Pro League', P1: 'Primeira Liga', T1: 'Süper Lig', G1: 'Super League Greece', X: 'Football' };
+const LAB_PICK = { H: 'Home Win', D: 'Draw', A: 'Away Win' };
+const labEsc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const eatTime = (iso) => new Date(iso).toLocaleTimeString('en-KE', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Africa/Nairobi' });
+const eatDay = (iso) => new Date(iso).toLocaleDateString('en-CA', { timeZone: 'Africa/Nairobi' });
+
+async function loadLabTips() {
+  try { const r = await fetch('data/recent.json?t=' + Date.now()); if (!r.ok) return []; return (await r.json()).filter((p) => p.status === 'pending' && new Date(p.kickoff) > Date.now()); }
+  catch { return []; }
+}
+
+function buildLabCard(p) {
+  const pk = p.pk, conf = Math.round(pk.x12p * 100);
+  const ou = pk.ou === 'O' ? 'Over 2.5' : 'Under 2.5';
+  return `
+  <div class="tip-card">
+    <div class="tip-card-header">
+      <span class="league-tag">${labEsc(LAB_COMP[p.comp] || p.comp)}</span>
+      <span class="tip-time">${eatTime(p.kickoff)}</span>
+    </div>
+    <div class="tip-body">
+      <div class="tip-teams"><span class="home">${labEsc(p.home)}</span><span class="vs-small">VS</span><span class="away">${labEsc(p.away)}</span></div>
+      <div class="tip-meta">
+        <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">${LAB_PICK[pk.x12]}</div></div>
+        <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">${conf}%</div></div>
+        <div class="tip-meta-item"><div class="key">Goals</div><div class="val gold">${ou}</div></div>
+        <div class="tip-meta-item"><div class="key">Safer</div><div class="val">${pk.dc}</div></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+async function initOpenMode() {
+  document.body.classList.add('ungated');
+  initNavHighlight(); initMobileNav(); initFilterChips();
+  // hide everything that is about accounts, payment or locked content
+  const hide = (el) => el && el.classList.add('gate-hidden');
+  document.querySelectorAll('[onclick*="openCheckoutModal"], [onclick*="openAuthModal"], a[href="/pricing.html"], a[href="/account.html"], #nav-login-btn, #nav-user-menu, #auth-modal, #checkout-modal, .premium-locked, .lock-overlay').forEach(hide);
+  document.querySelectorAll('.fb-cta-section').forEach((el) => { if (el.querySelector('[onclick*="openCheckoutModal"]')) hide(el); });
+  document.querySelectorAll('section').forEach((sec) => { if (sec.querySelector('#pane-daily')) hide(sec); });
+  document.querySelectorAll('.section-head').forEach((h) => { if (/premium/i.test(h.textContent)) { hide(h); const g = h.nextElementSibling; if (g && g.id === 'predictions-grid') hide(g); } });
+  // add a link to the Prediction Lab in the navigation
+  document.querySelectorAll('.nav-links, #mobile-nav').forEach((nav) => { if (!nav.querySelector('a[href="/lab.html"]')) { const a = document.createElement('a'); a.href = '/lab.html'; a.textContent = '🧪 Prediction Lab'; nav.appendChild(a); } });
+
+  const sub = document.querySelector('.page-title p'); if (sub) sub.textContent = 'Model-driven predictions for upcoming matches, updated every few hours. Every prediction is graded against the real result in the Prediction Lab.';
+  const page = document.body.dataset.page;
+  const tips = await loadLabTips();
+  const grid = document.getElementById('free-tips-grid');
+  if (page === 'daily' && grid) {
+    const days = [...new Set(tips.map((t) => eatDay(t.kickoff)))].sort();
+    const today = eatDay(new Date().toISOString());
+    const shown = days.includes(today) ? today : days[0];
+    const list = tips.filter((t) => eatDay(t.kickoff) === shown).sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+    const head = grid.previousElementSibling?.querySelector('h2'); if (head) head.textContent = shown === today ? "Today's Predictions" : 'Next Fixtures';
+    grid.innerHTML = list.length ? list.map(buildLabCard).join('') : '<p class="text-muted" style="padding:20px;">No predictions yet. They appear after the agent\'s next run.</p>';
+  }
+  if (page === 'home') {
+    const top = [...tips].sort((a, b) => b.pk.x12p - a.pk.x12p);
+    if (grid && top.length) grid.innerHTML = top.slice(0, 3).map(buildLabCard).join('');
+    const f = top[0], el = document.getElementById('featured-home');
+    if (f && el) {
+      const set = (sel, v) => { const n = el.querySelector(sel); if (n) n.textContent = v; };
+      set('.featured-home-name', f.home); set('.featured-away-name', f.away);
+      set('#featured-league', '⭐ ' + (LAB_COMP[f.comp] || 'Feature') + ' · ' + eatTime(f.kickoff));
+      const odds = f.ctx?.odds || [1 / f.p.h, 1 / f.p.d, 1 / f.p.a];
+      el.querySelectorAll('.odd-chip .value').forEach((n, i) => { if (odds[i]) n.textContent = (+odds[i]).toFixed(2); });
+    }
+  }
+  const track = document.getElementById('ticker-content');
+  if (track && tips.length) { const items = tips.slice(0, 10); track.innerHTML = [...items, ...items].map((t) => `<span class="ticker-item">${labEsc(t.home)} <span class="vs">vs</span> ${labEsc(t.away)} &nbsp;|&nbsp; <span class="odds">${LAB_PICK[t.pk.x12]}</span> &nbsp;·&nbsp; ${eatTime(t.kickoff)}</span>`).join(''); }
+}

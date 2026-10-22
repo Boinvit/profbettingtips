@@ -1371,3 +1371,6 @@ h1, h2, h3, h4 {
 
 .w-full { width: 100%; }
 .hidden { display: none !important; }
+
+/* Open mode (PREMIUM_GATING=false): hide accounts, checkout and locked content */
+.gate-hidden { display: none !important; }
