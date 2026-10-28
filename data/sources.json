@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-28T19:37:36.965Z",
+ "updated": "2026-10-28T22:39:51.023Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "84 files ok, 0 failed; 28221 results, 83 fixtures"
+   "detail": "40 files ok, 0 failed; 3724 results, 83 fixtures"
   },
   {
    "source": "football-data.org",
@@ -39,39 +39,37 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-28T19:37:11.371Z"
+   "detail": "35 listed games, 0 jackpot(s), scraped 2026-10-28T22:39:24.692Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "14 teams fetched, 0 failed"
+   "detail": "2 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "AC Monza Brianz vs Napoli",
-  "Celtic vs Dundee Utd",
-  "Arsenal W vs SL Benfica W",
-  "Lyon W vs Inter Milan W",
-  "SP Tre Fiori vs FC Fiorentino",
-  "SC Faetano vs FC Domagnano",
-  "SS Virtus vs SS Murata",
-  "Sutton United vs Aldershot",
-  "Farnborough vs Weston Super Mare",
-  "FAR Rabat vs Ittihad Tanger",
-  "Excelsior Maassluis vs SC Heerenveen",
-  "Alianza Atletico vs Deportivo Garcilaso",
-  "Bragantino SP vs Chapecoense",
   "Once Caldas vs Alianza FC Valledupar",
-  "New York City vs Atlanta United",
   "Universidad Catolica vs Audax Italiano",
   "Charlotte FC vs Montreal Impact",
+  "New York City vs Atlanta United",
   "Club Cienciano vs Atletico Grau",
   "Delfin SC vs Independiente DV",
   "Atletico Tucuman vs CA Platense",
-  "Remo PA vs Botafogo RJ",
-  "Bahia BA vs Sao Paulo",
   "Saint Louis City SC vs Portland Timbers",
-  "Minnesota Utd vs Sporting Kansas City"
+  "Bahia BA vs Sao Paulo",
+  "Remo PA vs Botafogo RJ",
+  "Minnesota Utd vs Sporting Kansas City",
+  "Internacional de Bogota. vs Independiente Medellin",
+  "San Jose Earthquake vs Colorado Rapids",
+  "CD Olimpia vs CS Cartagines",
+  "Shabana FC vs Migori Youth FC",
+  "Mathare United vs Tusker",
+  "Kenya Police FC vs Ulinzi Stars",
+  "Future FC vs Al Ahly Cairo",
+  "Pyramids FC vs Wadi Degla",
+  "USC Landhaus W vs Juventus W",
+  "Manchester City W vs Paris Saint Germain W",
+  "HB Koege W vs Barcelona W"
  ],
  "unknownJackpotTeams": []
 }
