@@ -179,7 +179,22 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         merge(r); health.push({ source: 'football-data.org', ok: true, detail: `${r.finished.length} results, ${r.upcoming.length} fixtures` });
       } catch (e) { health.push({ source: 'football-data.org', ok: false, detail: e.message }); }
     } else health.push({ source: 'football-data.org', ok: false, detail: 'no API key (optional)' });
-    // c) ClubElo ratings
+    // c) API-Football: broad fixture/results coverage when an API-Sports key is configured
+    try {
+      const { fetchApiFootball } = await import('./lib/sources/api-football.mjs');
+      merge(await fetchApiFootball({ key: process.env.API_FOOTBALL_KEY, now, health }));
+    } catch (e) { health.push({ source: 'API-Football', ok: false, detail: e.message }); }
+    // d) OpenLigaDB: free supplemental German Bundesliga feed
+    try {
+      const { fetchOpenLigaDB } = await import('./lib/sources/openligadb.mjs');
+      merge(await fetchOpenLigaDB({ now, health }));
+    } catch (e) { health.push({ source: 'OpenLigaDB', ok: false, detail: e.message }); }
+    // e) The Odds API: bookmaker 1X2 odds; merges into matching fixtures by team pair/date
+    try {
+      const { fetchOddsApi } = await import('./lib/sources/odds-api.mjs');
+      merge(await fetchOddsApi({ key: process.env.THE_ODDS_API_KEY, now, health }));
+    } catch (e) { health.push({ source: 'The Odds API', ok: false, detail: e.message }); }
+    // f) ClubElo ratings
     const { fetchClubElo } = await import('./lib/sources/clubelo.mjs'); feed.clubelo = await fetchClubElo({ now, health });
     // d) team news
     const { fetchTeamNews } = await import('./lib/sources/news.mjs'); let newsOk = 0, newsFail = 0;

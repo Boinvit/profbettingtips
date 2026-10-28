@@ -1,0 +1,177 @@
+-- ============================================================
+-- PROFESSIONAL BETTING TIPS — Supabase Schema
+-- Run this in your Supabase SQL Editor
+-- ============================================================
+
+-- ── Extensions ───────────────────────────────────────────────
+create extension if not exists "uuid-ossp";
+
+-- ── User Profiles ─────────────────────────────────────────────
+create table if not exists public.user_profiles (
+  id           uuid primary key references auth.users(id) on delete cascade,
+  email        text not null,
+  full_name    text,
+  phone        text,
+  country      text default 'KE',
+  created_at   timestamptz default now(),
+  updated_at   timestamptz default now()
+);
+
+alter table public.user_profiles enable row level security;
+
+create policy "Users can read own profile"
+  on public.user_profiles for select
+  using (auth.uid() = id);
+
+create policy "Users can update own profile"
+  on public.user_profiles for update
+  using (auth.uid() = id);
+
+create policy "Admins can read all profiles"
+  on public.user_profiles for select
+  using (auth.jwt() ->> 'role' = 'admin');
+
+
+-- ── Subscriptions ─────────────────────────────────────────────
+create table if not exists public.subscriptions (
+  id             uuid primary key default uuid_generate_v4(),
+  user_id        uuid not null references auth.users(id) on delete cascade,
+  category       text not null check (category in ('daily', 'weekend', 'monthly')),
+  plan           text not null check (plan in ('starter', 'standard', 'premium')),
+  odds_count     int not null check (odds_count in (4, 8, 10)),
+  price_paid     numeric not null,
+  currency       text default 'KES',
+  payment_ref    text unique,
+  payment_method text check (payment_method in ('paystack', 'paypal', 'mpesa')),
+  status         text default 'active' check (status in ('active', 'expired', 'cancelled', 'refunded')),
+  expires_at     timestamptz not null,
+  created_at     timestamptz default now()
+);
+
+alter table public.subscriptions enable row level security;
+
+create policy "Users can read own subscriptions"
+  on public.subscriptions for select
+  using (auth.uid() = user_id);
+
+create policy "Service role can insert subscriptions"
+  on public.subscriptions for insert
+  with check (true);
+
+create policy "Admins can read all subscriptions"
+  on public.subscriptions for all
+  using (auth.jwt() ->> 'role' = 'admin');
+
+
+-- ── Predictions ───────────────────────────────────────────────
+create table if not exists public.predictions (
+  id              uuid primary key default uuid_generate_v4(),
+  home_team       text not null,
+  away_team       text not null,
+  league          text not null,
+  match_date      date not null,
+  kick_off_time   text,
+  prediction      text not null,
+  odds            numeric not null,
+  confidence      text,
+  category        text not null check (category in ('daily', 'weekend', 'monthly')),
+  is_premium      boolean default true,
+  is_featured     boolean default false,
+  result          text check (result in ('WIN', 'LOSS', 'VOID', 'PENDING')) default 'PENDING',
+  analysis        text,
+  created_at      timestamptz default now(),
+  updated_at      timestamptz default now()
+);
+
+alter table public.predictions enable row level security;
+
+-- Everyone can see free tips
+create policy "Anyone can read free predictions"
+  on public.predictions for select
+  using (is_premium = false);
+
+-- Premium tips: only if active subscription for that category
+create policy "Subscribers can read premium predictions"
+  on public.predictions for select
+  using (
+    is_premium = true
+    and exists (
+      select 1 from public.subscriptions s
+      where s.user_id = auth.uid()
+        and s.category = predictions.category
+        and s.status = 'active'
+        and s.expires_at > now()
+    )
+  );
+
+-- Admins can do everything
+create policy "Admins can manage predictions"
+  on public.predictions for all
+  using (auth.jwt() ->> 'role' = 'admin');
+
+
+-- ── Highlights ────────────────────────────────────────────────
+create table if not exists public.highlights (
+  id          uuid primary key default uuid_generate_v4(),
+  title       text not null,
+  home_team   text not null,
+  away_team   text not null,
+  league      text,
+  score       text,
+  match_date  date,
+  video_url   text,
+  thumbnail   text,
+  duration    text,
+  views       int default 0,
+  created_at  timestamptz default now()
+);
+
+alter table public.highlights enable row level security;
+
+create policy "Anyone can read highlights"
+  on public.highlights for select
+  using (true);
+
+create policy "Admins can manage highlights"
+  on public.highlights for all
+  using (auth.jwt() ->> 'role' = 'admin');
+
+
+-- ── Indexes ───────────────────────────────────────────────────
+create index if not exists idx_predictions_date     on public.predictions(match_date);
+create index if not exists idx_predictions_category on public.predictions(category);
+create index if not exists idx_predictions_featured on public.predictions(is_featured);
+create index if not exists idx_subscriptions_user   on public.subscriptions(user_id);
+create index if not exists idx_subscriptions_status on public.subscriptions(status, expires_at);
+
+
+-- ── Auto-update updated_at ────────────────────────────────────
+create or replace function update_updated_at()
+returns trigger as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger trg_predictions_updated
+  before update on public.predictions
+  for each row execute function update_updated_at();
+
+create trigger trg_profiles_updated
+  before update on public.user_profiles
+  for each row execute function update_updated_at();
+
+
+-- ── Seed: Sample Free Predictions ─────────────────────────────
+-- (Remove or update daily as admin)
+insert into public.predictions
+  (home_team, away_team, league, match_date, kick_off_time, prediction, odds, confidence, category, is_premium, is_featured)
+values
+  ('Man City', 'Arsenal', 'Premier League', current_date, '20:00', 'Home Win', 2.10, '88%', 'daily', false, true),
+  ('Real Madrid', 'Barcelona', 'La Liga', current_date, '21:00', 'Both to Score', 1.85, '82%', 'daily', false, false),
+  ('Inter Milan', 'AC Milan', 'Serie A', current_date, '20:45', 'Over 2.5', 1.75, '79%', 'daily', false, false),
+  ('PSG', 'Dortmund', 'Champions League', current_date, '21:00', 'Home Win & Over 1.5', 1.95, '85%', 'daily', true, false),
+  ('Bayern Munich', 'Leverkusen', 'Bundesliga', current_date, '20:30', 'Home Win', 1.65, '90%', 'daily', true, false),
+  ('Juventus', 'Roma', 'Serie A', current_date, '20:45', 'Draw', 3.20, '72%', 'daily', true, false)
+on conflict do nothing;

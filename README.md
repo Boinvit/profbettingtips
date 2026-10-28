@@ -11,8 +11,11 @@ agent every 6 hours, writes JSON to `data/`, commits it, and Vercel redeploys th
 GitHub Action (agent.yml, every 6h)
   1. agent/scrape-sportpesa.mjs   real browser -> SportPesa football list + Mega Jackpot Pro  -> data/sportpesa.json
   2. agent/run.mjs
-       sources   football-data.co.uk (results + bookmaker odds, 38 leagues, incl. lower divisions)
+       sources   football-data.co.uk (historical results + bookmaker odds, broad league coverage)
                  football-data.org   (optional API key, fresher results)
+                 API-Football        (optional API-Sports key, recent fixtures/results)
+                 OpenLigaDB          (free supplemental German Bundesliga results/fixtures)
+                 The Odds API        (optional API key, multi-bookmaker 1X2 odds)
                  ClubElo             (global club ratings)
                  Google News RSS     (injury / suspension / return headlines per team)
        settle    grade frozen predictions against real results
@@ -73,3 +76,17 @@ When gating returns, Pricing/Account need real checkout and account flows wired 
 
 ### Going public
 Remove `<meta name="robots" content="noindex">` from `lab.html` and add a nav link once the Accuracy tab has a few hundred graded games.
+
+### Optional data-provider secrets
+
+Add these in GitHub repository Settings -> Secrets and variables -> Actions -> New repository secret. The agent still runs if a key is absent.
+
+- `FOOTBALL_DATA_API_KEY` — football-data.org.
+- `API_FOOTBALL_KEY` — API-Sports / API-Football. Coverage, historical access and quotas depend on the selected plan.
+- `THE_ODDS_API_KEY` — The Odds API. Fetches available soccer h2h markets and averages each outcome across returned bookmakers before attaching decimal 1X2 odds to matching fixtures.
+
+OpenLigaDB is called without a key and is a narrow supplemental source, not worldwide coverage. New providers are de-duplicated against existing match history using team IDs and kickoff proximity; odds are merged into an existing result/fixture where the team pair and date match.
+
+### Other research platforms
+
+FootyStats, FBref, WhoScored, Sofascore, FotMob, Understat, Transfermarkt, Soccerstats, Forebet, SportyTrader, MatchOutlook, ScoreGPT, Eagle Predict and similar sites are not automatically ingestible just because their pages are public. Many have no supported public API, use dynamic pages, restrict automated collection, or publish predictions rather than independently verifiable match outcomes. Prefer licensed APIs, official downloadable datasets, and permitted RSS feeds. Do not combine tipster picks as if they were ground-truth results or independent probabilities; record them separately and evaluate them against a time-based holdout before using them in the model.

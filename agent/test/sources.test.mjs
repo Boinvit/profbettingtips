@@ -47,3 +47,15 @@ test('registry merges spellings across sources without false merges', () => {
   assert.notEqual(id('Real Madrid'), id('Atletico Madrid')); assert.notEqual(id('Manchester City'), id('Manchester United'));
   assert.equal(r.resolve('Totally Unknown FC', false), null);
 });
+
+test('optional API sources report missing keys without making network requests', async () => {
+  const { fetchApiFootball } = await import('../lib/sources/api-football.mjs');
+  const { fetchOddsApi } = await import('../lib/sources/odds-api.mjs');
+  const health = [];
+  const a = await fetchApiFootball({ key: '', health });
+  const o = await fetchOddsApi({ key: '', health });
+  assert.deepEqual(a, { finished: [], upcoming: [] });
+  assert.deepEqual(o, { upcoming: [] });
+  assert.equal(health.length, 2);
+  assert.equal(health.every(x => x.ok === false), true);
+});
