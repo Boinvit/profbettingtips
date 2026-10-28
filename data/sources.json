@@ -1,0 +1,65 @@
+{
+ "updated": "2026-10-28T18:17:44.491Z",
+ "health": [
+  {
+   "source": "football-data.co.uk",
+   "ok": true,
+   "detail": "84 files ok, 0 failed; 28221 results, 83 fixtures"
+  },
+  {
+   "source": "football-data.org",
+   "ok": false,
+   "detail": "no API key (optional)"
+  },
+  {
+   "source": "ClubElo",
+   "ok": false,
+   "detail": "HTTP 502"
+  },
+  {
+   "source": "SportPesa",
+   "ok": true,
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-28T18:17:18.699Z"
+  },
+  {
+   "source": "Google News RSS",
+   "ok": true,
+   "detail": "109 teams fetched, 0 failed"
+  }
+ ],
+ "unmatchedListed": [
+  "AC Monza Brianz vs Napoli",
+  "Celtic vs Dundee Utd",
+  "Arsenal W vs SL Benfica W",
+  "Lyon W vs Inter Milan W",
+  "PAOK FC vs AEK Athens",
+  "Olimpija Ljubljana vs NK Celje",
+  "Ajax W vs Malmo FF",
+  "UE Porreres vs UD Alcudia",
+  "Quick Boys vs VV Eemdijk",
+  "JOS Watergraafsmeer vs NAC Breda",
+  "Bristol Academy W vs Tottenham W",
+  "London City Lionesses vs Crystal Palace W",
+  "FC Roskilde vs AGF Aarhus",
+  "Manchester United W vs Burnley FC Women",
+  "SC Genemuiden vs Dordrecht",
+  "Sheffield United Community Lfc vs Everton W",
+  "PEC Zwolle vs FC Oss",
+  "VVV Venlo vs Vitesse Arnhem",
+  "Maastricht vs Excelsior",
+  "Vvsb vs EVV",
+  "LASK Linz vs Josko Ried",
+  "Campobasso Calcio vs Latina",
+  "Charlton Athletic W vs West Ham United W",
+  "Union Brescia vs Cittadella",
+  "GOSK Gabela vs Siroki Brijeg",
+  "Wolverhampton Wanderers Wfc vs Brighton W",
+  "Athletic Carpi vs Ravenna Calcio",
+  "Fidelis Andria vs Virtus Francavilla",
+  "Aston Villa Lfc W vs Birmingham W",
+  "Farnborough vs Weston Super Mare",
+  "SC Faetano vs FC Domagnano",
+  "SP Tre Fiori vs FC Fiorentino"
+ ],
+ "unknownJackpotTeams": []
+}

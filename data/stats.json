@@ -1,1 +1,104 @@
-{"updated":null,"settled":0,"pending":0,"markets":{},"scoring":{},"byComp":[],"byConf":[],"byModel":[],"series":[],"rolling":{},"jackpots":[]}
+{
+ "updated": "2026-10-28T18:19:50.339Z",
+ "settled": 0,
+ "enhanced": {
+  "n": 0,
+  "full": {
+   "acc": null,
+   "logloss": null
+  },
+  "base": {
+   "acc": null,
+   "logloss": null
+  },
+  "withOdds": {
+   "n": 0,
+   "acc": null,
+   "baseAcc": null
+  },
+  "withNews": {
+   "n": 0,
+   "acc": null,
+   "baseAcc": null
+  }
+ },
+ "listed": {
+  "sportpesa": {
+   "n": 0,
+   "x12": null
+  },
+  "other": {
+   "n": 0,
+   "x12": null
+  }
+ },
+ "pending": 56,
+ "markets": {
+  "x12": {
+   "n": 0,
+   "correct": 0,
+   "acc": null
+  },
+  "dc": {
+   "n": 0,
+   "correct": 0,
+   "acc": null
+  },
+  "ou": {
+   "n": 0,
+   "correct": 0,
+   "acc": null
+  },
+  "bt": {
+   "n": 0,
+   "correct": 0,
+   "acc": null
+  }
+ },
+ "scoring": {
+  "logloss": null,
+  "brier": null,
+  "baselineLogloss": 1.0986,
+  "baselineAlwaysHome": null
+ },
+ "byComp": [],
+ "byConf": [
+  {
+   "key": "<45%",
+   "n": 0,
+   "predicted": null,
+   "actual": null
+  },
+  {
+   "key": "45–55%",
+   "n": 0,
+   "predicted": null,
+   "actual": null
+  },
+  {
+   "key": "55–65%",
+   "n": 0,
+   "predicted": null,
+   "actual": null
+  },
+  {
+   "key": "65%+",
+   "n": 0,
+   "predicted": null,
+   "actual": null
+  }
+ ],
+ "byModel": [],
+ "series": [],
+ "rolling": {
+  "last50": {
+   "n": 0,
+   "x12": null
+  },
+  "last200": {
+   "n": 0,
+   "x12": null
+  }
+ },
+ "jackpots": []
+}
