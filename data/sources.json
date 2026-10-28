@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T18:17:44.491Z",
+ "updated": "2026-10-28T19:37:36.965Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -12,6 +12,26 @@
    "detail": "no API key (optional)"
   },
   {
+   "source": "API-Football",
+   "ok": false,
+   "detail": "no API_FOOTBALL_KEY (optional)"
+  },
+  {
+   "source": "OpenLigaDB",
+   "ok": true,
+   "detail": "63 results, 243 fixtures (German Bundesliga)"
+  },
+  {
+   "source": "The Odds API",
+   "ok": false,
+   "detail": "no THE_ODDS_API_KEY (optional)"
+  },
+  {
+   "source": "The Odds API",
+   "ok": false,
+   "detail": "r.finished is not iterable (cannot read property undefined)"
+  },
+  {
    "source": "ClubElo",
    "ok": false,
    "detail": "HTTP 502"
@@ -19,12 +39,12 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-28T18:17:18.699Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-28T19:37:11.371Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "109 teams fetched, 0 failed"
+   "detail": "14 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
@@ -32,34 +52,26 @@
   "Celtic vs Dundee Utd",
   "Arsenal W vs SL Benfica W",
   "Lyon W vs Inter Milan W",
-  "PAOK FC vs AEK Athens",
-  "Olimpija Ljubljana vs NK Celje",
-  "Ajax W vs Malmo FF",
-  "UE Porreres vs UD Alcudia",
-  "Quick Boys vs VV Eemdijk",
-  "JOS Watergraafsmeer vs NAC Breda",
-  "Bristol Academy W vs Tottenham W",
-  "London City Lionesses vs Crystal Palace W",
-  "FC Roskilde vs AGF Aarhus",
-  "Manchester United W vs Burnley FC Women",
-  "SC Genemuiden vs Dordrecht",
-  "Sheffield United Community Lfc vs Everton W",
-  "PEC Zwolle vs FC Oss",
-  "VVV Venlo vs Vitesse Arnhem",
-  "Maastricht vs Excelsior",
-  "Vvsb vs EVV",
-  "LASK Linz vs Josko Ried",
-  "Campobasso Calcio vs Latina",
-  "Charlton Athletic W vs West Ham United W",
-  "Union Brescia vs Cittadella",
-  "GOSK Gabela vs Siroki Brijeg",
-  "Wolverhampton Wanderers Wfc vs Brighton W",
-  "Athletic Carpi vs Ravenna Calcio",
-  "Fidelis Andria vs Virtus Francavilla",
-  "Aston Villa Lfc W vs Birmingham W",
-  "Farnborough vs Weston Super Mare",
+  "SP Tre Fiori vs FC Fiorentino",
   "SC Faetano vs FC Domagnano",
-  "SP Tre Fiori vs FC Fiorentino"
+  "SS Virtus vs SS Murata",
+  "Sutton United vs Aldershot",
+  "Farnborough vs Weston Super Mare",
+  "FAR Rabat vs Ittihad Tanger",
+  "Excelsior Maassluis vs SC Heerenveen",
+  "Alianza Atletico vs Deportivo Garcilaso",
+  "Bragantino SP vs Chapecoense",
+  "Once Caldas vs Alianza FC Valledupar",
+  "New York City vs Atlanta United",
+  "Universidad Catolica vs Audax Italiano",
+  "Charlotte FC vs Montreal Impact",
+  "Club Cienciano vs Atletico Grau",
+  "Delfin SC vs Independiente DV",
+  "Atletico Tucuman vs CA Platense",
+  "Remo PA vs Botafogo RJ",
+  "Bahia BA vs Sao Paulo",
+  "Saint Louis City SC vs Portland Timbers",
+  "Minnesota Utd vs Sporting Kansas City"
  ],
  "unknownJackpotTeams": []
 }

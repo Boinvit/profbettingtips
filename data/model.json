@@ -1,5 +1,5 @@
 {
- "v": 2,
+ "v": 3,
  "params": {
   "k": 17.375,
   "homeAdv": 77.5,
@@ -8,9 +8,9 @@
   "adAlpha": 0.0587,
   "drawBoost": 0.1,
   "temp": 1,
-  "wOdds": 0.8083
+  "wOdds": 0.9749
  },
- "tunedOn": 28221,
+ "tunedOn": 28251,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -35,14 +35,38 @@
     "temp": 1,
     "wOdds": 0.8083
    }
+  },
+  {
+   "at": "2026-10-28T19:37:36.965Z",
+   "n": 28251,
+   "adopted": true,
+   "v": 3,
+   "logloss": [
+    1.0143,
+    1.0131
+   ],
+   "acc": [
+    0.4962,
+    0.4967
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1822,
-   "att": 2.11,
-   "def": 0.67
+   "elo": 1826,
+   "att": 2.07,
+   "def": 0.66
   },
   {
    "team": "Barcelona",
@@ -177,18 +201,18 @@
    "def": 0.65
   },
   {
+   "team": "Dortmund",
+   "elo": 1707,
+   "att": 1.23,
+   "def": 0.52
+  },
+  {
    "team": "AEK",
    "elo": 1704,
    "att": 1.71,
    "def": 0.46
-  },
-  {
-   "team": "Krasnodar",
-   "elo": 1698,
-   "att": 1.61,
-   "def": 0.7
   }
  ],
- "matches": 28221,
- "updated": "2026-10-28T18:17:44.491Z"
+ "matches": 28251,
+ "updated": "2026-10-28T19:37:36.965Z"
 }

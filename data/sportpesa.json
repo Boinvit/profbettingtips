@@ -1,17 +1,11 @@
 {
- "scrapedAt": "2026-10-28T18:17:18.699Z",
+ "scrapedAt": "2026-10-28T19:37:11.371Z",
  "matches": [
   {
    "home": "Bayern Munchen",
    "away": "Magdeburg",
    "kickoff": "2026-10-28T19:45:00.000Z",
    "league": "DFB Pokal"
-  },
-  {
-   "home": "Manchester City",
-   "away": "Brighton",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "EFL Cup"
   },
   {
    "home": "Liverpool",
@@ -92,202 +86,10 @@
    "league": "League Cup"
   },
   {
-   "home": "PAOK FC",
-   "away": "AEK Athens",
-   "kickoff": "2026-10-28T18:30:00.000Z",
-   "league": "Greece Cup"
-  },
-  {
-   "home": "Olimpija Ljubljana",
-   "away": "NK Celje",
-   "kickoff": "2026-10-28T18:30:00.000Z",
-   "league": "PrvaLiga"
-  },
-  {
-   "home": "Ajax W",
-   "away": "Malmo FF",
-   "kickoff": "2026-10-28T18:30:00.000Z",
-   "league": "UEFA Europa Cup, Women"
-  },
-  {
-   "home": "UE Porreres",
-   "away": "UD Alcudia",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "Tercera Division, Group 11"
-  },
-  {
-   "home": "Quick Boys",
-   "away": "VV Eemdijk",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "JOS Watergraafsmeer",
-   "away": "NAC Breda",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "Bristol Academy W",
-   "away": "Tottenham W",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "London City Lionesses",
-   "away": "Crystal Palace W",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "FC Roskilde",
-   "away": "AGF Aarhus",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "DBU Pokalen"
-  },
-  {
-   "home": "Manchester United W",
-   "away": "Burnley FC Women",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "SC Genemuiden",
-   "away": "Dordrecht",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "Sheffield United Community Lfc",
-   "away": "Everton W",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "PEC Zwolle",
-   "away": "FC Oss",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "Carrarese",
-   "away": "Arezzo",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "Serie B"
-  },
-  {
-   "home": "VVV Venlo",
-   "away": "Vitesse Arnhem",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "Maastricht",
-   "away": "Excelsior",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "Vvsb",
-   "away": "EVV",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "KNVB beker"
-  },
-  {
-   "home": "Juve Stabia",
-   "away": "Verona",
-   "kickoff": "2026-10-28T19:00:00.000Z",
-   "league": "Serie B"
-  },
-  {
-   "home": "LASK Linz",
-   "away": "Josko Ried",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "OEFB Cup"
-  },
-  {
-   "home": "Campobasso Calcio",
-   "away": "Latina",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "Coppa Italia Serie C"
-  },
-  {
-   "home": "Charlton Athletic W",
-   "away": "West Ham United W",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "Union Brescia",
-   "away": "Cittadella",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "Coppa Italia Serie C"
-  },
-  {
-   "home": "GOSK Gabela",
-   "away": "Siroki Brijeg",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "Bosnia & Herzegovina Cup"
-  },
-  {
-   "home": "Wolverhampton Wanderers Wfc",
-   "away": "Brighton W",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "Lechia Gdansk",
-   "away": "Jagiellonia",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "Puchar Polski"
-  },
-  {
-   "home": "Athletic Carpi",
-   "away": "Ravenna Calcio",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "Coppa Italia Serie C"
-  },
-  {
-   "home": "Fidelis Andria",
-   "away": "Virtus Francavilla",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "Coppa Italia Serie D"
-  },
-  {
-   "home": "Aston Villa Lfc W",
-   "away": "Birmingham W",
-   "kickoff": "2026-10-28T19:30:00.000Z",
-   "league": "FA Womens League Cup"
-  },
-  {
-   "home": "Carlisle",
-   "away": "Harrogate",
-   "kickoff": "2026-10-28T19:45:00.000Z",
-   "league": "National League"
-  },
-  {
-   "home": "St. Johnstone",
-   "away": "Motherwell",
+   "home": "Dundee FC",
+   "away": "Kilmarnock",
    "kickoff": "2026-10-28T19:45:00.000Z",
    "league": "Premiership"
-  },
-  {
-   "home": "Aberdeen",
-   "away": "Falkirk FC",
-   "kickoff": "2026-10-28T19:45:00.000Z",
-   "league": "Premiership"
-  },
-  {
-   "home": "Farnborough",
-   "away": "Weston Super Mare",
-   "kickoff": "2026-10-28T19:45:00.000Z",
-   "league": "National League South"
-  },
-  {
-   "home": "SC Faetano",
-   "away": "FC Domagnano",
-   "kickoff": "2026-10-28T19:45:00.000Z",
-   "league": "Coppa Titano"
   },
   {
    "home": "SP Tre Fiori",
@@ -296,10 +98,208 @@
    "league": "Coppa Titano"
   },
   {
-   "home": "Dundee FC",
-   "away": "Kilmarnock",
+   "home": "St. Johnstone",
+   "away": "Motherwell",
    "kickoff": "2026-10-28T19:45:00.000Z",
    "league": "Premiership"
+  },
+  {
+   "home": "SC Faetano",
+   "away": "FC Domagnano",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "Coppa Titano"
+  },
+  {
+   "home": "Forest Green",
+   "away": "Eastleigh",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "National League"
+  },
+  {
+   "home": "Aberdeen",
+   "away": "Falkirk FC",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "Premiership"
+  },
+  {
+   "home": "SS Virtus",
+   "away": "SS Murata",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "Coppa Titano"
+  },
+  {
+   "home": "Sutton United",
+   "away": "Aldershot",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "National League"
+  },
+  {
+   "home": "St. Mirren",
+   "away": "Hibernian",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "Premiership"
+  },
+  {
+   "home": "Carlisle",
+   "away": "Harrogate",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "National League"
+  },
+  {
+   "home": "Farnborough",
+   "away": "Weston Super Mare",
+   "kickoff": "2026-10-28T19:45:00.000Z",
+   "league": "National League South"
+  },
+  {
+   "home": "FAR Rabat",
+   "away": "Ittihad Tanger",
+   "kickoff": "2026-10-28T20:00:00.000Z",
+   "league": "Botola"
+  },
+  {
+   "home": "Excelsior Maassluis",
+   "away": "SC Heerenveen",
+   "kickoff": "2026-10-28T20:00:00.000Z",
+   "league": "KNVB beker"
+  },
+  {
+   "home": "Hearts",
+   "away": "Rangers FC",
+   "kickoff": "2026-10-28T20:00:00.000Z",
+   "league": "Premiership"
+  },
+  {
+   "home": "Alianza Atletico",
+   "away": "Deportivo Garcilaso",
+   "kickoff": "2026-10-28T20:30:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "Santos",
+   "away": "Palmeiras",
+   "kickoff": "2026-10-28T22:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Fluminense",
+   "away": "Internacional",
+   "kickoff": "2026-10-28T22:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Bragantino SP",
+   "away": "Chapecoense",
+   "kickoff": "2026-10-28T22:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Once Caldas",
+   "away": "Alianza FC Valledupar",
+   "kickoff": "2026-10-28T23:00:00.000Z",
+   "league": "Primera A, Apertura"
+  },
+  {
+   "home": "New York City",
+   "away": "Atlanta United",
+   "kickoff": "2026-10-28T23:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Toronto",
+   "away": "DC United",
+   "kickoff": "2026-10-28T23:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Universidad Catolica",
+   "away": "Audax Italiano",
+   "kickoff": "2026-10-28T23:30:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "Inter Miami",
+   "away": "FC Cincinnati",
+   "kickoff": "2026-10-28T23:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "New England Revolution",
+   "away": "New York Red Bulls",
+   "kickoff": "2026-10-28T23:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Charlotte FC",
+   "away": "Montreal Impact",
+   "kickoff": "2026-10-28T23:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Club Cienciano",
+   "away": "Atletico Grau",
+   "kickoff": "2026-10-29T00:00:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "Delfin SC",
+   "away": "Independiente DV",
+   "kickoff": "2026-10-29T00:00:00.000Z",
+   "league": "Copa Ecuador"
+  },
+  {
+   "home": "Atletico Tucuman",
+   "away": "CA Platense",
+   "kickoff": "2026-10-29T00:15:00.000Z",
+   "league": "Copa Argentina"
+  },
+  {
+   "home": "Dallas",
+   "away": "Columbus Crew",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Austin FC",
+   "away": "Real Salt Lake",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Chicago Fire",
+   "away": "Orlando City",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Remo PA",
+   "away": "Botafogo RJ",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Nashville",
+   "away": "Philadelphia Union",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Bahia BA",
+   "away": "Sao Paulo",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Saint Louis City SC",
+   "away": "Portland Timbers",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Minnesota Utd",
+   "away": "Sporting Kansas City",
+   "kickoff": "2026-10-29T00:30:00.000Z",
+   "league": "Major League Soccer"
   }
  ],
  "jackpots": [],

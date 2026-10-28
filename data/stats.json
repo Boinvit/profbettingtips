@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T18:19:50.339Z",
+ "updated": "2026-10-28T19:38:20.716Z",
  "settled": 0,
  "enhanced": {
   "n": 0,
@@ -32,7 +32,7 @@
    "x12": null
   }
  },
- "pending": 56,
+ "pending": 299,
  "markets": {
   "x12": {
    "n": 0,
