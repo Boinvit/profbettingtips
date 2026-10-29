@@ -1,103 +1,153 @@
 {
- "updated": "2026-10-29T05:54:32.290Z",
- "settled": 0,
+ "updated": "2026-10-29T13:10:25.216Z",
+ "settled": 13,
  "enhanced": {
-  "n": 0,
+  "n": 13,
   "full": {
-   "acc": null,
-   "logloss": null
+   "acc": 0.4615,
+   "logloss": 1.0845
   },
   "base": {
-   "acc": null,
-   "logloss": null
+   "acc": 0.5385,
+   "logloss": 1.105
   },
   "withOdds": {
-   "n": 0,
-   "acc": null,
-   "baseAcc": null
+   "n": 13,
+   "acc": 0.4615,
+   "baseAcc": 0.5385
   },
   "withNews": {
-   "n": 0,
-   "acc": null,
-   "baseAcc": null
+   "n": 13,
+   "acc": 0.4615,
+   "baseAcc": 0.5385
   }
  },
  "listed": {
   "sportpesa": {
-   "n": 0,
-   "x12": null
+   "n": 10,
+   "x12": 0.4
   },
   "other": {
-   "n": 0,
-   "x12": null
+   "n": 3,
+   "x12": 0.6667
   }
  },
- "pending": 300,
+ "pending": 288,
  "markets": {
   "x12": {
-   "n": 0,
-   "correct": 0,
-   "acc": null
+   "n": 13,
+   "correct": 6,
+   "acc": 0.4615
   },
   "dc": {
-   "n": 0,
-   "correct": 0,
-   "acc": null
+   "n": 13,
+   "correct": 9,
+   "acc": 0.6923
   },
   "ou": {
-   "n": 0,
-   "correct": 0,
-   "acc": null
+   "n": 13,
+   "correct": 7,
+   "acc": 0.5385
   },
   "bt": {
-   "n": 0,
-   "correct": 0,
-   "acc": null
+   "n": 13,
+   "correct": 7,
+   "acc": 0.5385
   }
  },
  "scoring": {
-  "logloss": null,
-  "brier": null,
+  "logloss": 1.0845,
+  "brier": 0.6548,
   "baselineLogloss": 1.0986,
-  "baselineAlwaysHome": null
+  "baselineAlwaysHome": 0.4615
  },
- "byComp": [],
+ "byComp": [
+  {
+   "key": "SC0",
+   "n": 6,
+   "x12": 0.1667,
+   "ou": 0.6667,
+   "bt": 0.8333
+  },
+  {
+   "key": "EC",
+   "n": 3,
+   "x12": 1,
+   "ou": 0.3333,
+   "bt": 0
+  },
+  {
+   "key": "I2",
+   "n": 2,
+   "x12": 0.5,
+   "ou": 0.5,
+   "bt": 0.5
+  },
+  {
+   "key": "I1",
+   "n": 2,
+   "x12": 0.5,
+   "ou": 0.5,
+   "bt": 0.5
+  }
+ ],
  "byConf": [
   {
    "key": "<45%",
-   "n": 0,
-   "predicted": null,
-   "actual": null
+   "n": 4,
+   "predicted": 0.407,
+   "actual": 0.25
   },
   {
    "key": "45–55%",
-   "n": 0,
-   "predicted": null,
-   "actual": null
+   "n": 6,
+   "predicted": 0.484,
+   "actual": 0.6667
   },
   {
    "key": "55–65%",
-   "n": 0,
-   "predicted": null,
-   "actual": null
+   "n": 2,
+   "predicted": 0.58,
+   "actual": 0.5
   },
   {
    "key": "65%+",
-   "n": 0,
-   "predicted": null,
-   "actual": null
+   "n": 1,
+   "predicted": 0.741,
+   "actual": 0
   }
  ],
- "byModel": [],
- "series": [],
+ "byModel": [
+  {
+   "key": "v3",
+   "n": 11,
+   "x12": 0.4545,
+   "ou": 0.5455,
+   "bt": 0.5455
+  },
+  {
+   "key": "v2",
+   "n": 2,
+   "x12": 0.5,
+   "ou": 0.5,
+   "bt": 0.5
+  }
+ ],
+ "series": [
+  {
+   "date": "2026-10-28",
+   "n": 13,
+   "acc": 0.4615
+  }
+ ],
  "rolling": {
   "last50": {
-   "n": 0,
-   "x12": null
+   "n": 13,
+   "x12": 0.4615
   },
   "last200": {
-   "n": 0,
-   "x12": null
+   "n": 13,
+   "x12": 0.4615
   }
  },
  "jackpots": []

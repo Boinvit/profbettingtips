@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-29T05:53:46.113Z",
+ "updated": "2026-10-29T13:09:35.136Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 3724 results, 83 fixtures"
+   "detail": "40 files ok, 0 failed; 3768 results, 83 fixtures"
   },
   {
    "source": "football-data.org",
@@ -39,55 +39,55 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-29T05:53:19.375Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-29T13:09:10.807Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "40 teams fetched, 0 failed"
+   "detail": "42 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Shabana FC vs Migori Youth FC",
-  "Mathare United vs Tusker",
   "Kenya Police FC vs Ulinzi Stars",
   "Future FC vs Al Ahly Cairo",
   "Pyramids FC vs Wadi Degla",
   "USC Landhaus W vs Juventus W",
   "Manchester City W vs Paris Saint Germain W",
   "HB Koege W vs Barcelona W",
-  "Adelaide United vs Home United",
-  "Canberra FC vs South Melbourne",
-  "Gangwon vs Kuching FA",
-  "FC Kattaqorgon vs Olimpik Mobiuz",
-  "Tampines vs Svay Rieng",
-  "Bitlis Ozguzelderespor vs Kayserispor",
-  "Zorya Lugansk vs Kryvbas Kryvyi Rih",
-  "Pamba SC vs Singida BS",
-  "Avia Swidnik vs Radomiak Radom",
-  "Olympia Yerevan vs FC Ararat-Armenia",
-  "AL Sharq (Sa) vs Najran SC",
-  "Alshoulla vs AL Washm",
-  "Phnom Penh vs Kitchee",
-  "Wofoo Tai PO FC vs Bangkok Glass",
-  "Shanghai Shenhua vs Machida Zelvia",
-  "Jubbah Club vs AL Arabi (SA)",
-  "KF Iliria Fushe-Kruje vs Flamurtari",
-  "Team FC Cairo vs Mega Sport Belqas",
-  "KF Tirana vs Din. Tirana",
-  "Genclerbirligi vs Sanliurfa Karakopru Belediye Spor",
-  "AL Mansoura vs Haras El Hodood",
-  "Aarhus Fremad vs FC Copenhagen",
-  "La Viena FC vs Dayrout",
-  "Jerash Club vs AL Qous Club",
-  "FC Maan vs AL Aqaba",
-  "Korona II Kielce SA vs Wislanie Jaskowice",
-  "Sutjeska vs Jezero",
-  "TRA FC vs Geita Gold FC",
-  "AL Mosul SC vs AL Julan",
   "Fountain Gate vs Simba SC",
+  "CS Sfaxien vs Esperance Tunis",
+  "FC Petrzalka U19 vs Slovan Bratislava U19",
+  "Africain vs Club A Bizertin",
   "Stade Tunisien vs Sportive Zarzis",
-  "CS Sfaxien vs Esperance Tunis"
+  "AL Naft vs AL Kahraba",
+  "Kryliya Sovetov vs FC Dynamo-Makhachkala",
+  "AL Waab vs Kharaityat",
+  "Al Khaleej Club vs AL Hazm",
+  "Al Sareeh vs Sama AL Sarhan",
+  "Al Ahli Amman vs Ittihad AL Ramtha",
+  "FC Noah vs FC Syunik",
+  "Kasimpasa vs Corluspor 1947",
+  "AL Salt vs Jazeera Amman",
+  "Quwa Al Jawiya vs AL Minaa",
+  "Decic Tuzi vs FK Otrant Ulcinj",
+  "Namungo FC vs Polisi Tanzania FC",
+  "Volos Nps vs Atromitos FC",
+  "Hapoel Tel Aviv W vs MS Kiryat Gat W",
+  "Maccabi Kishronot Hadera W vs Hapoel Katamon Jerusalem W",
+  "Hapoel Raanana W vs Bnot Netanya W",
+  "AS Tel Aviv Women W vs Maccabi Holon W FC",
+  "Karpaty Lviv vs Oleksandria",
+  "Inter Turku vs HJK Helsinki",
+  "Umm Salal SC vs AL Bidda SC",
+  "Chrobry Glogow vs Polonia Bytom SA",
+  "KP Polonia Warsaw vs Korona Kielce",
+  "Brinje Grosuplje vs ASK Bravo",
+  "Tallinna Kalev vs Nomme Kalju II",
+  "KuPS Kuopio vs IF Gnistan",
+  "Werder W vs Hoffenheim W",
+  "AL Kawkab vs Al Jubail",
+  "Maghreb Fes vs RS Berkane",
+  "Austria Lustenau vs Sturm Graz"
  ],
  "unknownJackpotTeams": []
 }
