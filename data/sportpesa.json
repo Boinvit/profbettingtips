@@ -1,305 +1,305 @@
 {
- "scrapedAt": "2026-10-29T13:09:10.807Z",
+ "scrapedAt": "2026-10-29T22:48:41.102Z",
  "matches": [
   {
-   "home": "Everton",
-   "away": "Newcastle",
-   "kickoff": "2026-10-29T19:45:00.000Z",
-   "league": "EFL Cup"
+   "home": "Vasco da Gama",
+   "away": "Flamengo",
+   "kickoff": "2026-10-29T23:00:00.000Z",
+   "league": "Brasileiro Serie A"
   },
   {
-   "home": "Fiorentina",
-   "away": "Atalanta",
-   "kickoff": "2026-10-29T19:45:00.000Z",
-   "league": "Serie A"
+   "home": "Gremio",
+   "away": "Atletico Pr",
+   "kickoff": "2026-10-30T00:30:00.000Z",
+   "league": "Brasileiro Serie A"
   },
   {
-   "home": "Frosinone",
-   "away": "Lecce",
-   "kickoff": "2026-10-29T17:30:00.000Z",
-   "league": "Serie A"
+   "home": "LD Alajuelense",
+   "away": "CD Motagua",
+   "kickoff": "2026-10-30T02:00:00.000Z",
+   "league": "CONCACAF Central American Cup"
   },
   {
-   "home": "Kenya Police FC",
-   "away": "Ulinzi Stars",
-   "kickoff": "2026-10-29T13:15:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Future FC",
-   "away": "Al Ahly Cairo",
-   "kickoff": "2026-10-29T14:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Pyramids FC",
-   "away": "Wadi Degla",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "USC Landhaus W",
-   "away": "Juventus W",
-   "kickoff": "2026-10-29T17:45:00.000Z",
-   "league": "UEFA Champions League Women"
-  },
-  {
-   "home": "Manchester City W",
-   "away": "Paris Saint Germain W",
-   "kickoff": "2026-10-29T20:00:00.000Z",
-   "league": "UEFA Champions League Women"
-  },
-  {
-   "home": "HB Koege W",
-   "away": "Barcelona W",
-   "kickoff": "2026-10-29T20:00:00.000Z",
-   "league": "UEFA Champions League Women"
-  },
-  {
-   "home": "Fountain Gate",
-   "away": "Simba SC",
-   "kickoff": "2026-10-29T13:15:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "CS Sfaxien",
-   "away": "Esperance Tunis",
-   "kickoff": "2026-10-29T13:30:00.000Z",
+   "home": "Le Havre",
+   "away": "Paris St Germain",
+   "kickoff": "2026-10-30T18:00:00.000Z",
    "league": "Ligue 1"
   },
   {
-   "home": "FC Petrzalka U19",
-   "away": "Slovan Bratislava U19",
-   "kickoff": "2026-10-29T13:30:00.000Z",
-   "league": "U19 1. Liga"
+   "home": "Nantes",
+   "away": "Clermont Foot",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Ligue 2"
   },
   {
-   "home": "Africain",
-   "away": "Club A Bizertin",
-   "kickoff": "2026-10-29T13:30:00.000Z",
+   "home": "Nice",
+   "away": "Rennes",
+   "kickoff": "2026-10-30T18:00:00.000Z",
    "league": "Ligue 1"
   },
   {
-   "home": "Stade Tunisien",
-   "away": "Sportive Zarzis",
-   "kickoff": "2026-10-29T13:30:00.000Z",
-   "league": "Ligue 1"
+   "home": "Villarreal",
+   "away": "Espanyol",
+   "kickoff": "2026-10-30T20:00:00.000Z",
+   "league": "LaLiga"
   },
   {
-   "home": "AL Naft",
-   "away": "AL Kahraba",
-   "kickoff": "2026-10-29T13:45:00.000Z",
-   "league": "Iraqi League"
+   "home": "Konyaspor",
+   "away": "Galatasaray",
+   "kickoff": "2026-10-30T17:00:00.000Z",
+   "league": "Super Lig"
   },
   {
-   "home": "Kryliya Sovetov",
-   "away": "FC Dynamo-Makhachkala",
-   "kickoff": "2026-10-29T14:00:00.000Z",
-   "league": "Russian Cup"
+   "home": "Bodo/Glimt",
+   "away": "Viking",
+   "kickoff": "2026-10-30T18:00:00.000Z",
+   "league": "Eliteserien"
   },
   {
-   "home": "AL Waab",
-   "away": "Kharaityat",
-   "kickoff": "2026-10-29T14:15:00.000Z",
-   "league": "2nd Division League"
+   "home": "Brisbane Roar",
+   "away": "Auckland FC",
+   "kickoff": "2026-10-30T09:00:00.000Z",
+   "league": "A-League"
   },
   {
-   "home": "Al Khaleej Club",
-   "away": "AL Hazm",
-   "kickoff": "2026-10-29T14:35:00.000Z",
-   "league": "Saudi Professional League"
+   "home": "CSA Steaua Bucuresti",
+   "away": "CS Dinamo Bucuresti",
+   "kickoff": "2026-10-30T16:00:00.000Z",
+   "league": "Liga 2"
   },
   {
-   "home": "Al Sareeh",
-   "away": "Sama AL Sarhan",
-   "kickoff": "2026-10-29T15:00:00.000Z",
-   "league": "Jordan 1st Division"
-  },
-  {
-   "home": "Al Ahli Amman",
-   "away": "Ittihad AL Ramtha",
-   "kickoff": "2026-10-29T15:00:00.000Z",
-   "league": "Jordan 1st Division"
-  },
-  {
-   "home": "FC Noah",
-   "away": "FC Syunik",
-   "kickoff": "2026-10-29T15:00:00.000Z",
-   "league": "Armenian Cup"
-  },
-  {
-   "home": "Kasimpasa",
-   "away": "Corluspor 1947",
-   "kickoff": "2026-10-29T15:00:00.000Z",
-   "league": "Turkiye Kupasi"
-  },
-  {
-   "home": "AL Salt",
-   "away": "Jazeera Amman",
-   "kickoff": "2026-10-29T15:00:00.000Z",
-   "league": "Jordan League"
-  },
-  {
-   "home": "Quwa Al Jawiya",
-   "away": "AL Minaa",
-   "kickoff": "2026-10-29T15:30:00.000Z",
-   "league": "Iraqi League"
-  },
-  {
-   "home": "Decic Tuzi",
-   "away": "FK Otrant Ulcinj",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "1. CFL"
-  },
-  {
-   "home": "Namungo FC",
-   "away": "Polisi Tanzania FC",
-   "kickoff": "2026-10-29T16:00:00.000Z",
+   "home": "Shakhtar Donetsk",
+   "away": "FC Obolon Kiev",
+   "kickoff": "2026-10-30T16:00:00.000Z",
    "league": "Premier League"
   },
   {
-   "home": "Volos Nps",
-   "away": "Atromitos FC",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Greece Cup"
+   "home": "Arminia Bielefeld",
+   "away": "Eintracht Braunschweig",
+   "kickoff": "2026-10-30T17:30:00.000Z",
+   "league": "2. Bundesliga"
   },
   {
-   "home": "Hapoel Tel Aviv W",
-   "away": "MS Kiryat Gat W",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Ligat Al, Women"
+   "home": "Energie Cottbus",
+   "away": "VfL Bochum",
+   "kickoff": "2026-10-30T17:30:00.000Z",
+   "league": "2. Bundesliga"
   },
   {
-   "home": "Maccabi Kishronot Hadera W",
-   "away": "Hapoel Katamon Jerusalem W",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Ligat Al, Women"
+   "home": "El Ittihad Alexandria",
+   "away": "Talaea El Gaish",
+   "kickoff": "2026-10-30T18:00:00.000Z",
+   "league": "Premier League"
   },
   {
-   "home": "Hapoel Raanana W",
-   "away": "Bnot Netanya W",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Ligat Al, Women"
+   "home": "Rapid Bucuresti",
+   "away": "FK Csikszereda Miercurea Ciuc",
+   "kickoff": "2026-10-30T18:30:00.000Z",
+   "league": "Liga I"
   },
   {
-   "home": "AS Tel Aviv Women W",
-   "away": "Maccabi Holon W FC",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Ligat Al, Women"
+   "home": "Laval",
+   "away": "Boulogne",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Ligue 2"
   },
   {
-   "home": "Karpaty Lviv",
-   "away": "Oleksandria",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Ukraine Cup"
+   "home": "Grenoble Foot",
+   "away": "Dijon",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Ligue 2"
   },
   {
-   "home": "Inter Turku",
-   "away": "HJK Helsinki",
-   "kickoff": "2026-10-29T16:00:00.000Z",
-   "league": "Veikkausliiga"
+   "home": "Helmond Sport",
+   "away": "FC Eindhoven",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Eerste Divisie"
   },
   {
-   "home": "CSKA Moscow",
-   "away": "Lokomotiv Moscow",
-   "kickoff": "2026-10-29T16:30:00.000Z",
-   "league": "Russian Cup"
+   "home": "Waalwick",
+   "away": "Almere City",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Eerste Divisie"
   },
   {
-   "home": "Umm Salal SC",
-   "away": "AL Bidda SC",
-   "kickoff": "2026-10-29T16:30:00.000Z",
-   "league": "2nd Division League"
+   "home": "Metz",
+   "away": "PAU FC",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Ligue 2"
   },
   {
-   "home": "Chrobry Glogow",
-   "away": "Polonia Bytom SA",
-   "kickoff": "2026-10-29T16:30:00.000Z",
-   "league": "Puchar Polski"
+   "home": "Rodez Aveyron",
+   "away": "Dunkerque",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Ligue 2"
   },
   {
-   "home": "KP Polonia Warsaw",
-   "away": "Korona Kielce",
-   "kickoff": "2026-10-29T16:30:00.000Z",
-   "league": "Puchar Polski"
+   "home": "Roda Kerkrade",
+   "away": "Jong AZ Alkmaar",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Eerste Divisie"
   },
   {
-   "home": "Brinje Grosuplje",
-   "away": "ASK Bravo",
-   "kickoff": "2026-10-29T16:30:00.000Z",
-   "league": "PrvaLiga"
+   "home": "FC Volendam",
+   "away": "De Graafschap",
+   "kickoff": "2026-10-30T19:00:00.000Z",
+   "league": "Eerste Divisie"
   },
   {
-   "home": "Tallinna Kalev",
-   "away": "Nomme Kalju II",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "Esiliiga"
+   "home": "Stenhousemuir",
+   "away": "Livingston",
+   "kickoff": "2026-10-30T19:30:00.000Z",
+   "league": "Championship"
   },
   {
-   "home": "KuPS Kuopio",
-   "away": "IF Gnistan",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "Veikkausliiga"
+   "home": "SV Elversberg",
+   "away": "Mainz",
+   "kickoff": "2026-10-30T19:30:00.000Z",
+   "league": "Bundesliga"
   },
   {
-   "home": "Werder W",
-   "away": "Hoffenheim W",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "Bundesliga, Women"
+   "home": "St Patricks",
+   "away": "Bohemians FC",
+   "kickoff": "2026-10-30T19:45:00.000Z",
+   "league": "Premier Division"
   },
   {
-   "home": "AL Kawkab",
-   "away": "Al Jubail",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "Second Division"
+   "home": "Zulte Waregem",
+   "away": "Brugge",
+   "kickoff": "2026-10-30T19:45:00.000Z",
+   "league": "First Division A"
   },
   {
-   "home": "Maghreb Fes",
-   "away": "RS Berkane",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "Botola"
+   "home": "Larne",
+   "away": "Portadown FC",
+   "kickoff": "2026-10-30T19:45:00.000Z",
+   "league": "Premiership"
   },
   {
-   "home": "Austria Lustenau",
-   "away": "Sturm Graz",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "OEFB Cup"
+   "home": "Sheffield Utd",
+   "away": "Wrexham",
+   "kickoff": "2026-10-30T20:00:00.000Z",
+   "league": "Championship"
   },
   {
-   "home": "Sparta Prague W",
-   "away": "SCU Torreense W",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "UEFA Europa Cup, Women"
+   "home": "Lille",
+   "away": "Lens",
+   "kickoff": "2026-10-30T20:05:00.000Z",
+   "league": "Ligue 1"
   },
   {
-   "home": "Trondheims-Orn W",
-   "away": "Brondby W",
-   "kickoff": "2026-10-29T17:00:00.000Z",
-   "league": "UEFA Europa Cup, Women"
+   "home": "Casa Pia Atletico",
+   "away": "Sporting Lisbon",
+   "kickoff": "2026-10-30T20:15:00.000Z",
+   "league": "Primeira Liga"
   },
   {
-   "home": "Deportivo Mixco",
-   "away": "Club Xelaju",
-   "kickoff": "2026-10-29T17:00:00.000Z",
+   "home": "America De Cali",
+   "away": "Fortaleza (COL)",
+   "kickoff": "2026-10-29T23:30:00.000Z",
+   "league": "Primera A, Apertura"
+  },
+  {
+   "home": "CA Wanderers Durazno",
+   "away": "Danubio FC",
+   "kickoff": "2026-10-29T23:30:00.000Z",
+   "league": "Copa Uruguay"
+  },
+  {
+   "home": "Antigua GFC",
+   "away": "Deportivo San Pedro",
+   "kickoff": "2026-10-30T00:00:00.000Z",
    "league": "Liga Nacional. Apertura"
   },
   {
-   "home": "Maccabi Neve Shaanan Eldad",
-   "away": "Hapoel Bnei Jat United",
-   "kickoff": "2026-10-29T17:15:00.000Z",
-   "league": "Liga Alef"
+   "home": "Univ Catolica",
+   "away": "LDU Quito",
+   "kickoff": "2026-10-30T00:00:00.000Z",
+   "league": "Copa Ecuador"
   },
   {
-   "home": "Egnatia Rrogozhine",
-   "away": "Teuta Durres",
-   "kickoff": "2026-10-29T17:30:00.000Z",
-   "league": "Kategoria Superiore"
+   "home": "FBC Melgar",
+   "away": "Comerciantes Unidos",
+   "kickoff": "2026-10-30T00:30:00.000Z",
+   "league": "Primera Division"
   },
   {
-   "home": "Hammarby",
-   "away": "Sirius FK",
-   "kickoff": "2026-10-29T17:30:00.000Z",
-   "league": "Allsvenskan"
+   "home": "Unan Managua",
+   "away": "Walter Ferreti",
+   "kickoff": "2026-10-30T01:00:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "Alebrijes Oaxaca",
+   "away": "M. Zacatecas",
+   "kickoff": "2026-10-30T01:00:00.000Z",
+   "league": "Liga de Ascenso, Apertura"
+  },
+  {
+   "home": "Atletico Nacional",
+   "away": "Independiente Santa Fe",
+   "kickoff": "2026-10-30T01:30:00.000Z",
+   "league": "Primera A, Apertura"
+  },
+  {
+   "home": "CD Marquense",
+   "away": "Deportivo Guastatoya",
+   "kickoff": "2026-10-30T02:10:00.000Z",
+   "league": "Liga Nacional. Apertura"
+  },
+  {
+   "home": "Brunei Dpmm",
+   "away": "Negeri Sembilan",
+   "kickoff": "2026-10-30T08:00:00.000Z",
+   "league": "Super League"
+  },
+  {
+   "home": "Sydney Olympic",
+   "away": "Marconi Stallions",
+   "kickoff": "2026-10-30T08:30:00.000Z",
+   "league": "Australian Championship"
+  },
+  {
+   "home": "Malut United",
+   "away": "Bhayangkara Surabaya Utd",
+   "kickoff": "2026-10-30T08:30:00.000Z",
+   "league": "Liga 1"
+  },
+  {
+   "home": "Broadmeadow Magic",
+   "away": "Adelaide City",
+   "kickoff": "2026-10-30T08:30:00.000Z",
+   "league": "Australian Championship"
+  },
+  {
+   "home": "Ispe FC",
+   "away": "Yadanarbon",
+   "kickoff": "2026-10-30T09:00:00.000Z",
+   "league": "National League"
+  },
+  {
+   "home": "Banik Ostrava U19",
+   "away": "Karvina U19",
+   "kickoff": "2026-10-30T09:00:00.000Z",
+   "league": "U19, 1st Division "
+  },
+  {
+   "home": "Myawady FC",
+   "away": "Yangon Royals",
+   "kickoff": "2026-10-30T09:00:00.000Z",
+   "league": "National League"
+  },
+  {
+   "home": "FC Stade Lausanne-Ouchy",
+   "away": "Yverdon-Sport FC",
+   "kickoff": "2026-10-30T18:30:00.000Z",
+   "league": "Challenge League"
+  },
+  {
+   "home": "FC Bidezarra",
+   "away": "Club Deportivo Aoiz",
+   "kickoff": "2026-10-30T18:30:00.000Z",
+   "league": "Tercera Division, Group 15"
   }
  ],
  "jackpots": [],
