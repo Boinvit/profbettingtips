@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T20:53:28.196Z",
+ "updated": "2026-10-30T22:25:36.097Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -44,12 +44,12 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-30T20:53:03.999Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-30T22:25:11.510Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "570 teams fetched, 0 failed"
+   "detail": "4 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
@@ -64,9 +64,9 @@
   "Tokushima Vortis vs Yokohama",
   "Yongin FC vs Seoul E Land",
   "Chuncheon FC vs Busan Transp.",
+  "Jeonbuk Hyundai vs Daejeon Citizen",
   "Fagiano Okayama vs FC Tokyo",
   "Zwiegen Kanazawa vs Thespakusatsu",
-  "Jeonbuk Hyundai vs Daejeon Citizen",
   "Vegalta Sendai vs Omiya Ardija",
   "Tochigi SC vs Ehime",
   "Kamatamare S vs Nara Club",
@@ -74,12 +74,12 @@
   "Blaublitz Akita vs Fujieda MYFC",
   "Niigata Albirex vs Kataller Toyama",
   "Hoyo Oita vs Tokyo Musashino City FC",
+  "Tegevajaro Miyazaki vs Oita Trinita",
   "Mito Hollyhock vs Sanfrecce Hiroshima",
   "Tochigi City vs Iwaki FC",
-  "Tegevajaro Miyazaki vs Oita Trinita",
-  "Fukushima Utd vs Matsumoto Yamaga",
   "Kyoto Sanga vs Shimizu S Pulse",
-  "Jubilo Iwata vs Sagan Tosu"
+  "Jubilo Iwata vs Sagan Tosu",
+  "Gangneung City vs Yangpyeong FC"
  ],
  "unknownJackpotTeams": []
 }

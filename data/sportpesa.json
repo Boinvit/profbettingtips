@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-10-30T20:53:03.999Z",
+ "scrapedAt": "2026-10-30T22:25:11.510Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -206,6 +206,12 @@
    "league": "K3 League"
   },
   {
+   "home": "Jeonbuk Hyundai",
+   "away": "Daejeon Citizen",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "K-League 1"
+  },
+  {
    "home": "Fagiano Okayama",
    "away": "FC Tokyo",
    "kickoff": "2026-10-31T05:00:00.000Z",
@@ -216,12 +222,6 @@
    "away": "Thespakusatsu",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J.League 3"
-  },
-  {
-   "home": "Jeonbuk Hyundai",
-   "away": "Daejeon Citizen",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "K-League 1"
   },
   {
    "home": "Vegalta Sendai",
@@ -266,6 +266,12 @@
    "league": "Japan Football League"
   },
   {
+   "home": "Tegevajaro Miyazaki",
+   "away": "Oita Trinita",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J2 League"
+  },
+  {
    "home": "Mito Hollyhock",
    "away": "Sanfrecce Hiroshima",
    "kickoff": "2026-10-31T05:00:00.000Z",
@@ -278,18 +284,6 @@
    "league": "J2 League"
   },
   {
-   "home": "Tegevajaro Miyazaki",
-   "away": "Oita Trinita",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J2 League"
-  },
-  {
-   "home": "Fukushima Utd",
-   "away": "Matsumoto Yamaga",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J.League 3"
-  },
-  {
    "home": "Kyoto Sanga",
    "away": "Shimizu S Pulse",
    "kickoff": "2026-10-31T05:00:00.000Z",
@@ -300,6 +294,12 @@
    "away": "Sagan Tosu",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
+  },
+  {
+   "home": "Gangneung City",
+   "away": "Yangpyeong FC",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "K3 League"
   }
  ],
  "jackpots": [],
