@@ -8,6 +8,8 @@ import { tune } from './lib/learn.mjs';
 import { computeStats } from './lib/stats.mjs';
 import { Registry } from './lib/teams.mjs';
 import { parseInbox, buildJackpots } from './lib/jackpot.mjs';
+import { updateAccas } from './lib/accas.mjs';
+import { dropDuplicatePending } from './lib/dupes.mjs';
 
 const MIN_TUNE_MATCHES = 150, RETUNE_EVERY = 30, DAY = 86400000;
 const dayOf = (iso) => iso.slice(0, 10);
@@ -137,8 +139,12 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   const jpUnknown = [...new Set(jackpots.flatMap((j) => j.games.filter((g) => !g.known).flatMap((g) => [g.hId.startsWith('unk:') ? g.home : null, g.aId.startsWith('unk:') ? g.away : null]).filter(Boolean)))];
 
   // 8. publish
+  { const kept = dropDuplicatePending(preds); if (kept.length !== preds.length) { log(`removed ${preds.length - kept.length} duplicate pending prediction(s)`); preds = kept; } }
   preds.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   const stats = computeStats(preds, jackpots);
+  // 7. accumulators: daily / weekend slips from the safest selections, frozen at kickoff and settled from real scores
+  const accas = updateAccas(load('accas.json', { items: [] }), preds, now); save('accas.json', accas);
+  log(`accumulators: ${accas.items.length} (${accas.stats.pending} pending, ${accas.stats.settled} settled, hit rate ${accas.stats.overall.rate ?? 'n/a'})`);
   const recent = preds.filter((p) => p.status === 'pending' || p.kickoff >= new Date(now - 21 * DAY).toISOString());
   const top = Object.entries(state.elo).filter(([id]) => state.n[id] >= 8).sort((a, b) => b[1] - a[1]).slice(0, 25)
     .map(([id, r]) => ({ team: registry.names[id], elo: Math.round(r), att: +state.att[id].toFixed(2), def: +state.def[id].toFixed(2) }));
