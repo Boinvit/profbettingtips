@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T13:02:18.324Z",
+ "updated": "2026-10-30T20:53:28.196Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -19,12 +19,12 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "63 results, 18 fixtures (German Bundesliga)"
+   "detail": "64 results, 17 fixtures (German Bundesliga)"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 96 fixtures next 14d"
+   "detail": "264 results, 95 fixtures next 14d"
   },
   {
    "source": "The Odds API",
@@ -44,54 +44,42 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-30T13:01:52.661Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-30T20:53:03.999Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "576 teams fetched, 0 failed"
+   "detail": "570 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Le Havre vs Paris St Germain",
-  "Casa Pia Atletico vs Sporting Lisbon",
-  "Zulte Waregem vs Brugge",
-  "Shakhtar Donetsk vs FC Obolon Kiev",
-  "El Ittihad Alexandria vs Talaea El Gaish",
-  "Nantes vs Clermont Foot",
-  "Helmond Sport vs FC Eindhoven",
-  "CSA Steaua Bucuresti vs CS Dinamo Bucuresti",
-  "Arminia Bielefeld vs Eintracht Braunschweig",
-  "Energie Cottbus vs VfL Bochum",
-  "Rapid Bucuresti vs FK Csikszereda Miercurea Ciuc",
-  "Grenoble Foot vs Dijon",
-  "Waalwick vs Almere City",
-  "Rodez Aveyron vs Dunkerque",
-  "Roda Kerkrade vs Jong AZ Alkmaar",
-  "FC Volendam vs De Graafschap",
-  "Larne vs Portadown FC",
-  "Malavan vs Chador Malu Yazd",
-  "PFK Xorazm vs Pakhtakor",
-  "Sogdiyona Jizzax vs Buxoro",
-  "Kokand 1912 vs Qizilqum",
-  "AL Karma vs Duhok FC",
-  "Kheybar Khorramabad FC vs Sepahan Esfahan",
-  "Niger Tornadoes FC vs Barau FC",
-  "Ramtha Club vs Buqaa Amman",
-  "Northeast United vs Bengaluru FC",
-  "Shahaniya SC vs Al Ahli Doha",
-  "Inter Luanda vs Desp. Huila",
-  "Foolad Khuzestan vs Aluminium Arak",
-  "Karbalaa vs AL Talaba",
-  "AL Draih vs Neom SC",
-  "CSKA Moscow W vs Kubanochka Krasnodar W",
-  "Veles vs Spartak Kostroma",
-  "Asyut Petroleum vs EL Gouna FC",
-  "AL Hashemeya vs Al-Yarmouk",
-  "Ekranas vs FK Tauras",
-  "Liptovsky Mikulas vs MSK Zilina B",
-  "Riffa Club vs Najma Manama",
-  "FK Arsenal Dzerzhinsk vs BATE Borisov"
+  "Bologna vs AC Monza Brianz",
+  "Brentford vs Nottingham",
+  "Feyenoord vs Fortuna Sittard",
+  "FC Porto vs GD Estoril",
+  "Briobecca Urayasu vs Honda FC",
+  "JEF United W vs Nojima Stella Kanagawa Sagamihara W",
+  "Newcastle Jets vs Wellington",
+  "Honda Lock vs Vonds Ichihara FC",
+  "Tokushima Vortis vs Yokohama",
+  "Yongin FC vs Seoul E Land",
+  "Chuncheon FC vs Busan Transp.",
+  "Fagiano Okayama vs FC Tokyo",
+  "Zwiegen Kanazawa vs Thespakusatsu",
+  "Jeonbuk Hyundai vs Daejeon Citizen",
+  "Vegalta Sendai vs Omiya Ardija",
+  "Tochigi SC vs Ehime",
+  "Kamatamare S vs Nara Club",
+  "Vanraure Hachnohe vs Montedio Yamagata",
+  "Blaublitz Akita vs Fujieda MYFC",
+  "Niigata Albirex vs Kataller Toyama",
+  "Hoyo Oita vs Tokyo Musashino City FC",
+  "Mito Hollyhock vs Sanfrecce Hiroshima",
+  "Tochigi City vs Iwaki FC",
+  "Tegevajaro Miyazaki vs Oita Trinita",
+  "Fukushima Utd vs Matsumoto Yamaga",
+  "Kyoto Sanga vs Shimizu S Pulse",
+  "Jubilo Iwata vs Sagan Tosu"
  ],
  "unknownJackpotTeams": []
 }
