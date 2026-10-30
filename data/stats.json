@@ -1,67 +1,81 @@
 {
- "updated": "2026-10-30T05:56:50.125Z",
- "settled": 15,
+ "updated": "2026-10-30T13:10:03.520Z",
+ "settled": 43,
  "enhanced": {
-  "n": 15,
+  "n": 43,
   "full": {
-   "acc": 0.4667,
-   "logloss": 1.0675
+   "acc": 0.4884,
+   "logloss": 1.0294
   },
   "base": {
-   "acc": 0.5333,
-   "logloss": 1.0681
+   "acc": 0.4884,
+   "logloss": 1.019
   },
   "withOdds": {
-   "n": 15,
-   "acc": 0.4667,
-   "baseAcc": 0.5333
+   "n": 43,
+   "acc": 0.4884,
+   "baseAcc": 0.4884
   },
   "withNews": {
-   "n": 15,
-   "acc": 0.4667,
-   "baseAcc": 0.5333
+   "n": 43,
+   "acc": 0.4884,
+   "baseAcc": 0.4884
   }
  },
  "listed": {
   "sportpesa": {
-   "n": 12,
-   "x12": 0.4167
+   "n": 25,
+   "x12": 0.44
   },
   "other": {
-   "n": 3,
-   "x12": 0.6667
+   "n": 18,
+   "x12": 0.5556
   }
  },
- "pending": 392,
+ "pending": 634,
  "markets": {
   "x12": {
-   "n": 15,
-   "correct": 7,
-   "acc": 0.4667
+   "n": 43,
+   "correct": 21,
+   "acc": 0.4884
   },
   "dc": {
-   "n": 15,
-   "correct": 10,
-   "acc": 0.6667
+   "n": 43,
+   "correct": 33,
+   "acc": 0.7674
   },
   "ou": {
-   "n": 15,
-   "correct": 9,
-   "acc": 0.6
+   "n": 43,
+   "correct": 23,
+   "acc": 0.5349
   },
   "bt": {
-   "n": 15,
-   "correct": 9,
-   "acc": 0.6
+   "n": 43,
+   "correct": 29,
+   "acc": 0.6744
   }
  },
  "scoring": {
-  "logloss": 1.0675,
-  "brier": 0.6413,
+  "logloss": 1.0294,
+  "brier": 0.6199,
   "baselineLogloss": 1.0986,
-  "baselineAlwaysHome": 0.4667
+  "baselineAlwaysHome": 0.4419
  },
  "byComp": [
+  {
+   "key": "MLS",
+   "n": 14,
+   "x12": 0.5,
+   "ou": 0.5714,
+   "bt": 0.7857
+  },
+  {
+   "key": "Serie A",
+   "n": 8,
+   "x12": 0.625,
+   "ou": 0.5,
+   "bt": 0.5
+  },
   {
    "key": "SC0",
    "n": 6,
@@ -84,46 +98,67 @@
    "bt": 0
   },
   {
+   "key": "Allsvenskan",
+   "n": 3,
+   "x12": 0.6667,
+   "ou": 0.6667,
+   "bt": 0.6667
+  },
+  {
    "key": "I2",
    "n": 2,
    "x12": 0.5,
    "ou": 0.5,
    "bt": 0.5
+  },
+  {
+   "key": "Veikkausliiga",
+   "n": 2,
+   "x12": 0,
+   "ou": 0,
+   "bt": 1
+  },
+  {
+   "key": "Liga MX",
+   "n": 1,
+   "x12": 0,
+   "ou": 0,
+   "bt": 1
   }
  ],
  "byConf": [
   {
    "key": "<45%",
-   "n": 5,
-   "predicted": 0.411,
-   "actual": 0.2
+   "n": 14,
+   "predicted": 0.403,
+   "actual": 0.2857
   },
   {
    "key": "45–55%",
-   "n": 6,
-   "predicted": 0.484,
-   "actual": 0.6667
+   "n": 16,
+   "predicted": 0.494,
+   "actual": 0.625
   },
   {
    "key": "55–65%",
-   "n": 3,
-   "predicted": 0.576,
-   "actual": 0.6667
+   "n": 8,
+   "predicted": 0.605,
+   "actual": 0.5
   },
   {
    "key": "65%+",
-   "n": 1,
-   "predicted": 0.741,
-   "actual": 0
+   "n": 5,
+   "predicted": 0.688,
+   "actual": 0.6
   }
  ],
  "byModel": [
   {
    "key": "v3",
-   "n": 13,
-   "x12": 0.4615,
-   "ou": 0.6154,
-   "bt": 0.6154
+   "n": 41,
+   "x12": 0.4878,
+   "ou": 0.5366,
+   "bt": 0.6829
   },
   {
    "key": "v2",
@@ -136,23 +171,28 @@
  "series": [
   {
    "date": "2026-10-28",
-   "n": 13,
-   "acc": 0.4615
+   "n": 21,
+   "acc": 0.5714
   },
   {
    "date": "2026-10-29",
-   "n": 15,
-   "acc": 0.4667
+   "n": 42,
+   "acc": 0.4762
+  },
+  {
+   "date": "2026-10-30",
+   "n": 43,
+   "acc": 0.4884
   }
  ],
  "rolling": {
   "last50": {
-   "n": 15,
-   "x12": 0.4667
+   "n": 43,
+   "x12": 0.4884
   },
   "last200": {
-   "n": 15,
-   "x12": 0.4667
+   "n": 43,
+   "x12": 0.4884
   }
  },
  "jackpots": []

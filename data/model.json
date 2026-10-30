@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 28432,
+ "tunedOn": 28471,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -96,6 +96,30 @@
    "acc": [
     0.4962,
     0.4962
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
+  },
+  {
+   "at": "2026-10-30T13:02:18.324Z",
+   "n": 28471,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0134,
+    1.0134
+   ],
+   "acc": [
+    0.4961,
+    0.4961
    ],
    "params": {
     "k": 17.375,
@@ -197,7 +221,7 @@
   {
    "team": "Real Madrid",
    "elo": 1741,
-   "att": 1.61,
+   "att": 1.62,
    "def": 0.71
   },
   {
@@ -213,16 +237,16 @@
    "def": 0.73
   },
   {
+   "team": "Flamengo RJ",
+   "elo": 1733,
+   "att": 1.65,
+   "def": 0.64
+  },
+  {
    "team": "Zenit",
    "elo": 1730,
    "att": 1.53,
    "def": 0.4
-  },
-  {
-   "team": "Flamengo RJ",
-   "elo": 1724,
-   "att": 1.57,
-   "def": 0.64
   },
   {
    "team": "Olympiakos",
@@ -237,16 +261,16 @@
    "def": 0.78
   },
   {
-   "team": "Palmeiras",
-   "elo": 1709,
-   "att": 1.32,
-   "def": 0.48
-  },
-  {
    "team": "Dortmund",
    "elo": 1707,
    "att": 1.23,
    "def": 0.52
+  },
+  {
+   "team": "Palmeiras",
+   "elo": 1707,
+   "att": 1.25,
+   "def": 0.45
   },
   {
    "team": "AEK",
@@ -261,6 +285,6 @@
    "def": 0.73
   }
  ],
- "matches": 28432,
- "updated": "2026-10-30T05:54:58.125Z"
+ "matches": 28471,
+ "updated": "2026-10-30T13:02:18.324Z"
 }
