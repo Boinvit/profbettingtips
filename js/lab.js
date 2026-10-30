@@ -79,6 +79,7 @@ import { predict, picks, newState } from '../agent/lib/model.mjs';
       <div class="panel"><h3>Head to head</h3>${h2h.length ? `<table class="tbl"><tbody>${h2h.map((m) => `<tr><td>${m.d.slice(0, 10)}</td><td style="text-align:left">${esc(R.teams[m.h]?.n || '')} ${m.hg}–${m.ag} ${esc(R.teams[m.a]?.n || '')}</td></tr>`).join('')}</tbody></table>` : '<p class="note">No meetings in the stored history.</p>'}</div>`;
   }
 
+  let accasData = { items: [], stats: {} };
   const views = {
     matchup() {
       const R = data.ratings;
@@ -110,10 +111,31 @@ import { predict, picks, newState } from '../agent/lib/model.mjs';
       }
       return out;
     },
+    accas() {
+      const A = accasData, items = (A.items || []).filter((a) => a.status !== 'void');
+      if (!items.length) return `<div class="empty">No accumulators yet. They are built on each agent run from the safest selections once enough upcoming matches are available.</div>`;
+      const o = (A.stats || {}).overall || {}, gl = { banker: 'Banker', solid: 'Solid', risky: 'Risky' }, mark = { won: '✅ Won', lost: '❌ Lost', pending: '' };
+      const card = (a) => `<div class="panel acca ${a.status}"><h3>${esc(a.title)} · ${a.n} legs · ${a.odds.toFixed(2)}${a.est ? '*' : ''} odds <span class="chip ${a.grade === 'banker' ? 'ok' : a.grade === 'risky' ? 'no' : 'main'}">${gl[a.grade]}</span> ${mark[a.status] || ''}</h3>
+        <p class="note">Model chance that every leg lands: <b>${pct(a.prob, 0)}</b></p>
+        ${a.legs.map((l) => `<div class="row"><div class="t">${esc(time(l.kickoff))}<small>${esc(COMP[l.comp] || l.comp)}</small></div><div class="m">${esc(l.home)} vs ${esc(l.away)}<small>${esc(l.label)}</small></div><div class="pick"><span class="chip ${l.ok === undefined ? '' : l.ok ? 'ok' : 'no'}">@${l.odds.toFixed(2)} · ${pct(l.p, 0)}${l.res ? ` · ${l.res.hg}–${l.res.ag}` : ''}${l.ok === undefined ? '' : l.ok ? ' ✓' : ' ✗'}</span></div></div>`).join('')}</div>`;
+      const groups = {};
+      for (const a of items) (groups[a.key] ||= []).push(a);
+      let out = `<div class="panel"><h3>Accumulators</h3><p class="note">Built from the model's safest selections (double chance, 1X2, goals). The chance shown assumes the matches are independent: it is an estimate, not a promise, and longer slips lose more often. Slips are locked once the first match kicks off. *Starred odds are estimated by the model (about 7% bookmaker margin) because live prices are not available for every leg, so always check the real price before you bet. Record so far: ${o.n ? `${o.won} of ${o.n} won (model expected ${pct(o.expected, 0)})` : 'no settled slips yet'}.${A.updated ? ` Updated ${esc(day(A.updated))} ${esc(time(A.updated))}.` : ''}</p></div>`;
+      for (const k of Object.keys(groups).sort().reverse()) {
+        const [kind, d] = k.split(':');
+        out += `<div class="day">${kind === 'weekend' ? 'Weekend' : 'Daily'} · ${esc(day(d + 'T12:00:00Z'))}</div>` + groups[k].sort((x, y) => x.odds - y.odds).map(card).join('');
+      }
+      return out;
+    },
     results() {
       const list = data.recent.filter((p) => p.status === 'settled').sort((a, b) => b.kickoff.localeCompare(a.kickoff));
-      if (!list.length) return `<div class="empty">No graded predictions yet. Results appear here after matches finish.</div>`;
-      let out = '', cur = '';
+      const awaiting = data.recent.filter((p) => p.status === 'pending' && new Date(p.kickoff) < Date.now()).sort((a, b) => b.kickoff.localeCompare(a.kickoff));
+      if (!list.length && !awaiting.length) return `<div class="empty">No graded predictions yet. Results appear here after matches finish.</div>`;
+      const graded = (k) => list.filter((p) => p.ok && typeof p.ok[k] === 'boolean');
+      const rate = (k) => { const g = graded(k), w = g.filter((p) => p.ok[k]).length; return g.length ? `${Math.round(100 * w / g.length)}% (${w}/${g.length})` : '–'; };
+      let out = list.length ? `<div class="panel"><h3>Track record (last 21 days)</h3><p class="note">${list.length} graded · 1X2 ${rate('x12')} · Double chance ${rate('dc')} · Over/Under 2.5 ${rate('ou')} · Both teams score ${rate('bt')}. Small samples swing a lot, so see the Accuracy tab for confidence ranges.</p></div>` : '';
+      if (awaiting.length) out += `<div class="day">Awaiting final score (${awaiting.length})</div>` + awaiting.slice(0, 40).map((p) => `<div class="row"><div class="t score">⏳</div><div class="m">${esc(p.home)} vs ${esc(p.away)}<small>${esc(COMP[p.comp] || p.comp)} · ${esc(time(p.kickoff))}</small></div><div class="pick">${['x12', 'dc', 'ou', 'bt'].map((k) => chip(k, p)).join(' ')}</div></div>`).join('');
+      let cur = '';
       for (const p of list) {
         const d = day(p.kickoff);
         if (d !== cur) { out += `<div class="day">${esc(d)}</div>`; cur = d; }
@@ -202,7 +224,8 @@ import { predict, picks, newState } from '../agent/lib/model.mjs';
   });
   document.getElementById('view').addEventListener('click', (e) => { const b = e.target.closest('[data-filter]'); if (b) { filter = b.dataset.filter; show('upcoming'); } });
   document.getElementById('tabs').addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b) show(b.dataset.tab); });
-  Promise.all([get('recent.json', []), get('stats.json', null), get('jackpots.json', []), get('model.json', {}), get('sources.json', {}), get('ratings.json', null), get('news.json', {})]).then(([recent, stats, jackpots, model, sources, ratings, news]) => {
+  Promise.all([get('recent.json', []), get('stats.json', null), get('jackpots.json', []), get('model.json', {}), get('sources.json', {}), get('ratings.json', null), get('news.json', {}), get('accas.json', { items: [], stats: {} })]).then(([recent, stats, jackpots, model, sources, ratings, news, accas]) => {
+    accasData = accas || accasData;
     Object.assign(data, { recent, stats, jackpots, model, sources, ratings, news });
     $('#stamp').textContent = model.updated ? `Last agent run: ${new Date(model.updated).toLocaleString('en-KE', { timeZone: TZ })} EAT · model v${model.v}` : 'Agent has not run yet.';
     show(location.hash.slice(1) || 'upcoming');
