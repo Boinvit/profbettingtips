@@ -727,6 +727,14 @@ async function initOpenMode() {
       set('#featured-league', '⭐ ' + (LAB_COMP[f.comp] || 'Feature') + ' · ' + eatTime(f.kickoff));
       const odds = f.ctx?.odds || [1 / f.p.h, 1 / f.p.d, 1 / f.p.a];
       el.querySelectorAll('.odd-chip .value').forEach((n, i) => { if (odds[i]) n.textContent = (+odds[i]).toFixed(2); });
+      const ix = { H: 0, D: 1, A: 2 }[f.pk.x12];
+      const ini = (t) => t.split(/\s+/).map((w) => w[0]).join('').slice(0, 3).toUpperCase();
+      set('#featured-home-init', ini(f.home)); set('#featured-away-init', ini(f.away));
+      set('.featured-pred-val', LAB_PICK[f.pk.x12]);
+      if (odds[ix]) set('.featured-odds-val', (+odds[ix]).toFixed(2));
+      set('.featured-time', '⏰ ' + eatTime(f.kickoff) + ' EAT');
+      set('.featured-meta', LAB_COMP[f.comp] || '');
+      el.querySelectorAll('.odd-chip').forEach((c, i) => c.classList.toggle('active', i === ix));
     }
   }
 }

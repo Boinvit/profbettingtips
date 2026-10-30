@@ -11,7 +11,6 @@
   <link rel="apple-touch-icon" href="/assets/images/icon.png">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://js.paystack.co/v1/inline.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body data-page="daily">
 
@@ -99,31 +98,7 @@
       </div>
     </div>
     <div class="tips-grid mb-32" id="free-tips-grid">
-      <!-- Loaded by JS or shown as static -->
-      <div class="tip-card">
-        <div class="tip-card-header"><span class="league-tag">Premier League</span><span class="tip-time">20:00</span></div>
-        <div class="tip-body">
-          <div class="tip-teams"><span class="home">Man City</span><span class="vs-small">VS</span><span class="away">Arsenal</span></div>
-          <div class="tip-meta">
-            <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">Home Win</div></div>
-            <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">2.10</div></div>
-            <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">88%</div></div>
-            <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-card-header"><span class="league-tag">La Liga</span><span class="tip-time">21:00</span></div>
-        <div class="tip-body">
-          <div class="tip-teams"><span class="home">Real Madrid</span><span class="vs-small">VS</span><span class="away">Barcelona</span></div>
-          <div class="tip-meta">
-            <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">BTTS</div></div>
-            <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">1.85</div></div>
-            <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">82%</div></div>
-            <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-          </div>
-        </div>
-      </div>
+      <p class="text-muted" style="padding:20px;">No upcoming predictions yet. They appear after the agent's next run.</p>
     </div>
 
     <div class="container">
@@ -143,58 +118,6 @@
       </div>
     </div>
     <div class="tips-grid" id="predictions-grid">
-      <!-- Loaded by JS -->
-      <div class="tip-card premium-locked">
-        <div class="tip-card-header"><span class="league-tag">Champions League</span><span class="tip-time">21:00</span></div>
-        <div class="tip-body">
-          <div class="tip-teams"><span class="home">PSG</span><span class="vs-small">VS</span><span class="away">Dortmund</span></div>
-          <div class="tip-meta">
-            <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">?????</div></div>
-            <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">?.??</div></div>
-            <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">??%</div></div>
-            <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-          </div>
-        </div>
-        <div class="lock-overlay">
-          <div class="lock-icon">🔒</div>
-          <div class="lock-text">Premium Tip</div>
-          <button class="btn btn-gold btn-sm" onclick="openCheckoutModal('daily','standard')">Unlock — KES 149</button>
-        </div>
-      </div>
-      <div class="tip-card premium-locked">
-        <div class="tip-card-header"><span class="league-tag">Bundesliga</span><span class="tip-time">20:30</span></div>
-        <div class="tip-body">
-          <div class="tip-teams"><span class="home">Bayern Munich</span><span class="vs-small">VS</span><span class="away">Dortmund</span></div>
-          <div class="tip-meta">
-            <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">?????</div></div>
-            <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">?.??</div></div>
-            <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">??%</div></div>
-            <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-          </div>
-        </div>
-        <div class="lock-overlay">
-          <div class="lock-icon">🔒</div>
-          <div class="lock-text">Premium Tip</div>
-          <button class="btn btn-gold btn-sm" onclick="openCheckoutModal('daily','standard')">Unlock — KES 149</button>
-        </div>
-      </div>
-      <div class="tip-card premium-locked">
-        <div class="tip-card-header"><span class="league-tag">Serie A</span><span class="tip-time">20:45</span></div>
-        <div class="tip-body">
-          <div class="tip-teams"><span class="home">Juventus</span><span class="vs-small">VS</span><span class="away">Roma</span></div>
-          <div class="tip-meta">
-            <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">?????</div></div>
-            <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">?.??</div></div>
-            <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">??%</div></div>
-            <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-          </div>
-        </div>
-        <div class="lock-overlay">
-          <div class="lock-icon">🔒</div>
-          <div class="lock-text">Premium Tip</div>
-          <button class="btn btn-gold btn-sm" onclick="openCheckoutModal('daily','standard')">Unlock — KES 149</button>
-        </div>
-      </div>
     </div>
 
     <!-- CTA Banner -->

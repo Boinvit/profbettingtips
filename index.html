@@ -17,7 +17,6 @@
   <!-- Paystack -->
   <script src="https://js.paystack.co/v1/inline.js"></script>
   <!-- Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Monetag Ad Script (replace with your Publisher ID) -->
   <!-- <script src="//oplerfino.com/YOUR_MONETAG_ID/invoke.js" async></script> -->
 </head>
@@ -68,19 +67,7 @@
   <div class="ticker-bar">
     <div class="ticker-label">⚽ Live</div>
     <div class="ticker-track">
-      <div class="ticker-content" id="ticker-content">
-        <span class="ticker-item">Man City <span class="vs">vs</span> Arsenal &nbsp;|&nbsp; <span class="odds">1.90</span> &nbsp;·&nbsp; 20:00</span>
-        <span class="ticker-item">Real Madrid <span class="vs">vs</span> Barcelona &nbsp;|&nbsp; <span class="odds">2.10</span> &nbsp;·&nbsp; 21:00</span>
-        <span class="ticker-item">PSG <span class="vs">vs</span> Dortmund &nbsp;|&nbsp; <span class="odds">1.75</span> &nbsp;·&nbsp; 20:45</span>
-        <span class="ticker-item">Bayern <span class="vs">vs</span> Juventus &nbsp;|&nbsp; <span class="odds">1.65</span> &nbsp;·&nbsp; 21:00</span>
-        <span class="ticker-item">Liverpool <span class="vs">vs</span> Chelsea &nbsp;|&nbsp; <span class="odds">2.20</span> &nbsp;·&nbsp; 17:30</span>
-        <span class="ticker-item">Inter Milan <span class="vs">vs</span> AC Milan &nbsp;|&nbsp; <span class="odds">2.50</span> &nbsp;·&nbsp; 20:00</span>
-        <!-- duplicated for seamless scroll -->
-        <span class="ticker-item">Man City <span class="vs">vs</span> Arsenal &nbsp;|&nbsp; <span class="odds">1.90</span> &nbsp;·&nbsp; 20:00</span>
-        <span class="ticker-item">Real Madrid <span class="vs">vs</span> Barcelona &nbsp;|&nbsp; <span class="odds">2.10</span> &nbsp;·&nbsp; 21:00</span>
-        <span class="ticker-item">PSG <span class="vs">vs</span> Dortmund &nbsp;|&nbsp; <span class="odds">1.75</span> &nbsp;·&nbsp; 20:45</span>
-        <span class="ticker-item">Bayern <span class="vs">vs</span> Juventus &nbsp;|&nbsp; <span class="odds">1.65</span> &nbsp;·&nbsp; 21:00</span>
-      </div>
+      <div class="ticker-content" id="ticker-content"><span class="ticker-item">Predictions appear here after the next agent run</span></div>
     </div>
   </div>
 
@@ -136,43 +123,43 @@
         <div class="featured-body">
           <div class="match-teams">
             <div class="team">
-              <div class="team-shield" id="featured-home-init">MC</div>
-              <div class="team-name featured-home-name">Man City</div>
+              <div class="team-shield" id="featured-home-init">–</div>
+              <div class="team-name featured-home-name">TBA</div>
             </div>
             <div class="match-vs">VS</div>
             <div class="team">
-              <div class="team-shield" id="featured-away-init">ARS</div>
-              <div class="team-name featured-away-name">Arsenal</div>
+              <div class="team-shield" id="featured-away-init">–</div>
+              <div class="team-name featured-away-name">TBA</div>
             </div>
           </div>
           <div class="match-odds-row">
             <div class="odd-chip active">
               <div class="label">Home</div>
-              <div class="value">2.10</div>
+              <div class="value">–</div>
             </div>
             <div class="odd-chip">
               <div class="label">Draw</div>
-              <div class="value">3.50</div>
+              <div class="value">–</div>
             </div>
             <div class="odd-chip">
               <div class="label">Away</div>
-              <div class="value">3.20</div>
+              <div class="value">–</div>
             </div>
           </div>
           <div class="prediction-row">
             <div>
               <div class="pred-label">Our Prediction</div>
-              <div class="pred-value featured-pred-val">Home Win</div>
+              <div class="pred-value featured-pred-val">–</div>
             </div>
             <div style="text-align:right;">
               <div class="pred-label">Odds</div>
-              <div class="pred-value featured-odds-val">2.10</div>
+              <div class="pred-value featured-odds-val">–</div>
             </div>
           </div>
         </div>
         <div class="featured-footer">
-          <span class="featured-time">⏰ 20:00 EAT</span>
-          <span>Premier League · Matchday 34</span>
+          <span class="featured-time">⏰ –</span>
+          <span class="featured-meta">Next fixtures coming soon</span>
         </div>
       </div>
     </div>
@@ -214,43 +201,7 @@
       </div>
 
       <div class="tips-grid" id="free-tips-grid">
-        <!-- Skeleton placeholders -->
-        <div class="tip-card">
-          <div class="tip-card-header"><span class="league-tag">Premier League</span><span class="tip-time">20:00</span></div>
-          <div class="tip-body">
-            <div class="tip-teams"><span class="home">Man City</span><span class="vs-small">VS</span><span class="away">Arsenal</span></div>
-            <div class="tip-meta">
-              <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">Home Win</div></div>
-              <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">2.10</div></div>
-              <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">88%</div></div>
-              <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="tip-card">
-          <div class="tip-card-header"><span class="league-tag">La Liga</span><span class="tip-time">21:00</span></div>
-          <div class="tip-body">
-            <div class="tip-teams"><span class="home">Real Madrid</span><span class="vs-small">VS</span><span class="away">Barcelona</span></div>
-            <div class="tip-meta">
-              <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">Both to Score</div></div>
-              <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">1.85</div></div>
-              <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">82%</div></div>
-              <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="tip-card">
-          <div class="tip-card-header"><span class="league-tag">Serie A</span><span class="tip-time">20:45</span></div>
-          <div class="tip-body">
-            <div class="tip-teams"><span class="home">Inter Milan</span><span class="vs-small">VS</span><span class="away">AC Milan</span></div>
-            <div class="tip-meta">
-              <div class="tip-meta-item"><div class="key">Prediction</div><div class="val green">Over 2.5</div></div>
-              <div class="tip-meta-item"><div class="key">Odds</div><div class="val gold">1.75</div></div>
-              <div class="tip-meta-item"><div class="key">Confidence</div><div class="val">79%</div></div>
-              <div class="tip-meta-item"><div class="key">Result</div><div class="val text-dim">Pending</div></div>
-            </div>
-          </div>
-        </div>
+        <p class="text-muted" style="padding:20px;">No upcoming predictions yet. They appear after the agent's next run.</p>
       </div>
     </div>
   </section>
