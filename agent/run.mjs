@@ -189,6 +189,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       const { fetchOpenLigaDB } = await import('./lib/sources/openligadb.mjs');
       merge(await fetchOpenLigaDB({ now, health }));
     } catch (e) { health.push({ source: 'OpenLigaDB', ok: false, detail: e.message }); }
+    // d2) openfootball: public-domain full-season fixtures/results for EPL, Championship, La Liga, Serie A
+    try {
+      const { fetchOpenFootball } = await import('./lib/sources/openfootball.mjs');
+      merge(await fetchOpenFootball({ now, health }));
+    } catch (e) { health.push({ source: 'openfootball', ok: false, detail: e.message }); }
     // e) The Odds API: bookmaker 1X2 odds; merges into matching fixtures by team pair/date
     try {
       const { fetchOddsApi } = await import('./lib/sources/odds-api.mjs');

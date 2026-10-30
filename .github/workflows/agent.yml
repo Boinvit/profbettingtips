@@ -30,7 +30,7 @@ jobs:
           node-version: 22
 
       - name: Unit tests
-        run: node --test agent/test/jackpot.test.mjs agent/test/sources.test.mjs
+        run: node --test agent/test/jackpot.test.mjs agent/test/sources.test.mjs agent/test/more-sources.test.mjs
 
       - name: Install browser for SportPesa scrape
         run: |
@@ -44,6 +44,8 @@ jobs:
       - name: Run agent (results, odds, ratings, news -> learn -> predict)
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}   # optional
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}             # optional (API-Sports)
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}             # optional
         run: node agent/run.mjs ${{ inputs.backfill && '--backfill' || '' }}
 
       - name: Save scrape diagnostics

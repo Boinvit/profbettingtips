@@ -11,7 +11,7 @@ export async function fetchOpenLigaDB({ now = new Date(), season = now.getUTCMon
       const result=(x.matchResults||[]).find(r=>r.resultTypeID===2) || (x.matchResults||[]).at(-1);
       if (result && Number.isInteger(result.pointsTeam1) && Number.isInteger(result.pointsTeam2) && new Date(d) <= now)
         finished.push({ c:'D1', d, hn, an, hg:result.pointsTeam1, ag:result.pointsTeam2 });
-      else if (new Date(d)>now) upcoming.push({ c:'D1', d, hn, an });
+      else if (new Date(d)>now && new Date(d)-now <= 14*86400000) upcoming.push({ c:'D1', d, hn, an });
     }
     health.push({ source:'OpenLigaDB', ok:true, detail:`${finished.length} results, ${upcoming.length} fixtures (German Bundesliga)` });
     log(`  OpenLigaDB: ${finished.length} results, ${upcoming.length} fixtures`);
