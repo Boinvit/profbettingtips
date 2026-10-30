@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T22:49:08.409Z",
+ "updated": "2026-10-30T05:54:58.125Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -19,7 +19,12 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "63 results, 243 fixtures (German Bundesliga)"
+   "detail": "63 results, 18 fixtures (German Bundesliga)"
+  },
+  {
+   "source": "openfootball",
+   "ok": true,
+   "detail": "264 results, 96 fixtures next 14d"
   },
   {
    "source": "The Odds API",
@@ -39,45 +44,35 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-29T22:48:41.102Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-30T05:54:32.201Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "48 teams fetched, 0 failed"
+   "detail": "119 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Vasco da Gama vs Flamengo",
-  "Gremio vs Atletico Pr",
-  "LD Alajuelense vs CD Motagua",
   "Le Havre vs Paris St Germain",
+  "Casa Pia Atletico vs Sporting Lisbon",
+  "Zulte Waregem vs Brugge",
+  "Abha vs Al Ittihad Jeddah",
+  "Shakhtar Donetsk vs FC Obolon Kiev",
+  "El Ittihad Alexandria vs Talaea El Gaish",
+  "Farco FC vs Telecom Egypt",
   "Nantes vs Clermont Foot",
+  "Helmond Sport vs FC Eindhoven",
   "Brisbane Roar vs Auckland FC",
   "CSA Steaua Bucuresti vs CS Dinamo Bucuresti",
-  "Shakhtar Donetsk vs FC Obolon Kiev",
   "Arminia Bielefeld vs Eintracht Braunschweig",
   "Energie Cottbus vs VfL Bochum",
-  "El Ittihad Alexandria vs Talaea El Gaish",
   "Rapid Bucuresti vs FK Csikszereda Miercurea Ciuc",
   "Grenoble Foot vs Dijon",
-  "Helmond Sport vs FC Eindhoven",
   "Waalwick vs Almere City",
   "Rodez Aveyron vs Dunkerque",
   "Roda Kerkrade vs Jong AZ Alkmaar",
   "FC Volendam vs De Graafschap",
-  "Zulte Waregem vs Brugge",
   "Larne vs Portadown FC",
-  "Casa Pia Atletico vs Sporting Lisbon",
-  "America De Cali vs Fortaleza (COL)",
-  "CA Wanderers Durazno vs Danubio FC",
-  "Antigua GFC vs Deportivo San Pedro",
-  "Univ Catolica vs LDU Quito",
-  "FBC Melgar vs Comerciantes Unidos",
-  "Unan Managua vs Walter Ferreti",
-  "Alebrijes Oaxaca vs M. Zacatecas",
-  "Atletico Nacional vs Independiente Santa Fe",
-  "CD Marquense vs Deportivo Guastatoya",
   "Brunei Dpmm vs Negeri Sembilan",
   "Sydney Olympic vs Marconi Stallions",
   "Malut United vs Bhayangkara Surabaya Utd",
@@ -85,8 +80,18 @@
   "Ispe FC vs Yadanarbon",
   "Banik Ostrava U19 vs Karvina U19",
   "Myawady FC vs Yangon Royals",
-  "FC Stade Lausanne-Ouchy vs Yverdon-Sport FC",
-  "FC Bidezarra vs Club Deportivo Aoiz"
+  "AZS Wroclaw W vs GKS Katowice W",
+  "Gornik Leczna W vs UKS Sms Lodz W",
+  "Atiker Konyaspor U19 vs Galatasaray Youth",
+  "TT Ha Noi vs PHU Dong FC",
+  "Shabab AL Sahel vs AL Ahed",
+  "Proxy SC vs Ismaily SC",
+  "EL Sekka EL Hadid vs Tanta FC",
+  "Baladiyyat AL Mehalla vs Al Nasr Cairo",
+  "EL Terasanah vs Maleyat Kafr El Zayat",
+  "Kahroba AL Ismailia vs FC Masar",
+  "Rakow II Czestochowa vs Row Rybnik",
+  "El Daklyeh vs El Entag El Harby"
  ],
  "unknownJackpotTeams": []
 }
