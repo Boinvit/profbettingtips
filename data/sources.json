@@ -1,35 +1,35 @@
 {
- "updated": "2026-10-31T12:52:33.488Z",
+ "updated": "2026-10-31T18:23:37.047Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "194 files ok, 0 failed; 88558 results, 307 fixtures"
+   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
   },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "14 results, 153 fixtures"
+   "detail": "41 results, 124 fixtures"
   },
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "46 results, 208 fixtures"
+   "detail": "132 results, 119 fixtures"
   },
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "64 results, 17 fixtures (German Bundesliga)"
+   "detail": "70 results, 11 fixtures (German Bundesliga)"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 93 fixtures next 14d"
+   "detail": "264 results, 75 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "23 events fetched, 8 with 1X2 odds"
+   "detail": "27 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,39 +39,48 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T12:52:09.380Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T18:23:12.680Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "4 teams fetched, 0 failed"
+   "detail": "352 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Feyenoord vs Fortuna Sittard",
-  "Doxa N. Sidirochoriou vs Kavala",
-  "Neftekhimik vs Ska Energiya",
-  "Wiedenbruck vs RW Oberhausen",
-  "Rea vs Odysseas Glyfadas W",
-  "Brabrand IF vs FA 2000",
-  "Hessen Kassel vs SG Barockstadt Fulda-Lehnerz",
-  "NK Jadran LP vs Segesta Sisak",
-  "NK Bilje vs Tabor",
-  "Power Dynamos vs Nkana FC",
-  "Dinamo Brest vs Vitebsk",
-  "NK Inker Zapresic vs Solin",
-  "Volga Ulyanovsk vs Tekstilshchik",
-  "HNK Orijent 1919 vs NK Vukovar 91",
-  "ETSV Weiche vs Kickers Emden",
-  "Shirak Gyumri vs Bkma Yerevan",
-  "IF Brommapojkarna W vs AIK Stockholm W",
-  "VfB Lubeck vs Werder Bremen II",
-  "Real Sociedad B vs Girona",
-  "Bijelo Brdo vs Kustosija",
-  "Nkwazi vs Zesco United",
-  "JK Nomme United vs Levadia Tallinn",
-  "St Andrews vs Pieta",
-  "Panathinaikos U19 vs AEK Athens U19"
+  "FC Gyori Eto vs Vasas SC",
+  "CA Fenix vs CS Cerrito",
+  "CA Penarol vs Mvo Wanderers",
+  "Karlsruher SC vs Heidenheim",
+  "Santiago Morning vs Lota Schwager",
+  "Celik Zenica vs Borac Banja Luka",
+  "RS Waasland Beveren vs Union Saint Gilloise",
+  "Newtown AFC vs Buckley Town",
+  "Independiente Santa Fe W vs Club Olimpia",
+  "FUS Rabat vs Hassania Agadir",
+  "CD Recoleta vs Sportivo Ameliano",
+  "CD Concon National FC vs Brujas de Salamanca",
+  "General Velasquez vs Deportes Rengo",
+  "Alianza Atletico vs ADC Juan Pablo II",
+  "Veraguas United FC B vs Academia Mario Mendez",
+  "San Jose Earthquake vs Real Salt Lake",
+  "C.D. Cacahuatique vs CD Inca",
+  "Lobos Upnfm vs FC Policia Nacional",
+  "O Higgins vs Nublense",
+  "Cocle FC vs Chorrillo",
+  "Academia Puerto Cabello vs Deportivo Tachira",
+  "Ciervos FC vs Santiago FC",
+  "Deportivo Delfines Coatzacoalcos vs La Tribu de Ciudad Juarez",
+  "Zacatepec FC vs Racing FC Porto Palmeiras",
+  "Cruz Azul Hidalgo vs Tlaxcala FC",
+  "Club Olimpo vs Gimnasia Y Esgrima",
+  "Tritones Vallarta MFC vs Pioneros de Cancun",
+  "Real Refineros Cds vs Guerreros de Autlan",
+  "CA Rentistas vs La Luz FC",
+  "Artesanos Metepec FC vs Saltillo Soccer FC",
+  "Sp. San Lorenzo vs Libertad Asuncion",
+  "Nautico PE vs Avai",
+  "Sportivo Luqueno vs Nacional Asuncion"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

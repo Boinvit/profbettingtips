@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 88966,
+ "tunedOn": 89063,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -203,14 +203,38 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-10-31T18:23:37.047Z",
+   "n": 89063,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0139,
+    1.0139
+   ],
+   "acc": [
+    0.4944,
+    0.4944
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1937,
-   "att": 2.07,
-   "def": 0.66
+   "elo": 1941,
+   "att": 1.98,
+   "def": 0.62
   },
   {
    "team": "Inter",
@@ -249,12 +273,6 @@
    "def": 0.66
   },
   {
-   "team": "Man City",
-   "elo": 1868,
-   "att": 1.54,
-   "def": 0.73
-  },
-  {
    "team": "Porto",
    "elo": 1867,
    "att": 1.52,
@@ -277,6 +295,12 @@
    "elo": 1857,
    "att": 1.23,
    "def": 0.5
+  },
+  {
+   "team": "Man City",
+   "elo": 1854,
+   "att": 1.45,
+   "def": 0.73
   },
   {
    "team": "Club Brugge",
@@ -327,22 +351,22 @@
    "def": 0.61
   },
   {
-   "team": "Fenerbahce",
-   "elo": 1807,
-   "att": 1.76,
-   "def": 0.78
-  },
-  {
-   "team": "Dortmund",
-   "elo": 1803,
-   "att": 1.23,
-   "def": 0.52
-  },
-  {
    "team": "AEK",
    "elo": 1799,
    "att": 1.7,
    "def": 0.46
+  },
+  {
+   "team": "Dortmund",
+   "elo": 1799,
+   "att": 1.16,
+   "def": 0.53
+  },
+  {
+   "team": "Fenerbahce",
+   "elo": 1791,
+   "att": 1.7,
+   "def": 0.81
   },
   {
    "team": "Viking",
@@ -351,12 +375,12 @@
    "def": 0.7
   },
   {
-   "team": "Feyenoord",
-   "elo": 1780,
-   "att": 1.52,
-   "def": 0.72
+   "team": "Napoli",
+   "elo": 1777,
+   "att": 1.33,
+   "def": 0.81
   }
  ],
- "matches": 88966,
- "updated": "2026-10-31T12:52:33.488Z"
+ "matches": 89063,
+ "updated": "2026-10-31T18:23:37.047Z"
 }
