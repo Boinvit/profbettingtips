@@ -41,13 +41,13 @@ async function grab(name, url) {
   fs.writeFileSync(path.join(DEBUG, `sportpesa-${name.replace(/\W+/g, '_')}.json`), JSON.stringify({ url, status, seenUrls, textHead: text.slice(0, 3000), found: found.matches.slice(0, 40) }, null, 1));
   await page.close();
   console.log(`${name}: ${status}, ${found.matches.length} matches via ${found.source || 'n/a'}`);
-  return { status, ...found };
+  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length };
 }
 
 const result = { scrapedAt: new Date().toISOString(), matches: [], jackpots: [], diagnostics: [] };
 for (const j of JACKPOTS) {
   const r = await grab(j.name, j.url);
-  result.diagnostics.push({ page: j.name, status: r.status, found: r.matches.length });
+  result.diagnostics.push({ page: j.name, status: r.status, found: r.matches.length, seen: r.seen, head: r.head }); // head: first 400 chars of page text, to diagnose short/empty jackpot lists
   if (r.matches.length >= 8) result.jackpots.push({ name: j.name, closes: r.closes || null, prize: r.prize || '', games: r.matches.map((m) => ({ home: m.home, away: m.away })) });
 }
 for (const l of LISTS) {
