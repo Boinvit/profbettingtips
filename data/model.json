@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 28622,
+ "tunedOn": 88966,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -179,160 +179,184 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-10-31T12:52:33.488Z",
+   "n": 88966,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0139,
+    1.0139
+   ],
+   "acc": [
+    0.4944,
+    0.4944
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1826,
+   "elo": 1937,
    "att": 2.07,
    "def": 0.66
   },
   {
+   "team": "Inter",
+   "elo": 1922,
+   "att": 1.94,
+   "def": 0.79
+  },
+  {
    "team": "Barcelona",
-   "elo": 1824,
+   "elo": 1898,
    "att": 2.11,
    "def": 0.76
   },
   {
-   "team": "Inter",
-   "elo": 1785,
-   "att": 1.94,
-   "def": 0.8
-  },
-  {
-   "team": "Benfica",
-   "elo": 1771,
-   "att": 1.87,
-   "def": 0.66
-  },
-  {
-   "team": "Porto",
-   "elo": 1771,
-   "att": 1.53,
-   "def": 0.48
-  },
-  {
-   "team": "Sp Lisbon",
-   "elo": 1765,
-   "att": 1.83,
-   "def": 0.7
-  },
-  {
-   "team": "PSV Eindhoven",
-   "elo": 1759,
-   "att": 1.77,
-   "def": 0.82
-  },
-  {
-   "team": "Club Brugge",
-   "elo": 1755,
-   "att": 1.87,
-   "def": 0.66
-  },
-  {
-   "team": "Galatasaray",
-   "elo": 1754,
-   "att": 1.62,
-   "def": 0.78
-  },
-  {
-   "team": "Celtic",
-   "elo": 1754,
-   "att": 1.62,
-   "def": 0.69
-  },
-  {
    "team": "Paris SG",
-   "elo": 1752,
+   "elo": 1889,
    "att": 1.61,
    "def": 0.67
   },
   {
+   "team": "Celtic",
+   "elo": 1886,
+   "att": 1.62,
+   "def": 0.69
+  },
+  {
+   "team": "Sp Lisbon",
+   "elo": 1880,
+   "att": 1.83,
+   "def": 0.7
+  },
+  {
+   "team": "Benfica",
+   "elo": 1873,
+   "att": 1.86,
+   "def": 0.66
+  },
+  {
+   "team": "Man City",
+   "elo": 1868,
+   "att": 1.54,
+   "def": 0.73
+  },
+  {
+   "team": "Porto",
+   "elo": 1867,
+   "att": 1.52,
+   "def": 0.48
+  },
+  {
+   "team": "PSV Eindhoven",
+   "elo": 1860,
+   "att": 1.77,
+   "def": 0.82
+  },
+  {
+   "team": "Galatasaray",
+   "elo": 1858,
+   "att": 1.62,
+   "def": 0.78
+  },
+  {
+   "team": "Arsenal",
+   "elo": 1857,
+   "att": 1.23,
+   "def": 0.5
+  },
+  {
+   "team": "Club Brugge",
+   "elo": 1839,
+   "att": 1.87,
+   "def": 0.66
+  },
+  {
    "team": "St. Gilloise",
-   "elo": 1750,
+   "elo": 1834,
    "att": 1.58,
    "def": 0.56
   },
   {
    "team": "Real Madrid",
-   "elo": 1749,
+   "elo": 1829,
    "att": 1.65,
    "def": 0.73
   },
   {
-   "team": "Arsenal",
-   "elo": 1746,
-   "att": 1.23,
-   "def": 0.5
+   "team": "Rangers",
+   "elo": 1826,
+   "att": 1.48,
+   "def": 0.8
   },
   {
-   "team": "Viking",
-   "elo": 1745,
-   "att": 1.63,
-   "def": 0.7
-  },
-  {
-   "team": "Bodo/Glimt",
-   "elo": 1744,
-   "att": 1.6,
-   "def": 0.61
-  },
-  {
-   "team": "Man City",
-   "elo": 1735,
-   "att": 1.54,
-   "def": 0.73
-  },
-  {
-   "team": "Flamengo RJ",
-   "elo": 1733,
-   "att": 1.65,
-   "def": 0.64
+   "team": "Olympiakos",
+   "elo": 1823,
+   "att": 1.17,
+   "def": 0.4
   },
   {
    "team": "Zenit",
-   "elo": 1730,
+   "elo": 1823,
    "att": 1.53,
    "def": 0.4
   },
   {
-   "team": "Olympiakos",
-   "elo": 1721,
-   "att": 1.18,
-   "def": 0.4
+   "team": "Roma",
+   "elo": 1812,
+   "att": 1.69,
+   "def": 0.73
+  },
+  {
+   "team": "Bodo/Glimt",
+   "elo": 1811,
+   "att": 1.59,
+   "def": 0.61
   },
   {
    "team": "Fenerbahce",
-   "elo": 1717,
+   "elo": 1807,
    "att": 1.76,
    "def": 0.78
   },
   {
    "team": "Dortmund",
-   "elo": 1707,
+   "elo": 1803,
    "att": 1.23,
    "def": 0.52
   },
   {
-   "team": "Palmeiras",
-   "elo": 1707,
-   "att": 1.25,
-   "def": 0.45
-  },
-  {
    "team": "AEK",
-   "elo": 1704,
-   "att": 1.71,
+   "elo": 1799,
+   "att": 1.7,
    "def": 0.46
   },
   {
-   "team": "Roma",
-   "elo": 1704,
-   "att": 1.69,
-   "def": 0.73
+   "team": "Viking",
+   "elo": 1789,
+   "att": 1.62,
+   "def": 0.7
+  },
+  {
+   "team": "Feyenoord",
+   "elo": 1780,
+   "att": 1.52,
+   "def": 0.72
   }
  ],
- "matches": 28626,
- "updated": "2026-10-31T12:40:06.119Z"
+ "matches": 88966,
+ "updated": "2026-10-31T12:52:33.488Z"
 }

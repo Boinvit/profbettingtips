@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31T12:40:06.119Z",
+ "updated": "2026-10-31T12:52:33.488Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
+   "detail": "194 files ok, 0 failed; 88558 results, 307 fixtures"
   },
   {
    "source": "football-data.org",
@@ -39,36 +39,35 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T12:39:39.643Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T12:52:09.380Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "532 teams fetched, 0 failed"
+   "detail": "4 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "Feyenoord vs Fortuna Sittard",
-  "Everton W vs Manchester United W",
-  "Hessen Kassel vs SG Barockstadt Fulda-Lehnerz",
-  "Brabrand IF vs FA 2000",
-  "Neftekhimik vs Ska Energiya",
   "Doxa N. Sidirochoriou vs Kavala",
+  "Neftekhimik vs Ska Energiya",
   "Wiedenbruck vs RW Oberhausen",
   "Rea vs Odysseas Glyfadas W",
+  "Brabrand IF vs FA 2000",
+  "Hessen Kassel vs SG Barockstadt Fulda-Lehnerz",
   "NK Jadran LP vs Segesta Sisak",
   "NK Bilje vs Tabor",
+  "Power Dynamos vs Nkana FC",
   "Dinamo Brest vs Vitebsk",
   "NK Inker Zapresic vs Solin",
-  "ETSV Weiche vs Kickers Emden",
-  "HNK Orijent 1919 vs NK Vukovar 91",
-  "IF Brommapojkarna W vs AIK Stockholm W",
-  "Shirak Gyumri vs Bkma Yerevan",
   "Volga Ulyanovsk vs Tekstilshchik",
-  "Power Dynamos vs Nkana FC",
+  "HNK Orijent 1919 vs NK Vukovar 91",
+  "ETSV Weiche vs Kickers Emden",
+  "Shirak Gyumri vs Bkma Yerevan",
+  "IF Brommapojkarna W vs AIK Stockholm W",
+  "VfB Lubeck vs Werder Bremen II",
   "Real Sociedad B vs Girona",
   "Bijelo Brdo vs Kustosija",
-  "VfB Lubeck vs Werder Bremen II",
   "Nkwazi vs Zesco United",
   "JK Nomme United vs Levadia Tallinn",
   "St Andrews vs Pieta",
