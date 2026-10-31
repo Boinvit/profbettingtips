@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T07:38:09.641Z",
+ "updated": "2026-10-31T07:49:16.461Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -28,13 +28,8 @@
   },
   {
    "source": "The Odds API",
-   "ok": false,
-   "detail": "no THE_ODDS_API_KEY (optional)"
-  },
-  {
-   "source": "The Odds API",
-   "ok": false,
-   "detail": "r.finished is not iterable (cannot read property undefined)"
+   "ok": true,
+   "detail": "13 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -44,7 +39,7 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T07:37:03.031Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T07:48:50.081Z"
   },
   {
    "source": "Google News RSS",
@@ -62,20 +57,20 @@
   "Gloria Popesti Leordeni vs AFC Metalul Buzau",
   "PAOK U19 vs Asteras Tripolis U19",
   "FK Vojvodina Novi Sad vs FK Vozdovac",
+  "Zhetysu vs Astana",
   "FK IMT Youth vs OFK Belgrade",
   "Ruzomberok W vs AS Trencin W",
-  "Ulytau FC vs Atyrau",
-  "Zhetysu vs Astana",
   "Elimai FC vs Okzhetpes",
   "FK Kaspiy Aktau vs FK Kyzylzhar Petropavlovsk",
-  "Tobol Kostanay vs Aktobe",
   "Kairat Almaty vs FC Altai Oskemen",
+  "Ulytau FC vs Atyrau",
+  "Tobol Kostanay vs Aktobe",
   "Irtysh Pavlodar vs Ordabasy",
   "Erzurum BB vs Corum Bld",
   "Atromitos Athinon U19 vs Volos Nps U19",
+  "Amarante FC vs Porto B",
   "Hai Phong FC vs Binh Phuoc",
   "Baranovichi vs Naftan Novopolotsk",
-  "Amarante FC vs Porto B",
   "Veres Rivne vs Chernomorets Odessa"
  ],
  "unknownJackpotTeams": [
