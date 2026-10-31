@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31T04:31:41.216Z",
+ "updated": "2026-10-31T05:50:46.715Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "84 files ok, 0 failed; 28302 results, 307 fixtures"
+   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
   },
   {
    "source": "football-data.org",
@@ -14,7 +14,7 @@
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "38 results, 231 fixtures"
+   "detail": "39 results, 228 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -44,12 +44,12 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T04:31:11.592Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T05:50:19.849Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "12 teams fetched, 0 failed"
+   "detail": "3 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
@@ -57,30 +57,27 @@
   "Brentford vs Nottingham",
   "Feyenoord vs Fortuna Sittard",
   "FC Porto vs GD Estoril",
-  "Tokushima Vortis vs Yokohama",
-  "Jeonbuk Hyundai vs Daejeon Citizen",
-  "Yongin FC vs Seoul E Land",
-  "Chuncheon FC vs Busan Transp.",
-  "Kamatamare S vs Nara Club",
-  "Vegalta Sendai vs Omiya Ardija",
-  "Tochigi SC vs Ehime",
-  "Niigata Albirex vs Kataller Toyama",
-  "Fagiano Okayama vs FC Tokyo",
-  "Zwiegen Kanazawa vs Thespakusatsu",
-  "Blaublitz Akita vs Fujieda MYFC",
-  "Vanraure Hachnohe vs Montedio Yamagata",
-  "Hoyo Oita vs Tokyo Musashino City FC",
-  "Tegevajaro Miyazaki vs Oita Trinita",
-  "Mito Hollyhock vs Sanfrecce Hiroshima",
-  "Tochigi City vs Iwaki FC",
-  "Kyoto Sanga vs Shimizu S Pulse",
-  "Jubilo Iwata vs Sagan Tosu",
-  "Gangneung City vs Yangpyeong FC",
-  "Fukushima Utd vs Matsumoto Yamaga",
-  "Gifu vs FC Osaka",
-  "Kochi United SC vs Sagamihara",
-  "Changnyeong WFC W vs Daejeon Sportstoto W",
-  "Imabari vs Ventforet Kofu"
+  "Melbourne City vs Sydney FC",
+  "NTV Beleza W vs Omiya Ardija Ventus W",
+  "Renofa Yamaguchi vs Giravanz Kitakyushu",
+  "Heilongjiang Lava Spring F.C. vs Shenzhen Juniors FC",
+  "Hebei Kungfu vs Guandong GZ-Power FC",
+  "Meizhou Kejia vs Shaanxi Union FC",
+  "Nanjing Fengfan vs Dalian Kun City",
+  "Suzhou Dongwu FC vs Yanbian Longding",
+  "Foshan Nanshi FC vs Shanghai Jiading",
+  "Guangxi Hengchen FC vs Wuxi Wuguo",
+  "Ryukyu vs Gainare Tottori",
+  "Nagano Parceiro vs MIO Biwako Shiga",
+  "Kashiwa Reysol vs Urawa Red Diamonds",
+  "Daegu vs Suwon Samsung",
+  "Chungnam Asan FC vs Gimpo Citizen",
+  "Macarthur vs Western Sydney Wonderers",
+  "Csl Stefanestii de Jos vs Chindia Targoviste",
+  "Cetatea 1932 Suceava vs Bihor",
+  "Kagoshima United vs Roasso Kumamoto",
+  "Targu Mures vs Unirea Slobozia",
+  "Gloria Popesti Leordeni vs AFC Metalul Buzau"
  ],
  "unknownJackpotTeams": []
 }
