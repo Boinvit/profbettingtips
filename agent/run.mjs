@@ -11,6 +11,7 @@ import { parseInbox, buildJackpots } from './lib/jackpot.mjs';
 import { updateAccas } from './lib/accas.mjs';
 import { dropDuplicatePending } from './lib/dupes.mjs';
 import { splitHistory, parseBackfill } from './lib/history.mjs';
+import { buildIntel } from './lib/intel.mjs';
 
 const MIN_TUNE_MATCHES = 150, RETUNE_EVERY = 30, DAY = 86400000;
 const dayOf = (iso) => iso.slice(0, 10);
@@ -160,6 +161,7 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   const last = {}; for (let i = matches.length - 1; i >= 0; i--) { const m = matches[i]; for (const [t, o, gf, ga, home] of [[m.h, m.a, m.hg, m.ag, 1], [m.a, m.h, m.ag, m.hg, 0]]) { const l = (last[t] ||= []); if (l.length < 6) l.push({ d: m.d.slice(0, 10), o: registry.names[o], gf, ga, home }); } }
   const teamsOut = {}; for (const id of Object.keys(state.elo)) if (state.n[id] >= 3) teamsOut[id] = { n: registry.names[id], e: Math.round(state.elo[id]), a: +state.att[id].toFixed(3), d: +state.def[id].toFixed(3), g: state.n[id], f: state.form[id], c: leagueOf.get(id), ce: club.has(id) ? Math.round(club.get(id)) : undefined, l: last[id] || [] };
   save('ratings.json', { updated: now.toISOString(), v: model.v, params: model.params, lg: state.lg, teams: teamsOut });
+  try { save('intel.json', buildIntel({ matches, preds, news: load('news.json', {}), now })); } catch (e) { log(`intel: skipped (${e.message})`); } // dossiers + match briefs, never blocks the run
   save('teams.json', registry.names); { const { recent, older } = splitHistory(matches, now); save('matches.json', recent); save('history.json', older); } save('predictions.json', preds); save('recent.json', recent);
   save('jackpots.json', jackpots, true); save('stats.json', stats, true); save('model.json', model, true); save('sources.json', sources, true); save('news.json', newsCache);
   log(`stats: ${stats.settled} settled, 1X2 accuracy ${stats.markets.x12.acc ?? 'n/a'}`);
