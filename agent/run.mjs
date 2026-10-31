@@ -10,6 +10,7 @@ import { Registry } from './lib/teams.mjs';
 import { parseInbox, buildJackpots } from './lib/jackpot.mjs';
 import { updateAccas } from './lib/accas.mjs';
 import { dropDuplicatePending } from './lib/dupes.mjs';
+import { splitHistory, parseBackfill } from './lib/history.mjs';
 
 const MIN_TUNE_MATCHES = 150, RETUNE_EVERY = 30, DAY = 86400000;
 const dayOf = (iso) => iso.slice(0, 10);
@@ -23,7 +24,7 @@ const near = (list, iso, tol) => (list || []).find((m) => Math.abs(+new Date(m.d
 export async function runOnce({ feed = {}, now = new Date(), log = console.log, forceTune = false } = {}) {
   const health = [...(feed.health || [])];
   const registry = new Registry(load('teams.json', {}), load('aliases.json', {}));
-  let matches = load('matches.json', []);
+  let matches = [...load('history.json', []), ...load('matches.json', [])]; // deep history + recent window
   let preds = load('predictions.json', []);
   let model = load('model.json', { v: 1, params: { ...DEFAULT_PARAMS }, tunedOn: 0, history: [] });
 
@@ -159,7 +160,7 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   const last = {}; for (let i = matches.length - 1; i >= 0; i--) { const m = matches[i]; for (const [t, o, gf, ga, home] of [[m.h, m.a, m.hg, m.ag, 1], [m.a, m.h, m.ag, m.hg, 0]]) { const l = (last[t] ||= []); if (l.length < 6) l.push({ d: m.d.slice(0, 10), o: registry.names[o], gf, ga, home }); } }
   const teamsOut = {}; for (const id of Object.keys(state.elo)) if (state.n[id] >= 3) teamsOut[id] = { n: registry.names[id], e: Math.round(state.elo[id]), a: +state.att[id].toFixed(3), d: +state.def[id].toFixed(3), g: state.n[id], f: state.form[id], c: leagueOf.get(id), ce: club.has(id) ? Math.round(club.get(id)) : undefined, l: last[id] || [] };
   save('ratings.json', { updated: now.toISOString(), v: model.v, params: model.params, lg: state.lg, teams: teamsOut });
-  save('teams.json', registry.names); save('matches.json', matches); save('predictions.json', preds); save('recent.json', recent);
+  save('teams.json', registry.names); { const { recent, older } = splitHistory(matches, now); save('matches.json', recent); save('history.json', older); } save('predictions.json', preds); save('recent.json', recent);
   save('jackpots.json', jackpots, true); save('stats.json', stats, true); save('model.json', model, true); save('sources.json', sources, true); save('news.json', newsCache);
   log(`stats: ${stats.settled} settled, 1X2 accuracy ${stats.markets.x12.acc ?? 'n/a'}`);
   for (const h of health) log(`  source ${h.source}: ${h.ok ? 'OK' : 'FAILED'} - ${h.detail}`);
@@ -169,12 +170,13 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
 // ---- CLI ----
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = new Set(process.argv.slice(2));
+  const backfillN = parseBackfill(args);
   const now = new Date(), health = [];
   const feed = { finished: [], upcoming: [], listed: [], scrapedJackpots: [], clubelo: [], health };
   if (!args.has('--offline')) {
     const merge = (r) => { feed.finished.push(...r.finished); feed.upcoming.push(...r.upcoming); };
     // a) football-data.co.uk: results + odds, 22 divisions + 16 extra leagues
-    try { const { fetchFduk } = await import('./lib/sources/fduk.mjs'); merge(await fetchFduk({ now, backfill: args.has('--backfill'), health })); }
+    try { const { fetchFduk } = await import('./lib/sources/fduk.mjs'); merge(await fetchFduk({ now, backfill: backfillN || false, health })); }
     catch (e) { health.push({ source: 'football-data.co.uk', ok: false, detail: e.message }); }
     // b) football-data.org API (optional key): fresher results
     if (process.env.FOOTBALL_DATA_API_KEY) {
@@ -217,6 +219,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const sp = load('sportpesa.json', null);
   if (sp) { feed.listed = sp.matches || []; feed.scrapedJackpots = sp.jackpots || []; feed.sportpesaMeta = sp;
     if (sp.scrapedAt && now - new Date(sp.scrapedAt) > 3 * DAY) feed.sportpesaMeta.stale = true; }
-  const res = await runOnce({ feed, now, forceTune: args.has('--tune') || args.has('--backfill') });
+  const res = await runOnce({ feed, now, forceTune: args.has('--tune') || backfillN > 0 });
   if (feed.__newsStats) { const n = feed.__newsStats(); const s = res.sources; s.health.push({ source: 'Google News RSS', ok: n.newsOk > 0 || n.newsFail === 0, detail: `${n.newsOk} teams fetched, ${n.newsFail} failed` }); save('sources.json', s, true); }
 }

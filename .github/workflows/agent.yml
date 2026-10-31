@@ -9,6 +9,10 @@ on:
         description: 'Backfill 3 seasons of history to train the model (use once, first run)'
         type: boolean
         default: false
+      seasons:
+        description: 'Deeper backfill: number of seasons of history to load (1-12). Overrides the checkbox above. Example: 8'
+        type: string
+        default: ''
   push:
     paths: ['data/jackpots/inbox.txt', 'data/config.json', 'data/aliases.json']
 
@@ -46,7 +50,7 @@ jobs:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}   # optional
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}             # optional (API-Sports)
           THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}             # optional
-        run: node agent/run.mjs ${{ inputs.backfill && '--backfill' || '' }}
+        run: node agent/run.mjs ${{ inputs.seasons && format('--backfill={0}', inputs.seasons) || (inputs.backfill && '--backfill' || '') }}
 
       - name: Save scrape diagnostics
         if: always()

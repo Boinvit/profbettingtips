@@ -41,7 +41,8 @@ export const seasonCode = (startYear) => String(startYear).slice(2) + String(sta
 
 export async function fetchFduk({ now = new Date(), seasons = 1, backfill = false, log = console.log, health = [], fetchText = defaultFetch } = {}) {
   const startYear = now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
-  const yrs = Array.from({ length: backfill ? 3 : seasons }, (_, i) => startYear - i);
+  const nSeasons = backfill ? (Number.isInteger(backfill) && backfill > 1 ? Math.min(backfill, 12) : 3) : seasons;
+  const yrs = Array.from({ length: nSeasons }, (_, i) => startYear - i);
   const out = { finished: [], upcoming: [] };
   const add = (r) => { out.finished.push(...r.finished); out.upcoming.push(...r.upcoming); };
   let ok = 0, fail = 0;
@@ -55,7 +56,7 @@ export async function fetchFduk({ now = new Date(), seasons = 1, backfill = fals
     } catch (e) { fail++; log(`  fduk ${url.replace(BASE, '')}: ${e.message}`); }
   };
   for (const y of yrs) for (const div of MAIN_DIVS) await tryGet(`${BASE}/mmz4281/${seasonCode(y)}/${div}.csv`, div, false);
-  const minExtra = new Date(Date.UTC(startYear - (backfill ? 2 : 0), 6, 1)).toISOString();
+  const minExtra = new Date(Date.UTC(startYear - (backfill ? nSeasons - 1 : 0), 6, 1)).toISOString();
   for (const code of EXTRA) await tryGet(`${BASE}/new/${code}.csv`, code, false, minExtra);
   await tryGet(`${BASE}/fixtures.csv`, null); await tryGet(`${BASE}/new_league_fixtures.csv`, null);
   health.push({ source: 'football-data.co.uk', ok: ok > 0, detail: `${ok} files ok, ${fail} failed; ${out.finished.length} results, ${out.upcoming.length} fixtures` });
