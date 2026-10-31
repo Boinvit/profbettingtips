@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-10-31T07:19:25.679Z",
+ "scrapedAt": "2026-10-31T07:37:03.031Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -158,18 +158,6 @@
    "league": "Primeira Liga"
   },
   {
-   "home": "Chungnam Asan FC",
-   "away": "Gimpo Citizen",
-   "kickoff": "2026-10-31T07:30:00.000Z",
-   "league": "K-League 2"
-  },
-  {
-   "home": "Daegu",
-   "away": "Suwon Samsung",
-   "kickoff": "2026-10-31T07:30:00.000Z",
-   "league": "K-League 2"
-  },
-  {
    "home": "Macarthur",
    "away": "Western Sydney Wonderers",
    "kickoff": "2026-10-31T08:40:00.000Z",
@@ -206,28 +194,22 @@
    "league": "Liga 2"
   },
   {
-   "home": "Zhfk Krylya Sovetov Samara W",
-   "away": "Spartak Moscow W",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League, Women"
-  },
-  {
    "home": "PAOK U19",
    "away": "Asteras Tripolis U19",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "U19 Super League"
   },
   {
+   "home": "Zhfk Krylya Sovetov Samara W",
+   "away": "Spartak Moscow W",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League, Women"
+  },
+  {
    "home": "FK Vojvodina Novi Sad",
    "away": "FK Vozdovac",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "U19 League"
-  },
-  {
-   "home": "FK Kaspiy Aktau",
-   "away": "FK Kyzylzhar Petropavlovsk",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
   },
   {
    "home": "FK IMT Youth",
@@ -242,6 +224,12 @@
    "league": "1. League Women"
   },
   {
+   "home": "Ulytau FC",
+   "away": "Atyrau",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
    "home": "Zhetysu",
    "away": "Astana",
    "kickoff": "2026-10-31T10:00:00.000Z",
@@ -254,14 +242,14 @@
    "league": "Premier League"
   },
   {
-   "home": "Tobol Kostanay",
-   "away": "Aktobe",
+   "home": "FK Kaspiy Aktau",
+   "away": "FK Kyzylzhar Petropavlovsk",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "Premier League"
   },
   {
-   "home": "Ulytau FC",
-   "away": "Atyrau",
+   "home": "Tobol Kostanay",
+   "away": "Aktobe",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "Premier League"
   },
@@ -296,10 +284,22 @@
    "league": "V-League"
   },
   {
+   "home": "Baranovichi",
+   "away": "Naftan Novopolotsk",
+   "kickoff": "2026-10-31T11:00:00.000Z",
+   "league": "Vysshaya Liga"
+  },
+  {
    "home": "Amarante FC",
    "away": "Porto B",
    "kickoff": "2026-10-31T11:00:00.000Z",
    "league": "Segunda Liga"
+  },
+  {
+   "home": "Veres Rivne",
+   "away": "Chernomorets Odessa",
+   "kickoff": "2026-10-31T11:00:00.000Z",
+   "league": "Premier League"
   }
  ],
  "jackpots": [],

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T07:19:49.383Z",
+ "updated": "2026-10-31T07:38:09.641Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -8,8 +8,8 @@
   },
   {
    "source": "football-data.org",
-   "ok": false,
-   "detail": "no API key (optional)"
+   "ok": true,
+   "detail": "14 results, 157 fixtures"
   },
   {
    "source": "API-Football",
@@ -44,18 +44,16 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T07:19:25.679Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T07:37:03.031Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "1 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "Feyenoord vs Fortuna Sittard",
-  "Chungnam Asan FC vs Gimpo Citizen",
-  "Daegu vs Suwon Samsung",
   "Macarthur vs Western Sydney Wonderers",
   "Csl Stefanestii de Jos vs Chindia Targoviste",
   "Cetatea 1932 Suceava vs Bihor",
@@ -64,19 +62,21 @@
   "Gloria Popesti Leordeni vs AFC Metalul Buzau",
   "PAOK U19 vs Asteras Tripolis U19",
   "FK Vojvodina Novi Sad vs FK Vozdovac",
-  "FK Kaspiy Aktau vs FK Kyzylzhar Petropavlovsk",
   "FK IMT Youth vs OFK Belgrade",
   "Ruzomberok W vs AS Trencin W",
+  "Ulytau FC vs Atyrau",
   "Zhetysu vs Astana",
   "Elimai FC vs Okzhetpes",
+  "FK Kaspiy Aktau vs FK Kyzylzhar Petropavlovsk",
   "Tobol Kostanay vs Aktobe",
-  "Ulytau FC vs Atyrau",
   "Kairat Almaty vs FC Altai Oskemen",
   "Irtysh Pavlodar vs Ordabasy",
   "Erzurum BB vs Corum Bld",
   "Atromitos Athinon U19 vs Volos Nps U19",
   "Hai Phong FC vs Binh Phuoc",
-  "Amarante FC vs Porto B"
+  "Baranovichi vs Naftan Novopolotsk",
+  "Amarante FC vs Porto B",
+  "Veres Rivne vs Chernomorets Odessa"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
