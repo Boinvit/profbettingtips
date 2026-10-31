@@ -1,1 +1,1498 @@
-[]
+[
+ {
+  "id": "mega-jackpot-pro-buohjc",
+  "name": "MEGA Jackpot Pro",
+  "closes": null,
+  "prize": "",
+  "source": "inbox",
+  "created": "2026-10-31T06:49:27.510Z",
+  "games": [
+   {
+    "n": 1,
+    "home": "Coventry City",
+    "away": "Sunderland AFC",
+    "hId": "t:coventry-city",
+    "aId": "t:sunderland",
+    "known": true,
+    "games": 93,
+    "modelV": 3,
+    "form": [
+     "LWWLL",
+     "LLLLD"
+    ],
+    "p": {
+     "h": 0.5926,
+     "d": 0.2329,
+     "a": 0.1745,
+     "o": 0.5432,
+     "b": 0.5273
+    },
+    "xg": [
+     1.94,
+     0.94
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.5925975193979837,
+     "alt": "D",
+     "altp": 0.23294128443900866,
+     "dc": "1X",
+     "dcp": 0.8255388038369923,
+     "ou": "O",
+     "oup": 0.5431867154281542,
+     "bt": "Y",
+     "btp": 0.5272568746567273
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -20,
+       "headlines": [
+        "Team News: Coventry vs. Brighton injury, suspension list, predicted XIs",
+        "Coventry vs Sunderland team news, Meunier returns, Mukiele and Thomas doubts, Isidor in frame",
+        "Lampard on Coventry City injury worry ahead of Sunderland game"
+       ]
+      },
+      "a": {
+       "adj": -24,
+       "headlines": [
+        "Sunderland lineup vs. Coventry: Predicted XI for Premier League fixture as Regis Le Bris sweats on Omar Alderete injury",
+        "Xabi Alonso confirms major early Chelsea injury blow ahead of Sunderland clash next weekend",
+        "Lampard on Coventry City injury worry ahead of Sunderland game"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 2,
+    "home": "FC Lorient",
+    "away": "Stade Brest 29",
+    "hId": "t:lorient",
+    "aId": "unk:stade brest 29",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "DLWWD",
+     ""
+    ],
+    "p": {
+     "h": 0.5312,
+     "d": 0.2459,
+     "a": 0.223,
+     "o": 0.557,
+     "b": 0.5668
+    },
+    "xg": [
+     1.83,
+     1.11
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.5311832875161161,
+     "alt": "D",
+     "altp": 0.24586551612546875,
+     "dc": "1X",
+     "dcp": 0.7770488036415848,
+     "ou": "O",
+     "oup": 0.556958715016852,
+     "bt": "Y",
+     "btp": 0.5667601976079226
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   },
+   {
+    "n": 3,
+    "home": "Albacete Balompie",
+    "away": "CE Sabadell FC",
+    "hId": "unk:albacete balompie",
+    "aId": "unk:ce sabadell fc",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     ""
+    ],
+    "p": {
+     "h": 0.4356,
+     "d": 0.2718,
+     "a": 0.2926,
+     "o": 0.5049,
+     "b": 0.5505
+    },
+    "xg": [
+     1.52,
+     1.2
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.43564096221944204,
+     "alt": "A",
+     "altp": 0.29258108860341364,
+     "dc": "12",
+     "dcp": 0.7282220508228556,
+     "ou": "O",
+     "oup": 0.5049374869921085,
+     "bt": "Y",
+     "btp": 0.5505342415003697
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   },
+   {
+    "n": 4,
+    "home": "Getafe CF",
+    "away": "Sevilla FC",
+    "hId": "t:getafe",
+    "aId": "t:sevilla",
+    "known": true,
+    "games": 94,
+    "modelV": 3,
+    "form": [
+     "WLDLL",
+     "WLDLW"
+    ],
+    "p": {
+     "h": 0.3273,
+     "d": 0.2783,
+     "a": 0.3944,
+     "o": 0.4907,
+     "b": 0.5446
+    },
+    "xg": [
+     1.26,
+     1.4
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.3944039323460479,
+     "alt": "H",
+     "altp": 0.3273422346551927,
+     "dc": "12",
+     "dcp": 0.7217461670012406,
+     "ou": "U",
+     "oup": 0.5092948501837448,
+     "bt": "Y",
+     "btp": 0.5445884234348712
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 5,
+    "home": "SS Arezzo",
+    "away": "Ascoli Calcio 1898",
+    "hId": "t:arezzo",
+    "aId": "unk:ascoli calcio 1898",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "LDWLL",
+     ""
+    ],
+    "p": {
+     "h": 0.3376,
+     "d": 0.2742,
+     "a": 0.3882,
+     "o": 0.5094,
+     "b": 0.5598
+    },
+    "xg": [
+     1.31,
+     1.43
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.3882102630600507,
+     "alt": "H",
+     "altp": 0.33756996003945405,
+     "dc": "12",
+     "dcp": 0.7257802230995047,
+     "ou": "O",
+     "oup": 0.5094164538995791,
+     "bt": "Y",
+     "btp": 0.5597968178052816
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {}
+   },
+   {
+    "n": 6,
+    "home": "Union Berlin",
+    "away": "1. FC Cologne",
+    "hId": "t:union-berlin",
+    "aId": "t:cologne",
+    "known": true,
+    "games": 76,
+    "modelV": 3,
+    "form": [
+     "LWWDD",
+     "LLWLD"
+    ],
+    "p": {
+     "h": 0.438,
+     "d": 0.246,
+     "a": 0.316,
+     "o": 0.6298,
+     "b": 0.6486
+    },
+    "xg": [
+     1.78,
+     1.49
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.43802127527234175,
+     "alt": "A",
+     "altp": 0.3159892718040634,
+     "dc": "12",
+     "dcp": 0.7540105470764051,
+     "ou": "O",
+     "oup": 0.6298293235614255,
+     "bt": "Y",
+     "btp": 0.6486202404323941
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 7,
+    "home": "AD Ceuta",
+    "away": "Sporting Gijon",
+    "hId": "t:ad-ceuta",
+    "aId": "t:sporting-gijon",
+    "known": true,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     ""
+    ],
+    "p": {
+     "h": 0.4356,
+     "d": 0.2718,
+     "a": 0.2926,
+     "o": 0.5049,
+     "b": 0.5505
+    },
+    "xg": [
+     1.52,
+     1.2
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.43564096221944204,
+     "alt": "A",
+     "altp": 0.29258108860341364,
+     "dc": "12",
+     "dcp": 0.7282220508228556,
+     "ou": "O",
+     "oup": 0.5049374869921085,
+     "bt": "Y",
+     "btp": 0.5505342415003697
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 8,
+    "home": "Lausanne-Sport",
+    "away": "FC Thun",
+    "hId": "unk:lausanne sport",
+    "aId": "t:thun",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     "LLWLL"
+    ],
+    "p": {
+     "h": 0.4418,
+     "d": 0.2647,
+     "a": 0.2935,
+     "o": 0.5349,
+     "b": 0.5734
+    },
+    "xg": [
+     1.59,
+     1.25
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.4417887725578562,
+     "alt": "A",
+     "altp": 0.29352962238307617,
+     "dc": "12",
+     "dcp": 0.7353183949409323,
+     "ou": "O",
+     "oup": 0.5349285010717733,
+     "bt": "Y",
+     "btp": 0.5734213566437137
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   },
+   {
+    "n": 9,
+    "home": "Panaitolikos Agrinio",
+    "away": "OFI Crete",
+    "hId": "unk:panaitolikos agrinio",
+    "aId": "t:ofi-crete",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     "WDLLW"
+    ],
+    "p": {
+     "h": 0.4625,
+     "d": 0.2607,
+     "a": 0.2768,
+     "o": 0.5419,
+     "b": 0.5749
+    },
+    "xg": [
+     1.65,
+     1.22
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.4624674286770011,
+     "alt": "A",
+     "altp": 0.2767931624161901,
+     "dc": "12",
+     "dcp": 0.7392605910931912,
+     "ou": "O",
+     "oup": 0.5419387029323477,
+     "bt": "Y",
+     "btp": 0.5748791906483907
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   },
+   {
+    "n": 10,
+    "home": "Paris FC",
+    "away": "AS Monaco",
+    "hId": "t:paris",
+    "aId": "t:monaco",
+    "known": true,
+    "games": 76,
+    "modelV": 3,
+    "form": [
+     "DWLWL",
+     "DWDLD"
+    ],
+    "p": {
+     "h": 0.4379,
+     "d": 0.2578,
+     "a": 0.3044,
+     "o": 0.5704,
+     "b": 0.6022
+    },
+    "xg": [
+     1.65,
+     1.34
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.437894626269171,
+     "alt": "A",
+     "altp": 0.30435127615183777,
+     "dc": "12",
+     "dcp": 0.7422459024210087,
+     "ou": "O",
+     "oup": 0.5704316089215768,
+     "bt": "Y",
+     "btp": 0.6021681459448587
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 11,
+    "home": "Liverpool FC",
+    "away": "Arsenal FC",
+    "hId": "t:liverpool",
+    "aId": "t:arsenal",
+    "known": true,
+    "games": 84,
+    "modelV": 3,
+    "form": [
+     "DWLWW",
+     "WLWWW"
+    ],
+    "p": {
+     "h": 0.2918,
+     "d": 0.2792,
+     "a": 0.429,
+     "o": 0.4752,
+     "b": 0.5277
+    },
+    "xg": [
+     1.15,
+     1.45
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.4289717795998065,
+     "alt": "H",
+     "altp": 0.29184844469554944,
+     "dc": "12",
+     "dcp": 0.7208202242953559,
+     "ou": "U",
+     "oup": 0.5248149842140428,
+     "bt": "Y",
+     "btp": 0.5276896506596902
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -14,
+       "headlines": [
+        "Liverpool injury update: Szoboszlai, Munoz, Frimpong latest return dates",
+        "Rice, Calafiori, Saka - Arsenal injury latest and return dates ahead of Liverpool",
+        "IRAOLA DROPS TRANSFER HINT! + ARSENAL INJURY CRISIS? Liverpool FC Latest Transfer News, Anfield Agenda"
+       ]
+      },
+      "a": {
+       "adj": -16,
+       "headlines": [
+        "Rice, Calafiori, Saka - Arsenal injury latest and return dates ahead of Liverpool",
+        "Arsenal injury update: Calafiori, Rice, Madueke latest return dates",
+        "IRAOLA DROPS TRANSFER HINT! + ARSENAL INJURY CRISIS? Liverpool FC Latest Transfer News, Anfield Agenda"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 12,
+    "home": "NK Lokomotiva Zagreb",
+    "away": "NK Osijek",
+    "hId": "unk:nk lokomotiva zagreb",
+    "aId": "unk:nk osijek",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     ""
+    ],
+    "p": {
+     "h": 0.4356,
+     "d": 0.2718,
+     "a": 0.2926,
+     "o": 0.5049,
+     "b": 0.5505
+    },
+    "xg": [
+     1.52,
+     1.2
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.43564096221944204,
+     "alt": "A",
+     "altp": 0.29258108860341364,
+     "dc": "12",
+     "dcp": 0.7282220508228556,
+     "ou": "O",
+     "oup": 0.5049374869921085,
+     "bt": "Y",
+     "btp": 0.5505342415003697
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   },
+   {
+    "n": 13,
+    "home": "US Lecce",
+    "away": "Genoa CFC",
+    "hId": "t:lecce",
+    "aId": "t:genoa-cfc",
+    "known": true,
+    "games": 5,
+    "modelV": 3,
+    "form": [
+     "LLWLL",
+     "LLLDL"
+    ],
+    "p": {
+     "h": 0.4445,
+     "d": 0.2604,
+     "a": 0.2951,
+     "o": 0.5541,
+     "b": 0.5882
+    },
+    "xg": [
+     1.64,
+     1.29
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.4445462518309886,
+     "alt": "A",
+     "altp": 0.2950519695102833,
+     "dc": "12",
+     "dcp": 0.739598221341272,
+     "ou": "O",
+     "oup": 0.55413229825352,
+     "bt": "Y",
+     "btp": 0.5881877317670843
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 14,
+    "home": "Elche CF",
+    "away": "Valencia CF",
+    "hId": "t:elche",
+    "aId": "t:valencia",
+    "known": true,
+    "games": 95,
+    "modelV": 3,
+    "form": [
+     "WWDDW",
+     "LDDDL"
+    ],
+    "p": {
+     "h": 0.5458,
+     "d": 0.2405,
+     "a": 0.2137,
+     "o": 0.5686,
+     "b": 0.5709
+    },
+    "xg": [
+     1.89,
+     1.1
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.5458229723213914,
+     "alt": "D",
+     "altp": 0.2405007101940892,
+     "dc": "1X",
+     "dcp": 0.7863236825154807,
+     "ou": "O",
+     "oup": 0.5686497383919747,
+     "bt": "Y",
+     "btp": 0.5708660834985966
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 4,
+       "headlines": [
+        "Umar Sadiq steps up Valencia return ahead of Elche trip"
+       ]
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 15,
+    "home": "Maritimo Madeira",
+    "away": "Santa Clara Azores",
+    "hId": "unk:maritimo madeira",
+    "aId": "unk:santa clara azores",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     ""
+    ],
+    "p": {
+     "h": 0.4356,
+     "d": 0.2718,
+     "a": 0.2926,
+     "o": 0.5049,
+     "b": 0.5505
+    },
+    "xg": [
+     1.52,
+     1.2
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.43564096221944204,
+     "alt": "A",
+     "altp": 0.29258108860341364,
+     "dc": "12",
+     "dcp": 0.7282220508228556,
+     "ou": "O",
+     "oup": 0.5049374869921085,
+     "bt": "Y",
+     "btp": 0.5505342415003697
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   },
+   {
+    "n": 16,
+    "home": "Vaalerenga IF",
+    "away": "Tromsoe IL",
+    "hId": "unk:vaalerenga if",
+    "aId": "unk:tromsoe il",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     ""
+    ],
+    "p": {
+     "h": 0.4356,
+     "d": 0.2718,
+     "a": 0.2926,
+     "o": 0.5049,
+     "b": 0.5505
+    },
+    "xg": [
+     1.52,
+     1.2
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.43564096221944204,
+     "alt": "A",
+     "altp": 0.29258108860341364,
+     "dc": "12",
+     "dcp": 0.7282220508228556,
+     "ou": "O",
+     "oup": 0.5049374869921085,
+     "bt": "Y",
+     "btp": 0.5505342415003697
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {}
+   }
+  ],
+  "summary": {
+   "expectedCorrect": 7.28,
+   "pAllCorrect": 0.0000030847086826724428,
+   "unknownTeams": 8
+  }
+ },
+ {
+  "id": "sportpesa-midweek-jackpot-11s7r1",
+  "name": "SportPesa Midweek Jackpot",
+  "closes": "2026-11-04T20:00:00.000Z",
+  "prize": "KES 20,280,097",
+  "source": "inbox",
+  "created": "2026-10-31T06:49:27.510Z",
+  "games": [
+   {
+    "n": 1,
+    "home": "Northampton",
+    "away": "Oldham",
+    "hId": "t:northampton",
+    "aId": "t:oldham",
+    "known": true,
+    "games": 103,
+    "modelV": 3,
+    "form": [
+     "LDWLW",
+     "LDWLD"
+    ],
+    "p": {
+     "h": 0.2553,
+     "d": 0.2715,
+     "a": 0.4732,
+     "o": 0.4835,
+     "b": 0.5247
+    },
+    "xg": [
+     1.07,
+     1.56
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.47319176039973915,
+     "alt": "D",
+     "altp": 0.2714687942371105,
+     "dc": "X2",
+     "dcp": 0.7446605546368497,
+     "ou": "U",
+     "oup": 0.516455887964393,
+     "bt": "Y",
+     "btp": 0.5246774406738538
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -8,
+       "headlines": [
+        "Two injured following multi-vehicle crash on I-64E near Northampton Blvd.",
+        "Preview: Northampton Returns Home to Face Bethlehem Catholic in Regular Season Finale",
+        "Gloucester Rugby injury latest ahead of Northampton Saints: Dewi Lake, Seb Atkinson, James Venter"
+       ]
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 2,
+    "home": "QPR",
+    "away": "Burnley",
+    "hId": "t:queens-park-rangers",
+    "aId": "t:burnley",
+    "known": true,
+    "games": 97,
+    "modelV": 3,
+    "form": [
+     "DDWLW",
+     "DWDLL"
+    ],
+    "p": {
+     "h": 0.5869,
+     "d": 0.2265,
+     "a": 0.1866,
+     "o": 0.5905,
+     "b": 0.5711
+    },
+    "xg": [
+     2.03,
+     1.06
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.5869477699734788,
+     "alt": "D",
+     "altp": 0.226497319504882,
+     "dc": "1X",
+     "dcp": 0.8134450894783607,
+     "ou": "O",
+     "oup": 0.59049634039614,
+     "bt": "Y",
+     "btp": 0.5710937854512483
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -14,
+       "headlines": [
+        "Why Southampton will fear the possible return of this QPR maverick at St Mary's",
+        "Swansea City given injury boost as Matos holds 'honest conversations' after QPR",
+        "Southampton wary of Ilias Chair boost as QPR visit St Mary’s"
+       ]
+      },
+      "a": {
+       "adj": -16,
+       "headlines": [
+        "Burnley v Portsmouth early team news: 18 ruled out and 5 fitness doubts",
+        "Burnley v Pompey: Early team and injury news as 18 out and 8 doubts"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 3,
+    "home": "Preston",
+    "away": "Sheffield Utd",
+    "hId": "t:preston",
+    "aId": "t:sheffield-united",
+    "known": true,
+    "games": 104,
+    "modelV": 3,
+    "form": [
+     "DLLLD",
+     "WLWDW"
+    ],
+    "p": {
+     "h": 0.247,
+     "d": 0.2535,
+     "a": 0.4996,
+     "o": 0.5495,
+     "b": 0.5713
+    },
+    "xg": [
+     1.16,
+     1.75
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.4995584923401789,
+     "alt": "D",
+     "altp": 0.25347002358504045,
+     "dc": "X2",
+     "dcp": 0.7530285159252194,
+     "ou": "O",
+     "oup": 0.5494855185130235,
+     "bt": "Y",
+     "btp": 0.5712601484977101
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -12,
+       "headlines": [
+        "Preston North End injury update on Alfie Devine, Lewis Gibson and Liam Lindsay ahead of Stoke City",
+        "Preston North End squad's heart-warming gesture to Ali McCann when he returned to training",
+        "Gallagher, Ingelsson, Cisse - Stoke City team news vs Preston North End and injury updates"
+       ]
+      },
+      "a": {
+       "adj": -16,
+       "headlines": [
+        "Wrexham news: Parkinson issues injury update ahead of Sheffield United test",
+        "Ryan One: Sheffield United striker out \"for number of weeks\" with hamstring injury",
+        "Wilder reveals fresh Sheffield United injury blow"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 4,
+    "home": "Watford",
+    "away": "Lincoln",
+    "hId": "t:watford",
+    "aId": "t:lincoln",
+    "known": true,
+    "games": 104,
+    "modelV": 3,
+    "form": [
+     "LLLWL",
+     "LLLDW"
+    ],
+    "p": {
+     "h": 0.1923,
+     "d": 0.2337,
+     "a": 0.574,
+     "o": 0.5685,
+     "b": 0.5585
+    },
+    "xg": [
+     1.04,
+     1.95
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.5740042859049795,
+     "alt": "D",
+     "altp": 0.2336539140858865,
+     "dc": "X2",
+     "dcp": 0.8076581999908661,
+     "ou": "O",
+     "oup": 0.5684953225793722,
+     "bt": "Y",
+     "btp": 0.5584628002623437
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": -8,
+       "headlines": [
+        "Lincoln County deputy uses squad car to stop wrong-way driver on Highway 51; two injured"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 5,
+    "home": "Portsmouth",
+    "away": "Swansea",
+    "hId": "t:portsmouth",
+    "aId": "t:swansea-city",
+    "known": true,
+    "games": 106,
+    "modelV": 3,
+    "form": [
+     "LWWDW",
+     "WWWLL"
+    ],
+    "p": {
+     "h": 0.3518,
+     "d": 0.2717,
+     "a": 0.3765,
+     "o": 0.5219,
+     "b": 0.5701
+    },
+    "xg": [
+     1.37,
+     1.42
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.37649123521326605,
+     "alt": "H",
+     "altp": 0.3517990927281942,
+     "dc": "12",
+     "dcp": 0.7282903279414603,
+     "ou": "O",
+     "oup": 0.5219485872330799,
+     "bt": "Y",
+     "btp": 0.570131823322029
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -20,
+       "headlines": [
+        "Burnley v Portsmouth early team news: 18 ruled out and 5 fitness doubts",
+        "‘More damage than we initially thought’: Portsmouth boss delivers Colby Bishop injury latest",
+        "Man seriously injured in shooting on Towne Point Road in Portsmouth"
+       ]
+      },
+      "a": {
+       "adj": 2,
+       "headlines": [
+        "Blackburn Rovers handed triple boost for Swansea City clash",
+        "Swansea City given injury boost as Matos holds 'honest conversations' after QPR",
+        "Swansea City news: Josh Key boosts Swans before Blackburn Rovers test"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 6,
+    "home": "Blackburn",
+    "away": "Stoke City",
+    "hId": "t:blackburn",
+    "aId": "t:stoke-city",
+    "known": true,
+    "games": 104,
+    "modelV": 3,
+    "form": [
+     "DWWLW",
+     "WWLWD"
+    ],
+    "p": {
+     "h": 0.462,
+     "d": 0.2634,
+     "a": 0.2745,
+     "o": 0.5292,
+     "b": 0.5648
+    },
+    "xg": [
+     1.62,
+     1.2
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.4620462232677472,
+     "alt": "A",
+     "altp": 0.27454916655575723,
+     "dc": "12",
+     "dcp": 0.7365953898235045,
+     "ou": "O",
+     "oup": 0.5292486262982367,
+     "bt": "Y",
+     "btp": 0.56476270452859
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -20,
+       "headlines": [
+        "Blackburn Rovers injury news: Trio return but striker faces fresh setback",
+        "Unpopular ex-Blackburn Rovers player signs for Derby County amid injury crisis",
+        "'Ready' - Returning Blackburn Rovers man keen to prove his fitness"
+       ]
+      },
+      "a": {
+       "adj": -20,
+       "headlines": [
+        "Stoke City trio closing in on returns to action",
+        "Preston North End injury update on Alfie Devine, Lewis Gibson and Liam Lindsay ahead of Stoke City",
+        "Gallagher, Ingelsson, Cisse - Stoke City team news vs Preston North End and injury updates"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 7,
+    "home": "Manchester Utd",
+    "away": "Roma",
+    "hId": "t:manchester-united",
+    "aId": "t:roma",
+    "known": true,
+    "games": 85,
+    "modelV": 3,
+    "form": [
+     "LDDDL",
+     "DDWDW"
+    ],
+    "p": {
+     "h": 0.2857,
+     "d": 0.2596,
+     "a": 0.4546,
+     "o": 0.5524,
+     "b": 0.5849
+    },
+    "xg": [
+     1.26,
+     1.65
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.45464979743834233,
+     "alt": "H",
+     "altp": 0.2857386722620645,
+     "dc": "12",
+     "dcp": 0.7403884697004068,
+     "ou": "O",
+     "oup": 0.5523526784070734,
+     "bt": "Y",
+     "btp": 0.5848641065727586
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -16,
+       "headlines": [
+        "Team News: Chelsea vs. Man United injury, suspension list, predicted XIs",
+        "Manchester United 22-man travelling squad vs Chelsea as huge injury boost confirmed",
+        "Man United star will not play again in 2026 as worrying injury update emerges"
+       ]
+      },
+      "a": {
+       "adj": -24,
+       "headlines": [
+        "Bompastor on Potter injury worry and Chelsea’s win over Roma",
+        "Roma, injury list update: from Svilar to Dybala, when the injured players will return",
+        "Sonia Bompastor updates on Lexi Potter injury and reflects on Roma | News | Official Site"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 8,
+    "home": "West Bromwich",
+    "away": "Southampton",
+    "hId": "unk:west bromwich",
+    "aId": "t:southampton",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     "LWWDW"
+    ],
+    "p": {
+     "h": 0.2991,
+     "d": 0.2713,
+     "a": 0.4296,
+     "o": 0.5101,
+     "b": 0.5557
+    },
+    "xg": [
+     1.22,
+     1.52
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.4295975816992153,
+     "alt": "H",
+     "altp": 0.2991449442252783,
+     "dc": "12",
+     "dcp": 0.7287425259244936,
+     "ou": "O",
+     "oup": 0.5100935122016016,
+     "bt": "Y",
+     "btp": 0.5556828282551473
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {}
+   },
+   {
+    "n": 9,
+    "home": "SK Artis Brno",
+    "away": "Bohemians",
+    "hId": "unk:sk artis brno",
+    "aId": "t:bohemians",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     "WLWLW"
+    ],
+    "p": {
+     "h": 0.3234,
+     "d": 0.2683,
+     "a": 0.4084,
+     "o": 0.5316,
+     "b": 0.5755
+    },
+    "xg": [
+     1.32,
+     1.51
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.4083953454294908,
+     "alt": "H",
+     "altp": 0.3233530578782136,
+     "dc": "12",
+     "dcp": 0.7317484033077044,
+     "ou": "O",
+     "oup": 0.5316057195267883,
+     "bt": "Y",
+     "btp": 0.5755154724120214
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {}
+   },
+   {
+    "n": 10,
+    "home": "Kortrijk",
+    "away": "Mechelen",
+    "hId": "t:kortrijk",
+    "aId": "t:mechelen",
+    "known": true,
+    "games": 44,
+    "modelV": 3,
+    "form": [
+     "LLLWL",
+     "DLLDW"
+    ],
+    "p": {
+     "h": 0.3736,
+     "d": 0.2569,
+     "a": 0.3695,
+     "o": 0.5902,
+     "b": 0.6227
+    },
+    "xg": [
+     1.55,
+     1.54
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.37357429007912696,
+     "alt": "A",
+     "altp": 0.3695454524730699,
+     "dc": "12",
+     "dcp": 0.7431197425521969,
+     "ou": "O",
+     "oup": 0.5902193601402204,
+     "bt": "Y",
+     "btp": 0.6227076454116367
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
+   },
+   {
+    "n": 11,
+    "home": "Oxford Utd",
+    "away": "Reading",
+    "hId": "unk:oxford utd",
+    "aId": "t:reading",
+    "known": false,
+    "games": 0,
+    "modelV": 3,
+    "form": [
+     "",
+     "DWLWW"
+    ],
+    "p": {
+     "h": 0.3499,
+     "d": 0.276,
+     "a": 0.3741,
+     "o": 0.5033,
+     "b": 0.5557
+    },
+    "xg": [
+     1.33,
+     1.38
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.3740691565817182,
+     "alt": "H",
+     "altp": 0.3499031567261378,
+     "dc": "12",
+     "dcp": 0.7239723133078559,
+     "ou": "O",
+     "oup": 0.5033224469091749,
+     "bt": "Y",
+     "btp": 0.5556913831460942
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {}
+   },
+   {
+    "n": 12,
+    "home": "FC Porto",
+    "away": "Napoli",
+    "hId": "t:porto",
+    "aId": "t:napoli",
+    "known": true,
+    "games": 77,
+    "modelV": 3,
+    "form": [
+     "WWWWW",
+     "DWLDW"
+    ],
+    "p": {
+     "h": 0.5799,
+     "d": 0.2412,
+     "a": 0.1789,
+     "o": 0.5169,
+     "b": 0.511
+    },
+    "xg": [
+     1.85,
+     0.92
+    ],
+    "pk": {
+     "x12": "H",
+     "x12p": 0.579930513879144,
+     "alt": "D",
+     "altp": 0.24120221474726672,
+     "dc": "1X",
+     "dcp": 0.8211327286264107,
+     "ou": "O",
+     "oup": 0.5168757989635508,
+     "bt": "Y",
+     "btp": 0.5110099556484141
+    },
+    "pk0": {
+     "x12": "H"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -24,
+       "headlines": [
+        "Oskar Pietuszewski only for Champions League as Chris Smalling injury worries Porto",
+        "Porto detail Smalling's right knee ligament injury suffered on debut",
+        "Unlucky Chris Smalling suffers bad injury on FC Porto debut"
+       ]
+      },
+      "a": {
+       "adj": -20,
+       "headlines": [
+        "Official: Napoli reveal extent of Lobotka’s injury",
+        "Napoli, double injury for Lobotka: the recovery timeframe",
+        "Lobotka injury: Napoli star stretchered off in tears"
+       ]
+      }
+     }
+    }
+   },
+   {
+    "n": 13,
+    "home": "Lens",
+    "away": "Como",
+    "hId": "t:lens",
+    "aId": "t:como",
+    "known": true,
+    "games": 77,
+    "modelV": 3,
+    "form": [
+     "LWWWL",
+     "LDWWW"
+    ],
+    "p": {
+     "h": 0.3647,
+     "d": 0.2614,
+     "a": 0.3739,
+     "o": 0.5687,
+     "b": 0.6063
+    },
+    "xg": [
+     1.48,
+     1.51
+    ],
+    "pk": {
+     "x12": "A",
+     "x12p": 0.3739016632580916,
+     "alt": "H",
+     "altp": 0.3646570128524429,
+     "dc": "12",
+     "dcp": 0.7385586761105345,
+     "ou": "O",
+     "oup": 0.5687428028111958,
+     "bt": "Y",
+     "btp": 0.6062803222860026
+    },
+    "pk0": {
+     "x12": "A"
+    },
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -12,
+       "headlines": [
+        "RC Lens fined €80,000, away fans banned for two games",
+        "Lille seek derby boost against Lens as top spot comes into view",
+        "Official | Lens fans banned from Leipzig and Liverpool Champions League away days"
+       ]
+      },
+      "a": {
+       "adj": -12,
+       "headlines": [
+        "Como, Kean's return still some way off: another month on the sidelines",
+        "Como face injury alarm in attack, but Kean expected on Sunday against Venezia",
+        "Como confirm Moise Kean has undergone surgery on tibia injury"
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "summary": {
+   "expectedCorrect": 5.97,
+   "pAllCorrect": 0.00003348576755685594,
+   "unknownTeams": 3
+  }
+ }
+]

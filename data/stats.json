@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T05:51:03.256Z",
+ "updated": "2026-10-31T06:49:45.712Z",
  "settled": 70,
  "enhanced": {
   "n": 70,
@@ -291,5 +291,24 @@
    "x12": 0.5429
   }
  },
- "jackpots": []
+ "jackpots": [
+  {
+   "id": "mega-jackpot-pro-buohjc",
+   "name": "MEGA Jackpot Pro",
+   "total": 16,
+   "settled": 0,
+   "correct": 0,
+   "correctDC": 0,
+   "closes": null
+  },
+  {
+   "id": "sportpesa-midweek-jackpot-11s7r1",
+   "name": "SportPesa Midweek Jackpot",
+   "total": 13,
+   "settled": 0,
+   "correct": 0,
+   "correctDC": 0,
+   "closes": "2026-11-04T20:00:00.000Z"
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-10-31T05:50:19.849Z",
+ "scrapedAt": "2026-10-31T06:49:03.413Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -158,84 +158,6 @@
    "league": "Primeira Liga"
   },
   {
-   "home": "Melbourne City",
-   "away": "Sydney FC",
-   "kickoff": "2026-10-31T06:00:00.000Z",
-   "league": "A-League"
-  },
-  {
-   "home": "Kashima Antlers",
-   "away": "Cerezo Osaka",
-   "kickoff": "2026-10-31T06:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "Vissel Kobe",
-   "away": "Nagoya Grampus",
-   "kickoff": "2026-10-31T06:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "NTV Beleza W",
-   "away": "Omiya Ardija Ventus W",
-   "kickoff": "2026-10-31T06:05:00.000Z",
-   "league": "WE League, Women"
-  },
-  {
-   "home": "Renofa Yamaguchi",
-   "away": "Giravanz Kitakyushu",
-   "kickoff": "2026-10-31T06:05:00.000Z",
-   "league": "J.League 3"
-  },
-  {
-   "home": "Heilongjiang Lava Spring F.C.",
-   "away": "Shenzhen Juniors FC",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Changchun Yatai",
-   "away": "Nantong Zhiyun",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Hebei Kungfu",
-   "away": "Guandong GZ-Power FC",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Meizhou Kejia",
-   "away": "Shaanxi Union FC",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Nanjing Fengfan",
-   "away": "Dalian Kun City",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Suzhou Dongwu FC",
-   "away": "Yanbian Longding",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Foshan Nanshi FC",
-   "away": "Shanghai Jiading",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
-   "home": "Guangxi Hengchen FC",
-   "away": "Wuxi Wuguo",
-   "kickoff": "2026-10-31T06:30:00.000Z",
-   "league": "China League 1"
-  },
-  {
    "home": "Ryukyu",
    "away": "Gainare Tottori",
    "kickoff": "2026-10-31T07:00:00.000Z",
@@ -300,6 +222,84 @@
    "away": "AFC Metalul Buzau",
    "kickoff": "2026-10-31T09:00:00.000Z",
    "league": "Liga 2"
+  },
+  {
+   "home": "Zhfk Krylya Sovetov Samara W",
+   "away": "Spartak Moscow W",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League, Women"
+  },
+  {
+   "home": "PAOK U19",
+   "away": "Asteras Tripolis U19",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "U19 Super League"
+  },
+  {
+   "home": "FK Vojvodina Novi Sad",
+   "away": "FK Vozdovac",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "U19 League"
+  },
+  {
+   "home": "Zhetysu",
+   "away": "Astana",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Ruzomberok W",
+   "away": "AS Trencin W",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "1. League Women"
+  },
+  {
+   "home": "FK Kaspiy Aktau",
+   "away": "FK Kyzylzhar Petropavlovsk",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Kairat Almaty",
+   "away": "FC Altai Oskemen",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Ulytau FC",
+   "away": "Atyrau",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Tobol Kostanay",
+   "away": "Aktobe",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Elimai FC",
+   "away": "Okzhetpes",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Irtysh Pavlodar",
+   "away": "Ordabasy",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Erzurum BB",
+   "away": "Corum Bld",
+   "kickoff": "2026-10-31T10:30:00.000Z",
+   "league": "Super Lig"
+  },
+  {
+   "home": "Atromitos Athinon U19",
+   "away": "Volos Nps U19",
+   "kickoff": "2026-10-31T10:30:00.000Z",
+   "league": "U19 Super League"
   }
  ],
  "jackpots": [],
