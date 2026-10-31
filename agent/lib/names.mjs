@@ -2,6 +2,7 @@
 // football-data.co.uk, ClubElo all spell teams differently).
 const STOP = new Set(['fc', 'afc', 'cf', 'sc', 'ac', 'as', 'ss', 'us', 'club', 'de', 'the', 'calcio', 'cd', 'ud', 'sv', 'vfl', 'vfb', 'fk', 'bk', 'if', '1', '04', '05', '1899', 'and']);
 export const ALIASES = {
+  'sporting gijon': 'sp gijon', 'real sporting': 'sp gijon',
   'man utd': 'manchester united', 'man united': 'manchester united', 'manchester utd': 'manchester united', 'man city': 'manchester city',
   'spurs': 'tottenham hotspur', 'tottenham': 'tottenham hotspur', 'wolves': 'wolverhampton wanderers', 'wolverhampton': 'wolverhampton wanderers',
   'nottm forest': 'nottingham forest', "nott'm forest": 'nottingham forest', 'newcastle': 'newcastle united', 'west ham': 'west ham united',
@@ -20,7 +21,10 @@ export const ALIASES = {
 };
 export const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
   .replace(/[.'’`]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+// Spelling folds so transliterations meet: Vaalerenga/Valerenga, Tromsoe/Tromso, Muenchen/Munchen.
+const fold = (t) => t.replace(/aa/g, 'a').replace(/oe/g, 'o').replace(/ae/g, 'a').replace(/ue/g, 'u');
 const tokens = (s) => norm(s).split(' ').filter((t) => t && !STOP.has(t));
+const ftokens = (s) => tokens(s).map(fold);
 export const canon = (s, extra = {}) => {
   const n = norm(s), t = tokens(s).join(' ');
   const a = extra[n] || extra[t] || ALIASES[n] || ALIASES[t] || n;
@@ -30,7 +34,7 @@ export const slugId = (name, extra) => `t:${canon(name, extra).replace(/ /g, '-'
 
 /** index: {list:[{id,n,k,t}], byCanon:Map, alias} built from {id:name}. */
 export function buildIndex(names, extra = {}) {
-  const list = Object.entries(names).map(([id, n]) => ({ id, n, k: canon(n, extra), t: new Set(tokens(n)) }));
+  const list = Object.entries(names).map(([id, n]) => { const k = canon(n, extra); return { id, n, k, t: new Set([...ftokens(n), ...ftokens(k)]) }; });
   return { list, byCanon: new Map(list.map((c) => [c.k, c.id])), alias: extra };
 }
 
@@ -38,10 +42,14 @@ export function buildIndex(names, extra = {}) {
 export function findTeam(index, raw) {
   const k = canon(raw, index.alias);
   if (index.byCanon.has(k)) return index.byCanon.get(k);
-  const qt = new Set(tokens(k));
+  const qt = new Set(ftokens(k));
   if (!qt.size) return null;
   const sub = index.list.filter((c) => [...qt].every((t) => c.t.has(t)));
   if (sub.length === 1 && qt.size >= 1 && k.length >= 4) return sub[0].id;
+  // Reverse containment: the known team's name is wholly inside the query (Oxford Utd -> Oxford,
+  // Stade Brest 29 -> Brest). Only when exactly one team qualifies and it has a distinctive (5+ letter) token.
+  const sup = index.list.filter((c) => c.t.size && [...c.t].every((t) => qt.has(t)) && [...c.t].some((t) => t.length >= 5));
+  if (sup.length === 1) return sup[0].id;
   let best = null, bs = 0, second = 0;
   for (const c of index.list) {
     let inter = 0; for (const t of qt) if (c.t.has(t)) inter++;
