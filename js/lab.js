@@ -1,5 +1,6 @@
 /* Prediction Lab — static viewer. Reads /data/*.json written by the agent (no backend). */
 import { predict, picks, newState } from '../agent/lib/model.mjs';
+import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
 (() => {
   const TZ = 'Africa/Nairobi';
   const $ = (s) => document.querySelector(s);
@@ -23,6 +24,17 @@ import { predict, picks, newState } from '../agent/lib/model.mjs';
   const probBar = (p) => `<div class="probs" role="img" aria-label="Home ${pct(p.h)}, draw ${pct(p.d)}, away ${pct(p.a)}"><i class="h" style="width:${p.h * 100}%"></i><i class="d" style="width:${p.d * 100}%"></i><i class="a" style="width:${p.a * 100}%"></i></div><div class="plabel"><span>H ${pct(p.h)}</span><span>D ${pct(p.d)}</span><span>A ${pct(p.a)}</span></div>`;
   const chip = (k, p, ok) => `<span class="chip ${ok === undefined ? (k === 'x12' ? 'main' : '') : ok ? 'ok' : 'no'}" title="${MKT[k]}">${esc(label(k, p.pk))}${ok === undefined ? '' : ok ? ' ✓' : ' ✗'}</span>`;
 
+  // Bankroll for the staking helper: stays in this browser only (localStorage), optional.
+  let bank = 0;
+  try { bank = parseInt(localStorage.getItem('pbt.bankroll') || '0', 10) || 0; } catch (e) { bank = 0; }
+  const kes = (n) => 'KES ' + n.toLocaleString('en-KE');
+  const bankBox = () => `<label class="bk">Bankroll (KES, optional) <input id="bk-in" inputmode="numeric" value="${bank || ''}" placeholder="e.g. 10000"></label> <span class="bk" title="Model edge of 3%+ over the bookmaker price. Rare, because the model is blended with bookmaker odds.">Value bets now: ${(data.recent || []).filter((p) => p.status === 'pending' && new Date(p.kickoff) > Date.now()).filter((p) => { const v = valueBet(p); return v && v.value; }).length}</span>`;
+  const valueLine = (p) => {
+    const v = valueBet(p);
+    if (!v || !v.value) return '';
+    const st = stakeFor(bank, v.f);
+    return `<small class="val">Value: ${esc(PICK[v.pick])} @ ${v.odds.toFixed(2)} · model edge +${(v.edge * 100).toFixed(1)}%${st ? ` · suggested stake ${kes(st)} (quarter Kelly, max 5%)` : ''}</small>`;
+  };
   const extras = (p) => {
     const bits = [];
     if (p.form && (p.form[0] || p.form[1])) bits.push(`Form H ${esc(p.form[0] || '–')} · A ${esc(p.form[1] || '–')}`);
@@ -98,14 +110,14 @@ import { predict, picks, newState } from '../agent/lib/model.mjs';
       const all = data.recent.filter((p) => p.status === 'pending' && new Date(p.kickoff) > now);
       const nL = all.filter((p) => p.listed).length;
       const list = filter === 'listed' ? all.filter((p) => p.listed) : all;
-      const bar = `<div class="filters" role="group" aria-label="Filter"><button class="chip ${filter === 'all' ? 'main' : ''}" data-filter="all">All (${all.length})</button> <button class="chip ${filter === 'listed' ? 'main' : ''}" data-filter="listed">SportPesa listed (${nL})</button></div>`;
+      const bar = `<div class="filters" role="group" aria-label="Filter"><button class="chip ${filter === 'all' ? 'main' : ''}" data-filter="all">All (${all.length})</button> <button class="chip ${filter === 'listed' ? 'main' : ''}" data-filter="listed">SportPesa listed (${nL})</button> ${bankBox()}</div>`;
       if (!list.length) return all.length ? bar + `<div class="empty">No SportPesa-listed games with predictions yet. See Accuracy → Data sources.</div>` : `<div class="empty">No upcoming predictions yet. The agent publishes them after each run once fixtures are available.</div>`;
       let out = bar, cur = '';
       for (const p of list) {
         const d = day(p.kickoff);
         if (d !== cur) { out += `<div class="day">${esc(d)}</div>`; cur = d; }
         out += `<div class="row"><div class="t">${time(p.kickoff)}<small>EAT</small></div>
-          <div class="m">${esc(p.home)} vs ${esc(p.away)}<small>${esc(COMP[p.comp] || p.comp)}${p.listed ? ' · <span class="tag">SportPesa</span>' : ''}${p.games < 5 ? ' · <span class="warn">limited data</span>' : ''}</small>${extras(p)}</div>
+          <div class="m">${esc(p.home)} vs ${esc(p.away)}<small>${esc(COMP[p.comp] || p.comp)}${p.listed ? ' · <span class="tag">SportPesa</span>' : ''}${p.games < 5 ? ' · <span class="warn">limited data</span>' : ''}</small>${extras(p)}${valueLine(p)}</div>
           <div class="pick">${chip('x12', p)} ${chip('dc', p)} ${chip('ou', p)} ${chip('bt', p)}</div>
           ${probBar(p.p)}</div>`;
       }
@@ -223,6 +235,12 @@ import { predict, picks, newState } from '../agent/lib/model.mjs';
     await analyse(); show('matchup');
   });
   document.getElementById('view').addEventListener('click', (e) => { const b = e.target.closest('[data-filter]'); if (b) { filter = b.dataset.filter; show('upcoming'); } });
+  document.getElementById('view').addEventListener('change', (e) => {
+    if (e.target.id !== 'bk-in') return;
+    bank = Math.max(0, parseInt(String(e.target.value).replace(/[^0-9]/g, ''), 10) || 0);
+    try { localStorage.setItem('pbt.bankroll', String(bank)); } catch (err) { /* storage unavailable */ }
+    show('upcoming');
+  });
   document.getElementById('tabs').addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b) show(b.dataset.tab); });
   Promise.all([get('recent.json', []), get('stats.json', null), get('jackpots.json', []), get('model.json', {}), get('sources.json', {}), get('ratings.json', null), get('news.json', {}), get('accas.json', { items: [], stats: {} })]).then(([recent, stats, jackpots, model, sources, ratings, news, accas]) => {
     accasData = accas || accasData;
