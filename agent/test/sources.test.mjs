@@ -55,7 +55,7 @@ test('optional API sources report missing keys without making network requests',
   const a = await fetchApiFootball({ key: '', health });
   const o = await fetchOddsApi({ key: '', health });
   assert.deepEqual(a, { finished: [], upcoming: [] });
-  assert.deepEqual(o, { upcoming: [] });
+  assert.deepEqual(o, { finished: [], upcoming: [] });
   assert.equal(health.length, 2);
   assert.equal(health.every(x => x.ok === false), true);
 });
