@@ -1,7 +1,7 @@
 // The Odds API v4: consensus 1X2 odds from available bookmakers. Requires THE_ODDS_API_KEY.
 const BASE = 'https://api.the-odds-api.com/v4';
 export async function fetchOddsApi({ key, now = new Date(), health = [], log = console.log } = {}) {
-  if (!key) { health.push({ source:'The Odds API', ok:false, detail:'no THE_ODDS_API_KEY (optional)' }); return { upcoming:[] }; }
+  if (!key) { health.push({ source:'The Odds API', ok:false, detail:'no THE_ODDS_API_KEY (optional)' }); return { finished:[], upcoming:[] }; }
   try {
     const url = `${BASE}/sports/soccer/odds/?apiKey=${encodeURIComponent(key)}&regions=uk,eu&markets=h2h&oddsFormat=decimal&dateFormat=iso`;
     const res = await fetch(url, { signal: AbortSignal.timeout(20000) });
@@ -22,9 +22,9 @@ export async function fetchOddsApi({ key, now = new Date(), health = [], log = c
     }
     health.push({ source:'The Odds API', ok:true, detail:`${events.length} events fetched, ${upcoming.filter(x=>x.o).length} with 1X2 odds` });
     log(`  The Odds API: ${events.length} events, ${upcoming.filter(x=>x.o).length} with odds`);
-    return { upcoming };
+    return { finished:[], upcoming };
   } catch(e) {
     health.push({ source:'The Odds API', ok:false, detail:e.message });
-    return { upcoming:[] };
+    return { finished:[], upcoming:[] };
   }
 }
