@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-10-31T06:49:03.413Z",
+ "scrapedAt": "2026-10-31T07:19:25.679Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -158,32 +158,14 @@
    "league": "Primeira Liga"
   },
   {
-   "home": "Ryukyu",
-   "away": "Gainare Tottori",
-   "kickoff": "2026-10-31T07:00:00.000Z",
-   "league": "J.League 3"
-  },
-  {
-   "home": "Nagano Parceiro",
-   "away": "MIO Biwako Shiga",
-   "kickoff": "2026-10-31T07:00:00.000Z",
-   "league": "J.League 3"
-  },
-  {
-   "home": "Kashiwa Reysol",
-   "away": "Urawa Red Diamonds",
-   "kickoff": "2026-10-31T07:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "Daegu",
-   "away": "Suwon Samsung",
+   "home": "Chungnam Asan FC",
+   "away": "Gimpo Citizen",
    "kickoff": "2026-10-31T07:30:00.000Z",
    "league": "K-League 2"
   },
   {
-   "home": "Chungnam Asan FC",
-   "away": "Gimpo Citizen",
+   "home": "Daegu",
+   "away": "Suwon Samsung",
    "kickoff": "2026-10-31T07:30:00.000Z",
    "league": "K-League 2"
   },
@@ -242,10 +224,16 @@
    "league": "U19 League"
   },
   {
-   "home": "Zhetysu",
-   "away": "Astana",
+   "home": "FK Kaspiy Aktau",
+   "away": "FK Kyzylzhar Petropavlovsk",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "Premier League"
+  },
+  {
+   "home": "FK IMT Youth",
+   "away": "OFK Belgrade",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "U19 League"
   },
   {
    "home": "Ruzomberok W",
@@ -254,20 +242,14 @@
    "league": "1. League Women"
   },
   {
-   "home": "FK Kaspiy Aktau",
-   "away": "FK Kyzylzhar Petropavlovsk",
+   "home": "Zhetysu",
+   "away": "Astana",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "Premier League"
   },
   {
-   "home": "Kairat Almaty",
-   "away": "FC Altai Oskemen",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Ulytau FC",
-   "away": "Atyrau",
+   "home": "Elimai FC",
+   "away": "Okzhetpes",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "Premier League"
   },
@@ -278,8 +260,14 @@
    "league": "Premier League"
   },
   {
-   "home": "Elimai FC",
-   "away": "Okzhetpes",
+   "home": "Ulytau FC",
+   "away": "Atyrau",
+   "kickoff": "2026-10-31T10:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Kairat Almaty",
+   "away": "FC Altai Oskemen",
    "kickoff": "2026-10-31T10:00:00.000Z",
    "league": "Premier League"
   },
@@ -300,6 +288,18 @@
    "away": "Volos Nps U19",
    "kickoff": "2026-10-31T10:30:00.000Z",
    "league": "U19 Super League"
+  },
+  {
+   "home": "Hai Phong FC",
+   "away": "Binh Phuoc",
+   "kickoff": "2026-10-31T11:00:00.000Z",
+   "league": "V-League"
+  },
+  {
+   "home": "Amarante FC",
+   "away": "Porto B",
+   "kickoff": "2026-10-31T11:00:00.000Z",
+   "league": "Segunda Liga"
   }
  ],
  "jackpots": [],

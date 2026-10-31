@@ -72,82 +72,104 @@
     "home": "FC Lorient",
     "away": "Stade Brest 29",
     "hId": "t:lorient",
-    "aId": "unk:stade brest 29",
-    "known": false,
-    "games": 0,
+    "aId": "t:brest",
+    "known": true,
+    "games": 76,
     "modelV": 3,
     "form": [
      "DLWWD",
-     ""
+     "LLWDL"
     ],
     "p": {
-     "h": 0.5312,
-     "d": 0.2459,
-     "a": 0.223,
-     "o": 0.557,
-     "b": 0.5668
+     "h": 0.5617,
+     "d": 0.2358,
+     "a": 0.2025,
+     "o": 0.5742,
+     "b": 0.5689
     },
     "xg": [
-     1.83,
-     1.11
+     1.94,
+     1.08
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5311832875161161,
+     "x12p": 0.5617331324085612,
      "alt": "D",
-     "altp": 0.24586551612546875,
+     "altp": 0.23575035979290113,
      "dc": "1X",
-     "dcp": 0.7770488036415848,
+     "dcp": 0.7974834922014623,
      "ou": "O",
-     "oup": 0.556958715016852,
+     "oup": 0.5742410560635202,
      "bt": "Y",
-     "btp": 0.5667601976079226
+     "btp": 0.5689157709122857
     },
     "pk0": {
      "x12": "H"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
    },
    {
     "n": 3,
     "home": "Albacete Balompie",
     "away": "CE Sabadell FC",
-    "hId": "unk:albacete balompie",
-    "aId": "unk:ce sabadell fc",
-    "known": false,
-    "games": 0,
+    "hId": "t:albacete",
+    "aId": "t:sabadell",
+    "known": true,
+    "games": 12,
     "modelV": 3,
     "form": [
-     "",
-     ""
+     "LLLLW",
+     "DDWLD"
     ],
     "p": {
-     "h": 0.4356,
-     "d": 0.2718,
-     "a": 0.2926,
-     "o": 0.5049,
-     "b": 0.5505
+     "h": 0.3143,
+     "d": 0.2833,
+     "a": 0.4024,
+     "o": 0.4672,
+     "b": 0.5251
     },
     "xg": [
-     1.52,
-     1.2
+     1.19,
+     1.38
     ],
     "pk": {
-     "x12": "H",
-     "x12p": 0.43564096221944204,
-     "alt": "A",
-     "altp": 0.29258108860341364,
+     "x12": "A",
+     "x12p": 0.4023561078892401,
+     "alt": "H",
+     "altp": 0.31430601676838466,
      "dc": "12",
-     "dcp": 0.7282220508228556,
-     "ou": "O",
-     "oup": 0.5049374869921085,
+     "dcp": 0.7166621246576248,
+     "ou": "U",
+     "oup": 0.532785436385909,
      "bt": "Y",
-     "btp": 0.5505342415003697
+     "btp": 0.5250555191213929
     },
     "pk0": {
-     "x12": "H"
+     "x12": "A"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
    },
    {
     "n": 4,
@@ -206,41 +228,52 @@
     "home": "SS Arezzo",
     "away": "Ascoli Calcio 1898",
     "hId": "t:arezzo",
-    "aId": "unk:ascoli calcio 1898",
-    "known": false,
-    "games": 0,
+    "aId": "t:ascoli",
+    "known": true,
+    "games": 9,
     "modelV": 3,
     "form": [
      "LDWLL",
-     ""
+     "WDDWW"
     ],
     "p": {
-     "h": 0.3376,
-     "d": 0.2742,
-     "a": 0.3882,
-     "o": 0.5094,
-     "b": 0.5598
+     "h": 0.2482,
+     "d": 0.267,
+     "a": 0.4849,
+     "o": 0.4955,
+     "b": 0.5312
     },
     "xg": [
-     1.31,
-     1.43
+     1.07,
+     1.61
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.3882102630600507,
-     "alt": "H",
-     "altp": 0.33756996003945405,
-     "dc": "12",
-     "dcp": 0.7257802230995047,
-     "ou": "O",
-     "oup": 0.5094164538995791,
+     "x12p": 0.48486790157822546,
+     "alt": "D",
+     "altp": 0.2669725435810129,
+     "dc": "X2",
+     "dcp": 0.7518404451592384,
+     "ou": "U",
+     "oup": 0.5045398826517629,
      "bt": "Y",
-     "btp": 0.5597968178052816
+     "btp": 0.5312242266013548
     },
     "pk0": {
      "x12": "A"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
    },
    {
     "n": 6,
@@ -305,30 +338,30 @@
     "modelV": 3,
     "form": [
      "",
-     ""
+     "LWWWL"
     ],
     "p": {
-     "h": 0.4356,
-     "d": 0.2718,
-     "a": 0.2926,
-     "o": 0.5049,
-     "b": 0.5505
+     "h": 0.4464,
+     "d": 0.2755,
+     "a": 0.2781,
+     "o": 0.4825,
+     "b": 0.5303
     },
     "xg": [
-     1.52,
-     1.2
+     1.5,
+     1.13
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.43564096221944204,
+     "x12p": 0.4463889334417662,
      "alt": "A",
-     "altp": 0.29258108860341364,
+     "altp": 0.2781000225909393,
      "dc": "12",
-     "dcp": 0.7282220508228556,
-     "ou": "O",
-     "oup": 0.5049374869921085,
+     "dcp": 0.7244889560327055,
+     "ou": "U",
+     "oup": 0.5174524807861526,
      "bt": "Y",
-     "btp": 0.5505342415003697
+     "btp": 0.5303368146112718
     },
     "pk0": {
      "x12": "H"
@@ -350,42 +383,53 @@
     "n": 8,
     "home": "Lausanne-Sport",
     "away": "FC Thun",
-    "hId": "unk:lausanne sport",
+    "hId": "t:lausanne",
     "aId": "t:thun",
-    "known": false,
-    "games": 0,
+    "known": true,
+    "games": 49,
     "modelV": 3,
     "form": [
-     "",
+     "LLLLL",
      "LLWLL"
     ],
     "p": {
-     "h": 0.4418,
-     "d": 0.2647,
-     "a": 0.2935,
-     "o": 0.5349,
-     "b": 0.5734
+     "h": 0.3029,
+     "d": 0.2388,
+     "a": 0.4583,
+     "o": 0.6573,
+     "b": 0.6671
     },
     "xg": [
-     1.59,
-     1.25
+     1.51,
+     1.9
     ],
     "pk": {
-     "x12": "H",
-     "x12p": 0.4417887725578562,
-     "alt": "A",
-     "altp": 0.29352962238307617,
+     "x12": "A",
+     "x12p": 0.45825372134045167,
+     "alt": "H",
+     "altp": 0.3029213136284084,
      "dc": "12",
-     "dcp": 0.7353183949409323,
+     "dcp": 0.7611750349688601,
      "ou": "O",
-     "oup": 0.5349285010717733,
+     "oup": 0.6573354225321987,
      "bt": "Y",
-     "btp": 0.5734213566437137
+     "btp": 0.6670996778609404
     },
     "pk0": {
-     "x12": "H"
+     "x12": "A"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
    },
    {
     "n": 9,
@@ -691,89 +735,113 @@
     "n": 15,
     "home": "Maritimo Madeira",
     "away": "Santa Clara Azores",
-    "hId": "unk:maritimo madeira",
-    "aId": "unk:santa clara azores",
-    "known": false,
-    "games": 0,
+    "hId": "t:maritimo",
+    "aId": "t:santa-clara",
+    "known": true,
+    "games": 9,
     "modelV": 3,
     "form": [
-     "",
-     ""
+     "LLDLL",
+     "WWDWL"
     ],
     "p": {
-     "h": 0.4356,
-     "d": 0.2718,
-     "a": 0.2926,
-     "o": 0.5049,
-     "b": 0.5505
+     "h": 0.3229,
+     "d": 0.2823,
+     "a": 0.3948,
+     "o": 0.4735,
+     "b": 0.5308
     },
     "xg": [
-     1.52,
-     1.2
+     1.22,
+     1.37
     ],
     "pk": {
-     "x12": "H",
-     "x12p": 0.43564096221944204,
-     "alt": "A",
-     "altp": 0.29258108860341364,
+     "x12": "A",
+     "x12p": 0.3948051757880408,
+     "alt": "H",
+     "altp": 0.32289348348017805,
      "dc": "12",
-     "dcp": 0.7282220508228556,
-     "ou": "O",
-     "oup": 0.5049374869921085,
+     "dcp": 0.7176986592682189,
+     "ou": "U",
+     "oup": 0.5265258223646232,
      "bt": "Y",
-     "btp": 0.5505342415003697
+     "btp": 0.5308441741482836
     },
     "pk0": {
-     "x12": "H"
+     "x12": "A"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": -8,
+       "headlines": [
+        "Mário Branco suspended for up to 20 days, Jhon Durán free to play after Santa Clara v Benfica fallout"
+       ]
+      }
+     }
+    }
    },
    {
     "n": 16,
     "home": "Vaalerenga IF",
     "away": "Tromsoe IL",
-    "hId": "unk:vaalerenga if",
-    "aId": "unk:tromsoe il",
-    "known": false,
-    "games": 0,
+    "hId": "t:valerenga",
+    "aId": "t:tromso",
+    "known": true,
+    "games": 54,
     "modelV": 3,
     "form": [
-     "",
-     ""
+     "LDLWW",
+     "LWDDL"
     ],
     "p": {
-     "h": 0.4356,
-     "d": 0.2718,
-     "a": 0.2926,
-     "o": 0.5049,
-     "b": 0.5505
+     "h": 0.3478,
+     "d": 0.2386,
+     "a": 0.4136,
+     "o": 0.6761,
+     "b": 0.687
     },
     "xg": [
-     1.52,
-     1.2
+     1.67,
+     1.84
     ],
     "pk": {
-     "x12": "H",
-     "x12p": 0.43564096221944204,
-     "alt": "A",
-     "altp": 0.29258108860341364,
+     "x12": "A",
+     "x12p": 0.4136338788987812,
+     "alt": "H",
+     "altp": 0.34777581527298873,
      "dc": "12",
-     "dcp": 0.7282220508228556,
+     "dcp": 0.76140969417177,
      "ou": "O",
-     "oup": 0.5049374869921085,
+     "oup": 0.6761350285911818,
      "bt": "Y",
-     "btp": 0.5505342415003697
+     "btp": 0.6869688010698743
     },
     "pk0": {
-     "x12": "H"
+     "x12": "A"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": 0,
+       "headlines": []
+      },
+      "a": {
+       "adj": 0,
+       "headlines": []
+      }
+     }
+    }
    }
   ],
   "summary": {
-   "expectedCorrect": 7.28,
-   "pAllCorrect": 0.0000030847086826724428,
-   "unknownTeams": 8
+   "expectedCorrect": 7.34,
+   "pAllCorrect": 0.000003441562532987454,
+   "unknownTeams": 2
   }
  },
  {
@@ -1197,21 +1265,21 @@
     "n": 8,
     "home": "West Bromwich",
     "away": "Southampton",
-    "hId": "unk:west bromwich",
+    "hId": "t:west-bromwich-albion",
     "aId": "t:southampton",
-    "known": false,
-    "games": 0,
+    "known": true,
+    "games": 98,
     "modelV": 3,
     "form": [
-     "",
+     "LLWWD",
      "LWWDW"
     ],
     "p": {
-     "h": 0.2991,
-     "d": 0.2713,
-     "a": 0.4296,
-     "o": 0.5101,
-     "b": 0.5557
+     "h": 0.2994,
+     "d": 0.2712,
+     "a": 0.4294,
+     "o": 0.5102,
+     "b": 0.5558
     },
     "xg": [
      1.22,
@@ -1219,20 +1287,39 @@
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4295975816992153,
+     "x12p": 0.4294000992388367,
      "alt": "H",
-     "altp": 0.2991449442252783,
+     "altp": 0.2993507647312804,
      "dc": "12",
-     "dcp": 0.7287425259244936,
+     "dcp": 0.7287508639701171,
      "ou": "O",
-     "oup": 0.5100935122016016,
+     "oup": 0.5102183033775527,
      "bt": "Y",
-     "btp": 0.5556828282551473
+     "btp": 0.5558141868104464
     },
     "pk0": {
      "x12": "A"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -24,
+       "headlines": [
+        "Lewis Cox on West Brom goal debate, injuries and West Ham test",
+        "Jarrod Bowen injury revelation: Nuno confirms latest ahead of West Ham vs West Brom",
+        "Watch: West Brom reporter Lewis Cox latest on injury update, goal debate and West Ham"
+       ]
+      },
+      "a": {
+       "adj": -14,
+       "headlines": [
+        "Drug combination cuts kidney injury risk, Southampton study finds",
+        "The 7 players set to miss Southampton vs QPR ft £18m star",
+        "The three QPR players who could return from injury to face Southampton this Saturday, including Ilias Chair"
+       ]
+      }
+     }
+    }
    },
    {
     "n": 9,
@@ -1331,42 +1418,61 @@
     "n": 11,
     "home": "Oxford Utd",
     "away": "Reading",
-    "hId": "unk:oxford utd",
+    "hId": "t:oxford",
     "aId": "t:reading",
-    "known": false,
-    "games": 0,
+    "known": true,
+    "games": 103,
     "modelV": 3,
     "form": [
-     "",
+     "WDWDW",
      "DWLWW"
     ],
     "p": {
-     "h": 0.3499,
-     "d": 0.276,
-     "a": 0.3741,
-     "o": 0.5033,
-     "b": 0.5557
+     "h": 0.3765,
+     "d": 0.2787,
+     "a": 0.3448,
+     "o": 0.4916,
+     "b": 0.5464
     },
     "xg": [
-     1.33,
-     1.38
+     1.37,
+     1.3
     ],
     "pk": {
-     "x12": "A",
-     "x12p": 0.3740691565817182,
-     "alt": "H",
-     "altp": 0.3499031567261378,
+     "x12": "H",
+     "x12p": 0.37647978517754666,
+     "alt": "A",
+     "altp": 0.3448001667607947,
      "dc": "12",
-     "dcp": 0.7239723133078559,
-     "ou": "O",
-     "oup": 0.5033224469091749,
+     "dcp": 0.7212799519383414,
+     "ou": "U",
+     "oup": 0.5083840138429562,
      "bt": "Y",
-     "btp": 0.5556913831460942
+     "btp": 0.5464305172223842
     },
     "pk0": {
-     "x12": "A"
+     "x12": "H"
     },
-    "meta": {}
+    "meta": {
+     "news": {
+      "h": {
+       "adj": -6,
+       "headlines": [
+        "Ole Miss Grad Dane Connery Returns to His Oxford Roots With ‘Back at Ole Miss’",
+        "Worker injured by fall at Oxford Dam in Catawba County; Severity of injuries unknown",
+        "Emma Rice’s Tristan & Yseult Returns To Oxford Playhouse In January"
+       ]
+      },
+      "a": {
+       "adj": -20,
+       "headlines": [
+        "Car accident on South 4th Street in Reading leaves one person injured",
+        "Tom Cleverley Provides Positive Injury Update Ahead of Reading Clash - Plymouth Argyle",
+        "Reading FC dealt major blow as winger set to miss ‘several months’ with injury"
+       ]
+      }
+     }
+    }
    },
    {
     "n": 12,
@@ -1491,8 +1597,8 @@
   ],
   "summary": {
    "expectedCorrect": 5.97,
-   "pAllCorrect": 0.00003348576755685594,
-   "unknownTeams": 3
+   "pAllCorrect": 0.000033686068877967724,
+   "unknownTeams": 1
   }
  }
 ]

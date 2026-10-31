@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T06:49:27.510Z",
+ "updated": "2026-10-31T07:19:49.383Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -14,7 +14,7 @@
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "39 results, 226 fixtures"
+   "detail": "42 results, 225 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -44,59 +44,44 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T06:49:03.413Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T07:19:25.679Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "4 teams fetched, 0 failed"
+   "detail": "1 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Bologna vs AC Monza Brianz",
-  "Brentford vs Nottingham",
   "Feyenoord vs Fortuna Sittard",
-  "FC Porto vs GD Estoril",
-  "Ryukyu vs Gainare Tottori",
-  "Nagano Parceiro vs MIO Biwako Shiga",
-  "Kashiwa Reysol vs Urawa Red Diamonds",
-  "Daegu vs Suwon Samsung",
   "Chungnam Asan FC vs Gimpo Citizen",
+  "Daegu vs Suwon Samsung",
   "Macarthur vs Western Sydney Wonderers",
   "Csl Stefanestii de Jos vs Chindia Targoviste",
   "Cetatea 1932 Suceava vs Bihor",
   "Kagoshima United vs Roasso Kumamoto",
   "Targu Mures vs Unirea Slobozia",
   "Gloria Popesti Leordeni vs AFC Metalul Buzau",
-  "Zhfk Krylya Sovetov Samara W vs Spartak Moscow W",
   "PAOK U19 vs Asteras Tripolis U19",
   "FK Vojvodina Novi Sad vs FK Vozdovac",
-  "Zhetysu vs Astana",
-  "Ruzomberok W vs AS Trencin W",
   "FK Kaspiy Aktau vs FK Kyzylzhar Petropavlovsk",
-  "Kairat Almaty vs FC Altai Oskemen",
-  "Ulytau FC vs Atyrau",
-  "Tobol Kostanay vs Aktobe",
+  "FK IMT Youth vs OFK Belgrade",
+  "Ruzomberok W vs AS Trencin W",
+  "Zhetysu vs Astana",
   "Elimai FC vs Okzhetpes",
+  "Tobol Kostanay vs Aktobe",
+  "Ulytau FC vs Atyrau",
+  "Kairat Almaty vs FC Altai Oskemen",
   "Irtysh Pavlodar vs Ordabasy",
   "Erzurum BB vs Corum Bld",
-  "Atromitos Athinon U19 vs Volos Nps U19"
+  "Atromitos Athinon U19 vs Volos Nps U19",
+  "Hai Phong FC vs Binh Phuoc",
+  "Amarante FC vs Porto B"
  ],
  "unknownJackpotTeams": [
-  "Stade Brest 29",
-  "Albacete Balompie",
-  "CE Sabadell FC",
-  "Ascoli Calcio 1898",
-  "Lausanne-Sport",
   "Panaitolikos Agrinio",
   "NK Lokomotiva Zagreb",
   "NK Osijek",
-  "Maritimo Madeira",
-  "Santa Clara Azores",
-  "Vaalerenga IF",
-  "Tromsoe IL",
-  "West Bromwich",
-  "SK Artis Brno",
-  "Oxford Utd"
+  "SK Artis Brno"
  ]
 }
