@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-10-30T22:25:11.510Z",
+ "scrapedAt": "2026-10-31T02:54:53.111Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -158,6 +158,12 @@
    "league": "Primeira Liga"
   },
   {
+   "home": "JEF United W",
+   "away": "Nojima Stella Kanagawa Sagamihara W",
+   "kickoff": "2026-10-31T04:00:00.000Z",
+   "league": "WE League, Women"
+  },
+  {
    "home": "Briobecca Urayasu",
    "away": "Honda FC",
    "kickoff": "2026-10-31T04:00:00.000Z",
@@ -168,12 +174,6 @@
    "away": "Shonan Bellmare",
    "kickoff": "2026-10-31T04:00:00.000Z",
    "league": "J2 League"
-  },
-  {
-   "home": "JEF United W",
-   "away": "Nojima Stella Kanagawa Sagamihara W",
-   "kickoff": "2026-10-31T04:00:00.000Z",
-   "league": "WE League, Women"
   },
   {
    "home": "Newcastle Jets",
@@ -188,16 +188,16 @@
    "league": "Japan Football League"
   },
   {
-   "home": "Tokushima Vortis",
-   "away": "Yokohama",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J2 League"
-  },
-  {
    "home": "Yongin FC",
    "away": "Seoul E Land",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "K-League 2"
+  },
+  {
+   "home": "Tokushima Vortis",
+   "away": "Yokohama",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J2 League"
   },
   {
    "home": "Chuncheon FC",
@@ -212,30 +212,6 @@
    "league": "K-League 1"
   },
   {
-   "home": "Fagiano Okayama",
-   "away": "FC Tokyo",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "Zwiegen Kanazawa",
-   "away": "Thespakusatsu",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J.League 3"
-  },
-  {
-   "home": "Vegalta Sendai",
-   "away": "Omiya Ardija",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J2 League"
-  },
-  {
-   "home": "Tochigi SC",
-   "away": "Ehime",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J.League 3"
-  },
-  {
    "home": "Kamatamare S",
    "away": "Nara Club",
    "kickoff": "2026-10-31T05:00:00.000Z",
@@ -246,6 +222,30 @@
    "away": "Montedio Yamagata",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
+  },
+  {
+   "home": "Tochigi SC",
+   "away": "Ehime",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J.League 3"
+  },
+  {
+   "home": "Hoyo Oita",
+   "away": "Tokyo Musashino City FC",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "Japan Football League"
+  },
+  {
+   "home": "Fagiano Okayama",
+   "away": "FC Tokyo",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J1 League"
+  },
+  {
+   "home": "Zwiegen Kanazawa",
+   "away": "Thespakusatsu",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J.League 3"
   },
   {
    "home": "Blaublitz Akita",
@@ -260,26 +260,8 @@
    "league": "J2 League"
   },
   {
-   "home": "Hoyo Oita",
-   "away": "Tokyo Musashino City FC",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Tegevajaro Miyazaki",
-   "away": "Oita Trinita",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J2 League"
-  },
-  {
-   "home": "Mito Hollyhock",
-   "away": "Sanfrecce Hiroshima",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "Tochigi City",
-   "away": "Iwaki FC",
+   "home": "Vegalta Sendai",
+   "away": "Omiya Ardija",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
   },
@@ -288,6 +270,18 @@
    "away": "Shimizu S Pulse",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J1 League"
+  },
+  {
+   "home": "Tegevajaro Miyazaki",
+   "away": "Oita Trinita",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J2 League"
+  },
+  {
+   "home": "Tochigi City",
+   "away": "Iwaki FC",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J2 League"
   },
   {
    "home": "Jubilo Iwata",
@@ -300,6 +294,12 @@
    "away": "Yangpyeong FC",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "K3 League"
+  },
+  {
+   "home": "Mito Hollyhock",
+   "away": "Sanfrecce Hiroshima",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J1 League"
   }
  ],
  "jackpots": [],
