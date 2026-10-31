@@ -1,17 +1,11 @@
 {
- "scrapedAt": "2026-10-31T07:48:50.081Z",
+ "scrapedAt": "2026-10-31T12:39:39.643Z",
  "matches": [
   {
    "home": "Barcelona",
    "away": "Alaves",
    "kickoff": "2026-10-31T20:00:00.000Z",
    "league": "LaLiga"
-  },
-  {
-   "home": "Chelsea",
-   "away": "Manchester Utd",
-   "kickoff": "2026-10-31T12:30:00.000Z",
-   "league": "Premier League"
   },
   {
    "home": "Bayern Munchen",
@@ -158,148 +152,154 @@
    "league": "Primeira Liga"
   },
   {
-   "home": "Macarthur",
-   "away": "Western Sydney Wonderers",
-   "kickoff": "2026-10-31T08:40:00.000Z",
-   "league": "A-League"
+   "home": "Everton W",
+   "away": "Manchester United W",
+   "kickoff": "2026-10-31T12:45:00.000Z",
+   "league": "The FA Womens Super League"
   },
   {
-   "home": "Csl Stefanestii de Jos",
-   "away": "Chindia Targoviste",
-   "kickoff": "2026-10-31T09:00:00.000Z",
-   "league": "Liga 2"
+   "home": "Annecy FC",
+   "away": "Montpellier",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Ligue 2"
   },
   {
-   "home": "Cetatea 1932 Suceava",
-   "away": "Bihor",
-   "kickoff": "2026-10-31T09:00:00.000Z",
-   "league": "Liga 2"
+   "home": "Hessen Kassel",
+   "away": "SG Barockstadt Fulda-Lehnerz",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Regionalliga Southwest"
   },
   {
-   "home": "Kagoshima United",
-   "away": "Roasso Kumamoto",
-   "kickoff": "2026-10-31T09:00:00.000Z",
-   "league": "J.League 3"
+   "home": "Brabrand IF",
+   "away": "FA 2000",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "2nd Division"
   },
   {
-   "home": "Targu Mures",
-   "away": "Unirea Slobozia",
-   "kickoff": "2026-10-31T09:00:00.000Z",
-   "league": "Liga 2"
+   "home": "Neftekhimik",
+   "away": "Ska Energiya",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Football National League"
   },
   {
-   "home": "Gloria Popesti Leordeni",
-   "away": "AFC Metalul Buzau",
-   "kickoff": "2026-10-31T09:00:00.000Z",
-   "league": "Liga 2"
+   "home": "Doxa N. Sidirochoriou",
+   "away": "Kavala",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Gamma Ethniki"
   },
   {
-   "home": "Zhfk Krylya Sovetov Samara W",
-   "away": "Spartak Moscow W",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League, Women"
+   "home": "Wiedenbruck",
+   "away": "RW Oberhausen",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Regionalliga West"
   },
   {
-   "home": "PAOK U19",
-   "away": "Asteras Tripolis U19",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "U19 Super League"
+   "home": "Rea",
+   "away": "Odysseas Glyfadas W",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Super League, Women"
   },
   {
-   "home": "FK Vojvodina Novi Sad",
-   "away": "FK Vozdovac",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "U19 League"
+   "home": "NK Jadran LP",
+   "away": "Segesta Sisak",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "2. HNL"
   },
   {
-   "home": "Zhetysu",
-   "away": "Astana",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
+   "home": "NK Bilje",
+   "away": "Tabor",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "2. SNL"
   },
   {
-   "home": "FK IMT Youth",
-   "away": "OFK Belgrade",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "U19 League"
-  },
-  {
-   "home": "Ruzomberok W",
-   "away": "AS Trencin W",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "1. League Women"
-  },
-  {
-   "home": "Elimai FC",
-   "away": "Okzhetpes",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "FK Kaspiy Aktau",
-   "away": "FK Kyzylzhar Petropavlovsk",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Kairat Almaty",
-   "away": "FC Altai Oskemen",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Ulytau FC",
-   "away": "Atyrau",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Tobol Kostanay",
-   "away": "Aktobe",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Irtysh Pavlodar",
-   "away": "Ordabasy",
-   "kickoff": "2026-10-31T10:00:00.000Z",
-   "league": "Premier League"
-  },
-  {
-   "home": "Erzurum BB",
-   "away": "Corum Bld",
-   "kickoff": "2026-10-31T10:30:00.000Z",
-   "league": "Super Lig"
-  },
-  {
-   "home": "Atromitos Athinon U19",
-   "away": "Volos Nps U19",
-   "kickoff": "2026-10-31T10:30:00.000Z",
-   "league": "U19 Super League"
-  },
-  {
-   "home": "Amarante FC",
-   "away": "Porto B",
-   "kickoff": "2026-10-31T11:00:00.000Z",
-   "league": "Segunda Liga"
-  },
-  {
-   "home": "Hai Phong FC",
-   "away": "Binh Phuoc",
-   "kickoff": "2026-10-31T11:00:00.000Z",
-   "league": "V-League"
-  },
-  {
-   "home": "Baranovichi",
-   "away": "Naftan Novopolotsk",
-   "kickoff": "2026-10-31T11:00:00.000Z",
+   "home": "Dinamo Brest",
+   "away": "Vitebsk",
+   "kickoff": "2026-10-31T13:00:00.000Z",
    "league": "Vysshaya Liga"
   },
   {
-   "home": "Veres Rivne",
-   "away": "Chernomorets Odessa",
-   "kickoff": "2026-10-31T11:00:00.000Z",
+   "home": "NK Inker Zapresic",
+   "away": "Solin",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Druga NL"
+  },
+  {
+   "home": "ETSV Weiche",
+   "away": "Kickers Emden",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Regionalliga North"
+  },
+  {
+   "home": "HNK Orijent 1919",
+   "away": "NK Vukovar 91",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "2. HNL"
+  },
+  {
+   "home": "IF Brommapojkarna W",
+   "away": "AIK Stockholm W",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Damallsvenskan, Women"
+  },
+  {
+   "home": "Shirak Gyumri",
+   "away": "Bkma Yerevan",
+   "kickoff": "2026-10-31T13:00:00.000Z",
    "league": "Premier League"
+  },
+  {
+   "home": "Volga Ulyanovsk",
+   "away": "Tekstilshchik",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Football National League"
+  },
+  {
+   "home": "Power Dynamos",
+   "away": "Nkana FC",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Super League"
+  },
+  {
+   "home": "Real Sociedad B",
+   "away": "Girona",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "LaLiga 2"
+  },
+  {
+   "home": "Bijelo Brdo",
+   "away": "Kustosija",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "2. HNL"
+  },
+  {
+   "home": "VfB Lubeck",
+   "away": "Werder Bremen II",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Regionalliga North"
+  },
+  {
+   "home": "Nkwazi",
+   "away": "Zesco United",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Super League"
+  },
+  {
+   "home": "JK Nomme United",
+   "away": "Levadia Tallinn",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "Premium Liiga"
+  },
+  {
+   "home": "St Andrews",
+   "away": "Pieta",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "First Division"
+  },
+  {
+   "home": "Panathinaikos U19",
+   "away": "AEK Athens U19",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "league": "U19 Super League"
   }
  ],
  "jackpots": [],
@@ -307,7 +307,9 @@
   {
    "page": "SportPesa Mega Jackpot Pro",
    "status": "ok",
-   "found": 2
+   "found": 2,
+   "seen": 16,
+   "head": "To give you the best experience possible, this website uses cookies. By viewing our content, you are accepting the use of cookies. If you want to learn more about the cookies that we use, view our Cookies Policy. Accept SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots"
   },
   {
    "page": "Football",

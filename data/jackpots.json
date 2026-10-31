@@ -52,15 +52,15 @@
        "adj": -20,
        "headlines": [
         "Team News: Coventry vs. Brighton injury, suspension list, predicted XIs",
-        "Coventry vs Sunderland team news, Meunier returns, Mukiele and Thomas doubts, Isidor in frame",
+        "Sunderland seek vital lift at Coventry City amid injury doubts",
         "Lampard on Coventry City injury worry ahead of Sunderland game"
        ]
       },
       "a": {
        "adj": -24,
        "headlines": [
+        "Sunderland seek vital lift at Coventry City amid injury doubts",
         "Sunderland lineup vs. Coventry: Predicted XI for Premier League fixture as Regis Le Bris sweats on Omar Alderete injury",
-        "Xabi Alonso confirms major early Chelsea injury blow ahead of Sunderland clash next weekend",
         "Lampard on Coventry City injury worry ahead of Sunderland game"
        ]
       }
@@ -568,17 +568,17 @@
       "h": {
        "adj": -14,
        "headlines": [
-        "Liverpool injury update: Szoboszlai, Munoz, Frimpong latest return dates",
-        "Rice, Calafiori, Saka - Arsenal injury latest and return dates ahead of Liverpool",
-        "IRAOLA DROPS TRANSFER HINT! + ARSENAL INJURY CRISIS? Liverpool FC Latest Transfer News, Anfield Agenda"
+        "13 players could miss Arsenal against Liverpool after Mikel Arteta injury update",
+        "THE OLISE TO LIVERPOOL DREAM IS OVER! + SZOBO & MUNOZ INJURY UPDATES! Liverpool Latest Transfer News",
+        "Liverpool injury, suspension list and return dates for Arsenal: Dominik Szoboszlai, Victor Munoz latest"
        ]
       },
       "a": {
        "adj": -16,
        "headlines": [
-        "Rice, Calafiori, Saka - Arsenal injury latest and return dates ahead of Liverpool",
         "Arsenal injury update: Calafiori, Rice, Madueke latest return dates",
-        "IRAOLA DROPS TRANSFER HINT! + ARSENAL INJURY CRISIS? Liverpool FC Latest Transfer News, Anfield Agenda"
+        "13 players could miss Arsenal against Liverpool after Mikel Arteta injury update",
+        "3 injured Arsenal players return to training pre-Liverpool"
        ]
       }
      }
@@ -726,7 +726,11 @@
       },
       "a": {
        "adj": 0,
-       "headlines": []
+       "headlines": [
+        "Umar Sadiq steps up Valencia return ahead of Elche trip",
+        "Flamengo without Carrascal, Saúl and Valencia doubts, nine at risk for Vasco derby",
+        "Harvey Elliott faces early Liverpool return with Valencia ‘likely’ to end loan"
+       ]
       }
      }
     }
@@ -866,27 +870,27 @@
      "LDWLD"
     ],
     "p": {
-     "h": 0.2553,
-     "d": 0.2715,
-     "a": 0.4732,
-     "o": 0.4835,
-     "b": 0.5247
+     "h": 0.2616,
+     "d": 0.273,
+     "a": 0.4654,
+     "o": 0.4821,
+     "b": 0.5256
     },
     "xg": [
-     1.07,
-     1.56
+     1.09,
+     1.54
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.47319176039973915,
+     "x12p": 0.4654063260569096,
      "alt": "D",
-     "altp": 0.2714687942371105,
+     "altp": 0.2729880795017255,
      "dc": "X2",
-     "dcp": 0.7446605546368497,
+     "dcp": 0.7383944055586351,
      "ou": "U",
-     "oup": 0.516455887964393,
+     "oup": 0.5178814425651447,
      "bt": "Y",
-     "btp": 0.5246774406738538
+     "btp": 0.5255555823323668
     },
     "pk0": {
      "x12": "A"
@@ -894,11 +898,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -8,
+       "adj": 0,
        "headlines": [
-        "Two injured following multi-vehicle crash on I-64E near Northampton Blvd.",
         "Preview: Northampton Returns Home to Face Bethlehem Catholic in Regular Season Finale",
-        "Gloucester Rugby injury latest ahead of Northampton Saints: Dewi Lake, Seb Atkinson, James Venter"
+        "Two injured following multi-vehicle crash on I-64E near Northampton Blvd.",
+        "Northampton Saints v Gloucester Rugby team news: Seb Atkinson returns for league leaders - Sports & Betting News"
        ]
       },
       "a": {
@@ -922,27 +926,27 @@
      "DWDLL"
     ],
     "p": {
-     "h": 0.5869,
-     "d": 0.2265,
-     "a": 0.1866,
-     "o": 0.5905,
-     "b": 0.5711
+     "h": 0.5787,
+     "d": 0.2291,
+     "a": 0.1922,
+     "o": 0.5879,
+     "b": 0.5729
     },
     "xg": [
-     2.03,
-     1.06
+     2.01,
+     1.07
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5869477699734788,
+     "x12p": 0.5787076589600241,
      "alt": "D",
-     "altp": 0.226497319504882,
+     "altp": 0.2291086761313544,
      "dc": "1X",
-     "dcp": 0.8134450894783607,
+     "dcp": 0.8078163350913785,
      "ou": "O",
-     "oup": 0.59049634039614,
+     "oup": 0.587934354722468,
      "bt": "Y",
-     "btp": 0.5710937854512483
+     "btp": 0.5728593582701212
     },
     "pk0": {
      "x12": "H"
@@ -952,16 +956,15 @@
       "h": {
        "adj": -14,
        "headlines": [
+        "QPR eye triple injury boost at Southampton as Julien Stephan stays positive",
         "Why Southampton will fear the possible return of this QPR maverick at St Mary's",
-        "Swansea City given injury boost as Matos holds 'honest conversations' after QPR",
-        "Southampton wary of Ilias Chair boost as QPR visit St Mary’s"
+        "Swansea City given injury boost as Matos holds 'honest conversations' after QPR"
        ]
       },
       "a": {
-       "adj": -16,
+       "adj": -8,
        "headlines": [
-        "Burnley v Portsmouth early team news: 18 ruled out and 5 fitness doubts",
-        "Burnley v Pompey: Early team and injury news as 18 out and 8 doubts"
+        "Burnley v Pompey: Early team and injury news as 20 out and 7 doubts for showdown"
        ]
       }
      }
@@ -981,27 +984,27 @@
      "WLWDW"
     ],
     "p": {
-     "h": 0.247,
-     "d": 0.2535,
-     "a": 0.4996,
-     "o": 0.5495,
-     "b": 0.5713
+     "h": 0.2374,
+     "d": 0.2507,
+     "a": 0.5119,
+     "o": 0.5521,
+     "b": 0.5695
     },
     "xg": [
-     1.16,
-     1.75
+     1.14,
+     1.78
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4995584923401789,
+     "x12p": 0.5118723797146362,
      "alt": "D",
-     "altp": 0.25347002358504045,
+     "altp": 0.2506953872119797,
      "dc": "X2",
-     "dcp": 0.7530285159252194,
+     "dcp": 0.7625677669266159,
      "ou": "O",
-     "oup": 0.5494855185130235,
+     "oup": 0.5520877037856998,
      "bt": "Y",
-     "btp": 0.5712601484977101
+     "btp": 0.5695029708819985
     },
     "pk0": {
      "x12": "A"
@@ -1009,11 +1012,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -12,
+       "adj": -24,
        "headlines": [
+        "SUFC News: United’s Bamford fitness hope v Preston as late injury blow explained",
         "Preston North End injury update on Alfie Devine, Lewis Gibson and Liam Lindsay ahead of Stoke City",
-        "Preston North End squad's heart-warming gesture to Ali McCann when he returned to training",
-        "Gallagher, Ingelsson, Cisse - Stoke City team news vs Preston North End and injury updates"
+        "Preston lorry driver told he's lucky not to be behind bars after breaching suspended sentence for third time"
        ]
       },
       "a": {
@@ -1041,27 +1044,27 @@
      "LLLDW"
     ],
     "p": {
-     "h": 0.1923,
-     "d": 0.2337,
-     "a": 0.574,
-     "o": 0.5685,
-     "b": 0.5585
+     "h": 0.198,
+     "d": 0.2362,
+     "a": 0.5658,
+     "o": 0.566,
+     "b": 0.5601
     },
     "xg": [
-     1.04,
-     1.95
+     1.05,
+     1.93
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.5740042859049795,
+     "x12p": 0.5658407628920402,
      "alt": "D",
-     "altp": 0.2336539140858865,
+     "altp": 0.23617265473918822,
      "dc": "X2",
-     "dcp": 0.8076581999908661,
+     "dcp": 0.8020134176312285,
      "ou": "O",
-     "oup": 0.5684953225793722,
+     "oup": 0.5660178208860295,
      "bt": "Y",
-     "btp": 0.5584628002623437
+     "btp": 0.5601166952045743
     },
     "pk0": {
      "x12": "A"
@@ -1073,9 +1076,10 @@
        "headlines": []
       },
       "a": {
-       "adj": -8,
+       "adj": -16,
        "headlines": [
-        "Lincoln County deputy uses squad car to stop wrong-way driver on Highway 51; two injured"
+        "Lincoln County deputy uses squad car to stop wrong-way driver on Highway 51; two injured",
+        "\"Luke Fahey is Going to End Lincoln Riley's Job\": CFB Fans React as OSU Names Starting QB After Julian Sayin Injury"
        ]
       }
      }
@@ -1095,27 +1099,27 @@
      "WWWLL"
     ],
     "p": {
-     "h": 0.3518,
-     "d": 0.2717,
-     "a": 0.3765,
-     "o": 0.5219,
+     "h": 0.3481,
+     "d": 0.2716,
+     "a": 0.3803,
+     "o": 0.522,
      "b": 0.5701
     },
     "xg": [
-     1.37,
-     1.42
+     1.36,
+     1.43
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.37649123521326605,
+     "x12p": 0.38031909465009256,
      "alt": "H",
-     "altp": 0.3517990927281942,
+     "altp": 0.34807532879903375,
      "dc": "12",
-     "dcp": 0.7282903279414603,
+     "dcp": 0.7283944234491263,
      "ou": "O",
-     "oup": 0.5219485872330799,
+     "oup": 0.5220424938230327,
      "bt": "Y",
-     "btp": 0.570131823322029
+     "btp": 0.5700689781409898
     },
     "pk0": {
      "x12": "H"
@@ -1123,11 +1127,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -20,
+       "adj": -24,
        "headlines": [
-        "Burnley v Portsmouth early team news: 18 ruled out and 5 fitness doubts",
-        "‘More damage than we initially thought’: Portsmouth boss delivers Colby Bishop injury latest",
-        "Man seriously injured in shooting on Towne Point Road in Portsmouth"
+        "Man injured in Portsmouth shooting on Lanier Crescent",
+        "Portsmouth boss delivers exciting attacking outlook as key figure closes in on injury return",
+        "‘More damage than we initially thought’: Portsmouth boss delivers Colby Bishop injury latest"
        ]
       },
       "a": {
@@ -1155,27 +1159,27 @@
      "WWLWD"
     ],
     "p": {
-     "h": 0.462,
-     "d": 0.2634,
-     "a": 0.2745,
-     "o": 0.5292,
-     "b": 0.5648
+     "h": 0.4681,
+     "d": 0.2624,
+     "a": 0.2695,
+     "o": 0.5302,
+     "b": 0.5641
     },
     "xg": [
-     1.62,
-     1.2
+     1.64,
+     1.18
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.4620462232677472,
+     "x12p": 0.4680889359189587,
      "alt": "A",
-     "altp": 0.27454916655575723,
+     "altp": 0.2695441719534186,
      "dc": "12",
-     "dcp": 0.7365953898235045,
+     "dcp": 0.7376331078723773,
      "ou": "O",
-     "oup": 0.5292486262982367,
+     "oup": 0.5302072177027343,
      "bt": "Y",
-     "btp": 0.56476270452859
+     "btp": 0.5641259138776435
     },
     "pk0": {
      "x12": "H"
@@ -1183,11 +1187,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -20,
+       "adj": -14,
        "headlines": [
+        "'Ready' - Returning Blackburn Rovers man keen to prove his fitness",
         "Blackburn Rovers injury news: Trio return but striker faces fresh setback",
-        "Unpopular ex-Blackburn Rovers player signs for Derby County amid injury crisis",
-        "'Ready' - Returning Blackburn Rovers man keen to prove his fitness"
+        "Unpopular ex-Blackburn Rovers player signs for Derby County amid injury crisis"
        ]
       },
       "a": {
@@ -1195,7 +1199,7 @@
        "headlines": [
         "Stoke City trio closing in on returns to action",
         "Preston North End injury update on Alfie Devine, Lewis Gibson and Liam Lindsay ahead of Stoke City",
-        "Gallagher, Ingelsson, Cisse - Stoke City team news vs Preston North End and injury updates"
+        "Stoke City injury blow confirmed as Lamine Cisse set for period on sidelines"
        ]
       }
      }
@@ -1215,27 +1219,27 @@
      "DDWDW"
     ],
     "p": {
-     "h": 0.2857,
-     "d": 0.2596,
-     "a": 0.4546,
-     "o": 0.5524,
-     "b": 0.5849
+     "h": 0.2875,
+     "d": 0.2599,
+     "a": 0.4526,
+     "o": 0.5521,
+     "b": 0.5851
     },
     "xg": [
-     1.26,
+     1.27,
      1.65
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.45464979743834233,
+     "x12p": 0.4526076703632271,
      "alt": "H",
-     "altp": 0.2857386722620645,
+     "altp": 0.28748122351565697,
      "dc": "12",
-     "dcp": 0.7403884697004068,
+     "dcp": 0.7400888938788841,
      "ou": "O",
-     "oup": 0.5523526784070734,
+     "oup": 0.5520805685316506,
      "bt": "Y",
-     "btp": 0.5848641065727586
+     "btp": 0.5850522985087333
     },
     "pk0": {
      "x12": "A"
@@ -1243,11 +1247,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -16,
+       "adj": -14,
        "headlines": [
-        "Team News: Chelsea vs. Man United injury, suspension list, predicted XIs",
-        "Manchester United 22-man travelling squad vs Chelsea as huge injury boost confirmed",
-        "Man United star will not play again in 2026 as worrying injury update emerges"
+        "Rashford, Mainoo, Shaw - Manchester United injury news and return dates vs Chelsea",
+        "Man United star will not play again in 2026 as worrying injury update emerges",
+        "Bruno Fernandes returns to Man United XI for Chelsea clash"
        ]
       },
       "a": {
@@ -1275,27 +1279,27 @@
      "LWWDW"
     ],
     "p": {
-     "h": 0.2994,
-     "d": 0.2712,
-     "a": 0.4294,
-     "o": 0.5102,
-     "b": 0.5558
+     "h": 0.2925,
+     "d": 0.2703,
+     "a": 0.4373,
+     "o": 0.5111,
+     "b": 0.5552
     },
     "xg": [
-     1.22,
-     1.52
+     1.21,
+     1.54
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4294000992388367,
+     "x12p": 0.4372622448052118,
      "alt": "H",
-     "altp": 0.2993507647312804,
+     "altp": 0.29248650637431056,
      "dc": "12",
-     "dcp": 0.7287508639701171,
+     "dcp": 0.7297487511795224,
      "ou": "O",
-     "oup": 0.5102183033775527,
+     "oup": 0.5111332423046853,
      "bt": "Y",
-     "btp": 0.5558141868104464
+     "btp": 0.5552179240479318
     },
     "pk0": {
      "x12": "A"
@@ -1307,15 +1311,15 @@
        "headlines": [
         "Lewis Cox on West Brom goal debate, injuries and West Ham test",
         "Jarrod Bowen injury revelation: Nuno confirms latest ahead of West Ham vs West Brom",
-        "Watch: West Brom reporter Lewis Cox latest on injury update, goal debate and West Ham"
+        "Reassuring Konstantinos Mavropanos injury update emerges amid initial West Ham worries"
        ]
       },
       "a": {
-       "adj": -14,
+       "adj": -6,
        "headlines": [
-        "Drug combination cuts kidney injury risk, Southampton study finds",
+        "QPR eye triple injury boost at Southampton as Julien Stephan stays positive",
         "The 7 players set to miss Southampton vs QPR ft £18m star",
-        "The three QPR players who could return from injury to face Southampton this Saturday, including Ilias Chair"
+        "QPR should plan to 'rattle' Southampton as 'massive' boost confirmed"
        ]
       }
      }
@@ -1428,27 +1432,27 @@
      "DWLWW"
     ],
     "p": {
-     "h": 0.3765,
-     "d": 0.2787,
-     "a": 0.3448,
-     "o": 0.4916,
-     "b": 0.5464
+     "h": 0.3821,
+     "d": 0.2785,
+     "a": 0.3394,
+     "o": 0.4918,
+     "b": 0.5463
     },
     "xg": [
-     1.37,
-     1.3
+     1.38,
+     1.29
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.37647978517754666,
+     "x12p": 0.38209729406744525,
      "alt": "A",
-     "altp": 0.3448001667607947,
+     "altp": 0.33938776933963344,
      "dc": "12",
-     "dcp": 0.7212799519383414,
+     "dcp": 0.7214850634070786,
      "ou": "U",
-     "oup": 0.5083840138429562,
+     "oup": 0.508197600274135,
      "bt": "Y",
-     "btp": 0.5464305172223842
+     "btp": 0.5463112218851628
     },
     "pk0": {
      "x12": "H"
@@ -1456,11 +1460,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -6,
+       "adj": 0,
        "headlines": [
         "Ole Miss Grad Dane Connery Returns to His Oxford Roots With ‘Back at Ole Miss’",
-        "Worker injured by fall at Oxford Dam in Catawba County; Severity of injuries unknown",
-        "Emma Rice’s Tristan & Yseult Returns To Oxford Playhouse In January"
+        "Phil Wang Returns To Oxford With UH OH In April 2027",
+        "Oxford United Team and Injury News for Visit of Barnsley"
        ]
       },
       "a": {
@@ -1526,9 +1530,9 @@
       "a": {
        "adj": -20,
        "headlines": [
+        "Spalletti takes entire Juventus squad on retreat, injured players included, before Napoli clash",
         "Official: Napoli reveal extent of Lobotka’s injury",
-        "Napoli, double injury for Lobotka: the recovery timeframe",
-        "Lobotka injury: Napoli star stretchered off in tears"
+        "Rrahmani returns in Napoli's big win"
        ]
       }
      }
@@ -1548,27 +1552,27 @@
      "LDWWW"
     ],
     "p": {
-     "h": 0.3647,
-     "d": 0.2614,
-     "a": 0.3739,
+     "h": 0.3686,
+     "d": 0.2615,
+     "a": 0.37,
      "o": 0.5687,
      "b": 0.6063
     },
     "xg": [
-     1.48,
-     1.51
+     1.49,
+     1.5
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.3739016632580916,
+     "x12p": 0.36996156390520496,
      "alt": "H",
-     "altp": 0.3646570128524429,
+     "altp": 0.36857782839514347,
      "dc": "12",
-     "dcp": 0.7385586761105345,
+     "dcp": 0.7385393923003485,
      "ou": "O",
-     "oup": 0.5687428028111958,
+     "oup": 0.5687257989593664,
      "bt": "Y",
-     "btp": 0.6062803222860026
+     "btp": 0.6062925579855833
     },
     "pk0": {
      "x12": "A"
@@ -1576,11 +1580,9 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -12,
+       "adj": -8,
        "headlines": [
-        "RC Lens fined €80,000, away fans banned for two games",
-        "Lille seek derby boost against Lens as top spot comes into view",
-        "Official | Lens fans banned from Leipzig and Liverpool Champions League away days"
+        "RC Lens fined €80,000, away fans banned for two games"
        ]
       },
       "a": {
@@ -1597,7 +1599,7 @@
   ],
   "summary": {
    "expectedCorrect": 5.97,
-   "pAllCorrect": 0.000033686068877967724,
+   "pAllCorrect": 0.00003437574568045172,
    "unknownTeams": 1
   }
  }

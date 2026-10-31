@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T07:49:16.461Z",
+ "updated": "2026-10-31T12:40:06.119Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "14 results, 157 fixtures"
+   "detail": "14 results, 153 fixtures"
   },
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "42 results, 225 fixtures"
+   "detail": "46 results, 208 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -24,12 +24,12 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 95 fixtures next 14d"
+   "detail": "264 results, 93 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "13 events fetched, 8 with 1X2 odds"
+   "detail": "23 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,39 +39,40 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T07:48:50.081Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T12:39:39.643Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "532 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "Feyenoord vs Fortuna Sittard",
-  "Macarthur vs Western Sydney Wonderers",
-  "Csl Stefanestii de Jos vs Chindia Targoviste",
-  "Cetatea 1932 Suceava vs Bihor",
-  "Kagoshima United vs Roasso Kumamoto",
-  "Targu Mures vs Unirea Slobozia",
-  "Gloria Popesti Leordeni vs AFC Metalul Buzau",
-  "PAOK U19 vs Asteras Tripolis U19",
-  "FK Vojvodina Novi Sad vs FK Vozdovac",
-  "Zhetysu vs Astana",
-  "FK IMT Youth vs OFK Belgrade",
-  "Ruzomberok W vs AS Trencin W",
-  "Elimai FC vs Okzhetpes",
-  "FK Kaspiy Aktau vs FK Kyzylzhar Petropavlovsk",
-  "Kairat Almaty vs FC Altai Oskemen",
-  "Ulytau FC vs Atyrau",
-  "Tobol Kostanay vs Aktobe",
-  "Irtysh Pavlodar vs Ordabasy",
-  "Erzurum BB vs Corum Bld",
-  "Atromitos Athinon U19 vs Volos Nps U19",
-  "Amarante FC vs Porto B",
-  "Hai Phong FC vs Binh Phuoc",
-  "Baranovichi vs Naftan Novopolotsk",
-  "Veres Rivne vs Chernomorets Odessa"
+  "Everton W vs Manchester United W",
+  "Hessen Kassel vs SG Barockstadt Fulda-Lehnerz",
+  "Brabrand IF vs FA 2000",
+  "Neftekhimik vs Ska Energiya",
+  "Doxa N. Sidirochoriou vs Kavala",
+  "Wiedenbruck vs RW Oberhausen",
+  "Rea vs Odysseas Glyfadas W",
+  "NK Jadran LP vs Segesta Sisak",
+  "NK Bilje vs Tabor",
+  "Dinamo Brest vs Vitebsk",
+  "NK Inker Zapresic vs Solin",
+  "ETSV Weiche vs Kickers Emden",
+  "HNK Orijent 1919 vs NK Vukovar 91",
+  "IF Brommapojkarna W vs AIK Stockholm W",
+  "Shirak Gyumri vs Bkma Yerevan",
+  "Volga Ulyanovsk vs Tekstilshchik",
+  "Power Dynamos vs Nkana FC",
+  "Real Sociedad B vs Girona",
+  "Bijelo Brdo vs Kustosija",
+  "VfB Lubeck vs Werder Bremen II",
+  "Nkwazi vs Zesco United",
+  "JK Nomme United vs Levadia Tallinn",
+  "St Andrews vs Pieta",
+  "Panathinaikos U19 vs AEK Athens U19"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
