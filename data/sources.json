@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31T02:55:18.184Z",
+ "updated": "2026-10-31T04:31:41.216Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
+   "detail": "84 files ok, 0 failed; 28302 results, 307 fixtures"
   },
   {
    "source": "football-data.org",
@@ -13,8 +13,8 @@
   },
   {
    "source": "API-Football",
-   "ok": false,
-   "detail": "no API_FOOTBALL_KEY (optional)"
+   "ok": true,
+   "detail": "38 results, 231 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -44,12 +44,12 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T02:54:53.111Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T04:31:11.592Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "562 teams fetched, 0 failed"
+   "detail": "12 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
@@ -57,29 +57,30 @@
   "Brentford vs Nottingham",
   "Feyenoord vs Fortuna Sittard",
   "FC Porto vs GD Estoril",
-  "JEF United W vs Nojima Stella Kanagawa Sagamihara W",
-  "Briobecca Urayasu vs Honda FC",
-  "Newcastle Jets vs Wellington",
-  "Honda Lock vs Vonds Ichihara FC",
-  "Yongin FC vs Seoul E Land",
   "Tokushima Vortis vs Yokohama",
-  "Chuncheon FC vs Busan Transp.",
   "Jeonbuk Hyundai vs Daejeon Citizen",
+  "Yongin FC vs Seoul E Land",
+  "Chuncheon FC vs Busan Transp.",
   "Kamatamare S vs Nara Club",
-  "Vanraure Hachnohe vs Montedio Yamagata",
+  "Vegalta Sendai vs Omiya Ardija",
   "Tochigi SC vs Ehime",
-  "Hoyo Oita vs Tokyo Musashino City FC",
+  "Niigata Albirex vs Kataller Toyama",
   "Fagiano Okayama vs FC Tokyo",
   "Zwiegen Kanazawa vs Thespakusatsu",
   "Blaublitz Akita vs Fujieda MYFC",
-  "Niigata Albirex vs Kataller Toyama",
-  "Vegalta Sendai vs Omiya Ardija",
-  "Kyoto Sanga vs Shimizu S Pulse",
+  "Vanraure Hachnohe vs Montedio Yamagata",
+  "Hoyo Oita vs Tokyo Musashino City FC",
   "Tegevajaro Miyazaki vs Oita Trinita",
+  "Mito Hollyhock vs Sanfrecce Hiroshima",
   "Tochigi City vs Iwaki FC",
+  "Kyoto Sanga vs Shimizu S Pulse",
   "Jubilo Iwata vs Sagan Tosu",
   "Gangneung City vs Yangpyeong FC",
-  "Mito Hollyhock vs Sanfrecce Hiroshima"
+  "Fukushima Utd vs Matsumoto Yamaga",
+  "Gifu vs FC Osaka",
+  "Kochi United SC vs Sagamihara",
+  "Changnyeong WFC W vs Daejeon Sportstoto W",
+  "Imabari vs Ventforet Kofu"
  ],
  "unknownJackpotTeams": []
 }

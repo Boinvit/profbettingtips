@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-10-31T02:54:53.111Z",
+ "scrapedAt": "2026-10-31T04:31:11.592Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -158,52 +158,10 @@
    "league": "Primeira Liga"
   },
   {
-   "home": "JEF United W",
-   "away": "Nojima Stella Kanagawa Sagamihara W",
-   "kickoff": "2026-10-31T04:00:00.000Z",
-   "league": "WE League, Women"
-  },
-  {
-   "home": "Briobecca Urayasu",
-   "away": "Honda FC",
-   "kickoff": "2026-10-31T04:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Consadole Sapporo",
-   "away": "Shonan Bellmare",
-   "kickoff": "2026-10-31T04:00:00.000Z",
-   "league": "J2 League"
-  },
-  {
-   "home": "Newcastle Jets",
-   "away": "Wellington",
-   "kickoff": "2026-10-31T04:00:00.000Z",
-   "league": "A-League"
-  },
-  {
-   "home": "Honda Lock",
-   "away": "Vonds Ichihara FC",
-   "kickoff": "2026-10-31T04:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Yongin FC",
-   "away": "Seoul E Land",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "K-League 2"
-  },
-  {
    "home": "Tokushima Vortis",
    "away": "Yokohama",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
-  },
-  {
-   "home": "Chuncheon FC",
-   "away": "Busan Transp.",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "K3 League"
   },
   {
    "home": "Jeonbuk Hyundai",
@@ -212,14 +170,26 @@
    "league": "K-League 1"
   },
   {
+   "home": "Yongin FC",
+   "away": "Seoul E Land",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "K-League 2"
+  },
+  {
+   "home": "Chuncheon FC",
+   "away": "Busan Transp.",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "K3 League"
+  },
+  {
    "home": "Kamatamare S",
    "away": "Nara Club",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J.League 3"
   },
   {
-   "home": "Vanraure Hachnohe",
-   "away": "Montedio Yamagata",
+   "home": "Vegalta Sendai",
+   "away": "Omiya Ardija",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
   },
@@ -230,10 +200,10 @@
    "league": "J.League 3"
   },
   {
-   "home": "Hoyo Oita",
-   "away": "Tokyo Musashino City FC",
+   "home": "Niigata Albirex",
+   "away": "Kataller Toyama",
    "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "Japan Football League"
+   "league": "J2 League"
   },
   {
    "home": "Fagiano Okayama",
@@ -254,22 +224,16 @@
    "league": "J2 League"
   },
   {
-   "home": "Niigata Albirex",
-   "away": "Kataller Toyama",
+   "home": "Vanraure Hachnohe",
+   "away": "Montedio Yamagata",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
   },
   {
-   "home": "Vegalta Sendai",
-   "away": "Omiya Ardija",
+   "home": "Hoyo Oita",
+   "away": "Tokyo Musashino City FC",
    "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J2 League"
-  },
-  {
-   "home": "Kyoto Sanga",
-   "away": "Shimizu S Pulse",
-   "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J1 League"
+   "league": "Japan Football League"
   },
   {
    "home": "Tegevajaro Miyazaki",
@@ -278,10 +242,22 @@
    "league": "J2 League"
   },
   {
+   "home": "Mito Hollyhock",
+   "away": "Sanfrecce Hiroshima",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J1 League"
+  },
+  {
    "home": "Tochigi City",
    "away": "Iwaki FC",
    "kickoff": "2026-10-31T05:00:00.000Z",
    "league": "J2 League"
+  },
+  {
+   "home": "Kyoto Sanga",
+   "away": "Shimizu S Pulse",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J1 League"
   },
   {
    "home": "Jubilo Iwata",
@@ -296,10 +272,34 @@
    "league": "K3 League"
   },
   {
-   "home": "Mito Hollyhock",
-   "away": "Sanfrecce Hiroshima",
+   "home": "Fukushima Utd",
+   "away": "Matsumoto Yamaga",
    "kickoff": "2026-10-31T05:00:00.000Z",
-   "league": "J1 League"
+   "league": "J.League 3"
+  },
+  {
+   "home": "Gifu",
+   "away": "FC Osaka",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J.League 3"
+  },
+  {
+   "home": "Kochi United SC",
+   "away": "Sagamihara",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "J.League 3"
+  },
+  {
+   "home": "Changnyeong WFC W",
+   "away": "Daejeon Sportstoto W",
+   "kickoff": "2026-10-31T05:00:00.000Z",
+   "league": "WK-League"
+  },
+  {
+   "home": "Imabari",
+   "away": "Ventforet Kofu",
+   "kickoff": "2026-10-31T05:05:00.000Z",
+   "league": "J2 League"
   }
  ],
  "jackpots": [],

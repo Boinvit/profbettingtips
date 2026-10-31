@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 28471,
+ "tunedOn": 28586,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -131,6 +131,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-10-31T04:31:41.216Z",
+   "n": 28586,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0133,
+    1.0133
+   ],
+   "acc": [
+    0.4964,
+    0.4964
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -142,9 +166,9 @@
   },
   {
    "team": "Barcelona",
-   "elo": 1814,
+   "elo": 1824,
    "att": 2.11,
-   "def": 0.78
+   "def": 0.76
   },
   {
    "team": "Inter",
@@ -166,9 +190,9 @@
   },
   {
    "team": "Sp Lisbon",
-   "elo": 1760,
-   "att": 1.85,
-   "def": 0.74
+   "elo": 1765,
+   "att": 1.83,
+   "def": 0.7
   },
   {
    "team": "PSV Eindhoven",
@@ -183,16 +207,22 @@
    "def": 0.66
   },
   {
+   "team": "Galatasaray",
+   "elo": 1754,
+   "att": 1.62,
+   "def": 0.78
+  },
+  {
    "team": "Celtic",
    "elo": 1754,
    "att": 1.62,
    "def": 0.69
   },
   {
-   "team": "Viking",
+   "team": "Paris SG",
    "elo": 1752,
-   "att": 1.65,
-   "def": 0.63
+   "att": 1.61,
+   "def": 0.67
   },
   {
    "team": "St. Gilloise",
@@ -201,10 +231,10 @@
    "def": 0.56
   },
   {
-   "team": "Galatasaray",
-   "elo": 1747,
-   "att": 1.55,
-   "def": 0.83
+   "team": "Real Madrid",
+   "elo": 1749,
+   "att": 1.65,
+   "def": 0.73
   },
   {
    "team": "Arsenal",
@@ -213,22 +243,16 @@
    "def": 0.5
   },
   {
-   "team": "Paris SG",
-   "elo": 1746,
-   "att": 1.5,
-   "def": 0.67
-  },
-  {
-   "team": "Real Madrid",
-   "elo": 1741,
-   "att": 1.62,
-   "def": 0.71
+   "team": "Viking",
+   "elo": 1745,
+   "att": 1.63,
+   "def": 0.7
   },
   {
    "team": "Bodo/Glimt",
-   "elo": 1737,
-   "att": 1.58,
-   "def": 0.58
+   "elo": 1744,
+   "att": 1.6,
+   "def": 0.61
   },
   {
    "team": "Man City",
@@ -285,6 +309,6 @@
    "def": 0.73
   }
  ],
- "matches": 28472,
- "updated": "2026-10-31T02:55:18.184Z"
+ "matches": 28586,
+ "updated": "2026-10-31T04:31:41.216Z"
 }
