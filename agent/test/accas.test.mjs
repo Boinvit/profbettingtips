@@ -68,3 +68,15 @@ test('lifecycle: rebuild before kickoff, freeze after, settle won/lost, void sta
   assert.equal(updateAccas(r3, [], new Date('2026-11-05T00:00:00Z')).items.find((a) => a.id === id).status, 'void');
   const st = accaStats(updateAccas(r3, settled(null), end).items); assert.ok(st.settled >= 1 && st.overall.rate === 1);
 });
+
+test('duplicates: same match on two days is collapsed, keeping the odds-backed entry; real rematches 3+ days apart are kept', () => {
+  const a = mk('d1', 'Barcelona', 'Deportivo Alaves', '2026-10-31T20:00:00Z', PK(0.8), { ctx: { odds: [1.2, 6, 12] } });
+  const b = mk('d2', 'Barcelona', 'Alaves', '2026-11-01T14:00:00Z', PK(0.8), { games: 40 });
+  assert.equal(sameFixture(a, b), true);
+  assert.deepEqual(dropDuplicatePending([b, a]).map((p) => p.id), ['d1']);
+  assert.equal(sameFixture(a, mk('d3', 'Barcelona', 'Alaves', '2026-11-04T20:00:00Z', PK(0.8))), false);
+});
+test('n-fold odds floor grows with the number of legs (a longer slip must pay more)', () => {
+  const pool = [0.9, 0.89, 0.88, 0.87, 0.86, 0.85, 0.84, 0.83].map((q, i) => mk('n' + i, 'H' + i, 'A' + i, '2026-10-30T' + String(12 + i).padStart(2, '0') + ':00:00Z', PK(q), { ctx: { odds: [1.3 + i * 0.05, 4, 6] } }));
+  for (const s of buildWindow(windows(NOW)[0], pool, NOW).filter((x) => x.type.startsWith('fold'))) assert.ok(s.odds >= 1.4 * 1.12 ** (s.n - 2) - 0.05, s.type + ' odds ' + s.odds);
+});

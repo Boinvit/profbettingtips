@@ -5,7 +5,7 @@ const words = (s) => new Set(String(s || '').toLowerCase().normalize('NFD').repl
 const share = (a, b) => { const B = words(b); for (const w of words(a)) if (B.has(w)) return true; return false; };
 export function sameFixture(a, b) {
   if (a === b) return false;
-  if (Math.abs(+new Date(a.kickoff) - +new Date(b.kickoff)) > 3 * 3600e3) return false;
+  if (Math.abs(+new Date(a.kickoff) - +new Date(b.kickoff)) > 36 * 3600e3) return false; // same fixture can carry a placeholder date in one source
   return share(a.home, b.home) && share(a.away, b.away);
 }
 /** Keep one prediction per real fixture among the pending ones (more history first, then earlier-created). Settled ones are never touched. */
@@ -14,7 +14,8 @@ export function dropDuplicatePending(preds) {
   for (let i = 0; i < pend.length; i++) for (let j = i + 1; j < pend.length; j++) {
     const a = pend[i], b = pend[j];
     if (drop.has(a) || drop.has(b) || !sameFixture(a, b)) continue;
-    const keepA = (a.games ?? 0) !== (b.games ?? 0) ? (a.games ?? 0) > (b.games ?? 0) : String(a.created) <= String(b.created);
+    const oa = a.ctx?.odds ? 1 : 0, ob = b.ctx?.odds ? 1 : 0; // prefer the entry backed by real bookmaker odds (authoritative schedule)
+    const keepA = oa !== ob ? oa > ob : (a.games ?? 0) !== (b.games ?? 0) ? (a.games ?? 0) > (b.games ?? 0) : String(a.created) <= String(b.created);
     drop.add(keepA ? b : a);
   }
   return drop.size ? preds.filter((p) => !drop.has(p)) : preds;

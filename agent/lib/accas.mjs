@@ -84,7 +84,7 @@ export function buildWindow(w, pool, now = new Date()) {
     out.set(sig, { id: `${w.id}|${type}`, window: w.kind, key: w.id, days: w.days, type, title, n: legs.length, odds: r2(s.odds), prob: r3(s.prob),
       grade: gradeOf(legs), est: legs.some((l) => l.src === 'model'), created: now.toISOString(), status: 'pending', lastKickoff: legs.at(-1).kickoff, legs });
   };
-  for (let n = 2; n <= 6; n++) push(`fold${n}`, `${n}-fold`, bestInBand(cands, { lo: 1.4, hi: 60, minN: n, maxN: n }));
+  for (let n = 2; n <= 6; n++) push(`fold${n}`, `${n}-fold`, bestInBand(cands, { lo: 1.4 * 1.12 ** (n - 2), hi: 60, minN: n, maxN: n }));
   for (const b of BANDS) push(`odds${b.t}`, `Around ${b.t}x`, bestInBand(cands, { lo: b.lo, hi: b.hi, minN: 2, maxN: 8 }));
   return [...out.values()].sort((a, b) => a.odds - b.odds);
 }
