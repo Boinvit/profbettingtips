@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T18:23:37.047Z",
+ "updated": "2026-10-31T21:41:14.222Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "41 results, 124 fixtures"
+   "detail": "48 results, 117 fixtures"
   },
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "132 results, 119 fixtures"
+   "detail": "162 results, 97 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -24,12 +24,12 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 75 fixtures next 14d"
+   "detail": "264 results, 73 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "27 events fetched, 8 with 1X2 odds"
+   "detail": "24 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,48 +39,49 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T18:23:12.680Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T21:40:49.716Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "352 teams fetched, 0 failed"
+   "detail": "15 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "FC Gyori Eto vs Vasas SC",
-  "CA Fenix vs CS Cerrito",
-  "CA Penarol vs Mvo Wanderers",
-  "Karlsruher SC vs Heidenheim",
-  "Santiago Morning vs Lota Schwager",
-  "Celik Zenica vs Borac Banja Luka",
-  "RS Waasland Beveren vs Union Saint Gilloise",
-  "Newtown AFC vs Buckley Town",
-  "Independiente Santa Fe W vs Club Olimpia",
-  "FUS Rabat vs Hassania Agadir",
-  "CD Recoleta vs Sportivo Ameliano",
-  "CD Concon National FC vs Brujas de Salamanca",
-  "General Velasquez vs Deportes Rengo",
-  "Alianza Atletico vs ADC Juan Pablo II",
-  "Veraguas United FC B vs Academia Mario Mendez",
-  "San Jose Earthquake vs Real Salt Lake",
-  "C.D. Cacahuatique vs CD Inca",
-  "Lobos Upnfm vs FC Policia Nacional",
-  "O Higgins vs Nublense",
-  "Cocle FC vs Chorrillo",
-  "Academia Puerto Cabello vs Deportivo Tachira",
-  "Ciervos FC vs Santiago FC",
-  "Deportivo Delfines Coatzacoalcos vs La Tribu de Ciudad Juarez",
-  "Zacatepec FC vs Racing FC Porto Palmeiras",
   "Cruz Azul Hidalgo vs Tlaxcala FC",
   "Club Olimpo vs Gimnasia Y Esgrima",
+  "Artesanos Metepec FC vs Saltillo Soccer FC",
+  "CA Rentistas vs La Luz FC",
   "Tritones Vallarta MFC vs Pioneros de Cancun",
   "Real Refineros Cds vs Guerreros de Autlan",
-  "CA Rentistas vs La Luz FC",
-  "Artesanos Metepec FC vs Saltillo Soccer FC",
   "Sp. San Lorenzo vs Libertad Asuncion",
   "Nautico PE vs Avai",
-  "Sportivo Luqueno vs Nacional Asuncion"
+  "Sportivo Luqueno vs Nacional Asuncion",
+  "Llaneros FC vs Junior Barranquilla",
+  "Carolina Uslw League vs Lexington SC",
+  "Inter Formando Un Atleta U20 vs CD Platense U20",
+  "Plaza Amador vs Alianza PAN",
+  "Real Espana vs Juticalpa",
+  "Caracas FC vs Monagas SC",
+  "Club Tijuana W vs Cruz Azul W",
+  "Dragones de Oaxaca vs Mineros de Fresnillo FC",
+  "Estudiantes LP vs Instituto Cordoba",
+  "Lobos Ulmx vs Chapulineros de Oaxaca",
+  "Isidro Metapan vs CD Municipal Limeno",
+  "Piratas Veracruz vs CD Tapatio",
+  "Cancun FC vs Tampico Madero",
+  "Alacranes de Durango vs Atletico Morelia",
+  "Atletico Choloma vs CD Olimpia",
+  "Veraguas FC vs Herrera FC",
+  "Sporting San Jose vs CS Herediano",
+  "Irapuato vs Deportiva Venados",
+  "Necaxa W vs Santos Laguna W",
+  "Migori Youth FC vs Mombasa United FC",
+  "AFC Leopards vs KK Homeboyz",
+  "PEC Zwolle vs ADO Den Haag",
+  "Nairobi United FC vs Bandari",
+  "Aps Bomet FC vs Muranga Seal",
+  "Gor Mahia vs KCB"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

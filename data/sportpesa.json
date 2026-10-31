@@ -1,239 +1,23 @@
 {
- "scrapedAt": "2026-10-31T18:23:12.680Z",
+ "scrapedAt": "2026-10-31T21:40:49.716Z",
  "matches": [
   {
-   "home": "Barcelona",
-   "away": "Alaves",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "LaLiga"
-  },
-  {
-   "home": "AC Milan",
-   "away": "Inter",
-   "kickoff": "2026-10-31T19:45:00.000Z",
-   "league": "Serie A"
-  },
-  {
-   "home": "Aston Villa",
-   "away": "Fulham",
-   "kickoff": "2026-10-31T20:00:00.000Z",
+   "home": "Liverpool",
+   "away": "Arsenal",
+   "kickoff": "2026-11-01T16:30:00.000Z",
    "league": "Premier League"
   },
   {
-   "home": "Troyes",
-   "away": "Le Mans",
-   "kickoff": "2026-10-31T19:45:00.000Z",
-   "league": "Ligue 1"
+   "home": "Racing Santander",
+   "away": "Real Madrid",
+   "kickoff": "2026-11-01T15:15:00.000Z",
+   "league": "LaLiga"
   },
   {
-   "home": "Ajax",
-   "away": "AZ Alkmaar",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Eredivisie"
-  },
-  {
-   "home": "FC Porto",
-   "away": "GD Estoril",
-   "kickoff": "2026-10-31T20:30:00.000Z",
-   "league": "Primeira Liga"
-  },
-  {
-   "home": "Sampdoria",
-   "away": "Virtus Entella",
-   "kickoff": "2026-10-31T18:30:00.000Z",
-   "league": "Serie B"
-  },
-  {
-   "home": "FC Gyori Eto",
-   "away": "Vasas SC",
-   "kickoff": "2026-10-31T18:45:00.000Z",
-   "league": "NB I"
-  },
-  {
-   "home": "Guingamp",
-   "away": "St. Etienne",
-   "kickoff": "2026-10-31T19:00:00.000Z",
-   "league": "Ligue 2"
-  },
-  {
-   "home": "CA Fenix",
-   "away": "CS Cerrito",
-   "kickoff": "2026-10-31T19:00:00.000Z",
-   "league": "Segunda Division "
-  },
-  {
-   "home": "FC Luzern",
-   "away": "FC Sion",
-   "kickoff": "2026-10-31T19:30:00.000Z",
-   "league": "Super League"
-  },
-  {
-   "home": "CA Penarol",
-   "away": "Mvo Wanderers",
-   "kickoff": "2026-10-31T19:30:00.000Z",
-   "league": "Primera Division"
-  },
-  {
-   "home": "Karlsruher SC",
-   "away": "Heidenheim",
-   "kickoff": "2026-10-31T19:30:00.000Z",
-   "league": "2. Bundesliga"
-  },
-  {
-   "home": "Santiago Morning",
-   "away": "Lota Schwager",
-   "kickoff": "2026-10-31T19:30:00.000Z",
-   "league": "Segunda Division"
-  },
-  {
-   "home": "Celik Zenica",
-   "away": "Borac Banja Luka",
-   "kickoff": "2026-10-31T19:45:00.000Z",
-   "league": "Premijer Liga"
-  },
-  {
-   "home": "RS Waasland Beveren",
-   "away": "Union Saint Gilloise",
-   "kickoff": "2026-10-31T19:45:00.000Z",
-   "league": "First Division A"
-  },
-  {
-   "home": "Newtown AFC",
-   "away": "Buckley Town",
-   "kickoff": "2026-10-31T19:45:00.000Z",
-   "league": "Cymru Championship, North"
-  },
-  {
-   "home": "Anderlecht",
-   "away": "Westerlo",
-   "kickoff": "2026-10-31T19:45:00.000Z",
-   "league": "First Division A"
-  },
-  {
-   "home": "Independiente Santa Fe W",
-   "away": "Club Olimpia",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Copa Libertadores, Women"
-  },
-  {
-   "home": "Cambuur",
-   "away": "GO Ahead Eagles",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Eredivisie"
-  },
-  {
-   "home": "FUS Rabat",
-   "away": "Hassania Agadir",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Botola"
-  },
-  {
-   "home": "CD Recoleta",
-   "away": "Sportivo Ameliano",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Primera Division, Apertura"
-  },
-  {
-   "home": "CD Concon National FC",
-   "away": "Brujas de Salamanca",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Segunda Division"
-  },
-  {
-   "home": "General Velasquez",
-   "away": "Deportes Rengo",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "Segunda Division"
-  },
-  {
-   "home": "Albacete Balompie",
-   "away": "CE Sabadell",
-   "kickoff": "2026-10-31T20:00:00.000Z",
-   "league": "LaLiga 2"
-  },
-  {
-   "home": "Alianza Atletico",
-   "away": "ADC Juan Pablo II",
-   "kickoff": "2026-10-31T20:30:00.000Z",
-   "league": "Primera Division"
-  },
-  {
-   "home": "Veraguas United FC B",
-   "away": "Academia Mario Mendez",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Liga Nacional de Ascenso"
-  },
-  {
-   "home": "Los Angeles Galaxy",
-   "away": "Austin FC",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Major League Soccer"
-  },
-  {
-   "home": "San Jose Earthquake",
-   "away": "Real Salt Lake",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Major League Soccer"
-  },
-  {
-   "home": "C.D. Cacahuatique",
-   "away": "CD Inca",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Primera Division, Apertura"
-  },
-  {
-   "home": "Colon Santa Fe",
-   "away": "Defensores Belgrano",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Primera Nacional"
-  },
-  {
-   "home": "Lobos Upnfm",
-   "away": "FC Policia Nacional",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Liga Nacional. Apertura"
-  },
-  {
-   "home": "O Higgins",
-   "away": "Nublense",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Primera Division"
-  },
-  {
-   "home": "Cocle FC",
-   "away": "Chorrillo",
-   "kickoff": "2026-10-31T21:00:00.000Z",
-   "league": "Liga Panamena de Futbol, Apertura"
-  },
-  {
-   "home": "Academia Puerto Cabello",
-   "away": "Deportivo Tachira",
-   "kickoff": "2026-10-31T21:30:00.000Z",
-   "league": "Primera Division"
-  },
-  {
-   "home": "Ciervos FC",
-   "away": "Santiago FC",
-   "kickoff": "2026-10-31T21:30:00.000Z",
-   "league": "Liga Premier Serie A"
-  },
-  {
-   "home": "Deportivo Delfines Coatzacoalcos",
-   "away": "La Tribu de Ciudad Juarez",
-   "kickoff": "2026-10-31T21:30:00.000Z",
-   "league": "Liga Premier Serie A"
-  },
-  {
-   "home": "Zacatepec FC",
-   "away": "Racing FC Porto Palmeiras",
-   "kickoff": "2026-10-31T21:30:00.000Z",
-   "league": "Liga Primera Premier"
-  },
-  {
-   "home": "Queretaro W",
-   "away": "Pachuca W",
-   "kickoff": "2026-10-31T21:40:00.000Z",
-   "league": "Liga MX, Women, Apertura"
+   "home": "Juventus",
+   "away": "Napoli",
+   "kickoff": "2026-11-01T19:45:00.000Z",
+   "league": "Serie A"
   },
   {
    "home": "Cruz Azul Hidalgo",
@@ -248,14 +32,8 @@
    "league": "Torneo Federal A"
   },
   {
-   "home": "Tritones Vallarta MFC",
-   "away": "Pioneros de Cancun",
-   "kickoff": "2026-10-31T22:00:00.000Z",
-   "league": "Liga Primera Premier"
-  },
-  {
-   "home": "Real Refineros Cds",
-   "away": "Guerreros de Autlan",
+   "home": "Artesanos Metepec FC",
+   "away": "Saltillo Soccer FC",
    "kickoff": "2026-10-31T22:00:00.000Z",
    "league": "Liga Premier Serie A"
   },
@@ -266,8 +44,14 @@
    "league": "Segunda Division "
   },
   {
-   "home": "Artesanos Metepec FC",
-   "away": "Saltillo Soccer FC",
+   "home": "Tritones Vallarta MFC",
+   "away": "Pioneros de Cancun",
+   "kickoff": "2026-10-31T22:00:00.000Z",
+   "league": "Liga Primera Premier"
+  },
+  {
+   "home": "Real Refineros Cds",
+   "away": "Guerreros de Autlan",
    "kickoff": "2026-10-31T22:00:00.000Z",
    "league": "Liga Premier Serie A"
   },
@@ -296,10 +80,226 @@
    "league": "Primera Division, Apertura"
   },
   {
+   "home": "Llaneros FC",
+   "away": "Junior Barranquilla",
+   "kickoff": "2026-10-31T23:00:00.000Z",
+   "league": "Primera A, Apertura"
+  },
+  {
+   "home": "Carolina Uslw League",
+   "away": "Lexington SC",
+   "kickoff": "2026-10-31T23:00:00.000Z",
+   "league": "USL Super League, Women"
+  },
+  {
+   "home": "Inter Formando Un Atleta U20",
+   "away": "CD Platense U20",
+   "kickoff": "2026-10-31T23:00:00.000Z",
+   "league": "Primera Division, Reserves, Apertura"
+  },
+  {
    "home": "CF Pachuca",
    "away": "Uanl Tigres",
    "kickoff": "2026-10-31T23:00:00.000Z",
    "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Plaza Amador",
+   "away": "Alianza PAN",
+   "kickoff": "2026-10-31T23:15:00.000Z",
+   "league": "Liga Panamena de Futbol, Apertura"
+  },
+  {
+   "home": "Real Espana",
+   "away": "Juticalpa",
+   "kickoff": "2026-10-31T23:15:00.000Z",
+   "league": "Liga Nacional. Apertura"
+  },
+  {
+   "home": "Caracas FC",
+   "away": "Monagas SC",
+   "kickoff": "2026-10-31T23:30:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "Club Tijuana W",
+   "away": "Cruz Azul W",
+   "kickoff": "2026-10-31T23:45:00.000Z",
+   "league": "Liga MX, Women, Apertura"
+  },
+  {
+   "home": "Corinthians W",
+   "away": "Cruzeiro EC MG W",
+   "kickoff": "2026-11-01T00:00:00.000Z",
+   "league": "Copa Libertadores, Women"
+  },
+  {
+   "home": "Dragones de Oaxaca",
+   "away": "Mineros de Fresnillo FC",
+   "kickoff": "2026-11-01T00:00:00.000Z",
+   "league": "Liga Premier Serie A"
+  },
+  {
+   "home": "Estudiantes LP",
+   "away": "Instituto Cordoba",
+   "kickoff": "2026-11-01T00:30:00.000Z",
+   "league": "Superliga"
+  },
+  {
+   "home": "Lobos Ulmx",
+   "away": "Chapulineros de Oaxaca",
+   "kickoff": "2026-11-01T01:00:00.000Z",
+   "league": "Liga Primera Premier"
+  },
+  {
+   "home": "Isidro Metapan",
+   "away": "CD Municipal Limeno",
+   "kickoff": "2026-11-01T01:00:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Piratas Veracruz",
+   "away": "CD Tapatio",
+   "kickoff": "2026-11-01T01:00:00.000Z",
+   "league": "Liga de Ascenso, Apertura"
+  },
+  {
+   "home": "Cancun FC",
+   "away": "Tampico Madero",
+   "kickoff": "2026-11-01T01:00:00.000Z",
+   "league": "Liga de Ascenso, Apertura"
+  },
+  {
+   "home": "Alacranes de Durango",
+   "away": "Atletico Morelia",
+   "kickoff": "2026-11-01T01:00:00.000Z",
+   "league": "Liga de Ascenso, Apertura"
+  },
+  {
+   "home": "CF Monterrey",
+   "away": "Club Tijuana",
+   "kickoff": "2026-11-01T01:05:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Guadalajara Chivas",
+   "away": "Atlante",
+   "kickoff": "2026-11-01T01:07:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Colorado Rapids",
+   "away": "Chicago Fire",
+   "kickoff": "2026-11-01T01:30:00.000Z",
+   "league": "Major League Soccer"
+  },
+  {
+   "home": "Atletico Choloma",
+   "away": "CD Olimpia",
+   "kickoff": "2026-11-01T01:30:00.000Z",
+   "league": "Liga Nacional. Apertura"
+  },
+  {
+   "home": "Veraguas FC",
+   "away": "Herrera FC",
+   "kickoff": "2026-11-01T01:30:00.000Z",
+   "league": "Liga Panamena de Futbol, Apertura"
+  },
+  {
+   "home": "Sporting San Jose",
+   "away": "CS Herediano",
+   "kickoff": "2026-11-01T02:00:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Irapuato",
+   "away": "Deportiva Venados",
+   "kickoff": "2026-11-01T02:00:00.000Z",
+   "league": "Liga Primera Premier"
+  },
+  {
+   "home": "Club America",
+   "away": "Deportivo Toluca",
+   "kickoff": "2026-11-01T03:10:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Necaxa W",
+   "away": "Santos Laguna W",
+   "kickoff": "2026-11-01T03:10:00.000Z",
+   "league": "Liga MX, Women, Apertura"
+  },
+  {
+   "home": "Migori Youth FC",
+   "away": "Mombasa United FC",
+   "kickoff": "2026-11-01T11:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "AFC Leopards",
+   "away": "KK Homeboyz",
+   "kickoff": "2026-11-01T11:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "PEC Zwolle",
+   "away": "ADO Den Haag",
+   "kickoff": "2026-11-01T11:15:00.000Z",
+   "league": "Eredivisie"
+  },
+  {
+   "home": "Lyon",
+   "away": "Angers",
+   "kickoff": "2026-11-01T16:15:00.000Z",
+   "league": "Ligue 1"
+  },
+  {
+   "home": "Getafe",
+   "away": "Sevilla FC",
+   "kickoff": "2026-11-01T13:00:00.000Z",
+   "league": "LaLiga"
+  },
+  {
+   "home": "Como",
+   "away": "Venezia",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Serie A"
+  },
+  {
+   "home": "Nairobi United FC",
+   "away": "Bandari",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Aps Bomet FC",
+   "away": "Muranga Seal",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Gor Mahia",
+   "away": "KCB",
+   "kickoff": "2026-11-01T13:15:00.000Z",
+   "league": "Premier League"
+  },
+  {
+   "home": "Lazio",
+   "away": "Cagliari",
+   "kickoff": "2026-11-01T14:00:00.000Z",
+   "league": "Serie A"
+  },
+  {
+   "home": "Frosinone",
+   "away": "Torino",
+   "kickoff": "2026-11-01T14:00:00.000Z",
+   "league": "Serie A"
+  },
+  {
+   "home": "Strasbourg",
+   "away": "AJ Auxerre",
+   "kickoff": "2026-11-01T14:00:00.000Z",
+   "league": "Ligue 1"
   }
  ],
  "jackpots": [],
