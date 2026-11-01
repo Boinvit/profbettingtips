@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { calibrate, buildCalibration, PROB_CAP } from '../lib/calibration.mjs';
-import { buildWindow, updateAccas } from '../lib/accas.mjs';
+import { buildWindow, updateAccas, MIN_TOTAL_ODDS } from '../lib/accas.mjs';
 
 const bins = (rows) => ({ markets: { dc: rows.map(([lo, hi, n, pred, real]) => ({ lo, hi, n, pred, real })) } });
 
@@ -61,4 +61,18 @@ test('updateAccas drops stale unfrozen slips that were not rebuilt, keeps window
   const pids = out.items.filter((a) => a.status === 'pending').flatMap((a) => a.legs.map((l) => l.pid));
   assert.ok(pids.length > 0);
   assert.equal(new Set(pids).size, pids.length, 'a fixture appears in more than one slip across windows (daily and weekend overlap)');
+});
+
+test('every slip pays at least the minimum total odds', () => {
+  const slips = buildWindow(W, pool, NOW);
+  assert.ok(slips.length >= 2);
+  for (const sl of slips) assert.ok(sl.odds >= MIN_TOTAL_ODDS - 1e-9, `${sl.id} pays only ${sl.odds}`);
+  assert.equal(MIN_TOTAL_ODDS, 2);
+});
+
+test('a slip is only called a banker or solid when the whole slip has the chance to back it up', () => {
+  for (const sl of buildWindow(W, pool, NOW)) {
+    if (sl.grade === 'banker') assert.ok(sl.prob >= 0.5, `banker at ${sl.prob}`);
+    if (sl.grade === 'solid') assert.ok(sl.prob >= 0.3, `solid at ${sl.prob}`);
+  }
 });

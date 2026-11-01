@@ -3,6 +3,9 @@
 // Slips freeze once any match kicks off and are then settled from real scores.
 import { dropDuplicatePending } from './dupes.mjs';
 import { calibrate } from './calibration.mjs';
+
+// Every accumulator must pay at least this (total odds): a KES 100 stake returns at least KES 200 when it lands.
+export const MIN_TOTAL_ODDS = 2.0;
 const DAY = 86400000, EAT = 3 * 3600e3;
 export const MIN_GAMES = 6, LEG_FLOOR = 0.55, MIN_PROB = 0.10;
 const MARGIN = 0.93; // typical bookmaker margin, applied when a leg is priced by the model
@@ -70,7 +73,7 @@ export function windows(now) {
   }
   return ws;
 }
-const gradeOf = (legs) => { const m = Math.min(...legs.map((l) => l.p)); return m >= 0.75 ? 'banker' : m >= 0.65 ? 'solid' : 'risky'; };
+const gradeOf = (legs, prob = 0) => { const m = Math.min(...legs.map((l) => l.p)); return prob >= 0.5 && m >= 0.75 ? 'banker' : prob >= 0.3 && m >= 0.65 ? 'solid' : 'risky'; };
 export function buildWindow(w, pool, now = new Date(), cal = null, exclude = new Set()) {
   const cands = pool.map((p) => ({ p, legs: legsFor(p, cal).filter((l) => l.p >= LEG_FLOOR) })).filter((c) => c.legs.length)
     .sort((a, b) => Math.max(...b.legs.map((l) => l.p)) - Math.max(...a.legs.map((l) => l.p))).slice(0, 40);
@@ -83,7 +86,7 @@ export function buildWindow(w, pool, now = new Date(), cal = null, exclude = new
     const legs = s.picks.map(({ c, l }) => ({ pid: c.p.id, home: c.p.home, away: c.p.away, comp: c.p.comp, kickoff: c.p.kickoff, mkt: l.mkt, sel: l.sel, label: l.label, p: r3(l.p), ...(l.praw != null ? { praw: r3(l.praw) } : {}), odds: l.odds, src: l.src }))
       .sort((a, b) => a.kickoff.localeCompare(b.kickoff));
     out.set(sig, { id: `${w.id}|${type}`, window: w.kind, key: w.id, days: w.days, type, title, n: legs.length, odds: r2(s.odds), prob: r3(s.prob),
-      grade: gradeOf(legs), est: legs.some((l) => l.src === 'model'), created: now.toISOString(), status: 'pending', lastKickoff: legs.at(-1).kickoff, legs, cal: !!cal });
+      grade: gradeOf(legs, s.prob), est: legs.some((l) => l.src === 'model'), created: now.toISOString(), status: 'pending', lastKickoff: legs.at(-1).kickoff, legs, cal: !!cal });
     return true;
   };
   // RISK MANAGEMENT: one slip per fixture per window. Slips are placed one at a time and a fixture that anchors a slip is removed from the
@@ -95,8 +98,8 @@ export function buildWindow(w, pool, now = new Date(), cal = null, exclude = new
     const s = bestInBand(avail, spec);
     if (push(type, title, s)) for (const x of s.picks) used.add(x.c.p.id);
   };
-  for (let n = 2; n <= 6; n++) place(`fold${n}`, `${n}-fold`, { lo: 1.4 * 1.12 ** (n - 2), hi: 60, minN: n, maxN: n });
-  for (const b of BANDS) if (b.t !== 2) place(`odds${b.t}`, `Around ${b.t}x`, { lo: b.lo, hi: b.hi, minN: 2, maxN: 8 }); // 'Around 2x' duplicated the 2-fold
+  for (let n = 2; n <= 6; n++) place(`fold${n}`, `${n}-fold`, { lo: Math.max(MIN_TOTAL_ODDS, 1.4 * 1.12 ** (n - 2)), hi: 60, minN: n, maxN: n });
+  for (const b of BANDS) if (b.t !== 2) place(`odds${b.t}`, `Around ${b.t}x`, { lo: Math.max(MIN_TOTAL_ODDS, b.lo), hi: b.hi, minN: 2, maxN: 8 }); // 'Around 2x' duplicated the 2-fold
   return [...out.values()].sort((a, b) => a.odds - b.odds);
 }
 export function settleAcca(a, byId, now) {
