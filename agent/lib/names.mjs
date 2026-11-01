@@ -2,6 +2,12 @@
 // football-data.co.uk, ClubElo all spell teams differently).
 const STOP = new Set(['fc', 'afc', 'cf', 'sc', 'ac', 'as', 'ss', 'us', 'club', 'de', 'the', 'calcio', 'cd', 'ud', 'sv', 'vfl', 'vfb', 'fk', 'bk', 'if', '1', '04', '05', '1899', 'and']);
 export const ALIASES = {
+  // SportPesa / bookmaker spellings -> the spelling of the id that holds the match history (verified against data/teams.json, Nov 2026)
+  'basaksehir': 'buyuksehyr', 'istanbul basaksehir': 'buyuksehyr', 'red bull salzburg': 'salzburg', 'rb salzburg': 'salzburg',
+  'austria lustenau': 'a lustenau', 'sheffield wednesday': 'sheffield weds', 'sheffield wed': 'sheffield weds', 'oh leuven': 'oud heverlee leuven',
+  'ifk goteborg': 'goteborg', 'rapid vienna': 'sk rapid', 'atlanta united': 'atlanta utd', 'atlanta united fc': 'atlanta utd',
+  'aik stockholm': 'aik', 'aik football': 'aik', 'racing santander': 'santander',
+  'vitoria guimaraes': 'guimaraes', 'steaua bucuresti': 'fcsb', 'akron tolyatti': 'akron togliatti', 'kaa gent': 'gent', 'vps vaasa': 'vps', 'bk hacken': 'hacken',
   'sporting gijon': 'sp gijon', 'real sporting': 'sp gijon',
   'man utd': 'manchester united', 'man united': 'manchester united', 'manchester utd': 'manchester united', 'man city': 'manchester city',
   'spurs': 'tottenham hotspur', 'tottenham': 'tottenham hotspur', 'wolves': 'wolverhampton wanderers', 'wolverhampton': 'wolverhampton wanderers',

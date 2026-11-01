@@ -17,4 +17,21 @@ export class Registry {
     if (id) this.cache.set(key, id);
     return id;
   }
+  /** Drop empty twin ids (no match ever recorded) that resolve to a club which has history. They appear when a source's spelling was not
+   *  recognised at the moment a team was first registered, and they then shadow the real id (no predictions, no ratings). Returns [[dropped, kept], ...]. */
+  prune(matches) {
+    const used = new Set();
+    for (const m of matches) { used.add(m.h); used.add(m.a); }
+    const known = {};
+    for (const [id, n] of Object.entries(this.names)) if (used.has(id)) known[id] = n;
+    const idx = buildIndex(known, this.aliases);
+    const removed = [];
+    for (const [id, n] of Object.entries(this.names)) {
+      if (used.has(id)) continue;
+      const t = findTeam(idx, n);
+      if (t && t !== id) { delete this.names[id]; removed.push([id, t]); }
+    }
+    if (removed.length) { this.index = buildIndex(this.names, this.aliases); this.cache.clear(); }
+    return removed;
+  }
 }

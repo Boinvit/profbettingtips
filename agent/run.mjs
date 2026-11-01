@@ -27,6 +27,7 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   const health = [...(feed.health || [])];
   const registry = new Registry(load('teams.json', {}), load('aliases.json', {}));
   let matches = [...load('history.json', []), ...load('matches.json', [])]; // deep history + recent window
+  { const merged = registry.prune(matches); if (merged.length) log(`teams: merged ${merged.length} empty duplicate id(s): ${merged.slice(0, 6).map(([a, b]) => `${a}->${b}`).join(', ')}${merged.length > 6 ? ', ...' : ''}`); } // empty twins from unrecognised spellings
   let preds = load('predictions.json', []);
   let model = load('model.json', { v: 1, params: { ...DEFAULT_PARAMS }, tunedOn: 0, history: [] });
 
