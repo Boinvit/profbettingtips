@@ -1,12 +1,6 @@
 {
- "scrapedAt": "2026-11-01T02:34:41.902Z",
+ "scrapedAt": "2026-11-01T05:57:06.675Z",
  "matches": [
-  {
-   "home": "Liverpool",
-   "away": "Arsenal",
-   "kickoff": "2026-11-01T16:30:00.000Z",
-   "league": "Premier League"
-  },
   {
    "home": "Racing Santander",
    "away": "Real Madrid",
@@ -14,28 +8,28 @@
    "league": "LaLiga"
   },
   {
+   "home": "Como",
+   "away": "Venezia",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Serie A"
+  },
+  {
+   "home": "Eintracht Frankfurt",
+   "away": "Hamburger SV",
+   "kickoff": "2026-11-01T16:30:00.000Z",
+   "league": "Bundesliga"
+  },
+  {
+   "home": "Liverpool",
+   "away": "Arsenal",
+   "kickoff": "2026-11-01T16:30:00.000Z",
+   "league": "Premier League"
+  },
+  {
    "home": "Juventus",
    "away": "Napoli",
    "kickoff": "2026-11-01T19:45:00.000Z",
    "league": "Serie A"
-  },
-  {
-   "home": "Club America",
-   "away": "Deportivo Toluca",
-   "kickoff": "2026-11-01T03:10:00.000Z",
-   "league": "Primera Division, Apertura"
-  },
-  {
-   "home": "Necaxa W",
-   "away": "Santos Laguna W",
-   "kickoff": "2026-11-01T03:10:00.000Z",
-   "league": "Liga MX, Women, Apertura"
-  },
-  {
-   "home": "Migori Youth FC",
-   "away": "Mombasa United FC",
-   "kickoff": "2026-11-01T11:00:00.000Z",
-   "league": "Premier League"
   },
   {
    "home": "AFC Leopards",
@@ -60,12 +54,6 @@
    "away": "Sevilla FC",
    "kickoff": "2026-11-01T13:00:00.000Z",
    "league": "LaLiga"
-  },
-  {
-   "home": "Como",
-   "away": "Venezia",
-   "kickoff": "2026-11-01T11:30:00.000Z",
-   "league": "Serie A"
   },
   {
    "home": "Nairobi United FC",
@@ -116,12 +104,6 @@
    "league": "Ligue 1"
   },
   {
-   "home": "Eintracht Frankfurt",
-   "away": "Hamburger SV",
-   "kickoff": "2026-11-01T16:30:00.000Z",
-   "league": "Bundesliga"
-  },
-  {
    "home": "Lecce",
    "away": "Genoa",
    "kickoff": "2026-11-01T17:00:00.000Z",
@@ -170,126 +152,6 @@
    "league": "Eredivisie"
   },
   {
-   "home": "Yokohama SCC",
-   "away": "J-Lease FC",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Canberra Utd W",
-   "away": "WS Wanderers  W",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "W-League"
-  },
-  {
-   "home": "Melbourne Victory",
-   "away": "CC Mariners",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "A-League"
-  },
-  {
-   "home": "Cerezo Osaka Sakai W",
-   "away": "AS Elfen Sayama W",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "WE League, Women"
-  },
-  {
-   "home": "Albirex Niigata W",
-   "away": "Urawa Red Diamonds W",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "WE League, Women"
-  },
-  {
-   "home": "Veertien Mie",
-   "away": "Okinawa SV",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Criacao Shinjuku",
-   "away": "Grulla Morioka",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Yokohama F Marinos",
-   "away": "Kawasaki Frontale",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "APIA Tigers",
-   "away": "Avondale FC",
-   "kickoff": "2026-11-01T04:00:00.000Z",
-   "league": "Australian Championship"
-  },
-  {
-   "home": "Ulsan Hyundai",
-   "away": "Gangwon",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K-League 1"
-  },
-  {
-   "home": "Jeonbuk FC II",
-   "away": "Pocheon FC",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K3 League"
-  },
-  {
-   "home": "JEF United Chiba",
-   "away": "Avispa Fukuoka",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "Ulsan Citizen FC",
-   "away": "Changwon City",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K3 League"
-  },
-  {
-   "home": "Mokpo City",
-   "away": "Daejeon Korail",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K3 League"
-  },
-  {
-   "home": "Azul Claro Numazu",
-   "away": "Maruyasu Okazaki",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "Japan Football League"
-  },
-  {
-   "home": "Suwon City",
-   "away": "Ansan Greeners FC",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K-League 2"
-  },
-  {
-   "home": "Sanfrecce Hiroshima Regina W",
-   "away": "Vegalta Sendai W",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "WE League, Women"
-  },
-  {
-   "home": "V Varen Nagasaki",
-   "away": "Tokyo Verdy",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "J1 League"
-  },
-  {
-   "home": "Jeonnam Dragons",
-   "away": "Seongnam Ilhwa",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K-League 2"
-  },
-  {
-   "home": "Pohang Steelers",
-   "away": "Jeju Utd",
-   "kickoff": "2026-11-01T05:00:00.000Z",
-   "league": "K-League 1"
-  },
-  {
    "home": "Xi An Ronghai",
    "away": "Langfang Glory City FC",
    "kickoff": "2026-11-01T06:30:00.000Z",
@@ -300,6 +162,144 @@
    "away": "Jiangxi Liansheng",
    "kickoff": "2026-11-01T06:30:00.000Z",
    "league": "China League 2"
+  },
+  {
+   "home": "Shanghai Port B",
+   "away": "Guizhou Zhucheng Athletic",
+   "kickoff": "2026-11-01T06:30:00.000Z",
+   "league": "China League 2"
+  },
+  {
+   "home": "Shandong Taishan B",
+   "away": "Shenzhen 2028 FC",
+   "kickoff": "2026-11-01T06:30:00.000Z",
+   "league": "China League 2"
+  },
+  {
+   "home": "Melbourne Victory W",
+   "away": "Newcastle Jets W",
+   "kickoff": "2026-11-01T06:45:00.000Z",
+   "league": "W-League"
+  },
+  {
+   "home": "Machida Zelvia",
+   "away": "Gamba Osaka",
+   "kickoff": "2026-11-01T07:00:00.000Z",
+   "league": "J1 League"
+  },
+  {
+   "home": "Bayswater City",
+   "away": "Oakleigh Cannons",
+   "kickoff": "2026-11-01T07:00:00.000Z",
+   "league": "Australian Championship"
+  },
+  {
+   "home": "FC Seoul",
+   "away": "Incheon Utd",
+   "kickoff": "2026-11-01T07:30:00.000Z",
+   "league": "K-League 1"
+  },
+  {
+   "home": "Gimhae",
+   "away": "Cheonan City FC",
+   "kickoff": "2026-11-01T07:30:00.000Z",
+   "league": "K-League 2"
+  },
+  {
+   "home": "Anyang",
+   "away": "Bucheon",
+   "kickoff": "2026-11-01T07:30:00.000Z",
+   "league": "K-League 1"
+  },
+  {
+   "home": "Cheongju FC",
+   "away": "Paju Citizen FC",
+   "kickoff": "2026-11-01T07:30:00.000Z",
+   "league": "K-League 2"
+  },
+  {
+   "home": "Siwelele FC Reserves",
+   "away": "Kaizer Chiefs Reserves",
+   "kickoff": "2026-11-01T08:00:00.000Z",
+   "league": "Diski Challenge, Reserves"
+  },
+  {
+   "home": "Maritzburg United Reserves",
+   "away": "Kruger United Reserve",
+   "kickoff": "2026-11-01T08:00:00.000Z",
+   "league": "Diski Challenge, Reserves"
+  },
+  {
+   "home": "Marumo Gallants Reserves",
+   "away": "Richards Bay FC Reserves",
+   "kickoff": "2026-11-01T08:00:00.000Z",
+   "league": "Diski Challenge, Reserves"
+  },
+  {
+   "home": "Tatung FC",
+   "away": "AC Taipei",
+   "kickoff": "2026-11-01T08:00:00.000Z",
+   "league": "Taiwan Football Premier League"
+  },
+  {
+   "home": "AmaZulu Reserves",
+   "away": "Stellenbosch FC Reserves",
+   "kickoff": "2026-11-01T08:00:00.000Z",
+   "league": "Diski Challenge, Reserves"
+  },
+  {
+   "home": "Perth Glory",
+   "away": "Adelaide United",
+   "kickoff": "2026-11-01T08:00:00.000Z",
+   "league": "A-League"
+  },
+  {
+   "home": "Persib Bandung",
+   "away": "Isenmulang Kalteng FC",
+   "kickoff": "2026-11-01T08:30:00.000Z",
+   "league": "Liga 1"
+  },
+  {
+   "home": "Huda Hue",
+   "away": "Sanna Khanh Hoa",
+   "kickoff": "2026-11-01T08:30:00.000Z",
+   "league": "V-League 2"
+  },
+  {
+   "home": "Psim Yogyakarta",
+   "away": "Pusamania Borneo",
+   "kickoff": "2026-11-01T08:30:00.000Z",
+   "league": "Liga 1"
+  },
+  {
+   "home": "Inac Leonessa W",
+   "away": "Bam Khatoon FC",
+   "kickoff": "2026-11-01T08:30:00.000Z",
+   "league": "AFC Women's Champions League"
+  },
+  {
+   "home": "Penang",
+   "away": "Melaka FC",
+   "kickoff": "2026-11-01T08:45:00.000Z",
+   "league": "Super League"
+  },
+  {
+   "home": "CSM Slatina",
+   "away": "Concordia Chiajna",
+   "kickoff": "2026-11-01T09:00:00.000Z",
+   "league": "Liga 2"
+  },
+  {
+   "home": "MFK Havirov",
+   "away": "Hodonin-Sardice",
+   "kickoff": "2026-11-01T09:15:00.000Z",
+   "league": "MSFL"
+  },
+  {
+   "home": "FK Chlumec NC",
+   "away": "Usti N Orlici",
+   "kickoff": "2026-11-01T09:15:00.000Z",
+   "league": "Divize C"
   }
  ],
  "jackpots": [],
@@ -308,8 +308,8 @@
    "page": "SportPesa Mega Jackpot Pro",
    "status": "ok",
    "found": 2,
-   "seen": 0,
-   "head": "To give you the best experience possible, this website uses cookies. By viewing our content, you are accepting the use of cookies. If you want to learn more about the cookies that we use, view our Cookies Policy. Accept SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation 1 Search Help 05:34:51 EAT Sports Live Games Aviator"
+   "seen": 16,
+   "head": "To give you the best experience possible, this website uses cookies. By viewing our content, you are accepting the use of cookies. If you want to learn more about the cookies that we use, view our Cookies Policy. Accept SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots"
   },
   {
    "page": "Football",
