@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T13:37:10.739Z",
+ "updated": "2026-11-01T16:41:05.100Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "52 results, 144 fixtures"
+   "detail": "52 results, 143 fixtures"
   },
   {
    "source": "API-Football",
@@ -19,17 +19,17 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "70 results, 11 fixtures (German Bundesliga)"
+   "detail": "72 results, 9 fixtures (German Bundesliga)"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 72 fixtures next 14d"
+   "detail": "264 results, 59 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "31 events fetched, 8 with 1X2 odds"
+   "detail": "34 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,42 +39,53 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-01T13:36:46.043Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-01T16:40:39.047Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "64 teams fetched, 0 failed"
+   "detail": "169 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "Sporting Braga vs Famalicao",
-  "Torpedo Zhodino vs Belshina",
-  "Spezia vs Atalanta BC U23",
-  "NK Mura vs Brinje Grosuplje",
-  "Brighton W vs Crystal Palace W",
-  "SSV Jeddeloh vs Bremer SV",
-  "Wolverhampton Wanderers Wfc vs Bristol Academy W",
-  "CD Utrera U19 vs Arenas Armilla CD U19",
-  "Swindon Town vs Bridgwater United Women",
-  "Roma W vs Napoli W",
-  "FK Sloga Doboj vs Velez Mostar",
-  "Aarhus Fremad vs Hillerod",
-  "HNK Rijeka vs NK Varazdin",
-  "OFK Beograd vs Vojvodina",
-  "Sheffield Wed vs Blackpool",
-  "Nottingham Forest Lfc vs Burnley FC Women",
-  "Bourges FC vs Metz FC W",
-  "Birmingham W vs Tottenham W",
-  "CD Tondela vs Felgueiras",
-  "Kabuscorp Scp vs Recreativo DA Caala",
-  "Bayern Munich W vs Bayer Leverkusen W",
-  "SS San Giovanni vs SC Faetano",
-  "Piteaa IF vs IFK Stocksund",
-  "Sl16 Football Campus vs RWDM Brussels",
-  "FK Sochi vs Ural Yekaterinburg",
-  "Saint Etienne W vs AJ Auxerre W",
-  "Inter Kashi FC vs Sporting Goa"
+  "Jeddah Club vs AL Adalh",
+  "Olympique Safi vs Olympique Khouribga",
+  "Dukla Banska Bystrica vs Dunajska Streda",
+  "FC Bocholt 1900 vs FC Koln II",
+  "Lokomotiva Zagreb vs NK Osijek",
+  "H2O Purepechas FC vs Montaneses FC",
+  "AL Qadsia vs AL Arabi",
+  "CD Mosquito U19 vs Real Betis Balompie",
+  "Bohemians vs Sparta Prague",
+  "Terrassa FC vs Reus FC Reddis",
+  "CS Cartagines vs AD San Carlos",
+  "Hegelmann Litauen B vs Baltijos Futbolo Akademija",
+  "Fcf Como W vs AC Milan W",
+  "Amorebieta vs RS Gimnastica",
+  "FC Nomme United vs FC Tallinn",
+  "Colombe FC vs PWD Bamenda",
+  "Omonia Aradippou vs Apoel Nicosia",
+  "Aurora FC vs Antigua GFC",
+  "Ujpest FC vs Nyiregyhaza",
+  "Ciudad De Lucena vs Atletico Sanluqueno",
+  "Af Elbasani vs Laci",
+  "Langreo vs Caudal Deportivo",
+  "Skenderbeu vs Vllaznia",
+  "CD Bala Azul vs SFC Minerva",
+  "Panathinaikos vs AEK Athens",
+  "Sporting CP W vs Valadares Gaia FC W",
+  "CD Badajoz vs CD Linares",
+  "Lommel United vs KAA Gent",
+  "Zamora vs Deportivo La Coruna B",
+  "Lugo vs Merida UD",
+  "Gzira United FC vs Marsaxlokk FC",
+  "CODM Meknes vs FAR Rabat",
+  "ASEC Mimosas vs FC San Pedro",
+  "Ipojuca Atletico Clube PE vs Ibis PE",
+  "CD Fuerte San Francisco U20 vs CD Aguila U20",
+  "7 De Abril RJ vs Cardoso Moreira RJ",
+  "Paduano EC RJ vs FC Rio de Janeiro RJ"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
