@@ -12,6 +12,7 @@ import { updateAccas } from './lib/accas.mjs';
 import { dropDuplicatePending } from './lib/dupes.mjs';
 import { splitHistory, parseBackfill } from './lib/history.mjs';
 import { buildIntel } from './lib/intel.mjs';
+import { buildCalibration } from './lib/calibration.mjs';
 
 const MIN_TUNE_MATCHES = 150, RETUNE_EVERY = 30, DAY = 86400000;
 const dayOf = (iso) => iso.slice(0, 10);
@@ -145,7 +146,11 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   preds.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   const stats = computeStats(preds, jackpots);
   // 7. accumulators: daily / weekend slips from the safest selections, frozen at kickoff and settled from real scores
-  const accas = updateAccas(load('accas.json', { items: [] }), preds, now); save('accas.json', accas);
+  // Self-awareness: measure how reliable the model's stated confidence really is (walk-forward over all history, ~1s) and correct
+  // accumulator leg probabilities by the measured gap. Refreshed whenever 300+ new matches have arrived.
+  let cal = load('calibration.json', null);
+  try { if (!cal || Math.abs(matches.length - (cal.n || 0)) >= 300) { cal = buildCalibration(matches, model.params, { now }); save('calibration.json', cal); } } catch (e) { log(`calibration: skipped (${e.message})`); cal = null; }
+  const accas = updateAccas(load('accas.json', { items: [] }), preds, now, { cal }); save('accas.json', accas);
   log(`accumulators: ${accas.items.length} (${accas.stats.pending} pending, ${accas.stats.settled} settled, hit rate ${accas.stats.overall.rate ?? 'n/a'})`);
   const recent = preds.filter((p) => p.status === 'pending' || p.kickoff >= new Date(now - 21 * DAY).toISOString());
   const top = Object.entries(state.elo).filter(([id]) => state.n[id] >= 8).sort((a, b) => b[1] - a[1]).slice(0, 25)

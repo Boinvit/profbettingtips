@@ -58,7 +58,7 @@ test('updateAccas drops stale unfrozen slips that were not rebuilt, keeps window
     legs: [{ pid: 'x', kickoff: '2026-11-01T15:00:00.000Z', mkt: 'x12', sel: 'H' }] };
   const out = updateAccas({ items: [stale] }, pool, NOW);
   assert.ok(!out.items.some((a) => a.id === stale.id), 'stale slip kept');
-  const byKey = {};
-  for (const a of out.items) (byKey[a.key] ||= []).push(...a.legs.map((l) => l.pid));
-  for (const [k, pids] of Object.entries(byKey)) assert.equal(new Set(pids).size, pids.length, `repeat in ${k}`);
+  const pids = out.items.filter((a) => a.status === 'pending').flatMap((a) => a.legs.map((l) => l.pid));
+  assert.ok(pids.length > 0);
+  assert.equal(new Set(pids).size, pids.length, 'a fixture appears in more than one slip across windows (daily and weekend overlap)');
 });

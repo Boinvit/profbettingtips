@@ -71,7 +71,7 @@ export function windows(now) {
   return ws;
 }
 const gradeOf = (legs) => { const m = Math.min(...legs.map((l) => l.p)); return m >= 0.75 ? 'banker' : m >= 0.65 ? 'solid' : 'risky'; };
-export function buildWindow(w, pool, now = new Date(), cal = null) {
+export function buildWindow(w, pool, now = new Date(), cal = null, exclude = new Set()) {
   const cands = pool.map((p) => ({ p, legs: legsFor(p, cal).filter((l) => l.p >= LEG_FLOOR) })).filter((c) => c.legs.length)
     .sort((a, b) => Math.max(...b.legs.map((l) => l.p)) - Math.max(...a.legs.map((l) => l.p))).slice(0, 40);
   if (cands.length < 2) return [];
@@ -88,7 +88,7 @@ export function buildWindow(w, pool, now = new Date(), cal = null) {
   };
   // RISK MANAGEMENT: one slip per fixture per window. Slips are placed one at a time and a fixture that anchors a slip is removed from the
   // pool for the rest, so a single upset can never sink several slips at once (the old nested 4/5/6-folds all shared the same legs).
-  const used = new Set();
+  const used = new Set(exclude); // fixtures already committed to a slip in another window are off-limits too
   const place = (type, title, spec) => {
     const avail = cands.filter((c) => !used.has(c.p.id));
     if (avail.length < 2) return;
@@ -124,12 +124,16 @@ export function updateAccas(prev, preds, now = new Date(), { cal = null } = {}) 
   const items = new Map((prev?.items || []).map((a) => [a.id, structuredClone(a)])); // clone: never mutate the caller's data
   for (const a of items.values()) settleAcca(a, byId, now);
   const pending = dropDuplicatePending(preds.filter((p) => p.status === 'pending' && p.pk && new Date(p.kickoff) > now && (p.games ?? 0) >= MIN_GAMES));
-  const built = new Set(), rebuilt = new Set();
-  for (const w of windows(now)) {
+  const built = new Set(), rebuilt = new Set(), taken = new Set();
+  // GLOBAL exposure rule: a fixture anchors one slip across ALL windows (daily and weekend windows overlap). Fixtures already locked into a
+  // slip that has started stay committed there; daily windows are placed before the weekend one, which only gets what is left.
+  for (const a of items.values()) if (a.status === 'pending' && a.legs.some((l) => new Date(l.kickoff) <= now)) for (const l of a.legs) taken.add(l.pid);
+  for (const w of [...windows(now)].sort((x, y) => (x.kind === 'daily' ? 0 : 1) - (y.kind === 'daily' ? 0 : 1))) {
     rebuilt.add(w.id);
     const pool = pending.filter((p) => w.days.includes(dayKey(p.kickoff)));
-    for (const a of buildWindow(w, pool, now, cal)) {
+    for (const a of buildWindow(w, pool, now, cal, taken)) {
       built.add(a.id);
+      for (const l of a.legs) taken.add(l.pid);
       const ex = items.get(a.id);
       if (ex && (ex.status !== 'pending' || ex.legs.some((l) => new Date(l.kickoff) <= now))) continue; // frozen once a match has started
       items.set(a.id, a);
