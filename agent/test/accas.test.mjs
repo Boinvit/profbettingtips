@@ -37,7 +37,9 @@ test('duplicates: collapsed across spellings, other fixtures kept, settled untou
 test('slips: one leg per match, odds in band, probability is the product', () => {
   const pool = [0.88, 0.85, 0.82, 0.8, 0.78, 0.76, 0.74, 0.72].map((q, i) => mk('m' + i, 'H' + i, 'A' + i, '2026-10-30T' + String(12 + i).padStart(2, '0') + ':00:00Z', PK(q)));
   const slips = buildWindow(windows(NOW)[0], pool, NOW);
-  assert.ok(slips.length >= 4);
+  assert.ok(slips.length >= 2);
+  const allPids = slips.flatMap((s) => s.legs.map((l) => l.pid));
+  assert.equal(new Set(allPids).size, allPids.length); // risk rule: a fixture anchors one slip only
   for (const s of slips) {
     assert.equal(new Set(s.legs.map((l) => l.pid)).size, s.legs.length);
     assert.ok(Math.abs(s.prob - s.legs.reduce((x, l) => x * l.p, 1)) < 0.01);

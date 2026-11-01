@@ -2,6 +2,7 @@
 // legs from different matches are treated as independent, so the combined probability is an estimate, not a guarantee.
 // Slips freeze once any match kicks off and are then settled from real scores.
 import { dropDuplicatePending } from './dupes.mjs';
+import { calibrate } from './calibration.mjs';
 const DAY = 86400000, EAT = 3 * 3600e3;
 export const MIN_GAMES = 6, LEG_FLOOR = 0.55, MIN_PROB = 0.10;
 const MARGIN = 0.93; // typical bookmaker margin, applied when a leg is priced by the model
@@ -25,7 +26,7 @@ export function legWins(mkt, sel, hg, ag) {
   return sel === (hg > 0 && ag > 0 ? 'Y' : 'N');
 }
 /** Candidate selections for one prediction. Bookmaker odds are used where the agent has them (1X2 and double chance). */
-export function legsFor(p) {
+export function legsFor(p, cal = null) {
   const k = p.pk; if (!k) return [];
   const o = p.ctx?.odds, book = Array.isArray(o) && o.length === 3 && o.every((x) => +x > 1) ? o.map(Number) : null;
   const priced = (q) => Math.max(1.01, r2(MARGIN / q));
@@ -36,7 +37,7 @@ export function legsFor(p) {
     { mkt: 'ou', sel: k.ou, p: k.oup, odds: priced(k.oup), src: 'model' },
     { mkt: 'bt', sel: k.bt, p: k.btp, odds: priced(k.btp), src: 'model' },
   ];
-  return legs.filter((l) => l.p > 0 && l.odds >= 1.05).map((l) => ({ ...l, label: legLabel(l.mkt, l.sel, p.home, p.away) }));
+  return legs.filter((l) => l.p > 0 && l.odds >= 1.05).map((l) => ({ ...l, ...(cal ? { praw: l.p, p: calibrate(cal, l.mkt, l.p) } : {}), label: legLabel(l.mkt, l.sel, p.home, p.away) }));
 }
 /** Highest-probability slip (one selection per match) whose combined odds fall in [lo, hi] with minN..maxN legs. */
 export function bestInBand(cands, { lo, hi, minN = 2, maxN = 8 }) {
@@ -70,22 +71,32 @@ export function windows(now) {
   return ws;
 }
 const gradeOf = (legs) => { const m = Math.min(...legs.map((l) => l.p)); return m >= 0.75 ? 'banker' : m >= 0.65 ? 'solid' : 'risky'; };
-export function buildWindow(w, pool, now = new Date()) {
-  const cands = pool.map((p) => ({ p, legs: legsFor(p).filter((l) => l.p >= LEG_FLOOR) })).filter((c) => c.legs.length)
-    .sort((a, b) => Math.max(...b.legs.map((l) => l.p)) - Math.max(...a.legs.map((l) => l.p))).slice(0, 30);
+export function buildWindow(w, pool, now = new Date(), cal = null) {
+  const cands = pool.map((p) => ({ p, legs: legsFor(p, cal).filter((l) => l.p >= LEG_FLOOR) })).filter((c) => c.legs.length)
+    .sort((a, b) => Math.max(...b.legs.map((l) => l.p)) - Math.max(...a.legs.map((l) => l.p))).slice(0, 40);
   if (cands.length < 2) return [];
   const out = new Map();
   const push = (type, title, s) => {
-    if (!s || s.prob < MIN_PROB) return;
+    if (!s || s.prob < MIN_PROB) return false;
     const sig = s.picks.map((x) => x.c.p.id + x.l.mkt).sort().join(',');
-    if (out.has(sig)) return;
-    const legs = s.picks.map(({ c, l }) => ({ pid: c.p.id, home: c.p.home, away: c.p.away, comp: c.p.comp, kickoff: c.p.kickoff, mkt: l.mkt, sel: l.sel, label: l.label, p: r3(l.p), odds: l.odds, src: l.src }))
+    if (out.has(sig)) return false;
+    const legs = s.picks.map(({ c, l }) => ({ pid: c.p.id, home: c.p.home, away: c.p.away, comp: c.p.comp, kickoff: c.p.kickoff, mkt: l.mkt, sel: l.sel, label: l.label, p: r3(l.p), ...(l.praw != null ? { praw: r3(l.praw) } : {}), odds: l.odds, src: l.src }))
       .sort((a, b) => a.kickoff.localeCompare(b.kickoff));
     out.set(sig, { id: `${w.id}|${type}`, window: w.kind, key: w.id, days: w.days, type, title, n: legs.length, odds: r2(s.odds), prob: r3(s.prob),
-      grade: gradeOf(legs), est: legs.some((l) => l.src === 'model'), created: now.toISOString(), status: 'pending', lastKickoff: legs.at(-1).kickoff, legs });
+      grade: gradeOf(legs), est: legs.some((l) => l.src === 'model'), created: now.toISOString(), status: 'pending', lastKickoff: legs.at(-1).kickoff, legs, cal: !!cal });
+    return true;
   };
-  for (let n = 2; n <= 6; n++) push(`fold${n}`, `${n}-fold`, bestInBand(cands, { lo: 1.4 * 1.12 ** (n - 2), hi: 60, minN: n, maxN: n }));
-  for (const b of BANDS) push(`odds${b.t}`, `Around ${b.t}x`, bestInBand(cands, { lo: b.lo, hi: b.hi, minN: 2, maxN: 8 }));
+  // RISK MANAGEMENT: one slip per fixture per window. Slips are placed one at a time and a fixture that anchors a slip is removed from the
+  // pool for the rest, so a single upset can never sink several slips at once (the old nested 4/5/6-folds all shared the same legs).
+  const used = new Set();
+  const place = (type, title, spec) => {
+    const avail = cands.filter((c) => !used.has(c.p.id));
+    if (avail.length < 2) return;
+    const s = bestInBand(avail, spec);
+    if (push(type, title, s)) for (const x of s.picks) used.add(x.c.p.id);
+  };
+  for (let n = 2; n <= 6; n++) place(`fold${n}`, `${n}-fold`, { lo: 1.4 * 1.12 ** (n - 2), hi: 60, minN: n, maxN: n });
+  for (const b of BANDS) if (b.t !== 2) place(`odds${b.t}`, `Around ${b.t}x`, { lo: b.lo, hi: b.hi, minN: 2, maxN: 8 }); // 'Around 2x' duplicated the 2-fold
   return [...out.values()].sort((a, b) => a.odds - b.odds);
 }
 export function settleAcca(a, byId, now) {
@@ -108,19 +119,24 @@ export function accaStats(items) {
   const by = (f) => { const g = {}; for (const a of done) (g[f(a)] ||= []).push(a); return Object.fromEntries(Object.entries(g).map(([k, v]) => [k, agg(v)])); };
   return { settled: done.length, pending: items.filter((a) => a.status === 'pending').length, overall: agg(done), byGrade: by((a) => a.grade), byLegs: by((a) => (a.n >= 5 ? '5+' : String(a.n))), byWindow: by((a) => a.window) };
 }
-export function updateAccas(prev, preds, now = new Date()) {
+export function updateAccas(prev, preds, now = new Date(), { cal = null } = {}) {
   const byId = new Map(preds.map((p) => [p.id, p]));
   const items = new Map((prev?.items || []).map((a) => [a.id, structuredClone(a)])); // clone: never mutate the caller's data
   for (const a of items.values()) settleAcca(a, byId, now);
   const pending = dropDuplicatePending(preds.filter((p) => p.status === 'pending' && p.pk && new Date(p.kickoff) > now && (p.games ?? 0) >= MIN_GAMES));
+  const built = new Set(), rebuilt = new Set();
   for (const w of windows(now)) {
+    rebuilt.add(w.id);
     const pool = pending.filter((p) => w.days.includes(dayKey(p.kickoff)));
-    for (const a of buildWindow(w, pool, now)) {
+    for (const a of buildWindow(w, pool, now, cal)) {
+      built.add(a.id);
       const ex = items.get(a.id);
       if (ex && (ex.status !== 'pending' || ex.legs.some((l) => new Date(l.kickoff) <= now))) continue; // frozen once a match has started
       items.set(a.id, a);
     }
   }
+  // an unfrozen pending slip of a window we just rebuilt that is no longer produced is stale (e.g. it shared fixtures): drop it
+  for (const [id, a] of [...items]) if (a.status === 'pending' && rebuilt.has(a.key) && !built.has(id) && !a.legs.some((l) => new Date(l.kickoff) <= now)) items.delete(id);
   const list = [...items.values()].filter((a) => now - new Date(a.lastKickoff) < 45 * DAY).sort((a, b) => a.lastKickoff.localeCompare(b.lastKickoff) || a.odds - b.odds);
   return { updated: now.toISOString(), items: list, stats: accaStats(list) };
 }
