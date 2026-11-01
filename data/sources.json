@@ -1,10 +1,15 @@
 {
- "updated": "2026-11-01T06:13:58.298Z",
+ "updated": "2026-11-01T11:08:27.604Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
+   "detail": "282 files ok, 0 failed; 137063 results, 307 fixtures"
+  },
+  {
+   "source": "football-data.co.uk",
+   "ok": false,
+   "detail": "Maximum call stack size exceeded"
   },
   {
    "source": "football-data.org",
@@ -14,7 +19,7 @@
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "147 results, 120 fixtures"
+   "detail": "150 results, 117 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -29,7 +34,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "12 events fetched, 8 with 1X2 odds"
+   "detail": "10 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,45 +44,44 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-01T06:13:34.589Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-01T11:08:00.238Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "227 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "AFC Leopards vs KK Homeboyz",
   "PEC Zwolle vs ADO Den Haag",
   "Nairobi United FC vs Bandari",
   "Aps Bomet FC vs Muranga Seal",
   "Gor Mahia vs KCB",
   "Sporting Braga vs Famalicao",
-  "Xi An Ronghai vs Langfang Glory City FC",
-  "Dalian Kewei vs Jiangxi Liansheng",
-  "Shandong Taishan B vs Shenzhen 2028 FC",
-  "Melbourne Victory W vs Newcastle Jets W",
-  "Machida Zelvia vs Gamba Osaka",
-  "Bayswater City vs Oakleigh Cannons",
-  "FC Seoul vs Incheon Utd",
-  "Gimhae vs Cheonan City FC",
-  "Anyang vs Bucheon",
-  "Cheongju FC vs Paju Citizen FC",
-  "Siwelele FC Reserves vs Kaizer Chiefs Reserves",
-  "Maritzburg United Reserves vs Kruger United Reserve",
-  "Marumo Gallants Reserves vs Richards Bay FC Reserves",
-  "Tatung FC vs AC Taipei",
-  "AmaZulu Reserves vs Stellenbosch FC Reserves",
-  "Perth Glory vs Adelaide United",
-  "Persib Bandung vs Isenmulang Kalteng FC",
-  "Huda Hue vs Sanna Khanh Hoa",
-  "Psim Yogyakarta vs Pusamania Borneo",
-  "Inac Leonessa W vs Bam Khatoon FC",
-  "Penang vs Melaka FC",
-  "CSM Slatina vs Concordia Chiajna",
-  "MFK Havirov vs Hodonin-Sardice",
-  "FK Chlumec NC vs Usti N Orlici"
+  "Sparta Prague W vs 1 FC Slovacko W",
+  "Ajax W vs Twente W",
+  "Cosenza vs Inter Milano U23",
+  "Mumbai City vs Hyderabad FC",
+  "Caratese vs Union Brescia",
+  "Balestier Khalsa vs Home United",
+  "Jerez de Los Caballeros vs Atletico Club Pueblonuevo",
+  "Tampines vs Geylang Int.",
+  "CD Covadonga vs Condal Club",
+  "UD Las Palmas B vs Club Atletico Central",
+  "FFC Vorderland W vs St.polten-Spratzern W",
+  "FC Syunik vs FC Noah",
+  "CA Antoniano vs CD Estepona",
+  "Pattaya Dolphins United vs DP Kanchanaburi FC",
+  "Yunnan Yukun vs Dalian Zhixing FC",
+  "Thisted FC vs B 93 Copenhagen",
+  "Enskede IK vs IK Sleipner",
+  "Trelleborgs FF vs Laholms FK",
+  "Malisheva vs KF Feronikeli",
+  "FK Naftagas Elemir vs FK Loznica",
+  "Garuda Yaksa vs PSS Sleman",
+  "Kutahyaspor vs Bursa Niluferspor",
+  "Denizli Idman Yurdu vs Karsiyaka",
+  "Karcag SE vs Mezokovesdi SE"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

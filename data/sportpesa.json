@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-01T06:13:34.589Z",
+ "scrapedAt": "2026-11-01T11:08:00.238Z",
  "matches": [
   {
    "home": "Racing Santander",
@@ -14,28 +14,22 @@
    "league": "Serie A"
   },
   {
-   "home": "Eintracht Frankfurt",
-   "away": "Hamburger SV",
-   "kickoff": "2026-11-01T16:30:00.000Z",
-   "league": "Bundesliga"
-  },
-  {
    "home": "Liverpool",
    "away": "Arsenal",
    "kickoff": "2026-11-01T16:30:00.000Z",
    "league": "Premier League"
   },
   {
+   "home": "Eintracht Frankfurt",
+   "away": "Hamburger SV",
+   "kickoff": "2026-11-01T16:30:00.000Z",
+   "league": "Bundesliga"
+  },
+  {
    "home": "Juventus",
    "away": "Napoli",
    "kickoff": "2026-11-01T19:45:00.000Z",
    "league": "Serie A"
-  },
-  {
-   "home": "AFC Leopards",
-   "away": "KK Homeboyz",
-   "kickoff": "2026-11-01T11:00:00.000Z",
-   "league": "Premier League"
   },
   {
    "home": "PEC Zwolle",
@@ -152,154 +146,160 @@
    "league": "Eredivisie"
   },
   {
-   "home": "Xi An Ronghai",
-   "away": "Langfang Glory City FC",
-   "kickoff": "2026-11-01T06:30:00.000Z",
-   "league": "China League 2"
+   "home": "Sparta Prague W",
+   "away": "1 FC Slovacko W",
+   "kickoff": "2026-11-01T11:15:00.000Z",
+   "league": "1. Liga, Women"
   },
   {
-   "home": "Dalian Kewei",
-   "away": "Jiangxi Liansheng",
-   "kickoff": "2026-11-01T06:30:00.000Z",
-   "league": "China League 2"
+   "home": "Ajax W",
+   "away": "Twente W",
+   "kickoff": "2026-11-01T11:15:00.000Z",
+   "league": "Eredivisie, Women"
   },
   {
-   "home": "Shanghai Port B",
-   "away": "Guizhou Zhucheng Athletic",
-   "kickoff": "2026-11-01T06:30:00.000Z",
-   "league": "China League 2"
+   "home": "Cosenza",
+   "away": "Inter Milano U23",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Serie C, Group C"
   },
   {
-   "home": "Shandong Taishan B",
-   "away": "Shenzhen 2028 FC",
-   "kickoff": "2026-11-01T06:30:00.000Z",
-   "league": "China League 2"
+   "home": "Mumbai City",
+   "away": "Hyderabad FC",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Indian Super League"
   },
   {
-   "home": "Melbourne Victory W",
-   "away": "Newcastle Jets W",
-   "kickoff": "2026-11-01T06:45:00.000Z",
-   "league": "W-League"
+   "home": "Caratese",
+   "away": "Union Brescia",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Serie C, Group A"
   },
   {
-   "home": "Machida Zelvia",
-   "away": "Gamba Osaka",
-   "kickoff": "2026-11-01T07:00:00.000Z",
-   "league": "J1 League"
+   "home": "Balestier Khalsa",
+   "away": "Home United",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Premier League"
   },
   {
-   "home": "Bayswater City",
-   "away": "Oakleigh Cannons",
-   "kickoff": "2026-11-01T07:00:00.000Z",
-   "league": "Australian Championship"
+   "home": "Jerez de Los Caballeros",
+   "away": "Atletico Club Pueblonuevo",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Tercera Division, Group 14"
   },
   {
-   "home": "FC Seoul",
-   "away": "Incheon Utd",
-   "kickoff": "2026-11-01T07:30:00.000Z",
-   "league": "K-League 1"
+   "home": "Tampines",
+   "away": "Geylang Int.",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Premier League"
   },
   {
-   "home": "Gimhae",
-   "away": "Cheonan City FC",
-   "kickoff": "2026-11-01T07:30:00.000Z",
-   "league": "K-League 2"
+   "home": "Levante Las Planas FC",
+   "away": "Barcelona W",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Primera Division Feminina"
   },
   {
-   "home": "Anyang",
-   "away": "Bucheon",
-   "kickoff": "2026-11-01T07:30:00.000Z",
-   "league": "K-League 1"
+   "home": "CD Covadonga",
+   "away": "Condal Club",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Tercera Division, Group 2"
   },
   {
-   "home": "Cheongju FC",
-   "away": "Paju Citizen FC",
-   "kickoff": "2026-11-01T07:30:00.000Z",
-   "league": "K-League 2"
+   "home": "UD Las Palmas B",
+   "away": "Club Atletico Central",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Segunda Division B"
   },
   {
-   "home": "Siwelele FC Reserves",
-   "away": "Kaizer Chiefs Reserves",
-   "kickoff": "2026-11-01T08:00:00.000Z",
-   "league": "Diski Challenge, Reserves"
+   "home": "FFC Vorderland W",
+   "away": "St.polten-Spratzern W",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Bundesliga, Women"
   },
   {
-   "home": "Maritzburg United Reserves",
-   "away": "Kruger United Reserve",
-   "kickoff": "2026-11-01T08:00:00.000Z",
-   "league": "Diski Challenge, Reserves"
+   "home": "FC Syunik",
+   "away": "FC Noah",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Premier League"
   },
   {
-   "home": "Marumo Gallants Reserves",
-   "away": "Richards Bay FC Reserves",
-   "kickoff": "2026-11-01T08:00:00.000Z",
-   "league": "Diski Challenge, Reserves"
+   "home": "CA Antoniano",
+   "away": "CD Estepona",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Segunda Division B"
   },
   {
-   "home": "Tatung FC",
-   "away": "AC Taipei",
-   "kickoff": "2026-11-01T08:00:00.000Z",
-   "league": "Taiwan Football Premier League"
+   "home": "Inter Milan W",
+   "away": "Lazio Rome W",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Serie A, Women"
   },
   {
-   "home": "AmaZulu Reserves",
-   "away": "Stellenbosch FC Reserves",
-   "kickoff": "2026-11-01T08:00:00.000Z",
-   "league": "Diski Challenge, Reserves"
+   "home": "Pattaya Dolphins United",
+   "away": "DP Kanchanaburi FC",
+   "kickoff": "2026-11-01T11:30:00.000Z",
+   "league": "Thai League 2"
   },
   {
-   "home": "Perth Glory",
-   "away": "Adelaide United",
-   "kickoff": "2026-11-01T08:00:00.000Z",
-   "league": "A-League"
+   "home": "Yunnan Yukun",
+   "away": "Dalian Zhixing FC",
+   "kickoff": "2026-11-01T11:35:00.000Z",
+   "league": "FA Cup"
   },
   {
-   "home": "Persib Bandung",
-   "away": "Isenmulang Kalteng FC",
-   "kickoff": "2026-11-01T08:30:00.000Z",
+   "home": "Thisted FC",
+   "away": "B 93 Copenhagen",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "2nd Division"
+  },
+  {
+   "home": "Enskede IK",
+   "away": "IK Sleipner",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "Division 2, Promotion Playoffs"
+  },
+  {
+   "home": "Trelleborgs FF",
+   "away": "Laholms FK",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "Division 1, Relegation/Promotion"
+  },
+  {
+   "home": "Malisheva",
+   "away": "KF Feronikeli",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "Superliga"
+  },
+  {
+   "home": "FK Naftagas Elemir",
+   "away": "FK Loznica",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "Prva Liga "
+  },
+  {
+   "home": "Garuda Yaksa",
+   "away": "PSS Sleman",
+   "kickoff": "2026-11-01T12:00:00.000Z",
    "league": "Liga 1"
   },
   {
-   "home": "Huda Hue",
-   "away": "Sanna Khanh Hoa",
-   "kickoff": "2026-11-01T08:30:00.000Z",
-   "league": "V-League 2"
+   "home": "Kutahyaspor",
+   "away": "Bursa Niluferspor",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "2. Lig"
   },
   {
-   "home": "Psim Yogyakarta",
-   "away": "Pusamania Borneo",
-   "kickoff": "2026-11-01T08:30:00.000Z",
-   "league": "Liga 1"
+   "home": "Denizli Idman Yurdu",
+   "away": "Karsiyaka",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "3. Lig Playoffs"
   },
   {
-   "home": "Inac Leonessa W",
-   "away": "Bam Khatoon FC",
-   "kickoff": "2026-11-01T08:30:00.000Z",
-   "league": "AFC Women's Champions League"
-  },
-  {
-   "home": "Penang",
-   "away": "Melaka FC",
-   "kickoff": "2026-11-01T08:45:00.000Z",
-   "league": "Super League"
-  },
-  {
-   "home": "CSM Slatina",
-   "away": "Concordia Chiajna",
-   "kickoff": "2026-11-01T09:00:00.000Z",
-   "league": "Liga 2"
-  },
-  {
-   "home": "MFK Havirov",
-   "away": "Hodonin-Sardice",
-   "kickoff": "2026-11-01T09:15:00.000Z",
-   "league": "MSFL"
-  },
-  {
-   "home": "FK Chlumec NC",
-   "away": "Usti N Orlici",
-   "kickoff": "2026-11-01T09:15:00.000Z",
-   "league": "Divize C"
+   "home": "Karcag SE",
+   "away": "Mezokovesdi SE",
+   "kickoff": "2026-11-01T12:00:00.000Z",
+   "league": "NB II"
   }
  ],
  "jackpots": [],
