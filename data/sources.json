@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T16:41:05.100Z",
+ "updated": "2026-11-01T22:06:42.602Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "52 results, 143 fixtures"
+   "detail": "73 results, 125 fixtures"
   },
   {
    "source": "API-Football",
@@ -24,12 +24,12 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 59 fixtures next 14d"
+   "detail": "264 results, 57 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "34 events fetched, 8 with 1X2 odds"
+   "detail": "17 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,53 +39,42 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-01T16:40:39.047Z"
+   "detail": "45 listed games, 0 jackpot(s), scraped 2026-11-01T22:06:17.645Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "169 teams fetched, 0 failed"
+   "detail": "171 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Sporting Braga vs Famalicao",
-  "Jeddah Club vs AL Adalh",
-  "Olympique Safi vs Olympique Khouribga",
-  "Dukla Banska Bystrica vs Dunajska Streda",
-  "FC Bocholt 1900 vs FC Koln II",
-  "Lokomotiva Zagreb vs NK Osijek",
-  "H2O Purepechas FC vs Montaneses FC",
-  "AL Qadsia vs AL Arabi",
-  "CD Mosquito U19 vs Real Betis Balompie",
-  "Bohemians vs Sparta Prague",
-  "Terrassa FC vs Reus FC Reddis",
-  "CS Cartagines vs AD San Carlos",
-  "Hegelmann Litauen B vs Baltijos Futbolo Akademija",
-  "Fcf Como W vs AC Milan W",
-  "Amorebieta vs RS Gimnastica",
-  "FC Nomme United vs FC Tallinn",
-  "Colombe FC vs PWD Bamenda",
-  "Omonia Aradippou vs Apoel Nicosia",
-  "Aurora FC vs Antigua GFC",
-  "Ujpest FC vs Nyiregyhaza",
-  "Ciudad De Lucena vs Atletico Sanluqueno",
-  "Af Elbasani vs Laci",
-  "Langreo vs Caudal Deportivo",
-  "Skenderbeu vs Vllaznia",
-  "CD Bala Azul vs SFC Minerva",
-  "Panathinaikos vs AEK Athens",
-  "Sporting CP W vs Valadares Gaia FC W",
-  "CD Badajoz vs CD Linares",
-  "Lommel United vs KAA Gent",
-  "Zamora vs Deportivo La Coruna B",
-  "Lugo vs Merida UD",
-  "Gzira United FC vs Marsaxlokk FC",
-  "CODM Meknes vs FAR Rabat",
-  "ASEC Mimosas vs FC San Pedro",
-  "Ipojuca Atletico Clube PE vs Ibis PE",
-  "CD Fuerte San Francisco U20 vs CD Aguila U20",
-  "7 De Abril RJ vs Cardoso Moreira RJ",
-  "Paduano EC RJ vs FC Rio de Janeiro RJ"
+  "Deportivo La Guaira vs Portuguesa FC",
+  "Champions FC Academy vs Umecit II",
+  "Rancho Santana FC vs Indigenas de Matagalpa FC",
+  "New Mexico United vs Phoenix Rising FC",
+  "Liverpool (URU) vs Juventud LP",
+  "Independiente Medellin vs Alianza FC Valledupar",
+  "CD Motagua vs CD Marathon",
+  "Atletico Independiente vs San Francisco",
+  "Carabobo FC vs Metropolitanos",
+  "Firpo vs CD FAS",
+  "Managua FC vs Unan Managua",
+  "Olancho FC vs Platense (HON)",
+  "Los Angeles FC vs Minnesota Utd",
+  "Sacramento Republic vs Tulsa Roughnecks",
+  "Ulinzi Stars vs Mathare United",
+  "Posta Rangers vs 3K FC",
+  "Tusker vs Mara Sugar FC",
+  "Shabana FC vs Kenya Police FC",
+  "Al Ahly Cairo vs Arab Contractors",
+  "Jong Ajax vs Vitesse Arnhem",
+  "Jong PSV vs NAC Breda",
+  "CSB Atenas vs CA Sarmiento de la Banda",
+  "Deportivo Guastatoya vs Coban Imperial",
+  "Charlotte Independence vs FC Naples",
+  "AC Boise vs One Knoxville SC",
+  "CSD Comunicaciones vs Deportivo Mixco",
+  "Universitatea Cluj vs Steaua Bucuresti"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

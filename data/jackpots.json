@@ -545,34 +545,34 @@
     "hId": "t:paris",
     "aId": "t:monaco",
     "known": true,
-    "games": 252,
+    "games": 253,
     "modelV": 3,
     "form": [
-     "DWLWL",
-     "DWDLD"
+     "WLWLW",
+     "WDLDL"
     ],
     "p": {
-     "h": 0.3826,
-     "d": 0.262,
-     "a": 0.3553,
-     "o": 0.5654,
-     "b": 0.6035
+     "h": 0.4307,
+     "d": 0.2426,
+     "a": 0.3267,
+     "o": 0.6502,
+     "b": 0.6654
     },
     "xg": [
-     1.52,
-     1.46
+     1.82,
+     1.56
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.38263006547785877,
+     "x12p": 0.4307311324538245,
      "alt": "A",
-     "altp": 0.3553377364833757,
+     "altp": 0.3266561439270075,
      "dc": "12",
-     "dcp": 0.7379678019612345,
+     "dcp": 0.757387276380832,
      "ou": "O",
-     "oup": 0.5654319254314343,
+     "oup": 0.6502279004073656,
      "bt": "Y",
-     "btp": 0.6035461343048084
+     "btp": 0.6653814599493959
     },
     "pk0": {
      "x12": "H"
@@ -580,14 +580,35 @@
     "meta": {
      "news": {
       "h": {
-       "adj": 0,
-       "headlines": []
+       "adj": 8,
+       "headlines": [
+        "Dier returns, Zakaria kept as Monaco name XI for Paris FC",
+        "Dier endures nightmare return as Monaco lose 3-1 at Paris FC, player ratings"
+       ]
       },
       "a": {
-       "adj": 0,
-       "headlines": []
+       "adj": 8,
+       "headlines": [
+        "Dier returns, Zakaria kept as Monaco name XI for Paris FC",
+        "Dier endures nightmare return as Monaco lose 3-1 at Paris FC, player ratings"
+       ]
       }
      }
+    },
+    "result": {
+     "hg": 3,
+     "ag": 1,
+     "src": "feed",
+     "o": "H"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": true,
+     "bt": true
+    },
+    "ok0": {
+     "x12": true
     }
    },
    {
@@ -597,34 +618,34 @@
     "hId": "t:liverpool",
     "aId": "t:arsenal",
     "known": true,
-    "games": 275,
+    "games": 276,
     "modelV": 3,
     "form": [
-     "DWLWW",
-     "WLWWW"
+     "WLWWL",
+     "LWWWW"
     ],
     "p": {
-     "h": 0.2951,
-     "d": 0.2791,
-     "a": 0.4258,
-     "o": 0.477,
-     "b": 0.5297
+     "h": 0.2658,
+     "d": 0.3135,
+     "a": 0.4208,
+     "o": 0.3484,
+     "b": 0.4224
     },
     "xg": [
-     1.16,
-     1.45
+     0.9,
+     1.21
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4257673728557943,
-     "alt": "H",
-     "altp": 0.29513865659758914,
-     "dc": "12",
-     "dcp": 0.7209060294533834,
+     "x12p": 0.4207537051678189,
+     "alt": "D",
+     "altp": 0.31346135857490154,
+     "dc": "X2",
+     "dcp": 0.7342150637427205,
      "ou": "U",
-     "oup": 0.5230465499454363,
-     "bt": "Y",
-     "btp": 0.5296635041248836
+     "oup": 0.6516044864058419,
+     "bt": "N",
+     "btp": 0.5775619220351431
     },
     "pk0": {
      "x12": "A"
@@ -634,20 +655,35 @@
       "h": {
        "adj": -20,
        "headlines": [
-        "Liverpool vs. Arsenal: Christos Tzolis drops huge double injury hint with key FPL decisions",
-        "Liverpool FC team news vs. Arsenal – Injuries, suspensions & available squad",
-        "14 players could miss Liverpool vs Arsenal after Andoni Iraola injury update"
+        "Mikel Arteta confirms fresh Arsenal injury blow after Liverpool win - \"It's incredible\"",
+        "Every word Mikel Arteta said on Arsenal win at Liverpool, Christos Tzolis display and secret injury",
+        "Mikel Arteta explains shock Arsenal decision against Liverpool as new injury scare revealed"
        ]
       },
       "a": {
        "adj": -16,
        "headlines": [
-        "Arsenal team news hint as injured star set to return against Liverpool",
-        "Liverpool vs. Arsenal: Christos Tzolis drops huge double injury hint with key FPL decisions",
-        "Mikel Arteta gives four-man Arsenal injury update and sends Max Dowman protection message"
+        "Arsenal injury, suspension list and return dates vs. Slavia Prague: Bukayo Saka, William Saliba latest",
+        "Every word Mikel Arteta said on Arsenal win at Liverpool, Christos Tzolis display and secret injury",
+        "Mikel Arteta explains shock Arsenal decision against Liverpool as new injury scare revealed"
        ]
       }
      }
+    },
+    "result": {
+     "hg": 0,
+     "ag": 1,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": true,
+     "bt": true
+    },
+    "ok0": {
+     "x12": true
     }
    },
    {
@@ -698,34 +734,34 @@
     "hId": "t:lecce",
     "aId": "t:genoa-cfc",
     "known": true,
-    "games": 5,
+    "games": 6,
     "modelV": 3,
     "form": [
-     "LLWLL",
-     "LLLDL"
+     "LWLLL",
+     "LLDLW"
     ],
     "p": {
-     "h": 0.5261,
-     "d": 0.2444,
-     "a": 0.2295,
-     "o": 0.5706,
-     "b": 0.58
+     "h": 0.4811,
+     "d": 0.2464,
+     "a": 0.2725,
+     "o": 0.602,
+     "b": 0.6187
     },
     "xg": [
-     1.85,
-     1.15
+     1.82,
+     1.32
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5260886910960599,
-     "alt": "D",
-     "altp": 0.244401957514929,
-     "dc": "1X",
-     "dcp": 0.7704906486109889,
+     "x12p": 0.481111370431706,
+     "alt": "A",
+     "altp": 0.2725083325948595,
+     "dc": "12",
+     "dcp": 0.7536197030265654,
      "ou": "O",
-     "oup": 0.5706433456050981,
+     "oup": 0.6020388985276708,
      "bt": "Y",
-     "btp": 0.5799591613278569
+     "btp": 0.6187038599945464
     },
     "pk0": {
      "x12": "H"
@@ -733,8 +769,9 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -8,
+       "adj": -16,
        "headlines": [
+        "Lecce-Genoa 1-2 live: Maleh pulls one back with a deflected free-kick. Stulic’s 2-2 equaliser ruled out",
         "Soccer: Lecce; striker Guebbels also suffers a knee injury."
        ]
       },
@@ -743,6 +780,21 @@
        "headlines": []
       }
      }
+    },
+    "result": {
+     "hg": 1,
+     "ag": 2,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": false,
+     "dc": true,
+     "ou": true,
+     "bt": true
+    },
+    "ok0": {
+     "x12": false
     }
    },
    {
@@ -752,34 +804,34 @@
     "hId": "t:elche",
     "aId": "t:valencia",
     "known": true,
-    "games": 285,
+    "games": 286,
     "modelV": 3,
     "form": [
-     "WWDDW",
-     "LDDDL"
+     "WDDWL",
+     "DDDLW"
     ],
     "p": {
-     "h": 0.5198,
-     "d": 0.2472,
-     "a": 0.233,
-     "o": 0.5625,
-     "b": 0.5754
+     "h": 0.4817,
+     "d": 0.2569,
+     "a": 0.2614,
+     "o": 0.5471,
+     "b": 0.5744
     },
     "xg": [
-     1.82,
-     1.14
+     1.7,
+     1.19
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5198054565338892,
-     "alt": "D",
-     "altp": 0.24718099603975519,
-     "dc": "1X",
-     "dcp": 0.7669864525736444,
+     "x12p": 0.48172690507366017,
+     "alt": "A",
+     "altp": 0.2613569538428898,
+     "dc": "12",
+     "dcp": 0.74308385891655,
      "ou": "O",
-     "oup": 0.5624905145898799,
+     "oup": 0.5470900556305712,
      "bt": "Y",
-     "btp": 0.575410879175985
+     "btp": 0.574356312664959
     },
     "pk0": {
      "x12": "H"
@@ -791,12 +843,28 @@
        "headlines": []
       },
       "a": {
-       "adj": 4,
+       "adj": 8,
        "headlines": [
-        "Umar Sadiq steps up Valencia return ahead of Elche trip"
+        "Umar Sadiq steps up Valencia return ahead of Elche trip",
+        "Harvey Elliott faces early Liverpool return with Valencia ‘likely’ to end loan"
        ]
       }
      }
+    },
+    "result": {
+     "hg": 0,
+     "ag": 1,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": false,
+     "dc": true,
+     "ou": false,
+     "bt": false
+    },
+    "ok0": {
+     "x12": false
     }
    },
    {
@@ -806,34 +874,34 @@
     "hId": "t:maritimo",
     "aId": "t:santa-clara",
     "known": true,
-    "games": 145,
+    "games": 146,
     "modelV": 3,
     "form": [
-     "LLDLL",
-     "WWDWL"
+     "LDLLL",
+     "WDWLW"
     ],
     "p": {
-     "h": 0.2557,
-     "d": 0.2707,
-     "a": 0.4737,
-     "o": 0.4869,
-     "b": 0.5273
+     "h": 0.2226,
+     "d": 0.2727,
+     "a": 0.5047,
+     "o": 0.4516,
+     "b": 0.4877
     },
     "xg": [
-     1.08,
-     1.57
+     0.94,
+     1.56
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4736570935229285,
+     "x12p": 0.5047368293545562,
      "alt": "D",
-     "altp": 0.2706651400992309,
+     "altp": 0.2727131381604736,
      "dc": "X2",
-     "dcp": 0.7443222336221594,
+     "dcp": 0.7774499675150298,
      "ou": "U",
-     "oup": 0.5131035218360562,
-     "bt": "Y",
-     "btp": 0.527320975855731
+     "oup": 0.5484476517459289,
+     "bt": "N",
+     "btp": 0.512254188488027
     },
     "pk0": {
      "x12": "A"
@@ -845,12 +913,25 @@
        "headlines": []
       },
       "a": {
-       "adj": -8,
-       "headlines": [
-        "Mário Branco suspended for up to 20 days, Jhon Durán free to play after Santa Clara v Benfica fallout"
-       ]
+       "adj": 0,
+       "headlines": []
       }
      }
+    },
+    "result": {
+     "hg": 0,
+     "ag": 2,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": true,
+     "bt": true
+    },
+    "ok0": {
+     "x12": true
     }
    },
    {
@@ -907,8 +988,8 @@
    }
   ],
   "summary": {
-   "expectedCorrect": 7.14,
-   "pAllCorrect": 0.0000021835302069777996,
+   "expectedCorrect": 7.13,
+   "pAllCorrect": 0.0000021937625562878584,
    "unknownTeams": 2
   }
  },
@@ -992,27 +1073,27 @@
      "WDLLD"
     ],
     "p": {
-     "h": 0.574,
-     "d": 0.2088,
-     "a": 0.2172,
-     "o": 0.7191,
-     "b": 0.6865
+     "h": 0.5626,
+     "d": 0.2116,
+     "a": 0.2258,
+     "o": 0.7168,
+     "b": 0.6887
     },
     "xg": [
-     2.35,
-     1.41
+     2.31,
+     1.43
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5740361867202073,
+     "x12p": 0.5625804974027008,
      "alt": "A",
-     "altp": 0.21720970578324336,
+     "altp": 0.2257855967538267,
      "dc": "12",
-     "dcp": 0.7912458925034507,
+     "dcp": 0.7883660941565275,
      "ou": "O",
-     "oup": 0.7191226970993831,
+     "oup": 0.7167934234145352,
      "bt": "Y",
-     "btp": 0.6865198167783367
+     "btp": 0.6886505252107255
     },
     "pk0": {
      "x12": "H"
@@ -1020,11 +1101,10 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -6,
+       "adj": -16,
        "headlines": [
         "QPR eye triple injury boost at Southampton as Julien Stephan stays positive",
-        "Why Southampton will fear the possible return of this QPR maverick at St Mary's",
-        "Southampton wary of Ilias Chair boost as QPR visit St Mary’s"
+        "The 7 players set to miss Southampton vs QPR ft £18m star"
        ]
       },
       "a": {
@@ -1052,27 +1132,27 @@
      "WLWDW"
     ],
     "p": {
-     "h": 0.2369,
-     "d": 0.2484,
-     "a": 0.5147,
-     "o": 0.5611,
-     "b": 0.576
+     "h": 0.2244,
+     "d": 0.2444,
+     "a": 0.5312,
+     "o": 0.5649,
+     "b": 0.5734
     },
     "xg": [
-     1.15,
-     1.8
+     1.12,
+     1.85
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.5146997124081547,
+     "x12p": 0.5312333868649285,
      "alt": "D",
-     "altp": 0.2484464425596701,
+     "altp": 0.24438697649633906,
      "dc": "X2",
-     "dcp": 0.7631461549678248,
+     "dcp": 0.7756203633612675,
      "ou": "O",
-     "oup": 0.5610785066607575,
+     "oup": 0.5649083265314319,
      "bt": "Y",
-     "btp": 0.5759686588019969
+     "btp": 0.5733519465047295
     },
     "pk0": {
      "x12": "A"
@@ -1080,17 +1160,18 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -8,
+       "adj": -16,
        "headlines": [
-        "SUFC News: United’s Bamford fitness hope v Preston as late injury blow explained"
+        "SUFC News: United’s Bamford fitness hope v Preston as late injury blow explained",
+        "SUFC News: United handed suspension blow for Preston trip after moment v Wrexham"
        ]
       },
       "a": {
-       "adj": -8,
+       "adj": 0,
        "headlines": [
-        "Wilder reveals fresh Sheffield United injury blow",
-        "Wrexham news: Parkinson issues injury update ahead of Sheffield United test",
-        "'Excellent' - Wrexham boss sends message to Callum O'Hare ahead of Sheffield United return"
+        "'Excellent' - Wrexham boss sends message to Callum O'Hare ahead of Sheffield United return",
+        "No sentiment from Wrexham midfielder O'Hare ahead of Sheffield United return",
+        "Sheffield Wednesday team news and predicted XI vs Blackpool: Ernie Weaver starts again amid defensive injuries"
        ]
       }
      }
@@ -1110,27 +1191,27 @@
      "LLDWL"
     ],
     "p": {
-     "h": 0.2012,
-     "d": 0.2041,
-     "a": 0.5947,
-     "o": 0.718,
-     "b": 0.6774
+     "h": 0.211,
+     "d": 0.2078,
+     "a": 0.5811,
+     "o": 0.7149,
+     "b": 0.6802
     },
     "xg": [
-     1.35,
-     2.4
+     1.38,
+     2.35
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.5947272084560395,
-     "alt": "D",
-     "altp": 0.20406785247855316,
-     "dc": "X2",
-     "dcp": 0.7987950609345927,
+     "x12p": 0.5811437225468415,
+     "alt": "H",
+     "altp": 0.2110417224601922,
+     "dc": "12",
+     "dcp": 0.7921854450070338,
      "ou": "O",
-     "oup": 0.7180070949112131,
+     "oup": 0.7149011985414634,
      "bt": "Y",
-     "btp": 0.67738701399175
+     "btp": 0.6801918118324758
     },
     "pk0": {
      "x12": "A"
@@ -1142,8 +1223,12 @@
        "headlines": []
       },
       "a": {
-       "adj": 0,
-       "headlines": []
+       "adj": -12,
+       "headlines": [
+        "USC Fan Suffers Serious Injury During Field Storm After Lincoln Riley’s Upset Win Over Ohio State",
+        "New-look Lincoln Lutheran returns to the state tournament for 10th straight year",
+        "\"Luke Fahey is Going to End Lincoln Riley's Job\": CFB Fans React as OSU Names Starting QB After Julian Sayin Injury"
+       ]
       }
      }
     }
@@ -1162,27 +1247,27 @@
      "WLLWW"
     ],
     "p": {
-     "h": 0.33,
-     "d": 0.2395,
-     "a": 0.4305,
-     "o": 0.6665,
-     "b": 0.6781
+     "h": 0.3259,
+     "d": 0.2391,
+     "a": 0.4349,
+     "o": 0.6668,
+     "b": 0.6778
     },
     "xg": [
      1.6,
-     1.85
+     1.87
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4305313538403729,
+     "x12p": 0.43494462529694883,
      "alt": "H",
-     "altp": 0.3299838631477138,
+     "altp": 0.32594313218017057,
      "dc": "12",
-     "dcp": 0.7605152169880867,
+     "dcp": 0.7608877574771193,
      "ou": "O",
-     "oup": 0.6665381905917757,
+     "oup": 0.6668388092012908,
      "bt": "Y",
-     "btp": 0.6780601613829291
+     "btp": 0.677804281282515
     },
     "pk0": {
      "x12": "A"
@@ -1194,15 +1279,13 @@
        "headlines": [
         "1 person injured in shooting on George Washington Highway in Portsmouth",
         "Man injured in shooting at Lanier Crescent, Portsmouth",
-        "Portsmouth boss delivers exciting attacking outlook as key figure closes in on injury return"
+        "Child suffers serious injury after being hit by a car in Portsmouth"
        ]
       },
       "a": {
-       "adj": 0,
+       "adj": 4,
        "headlines": [
-        "Blackburn Rovers handed triple boost for Swansea City clash",
-        "Matos reveals Swansea boost for Blackburn clash",
-        "Canada vice-captain Stephen Eustaquio scores, exits with a knock in Swansea City win - Canadian Soccer Daily -"
+        "Blackburn Rovers handed triple boost for Swansea City clash"
        ]
       }
      }
@@ -1280,27 +1363,27 @@
      "DWDWW"
     ],
     "p": {
-     "h": 0.2474,
-     "d": 0.2725,
-     "a": 0.4801,
-     "o": 0.4738,
-     "b": 0.5146
+     "h": 0.252,
+     "d": 0.2845,
+     "a": 0.4635,
+     "o": 0.4334,
+     "b": 0.4854
     },
     "xg": [
-     1.04,
-     1.55
+     0.99,
+     1.45
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.48013089172878903,
+     "x12p": 0.4635119798253194,
      "alt": "D",
-     "altp": 0.2724632923538779,
+     "altp": 0.28447469186384694,
      "dc": "X2",
-     "dcp": 0.7525941840826669,
+     "dcp": 0.7479866716891663,
      "ou": "U",
-     "oup": 0.5262368567294864,
-     "bt": "Y",
-     "btp": 0.5145896091455595
+     "oup": 0.5665663372598113,
+     "bt": "N",
+     "btp": 0.5145646674286819
     },
     "pk0": {
      "x12": "A"
@@ -1316,10 +1399,11 @@
        ]
       },
       "a": {
-       "adj": -16,
+       "adj": -24,
        "headlines": [
+        "Roma hit five at Udinese but bring injuries and a heavy schedule to Old Trafford",
         "Will Carrick Be Sacked? What Man Utd Need Against Roma and Villa",
-        "Roma hit five at Udinese but bring injuries and a heavy schedule to Old Trafford"
+        "Manchester United vs AS Roma Preview, prediction, injury news & lineups | Champions League 2026-27"
        ]
       }
      }
@@ -1339,27 +1423,27 @@
      "WWDWW"
     ],
     "p": {
-     "h": 0.3065,
-     "d": 0.2375,
-     "a": 0.456,
-     "o": 0.6657,
-     "b": 0.6741
+     "h": 0.3183,
+     "d": 0.2389,
+     "a": 0.4427,
+     "o": 0.6646,
+     "b": 0.6751
     },
     "xg": [
-     1.54,
-     1.91
+     1.57,
+     1.88
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4560481227588069,
+     "x12p": 0.4427398114425486,
      "alt": "H",
-     "altp": 0.30647826654494653,
+     "altp": 0.31833094426024616,
      "dc": "12",
-     "dcp": 0.7625263893037535,
+     "dcp": 0.7610707557027947,
      "ou": "O",
-     "oup": 0.6657431392812376,
+     "oup": 0.6645590972564722,
      "bt": "Y",
-     "btp": 0.674063436465536
+     "btp": 0.6750654287480634
     },
     "pk0": {
      "x12": "A"
@@ -1367,19 +1451,19 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -20,
+       "adj": -24,
        "headlines": [
         "Jarrod Bowen injury revelation: Nuno confirms latest ahead of West Ham vs West Brom",
-        "Preview: West Ham aim to return to winning ways as they welcome West Brom",
-        "Watch: West Brom reporter Lewis Cox latest on injury update, goal debate and West Ham"
+        "Watch: West Brom reporter Lewis Cox latest on injury update, goal debate and West Ham",
+        "6 players set to miss West Ham v West Brom ft 5-goal star"
        ]
       },
       "a": {
-       "adj": -8,
+       "adj": -24,
        "headlines": [
         "QPR eye triple injury boost at Southampton as Julien Stephan stays positive",
-        "The 7 players set to miss Southampton vs QPR ft £18m star",
-        "QPR should plan to 'rattle' Southampton as 'massive' boost confirmed"
+        "Halloween party stabbing: Five teenagers seriously injured near Southampton",
+        "The 7 players set to miss Southampton vs QPR ft £18m star"
        ]
       }
      }
@@ -1520,17 +1604,15 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -4,
+       "adj": 4,
        "headlines": [
-        "Ole Miss Grad Dane Connery Returns to His Oxford Roots With ‘Back at Ole Miss’",
-        "Worker injured by fall at Oxford Dam in Catawba County; Severity of injuries unknown"
+        "Ole Miss Grad Dane Connery Returns to His Oxford Roots With ‘Back at Ole Miss’"
        ]
       },
       "a": {
-       "adj": -16,
+       "adj": -8,
        "headlines": [
-        "Tom Cleverley Provides Positive Injury Update Ahead of Reading Clash - Plymouth Argyle",
-        "Reading FC dealt major blow as winger set to miss ‘several months’ with injury"
+        "Tom Cleverley Provides Positive Injury Update Ahead of Reading Clash - Plymouth Argyle"
        ]
       }
      }
@@ -1550,27 +1632,27 @@
      "DWLDW"
     ],
     "p": {
-     "h": 0.6026,
-     "d": 0.2245,
-     "a": 0.1729,
-     "o": 0.5759,
-     "b": 0.5504
+     "h": 0.5779,
+     "d": 0.2487,
+     "a": 0.1734,
+     "o": 0.4799,
+     "b": 0.4796
     },
     "xg": [
-     2.03,
-     0.99
+     1.77,
+     0.85
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.6025763297505428,
+     "x12p": 0.5779238597665112,
      "alt": "D",
-     "altp": 0.22454510942703393,
+     "altp": 0.24870117624818427,
      "dc": "1X",
-     "dcp": 0.8271214391775767,
-     "ou": "O",
-     "oup": 0.5758831078780905,
-     "bt": "Y",
-     "btp": 0.5503727222848039
+     "dcp": 0.8266250360146954,
+     "ou": "U",
+     "oup": 0.5201456268956,
+     "bt": "N",
+     "btp": 0.5204045551230615
     },
     "pk0": {
      "x12": "H"
@@ -1578,11 +1660,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -12,
+       "adj": -8,
        "headlines": [
         "FC Porto v Estoril: Farioli returns to the usual formula",
         "Oskar Pietuszewski only for Champions League as Chris Smalling injury worries Porto",
-        "Unlucky Chris Smalling suffers bad injury on FC Porto debut"
+        "Banrisul stock returns as shirt sponsor for Porto Alegre rivals - ad-hoc-news.de"
        ]
       },
       "a": {
@@ -1610,27 +1692,27 @@
      "LDWWW"
     ],
     "p": {
-     "h": 0.382,
-     "d": 0.2618,
-     "a": 0.3562,
-     "o": 0.5667,
-     "b": 0.6046
+     "h": 0.3741,
+     "d": 0.2619,
+     "a": 0.364,
+     "o": 0.5666,
+     "b": 0.6047
     },
     "xg": [
-     1.52,
-     1.46
+     1.5,
+     1.48
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.3820214600515845,
+     "x12p": 0.3741109675764134,
      "alt": "A",
-     "altp": 0.356213260856028,
+     "altp": 0.3639933637707562,
      "dc": "12",
-     "dcp": 0.7382347209076126,
+     "dcp": 0.7381043313471696,
      "ou": "O",
-     "oup": 0.5667362891367314,
+     "oup": 0.5666211404533181,
      "bt": "Y",
-     "btp": 0.6045688239935526
+     "btp": 0.6046513988300237
     },
     "pk0": {
      "x12": "A"
@@ -1638,17 +1720,13 @@
     "meta": {
      "news": {
       "h": {
-       "adj": 4,
-       "headlines": [
-        "Lille seek derby boost against Lens as top spot comes into view"
-       ]
+       "adj": 0,
+       "headlines": []
       },
       "a": {
-       "adj": -12,
+       "adj": -8,
        "headlines": [
-        "Fabregas: ‘Venezia will be difficult for Como, Kean injury happened with Italy’",
-        "Como, Kean's return still some way off: another month on the sidelines",
-        "Como confirm Moise Kean has undergone surgery on tibia injury"
+        "Fabregas: ‘Venezia will be difficult for Como, Kean injury happened with Italy’"
        ]
       }
      }
@@ -1656,8 +1734,8 @@
    }
   ],
   "summary": {
-   "expectedCorrect": 6.16,
-   "pAllCorrect": 0.00005253018577066578,
+   "expectedCorrect": 6.1,
+   "pAllCorrect": 0.00004617332567275428,
    "unknownTeams": 1
   }
  }
