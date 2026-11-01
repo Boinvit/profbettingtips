@@ -1,6 +1,7 @@
 /* Prediction Lab — static viewer. Reads /data/*.json written by the agent (no backend). */
 import { predict, picks, newState } from '../agent/lib/model.mjs';
 import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
+import { combineSlips } from '../agent/lib/combine.mjs';
 (() => {
   const TZ = 'Africa/Nairobi';
   const $ = (s) => document.querySelector(s);
@@ -35,6 +36,22 @@ import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
     const st = stakeFor(bank, v.f);
     return `<small class="val">Value: ${esc(PICK[v.pick])} @ ${v.odds.toFixed(2)} · model edge +${(v.edge * 100).toFixed(1)}%${st ? ` · suggested stake ${kes(st)} (quarter Kelly, max 5%)` : ''}</small>`;
   };
+  // Combine calculator (Accumulators tab): tick slips, see total odds / chance / payout / cash-out ladder.
+  const combo = new Set();
+  let cmbStake = 0;
+  try { cmbStake = parseInt(localStorage.getItem('pbt.stake') || '0', 10) || 0; } catch (e) { cmbStake = 0; }
+  const cmbOut = () => {
+    const sel = (accasData.items || []).filter((a) => combo.has(a.id));
+    if (!sel.length) return '<small>Nothing ticked yet. Tick \u201ccombine\u201d on two or more open slips below.</small>';
+    const c = combineSlips(sel, cmbStake);
+    const lines = [`<b>${c.slips} slip${c.slips > 1 ? 's' : ''} \u00b7 ${c.legs} legs</b> \u00b7 total odds <b>${c.odds.toFixed(2)}</b> \u00b7 chance every leg lands <b>${pct(c.prob, c.prob < 0.1 ? 1 : 0)}</b>`];
+    if (c.stake) lines.push(`Stake ${kes(c.stake)} would pay <b>${kes(Math.round(c.payout))}</b> (before any SportPesa multi-bet bonus). Average return on the model\u2019s numbers: ${kes(Math.round(c.expected))}.`);
+    if (c.overlaps.length) lines.push(`<span class="warn">\u26a0 ${c.overlaps.length} match${c.overlaps.length > 1 ? 'es appear' : ' appears'} in more than one ticked slip. SportPesa will not take the same match twice, and the chance above is then wrong.</span>`);
+    lines.push('Chance is the product of each slip\u2019s chance, so stacking lowers it. If the first legs (in kick-off order) all win, a cash-out is worth roughly:');
+    lines.push(c.ladder.map((s) => `after ${s.k} leg${s.k > 1 ? "s" : ""}: ${pct(s.prob, s.prob < 0.1 ? 1 : 0)} still alive${c.stake ? `, cash-out about ${kes(Math.round(s.value))}` : `, about ${s.multiple.toFixed(1)}\u00d7 stake`}`).join('<br>'));
+    return lines.join('<br>');
+  };
+  const cmbBar = () => `<div class="panel cmb-bar"><h3>Combine slips</h3><p class="note">Slips never share a match, so you can stack several into one bet. Cash-out values are rough: SportPesa sets the real price (your 31 Oct cash-out paid about 96% of fair value, one sample).</p><label class="bk">Stake (KES) <input id="cmb-stake" inputmode="numeric" value="${cmbStake || ''}" placeholder="e.g. 100"></label><div id="cmb-out">${cmbOut()}</div></div>`;
   const extras = (p) => {
     const bits = [];
     if (p.form && (p.form[0] || p.form[1])) bits.push(`Form H ${esc(p.form[0] || '–')} · A ${esc(p.form[1] || '–')}`);
@@ -127,7 +144,7 @@ import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
       const A = accasData, items = (A.items || []).filter((a) => a.status !== 'void');
       if (!items.length) return `<div class="empty">No accumulators yet. They are built on each agent run from the safest selections once enough upcoming matches are available.</div>`;
       const o = (A.stats || {}).overall || {}, gl = { banker: 'Banker', solid: 'Solid', risky: 'Risky' }, mark = { won: '✅ Won', lost: '❌ Lost', pending: '' };
-      const card = (a) => `<div class="panel acca ${a.status}"><h3>${esc(a.title)} · ${a.n} legs · ${a.odds.toFixed(2)}${a.est ? '*' : ''} odds <span class="chip ${a.grade === 'banker' ? 'ok' : a.grade === 'risky' ? 'no' : 'main'}">${gl[a.grade]}</span> ${mark[a.status] || ''}</h3>
+      const card = (a) => `<div class="panel acca ${a.status}"><h3>${esc(a.title)} · ${a.n} legs · ${a.odds.toFixed(2)}${a.est ? '*' : ''} odds <span class="chip ${a.grade === 'banker' ? 'ok' : a.grade === 'risky' ? 'no' : 'main'}">${gl[a.grade]}</span> ${mark[a.status] || ''}${a.status === 'pending' && !a.legs.some((l) => new Date(l.kickoff) <= Date.now()) ? `<label class="cmb-l"><input type="checkbox" class="cmb" data-id="${esc(a.id)}"${combo.has(a.id) ? ' checked' : ''}> combine</label>` : ''}</h3>
         <p class="note">Model chance that every leg lands: <b>${pct(a.prob, 0)}</b></p>
         ${a.legs.map((l) => `<div class="row"><div class="t">${esc(time(l.kickoff))}<small>${esc(COMP[l.comp] || l.comp)}</small></div><div class="m">${esc(l.home)} vs ${esc(l.away)}<small>${esc(l.label)}</small></div><div class="pick"><span class="chip ${l.ok === undefined ? '' : l.ok ? 'ok' : 'no'}">@${l.odds.toFixed(2)} · ${pct(l.p, 0)}${l.res ? ` · ${l.res.hg}–${l.res.ag}` : ''}${l.ok === undefined ? '' : l.ok ? ' ✓' : ' ✗'}</span></div></div>`).join('')}</div>`;
       const groups = {};
@@ -137,7 +154,7 @@ import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
         const [kind, d] = k.split(':');
         out += `<div class="day">${kind === 'weekend' ? 'Weekend' : 'Daily'} · ${esc(day(d + 'T12:00:00Z'))}</div>` + groups[k].sort((x, y) => x.odds - y.odds).map(card).join('');
       }
-      return out;
+      return cmbBar() + out;
     },
     results() {
       const list = data.recent.filter((p) => p.status === 'settled').sort((a, b) => b.kickoff.localeCompare(a.kickoff));
@@ -241,6 +258,18 @@ import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
     try { localStorage.setItem('pbt.bankroll', String(bank)); } catch (err) { /* storage unavailable */ }
     show('upcoming');
   });
+  const cmbHandler = (e) => {
+    const t = e.target;
+    if (t.classList && t.classList.contains('cmb')) { if (t.checked) combo.add(t.dataset.id); else combo.delete(t.dataset.id); }
+    else if (t.id === 'cmb-stake') {
+      cmbStake = Math.max(0, parseInt(String(t.value).replace(/[^0-9]/g, ''), 10) || 0);
+      try { localStorage.setItem('pbt.stake', String(cmbStake)); } catch (err) { /* storage unavailable */ }
+    } else return;
+    const out = document.getElementById('cmb-out');
+    if (out) out.innerHTML = cmbOut();
+  };
+  document.getElementById('view').addEventListener('input', cmbHandler);
+  document.getElementById('view').addEventListener('change', cmbHandler);
   document.getElementById('tabs').addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b) show(b.dataset.tab); });
   Promise.all([get('recent.json', []), get('stats.json', null), get('jackpots.json', []), get('model.json', {}), get('sources.json', {}), get('ratings.json', null), get('news.json', {}), get('accas.json', { items: [], stats: {} })]).then(([recent, stats, jackpots, model, sources, ratings, news, accas]) => {
     accasData = accas || accasData;

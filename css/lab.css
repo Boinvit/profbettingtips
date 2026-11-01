@@ -61,3 +61,8 @@ svg.chart { width:100%; height:auto; aspect-ratio:640/180; display:block; }
 .bk { display:inline-flex; align-items:center; gap:8px; margin-left:10px; font-size:12px; color:var(--text-2); }
 .bk input { width:110px; padding:6px 8px; border-radius:8px; border:1px solid var(--border, #333); background:var(--bg-card); color:inherit; }
 .row .m small.val { display:block; margin:4px 0 0; color:var(--gold, #d4af37); font-weight:600; }
+.cmb-l { float:right; font-size:12px; font-weight:500; color:var(--text-2); cursor:pointer; }
+.cmb-l input { margin-right:4px; }
+.cmb-bar { position:sticky; top:0; z-index:5; }
+.cmb-bar #cmb-out { margin-top:8px; font-size:13px; line-height:1.6; }
+.cmb-bar .warn { color:#e8a33d; font-weight:600; }
