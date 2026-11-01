@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T21:41:14.222Z",
+ "updated": "2026-11-01T02:35:01.368Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "48 results, 117 fixtures"
+   "detail": "50 results, 149 fixtures"
   },
   {
    "source": "API-Football",
    "ok": true,
-   "detail": "162 results, 97 fixtures"
+   "detail": "142 results, 124 fixtures"
   },
   {
    "source": "OpenLigaDB",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "24 events fetched, 8 with 1X2 odds"
+   "detail": "12 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,49 +39,43 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-10-31T21:40:49.716Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-01T02:34:41.902Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "15 teams fetched, 0 failed"
+   "detail": "303 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Cruz Azul Hidalgo vs Tlaxcala FC",
-  "Club Olimpo vs Gimnasia Y Esgrima",
-  "Artesanos Metepec FC vs Saltillo Soccer FC",
-  "CA Rentistas vs La Luz FC",
-  "Tritones Vallarta MFC vs Pioneros de Cancun",
-  "Real Refineros Cds vs Guerreros de Autlan",
-  "Sp. San Lorenzo vs Libertad Asuncion",
-  "Nautico PE vs Avai",
-  "Sportivo Luqueno vs Nacional Asuncion",
-  "Llaneros FC vs Junior Barranquilla",
-  "Carolina Uslw League vs Lexington SC",
-  "Inter Formando Un Atleta U20 vs CD Platense U20",
-  "Plaza Amador vs Alianza PAN",
-  "Real Espana vs Juticalpa",
-  "Caracas FC vs Monagas SC",
-  "Club Tijuana W vs Cruz Azul W",
-  "Dragones de Oaxaca vs Mineros de Fresnillo FC",
-  "Estudiantes LP vs Instituto Cordoba",
-  "Lobos Ulmx vs Chapulineros de Oaxaca",
-  "Isidro Metapan vs CD Municipal Limeno",
-  "Piratas Veracruz vs CD Tapatio",
-  "Cancun FC vs Tampico Madero",
-  "Alacranes de Durango vs Atletico Morelia",
-  "Atletico Choloma vs CD Olimpia",
-  "Veraguas FC vs Herrera FC",
-  "Sporting San Jose vs CS Herediano",
-  "Irapuato vs Deportiva Venados",
   "Necaxa W vs Santos Laguna W",
   "Migori Youth FC vs Mombasa United FC",
   "AFC Leopards vs KK Homeboyz",
   "PEC Zwolle vs ADO Den Haag",
   "Nairobi United FC vs Bandari",
   "Aps Bomet FC vs Muranga Seal",
-  "Gor Mahia vs KCB"
+  "Gor Mahia vs KCB",
+  "Sporting Braga vs Famalicao",
+  "Yokohama SCC vs J-Lease FC",
+  "Canberra Utd W vs WS Wanderers  W",
+  "Melbourne Victory vs CC Mariners",
+  "Cerezo Osaka Sakai W vs AS Elfen Sayama W",
+  "Albirex Niigata W vs Urawa Red Diamonds W",
+  "Veertien Mie vs Okinawa SV",
+  "Criacao Shinjuku vs Grulla Morioka",
+  "APIA Tigers vs Avondale FC",
+  "Ulsan Hyundai vs Gangwon",
+  "Jeonbuk FC II vs Pocheon FC",
+  "JEF United Chiba vs Avispa Fukuoka",
+  "Ulsan Citizen FC vs Changwon City",
+  "Mokpo City vs Daejeon Korail",
+  "Azul Claro Numazu vs Maruyasu Okazaki",
+  "Suwon City vs Ansan Greeners FC",
+  "V Varen Nagasaki vs Tokyo Verdy",
+  "Jeonnam Dragons vs Seongnam Ilhwa",
+  "Pohang Steelers vs Jeju Utd",
+  "Xi An Ronghai vs Langfang Glory City FC",
+  "Dalian Kewei vs Jiangxi Liansheng"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
