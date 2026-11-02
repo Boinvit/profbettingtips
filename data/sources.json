@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-02T05:49:56.210Z",
+ "updated": "2026-11-02T06:14:35.282Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "84 files ok, 0 failed; 28302 results, 307 fixtures"
+   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
   },
   {
    "source": "football-data.org",
@@ -39,12 +39,12 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-02T05:49:32.574Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-02T06:14:14.421Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "169 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
@@ -56,9 +56,9 @@
   "Jong Ajax vs Vitesse Arnhem",
   "Jong PSV vs NAC Breda",
   "Universitatea Cluj vs Steaua Bucuresti",
+  "FK Skopje vs Sileks",
   "Zorya Lugansk vs Epicentr Dunaivtsi",
   "TRA FC vs Fountain Gate",
-  "FK Skopje vs Sileks",
   "Kryvbas Kryvyi Rih vs Dynamo Kiev",
   "Besat Kermanshah vs Saipa Karadj",
   "AL Sahel SC vs AL Qwarah",
@@ -70,9 +70,9 @@
   "FK Teleoptik vs Javor Ivanjica",
   "FK Graficar Beograd vs FK Napredak",
   "Mladost DG vs Sutjeska",
-  "AL Rayan vs AL Qala",
-  "FK Vora vs Din. Tirana",
   "Juventud de Las Piedras vs CA River Plate (URU)",
+  "FK Vora vs Din. Tirana",
+  "AL Rayan vs AL Qala",
   "Al Orubah vs AL Anwar",
   "Sopoti Librazhd vs KF Iliria Fushe-Kruje",
   "Al-Jabalain vs AL Bukayriyah FC",
