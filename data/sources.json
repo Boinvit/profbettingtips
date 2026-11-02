@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-02T06:14:35.282Z",
+ "updated": "2026-11-02T16:17:06.671Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 3805 results, 307 fixtures"
+   "detail": "40 files ok, 0 failed; 3985 results, 307 fixtures"
   },
   {
    "source": "football-data.org",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
+   "detail": "13 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,50 +39,49 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-02T06:14:14.421Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-02T16:16:38.718Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "159 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Ulinzi Stars vs Mathare United",
-  "Posta Rangers vs 3K FC",
-  "Tusker vs Mara Sugar FC",
-  "Shabana FC vs Kenya Police FC",
   "Al Ahly Cairo vs Arab Contractors",
   "Jong Ajax vs Vitesse Arnhem",
   "Jong PSV vs NAC Breda",
   "Universitatea Cluj vs Steaua Bucuresti",
-  "FK Skopje vs Sileks",
-  "Zorya Lugansk vs Epicentr Dunaivtsi",
-  "TRA FC vs Fountain Gate",
-  "Kryvbas Kryvyi Rih vs Dynamo Kiev",
-  "Besat Kermanshah vs Saipa Karadj",
-  "AL Sahel SC vs AL Qwarah",
-  "Al-Taraji Club vs AL Baten",
-  "Al Safa (Ksa) vs Wajj",
-  "Chonburi vs Bangkok Glass",
-  "FK Bor 1919 vs Spartak Subotica",
-  "Ario Eslamshahr vs FC Fard Alborz",
-  "FK Teleoptik vs Javor Ivanjica",
-  "FK Graficar Beograd vs FK Napredak",
-  "Mladost DG vs Sutjeska",
-  "Juventud de Las Piedras vs CA River Plate (URU)",
-  "FK Vora vs Din. Tirana",
-  "AL Rayan vs AL Qala",
-  "Al Orubah vs AL Anwar",
-  "Sopoti Librazhd vs KF Iliria Fushe-Kruje",
-  "Al-Jabalain vs AL Bukayriyah FC",
-  "Hottain vs AL Gottah",
-  "Baniyas vs AL Jazira",
-  "AL Nasr U23 vs Sharjah FC U23",
-  "Hatta SC vs AL Wahda FC U23",
-  "FC Zeirey Tamra vs Hapoel Karmiel FC",
-  "Uniao Desportiva Do Songo vs Ferroviario de Lichinga",
-  "Bashkimi Kumanovo vs FK Arsimi 1973"
+  "Triglav vs Krka",
+  "AS Nordia Jerusalem vs MK KFAR Saba 1928",
+  "Deportivo Maldonado Reserve vs Boston River",
+  "ZR Temouchent vs US Biskra",
+  "Maccabi Yavne vs Shimshon Tel Aviv",
+  "Progreso vs Racing Club Montevideo Reserve",
+  "Valerenga W vs Lyn W",
+  "Montevideo Wanderers vs Cerro Largo FC",
+  "Hapoel Raanana vs MS Football Hapoel Kiryat Yam",
+  "Metalac vs FK Jedinstvo UB",
+  "Maccabi Jaffa vs Hapoel Kfar Saba",
+  "Chojnice vs Avia Swidnik",
+  "Hapoel Kfar Shelem vs Ironi Modiin",
+  "Kayserispor vs Muglaspor",
+  "FC Ashdod vs Bnei Yehuda",
+  "Radnicki Nis vs FK Zeleznicar Pancevo",
+  "Mladost Lucani vs Radnik Surduluca",
+  "Kopparbergs Go W vs Kristianstads W",
+  "Polonia Bytom SA vs OKS Odra Opole",
+  "Maccabi Ironi Kiryat Malakhi vs FC Holon Yirmiyahu",
+  "Jaen vs Algeciras",
+  "Kalamata FC vs PO Triglias",
+  "Cape Town City vs Magesi FC",
+  "Teuta Durres vs Partizani Tirana",
+  "El Fahem vs Maccabi Nujeidat Ahmad",
+  "Defensores Unidos vs Deportivo Laferrere",
+  "Comunicaciones vs Talleres RDE",
+  "Osters IF vs Helsingborg",
+  "Atletico Rafaela vs Patronato Parana",
+  "Argentino De Quilmes vs Brown Adrogue"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

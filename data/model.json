@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 89143,
+ "tunedOn": 89224,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -323,6 +323,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-02T16:17:06.671Z",
+   "n": 89224,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0137,
+    1.0137
+   ],
+   "acc": [
+    0.4947,
+    0.4947
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -351,12 +375,6 @@
    "def": 0.67
   },
   {
-   "team": "Celtic",
-   "elo": 1886,
-   "att": 1.62,
-   "def": 0.69
-  },
-  {
    "team": "Sp Lisbon",
    "elo": 1880,
    "att": 1.83,
@@ -373,6 +391,12 @@
    "elo": 1869,
    "att": 1.59,
    "def": 0.46
+  },
+  {
+   "team": "Celtic",
+   "elo": 1867,
+   "att": 1.53,
+   "def": 0.73
   },
   {
    "team": "Arsenal",
@@ -400,33 +424,33 @@
   },
   {
    "team": "Club Brugge",
-   "elo": 1839,
-   "att": 1.87,
-   "def": 0.66
+   "elo": 1844,
+   "att": 1.91,
+   "def": 0.7
   },
   {
    "team": "Real Madrid",
-   "elo": 1834,
-   "att": 1.67,
-   "def": 0.68
+   "elo": 1841,
+   "att": 1.69,
+   "def": 0.64
   },
   {
    "team": "St. Gilloise",
-   "elo": 1834,
-   "att": 1.58,
+   "elo": 1835,
+   "att": 1.56,
    "def": 0.56
+  },
+  {
+   "team": "Olympiakos",
+   "elo": 1826,
+   "att": 1.23,
+   "def": 0.46
   },
   {
    "team": "Rangers",
    "elo": 1826,
    "att": 1.48,
    "def": 0.8
-  },
-  {
-   "team": "Olympiakos",
-   "elo": 1823,
-   "att": 1.17,
-   "def": 0.4
   },
   {
    "team": "Zenit",
@@ -447,22 +471,10 @@
    "def": 0.61
   },
   {
-   "team": "AEK",
-   "elo": 1799,
-   "att": 1.7,
-   "def": 0.46
-  },
-  {
    "team": "Dortmund",
    "elo": 1799,
    "att": 1.16,
    "def": 0.53
-  },
-  {
-   "team": "Fenerbahce",
-   "elo": 1791,
-   "att": 1.7,
-   "def": 0.81
   },
   {
    "team": "Viking",
@@ -471,12 +483,24 @@
    "def": 0.7
   },
   {
-   "team": "Napoli",
+   "team": "AEK",
+   "elo": 1787,
+   "att": 1.6,
+   "def": 0.52
+  },
+  {
+   "team": "Como",
    "elo": 1777,
-   "att": 1.33,
-   "def": 0.81
+   "att": 1.4,
+   "def": 0.61
+  },
+  {
+   "team": "Fenerbahce",
+   "elo": 1776,
+   "att": 1.64,
+   "def": 0.85
   }
  ],
- "matches": 89143,
- "updated": "2026-11-02T06:14:35.282Z"
+ "matches": 89224,
+ "updated": "2026-11-02T16:17:06.671Z"
 }
