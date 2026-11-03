@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T01:02:38.985Z",
+ "updated": "2026-11-03T06:02:25.617Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "29 results, 120 fixtures"
+   "detail": "73 results, 117 fixtures"
   },
   {
    "source": "API-Football",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "13 events fetched, 8 with 1X2 odds"
+   "detail": "8 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,24 +39,46 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "25 listed games, 0 jackpot(s), scraped 2026-11-03T01:02:13.334Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-03T06:02:00.192Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "112 teams fetched, 0 failed"
+   "detail": "1 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Defensor Sporting vs Torque",
-  "Leon W vs Atletico San Luis W",
-  "Atletico Bucaramanga vs Atletico Nacional",
-  "Suchitepequez vs Deportivo Malacateco",
-  "Halcones Negros FC vs Real Apodaca FC",
+  "LASK Linz vs Slovan Bratislava",
   "Shakhtar Donetsk vs Sporting Lisbon",
   "Smouha Club vs Pyramids FC",
   "Al Hilal Riyadh vs Shabab AL Ahli Dubai Club",
-  "LASK Linz vs Slovan Bratislava"
+  "Ryukyu vs Gifu",
+  "Newcastle Jets vs Shanghai port",
+  "Rans Nusantara vs Arema",
+  "De Red FC vs PSM Makassar",
+  "Kashiwa Reysol vs Daejeon Citizen",
+  "Vissel Kobe vs Ratchaburi",
+  "Jeonbuk Hyundai vs Johor Darul Takzim",
+  "Kendal Tornado FC vs Persebaya Surabaya",
+  "Psms Medan vs Persija Jakarta",
+  "Persela Lamongan vs Persijap Jepara",
+  "Dewa United vs Persita Tangerang",
+  "Mudhar vs Baish",
+  "FK Otrant Ulcinj vs FK Arsenal Tivat",
+  "Shakhtar Donetsk U19 vs Sporting Lisbon  U19",
+  "Colon FC Reserve vs Albion FC Reserve",
+  "Gornik Leczna W vs Czarni Sosnowiec W",
+  "Villarreal Youth vs PSG Youth",
+  "AL Kawkab vs Jerash Club",
+  "AL Washm vs AL Hada",
+  "Cong Anh Nhan Dan vs Kyoto Sanga",
+  "Port FC vs Beijing Guoan",
+  "Najran SC vs Jubbah Club",
+  "Dhamk vs AL Akhdood",
+  "Mladost Zdralovi vs NK Slaven Belupo",
+  "Baia de Pemba FC vs Ferroviario De Maputo",
+  "Feyenoord Rotterdam Youth vs Inter Milano U20",
+  "Manchester Utd Youth vs AS Roma U20"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

@@ -352,9 +352,9 @@
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1941,
-   "att": 1.98,
-   "def": 0.62
+   "elo": 1933,
+   "att": 2.02,
+   "def": 0.69
   },
   {
    "team": "Inter",
@@ -472,9 +472,9 @@
   },
   {
    "team": "Dortmund",
-   "elo": 1799,
-   "att": 1.16,
-   "def": 0.53
+   "elo": 1808,
+   "att": 1.23,
+   "def": 0.56
   },
   {
    "team": "Viking",
@@ -501,6 +501,6 @@
    "def": 0.85
   }
  ],
- "matches": 89229,
- "updated": "2026-11-03T01:02:38.985Z"
+ "matches": 89232,
+ "updated": "2026-11-03T06:02:25.617Z"
 }
