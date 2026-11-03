@@ -1,65 +1,65 @@
 {
- "updated": "2026-11-03T21:02:08.997Z",
- "settled": 360,
+ "updated": "2026-11-03T22:15:58.618Z",
+ "settled": 367,
  "enhanced": {
-  "n": 360,
+  "n": 367,
   "full": {
-   "acc": 0.5861,
-   "logloss": 0.948
+   "acc": 0.5804,
+   "logloss": 0.9522
   },
   "base": {
-   "acc": 0.5611,
-   "logloss": 0.963
+   "acc": 0.5559,
+   "logloss": 0.9672
   },
   "withOdds": {
-   "n": 333,
-   "acc": 0.5796,
-   "baseAcc": 0.5526
+   "n": 336,
+   "acc": 0.5744,
+   "baseAcc": 0.5476
   },
   "withNews": {
-   "n": 360,
-   "acc": 0.5861,
-   "baseAcc": 0.5611
+   "n": 367,
+   "acc": 0.5804,
+   "baseAcc": 0.5559
   }
  },
  "listed": {
   "sportpesa": {
-   "n": 121,
-   "x12": 0.5702
+   "n": 127,
+   "x12": 0.5591
   },
   "other": {
-   "n": 239,
-   "x12": 0.5941
+   "n": 240,
+   "x12": 0.5917
   }
  },
- "pending": 404,
+ "pending": 397,
  "markets": {
   "x12": {
-   "n": 360,
-   "correct": 211,
-   "acc": 0.5861
+   "n": 367,
+   "correct": 213,
+   "acc": 0.5804
   },
   "dc": {
-   "n": 360,
-   "correct": 294,
-   "acc": 0.8167
+   "n": 367,
+   "correct": 297,
+   "acc": 0.8093
   },
   "ou": {
-   "n": 360,
-   "correct": 200,
-   "acc": 0.5556
+   "n": 367,
+   "correct": 204,
+   "acc": 0.5559
   },
   "bt": {
-   "n": 360,
-   "correct": 202,
-   "acc": 0.5611
+   "n": 367,
+   "correct": 206,
+   "acc": 0.5613
   }
  },
  "scoring": {
-  "logloss": 0.948,
-  "brier": 0.56,
+  "logloss": 0.9522,
+  "brier": 0.5627,
   "baselineLogloss": 1.0986,
-  "baselineAlwaysHome": 0.5306
+  "baselineAlwaysHome": 0.5286
  },
  "byComp": [
   {
@@ -82,6 +82,13 @@
    "x12": 0.7333,
    "ou": 0.6,
    "bt": 0.3333
+  },
+  {
+   "key": "E1",
+   "n": 15,
+   "x12": 0.6667,
+   "ou": 0.6667,
+   "bt": 0.6
   },
   {
    "key": "Liga Profesional",
@@ -117,13 +124,6 @@
    "x12": 0.5,
    "ou": 0.5,
    "bt": 0.8333
-  },
-  {
-   "key": "E1",
-   "n": 12,
-   "x12": 0.8333,
-   "ou": 0.75,
-   "bt": 0.5
   },
   {
    "key": "E2",
@@ -301,6 +301,13 @@
    "bt": 0.6
   },
   {
+   "key": "CL",
+   "n": 5,
+   "x12": 0.6,
+   "ou": 0.6,
+   "bt": 0.2
+  },
+  {
    "key": "Veikkausliiga",
    "n": 4,
    "x12": 0.5,
@@ -369,27 +376,20 @@
    "x12": 1,
    "ou": 1,
    "bt": 1
-  },
-  {
-   "key": "CL",
-   "n": 1,
-   "x12": 1,
-   "ou": 0,
-   "bt": 0
   }
  ],
  "byConf": [
   {
    "key": "<45%",
-   "n": 147,
-   "predicted": 0.405,
-   "actual": 0.4626
+   "n": 149,
+   "predicted": 0.404,
+   "actual": 0.4564
   },
   {
    "key": "45–55%",
-   "n": 105,
-   "predicted": 0.501,
-   "actual": 0.6095
+   "n": 108,
+   "predicted": 0.5,
+   "actual": 0.6019
   },
   {
    "key": "55–65%",
@@ -399,18 +399,18 @@
   },
   {
    "key": "65%+",
-   "n": 42,
+   "n": 44,
    "predicted": 0.725,
-   "actual": 0.7857
+   "actual": 0.7727
   }
  ],
  "byModel": [
   {
    "key": "v3",
-   "n": 358,
-   "x12": 0.5866,
-   "ou": 0.5559,
-   "bt": 0.5615
+   "n": 365,
+   "x12": 0.5808,
+   "ou": 0.5562,
+   "bt": 0.5616
   },
   {
    "key": "v2",
@@ -453,18 +453,18 @@
   },
   {
    "date": "2026-11-03",
-   "n": 360,
-   "acc": 0.5861
+   "n": 367,
+   "acc": 0.5804
   }
  ],
  "rolling": {
   "last50": {
    "n": 50,
-   "x12": 0.72
+   "x12": 0.62
   },
   "last200": {
    "n": 200,
-   "x12": 0.615
+   "x12": 0.605
   }
  },
  "jackpots": [
@@ -481,9 +481,9 @@
    "id": "sportpesa-midweek-jackpot-11s7r1",
    "name": "SportPesa Midweek Jackpot",
    "total": 13,
-   "settled": 0,
-   "correct": 0,
-   "correctDC": 0,
+   "settled": 4,
+   "correct": 1,
+   "correctDC": 1,
    "closes": "2026-11-04T20:00:00.000Z"
   }
  ]

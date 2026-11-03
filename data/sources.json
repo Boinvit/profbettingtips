@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T20:58:43.234Z",
+ "updated": "2026-11-03T22:14:19.426Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "75 results, 108 fixtures"
+   "detail": "91 results, 99 fixtures"
   },
   {
    "source": "API-Football",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "27 events fetched, 8 with 1X2 odds"
+   "detail": "8 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,20 +39,18 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-03T20:58:17.889Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-03T22:13:53.686Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "117 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "AEK Athens vs Real Madrid",
   "Slavia Prague vs Arsenal",
   "Viking vs Sabah",
-  "Club Xelaju vs CD Marquense",
-  "Monagas SC vs Caracas FC",
   "Desportivo Aurora vs Independiente Petrolero",
   "Deportivo Pasto vs Jaguares de Cordoba",
   "Deportivo Tachira vs Academia Puerto Cabello",
@@ -80,7 +78,10 @@
   "UD Leiria U23 vs Estoril Praia U23",
   "ZED vs Talaea El Gaish",
   "Ghazl El Mahallah vs El Ittihad Alexandria",
-  "AL Wahda Scc (UAE) vs AL Khalidiyah"
+  "AL Wahda Scc (UAE) vs AL Khalidiyah",
+  "Rayyan SC vs Al Nahda (Oman)",
+  "Al Kuwait SC vs Nasaf Qarshi",
+  "Doxa Katokopia vs Olympiakos Nicosia FC"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

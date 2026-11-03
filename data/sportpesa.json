@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-03T20:58:17.889Z",
+ "scrapedAt": "2026-11-03T22:13:53.686Z",
  "matches": [
   {
    "home": "AEK Athens",
@@ -90,24 +90,6 @@
    "away": "Reading",
    "kickoff": "2026-11-04T19:45:00.000Z",
    "league": "League One"
-  },
-  {
-   "home": "Club Xelaju",
-   "away": "CD Marquense",
-   "kickoff": "2026-11-03T21:00:00.000Z",
-   "league": "Liga Nacional. Apertura"
-  },
-  {
-   "home": "Monagas SC",
-   "away": "Caracas FC",
-   "kickoff": "2026-11-03T21:30:00.000Z",
-   "league": "Primera Division"
-  },
-  {
-   "home": "EC Bahia BA W",
-   "away": "Flamengo RJ W",
-   "kickoff": "2026-11-03T22:00:00.000Z",
-   "league": "Copa do Brasil, Women"
   },
   {
    "home": "Nacional Asuncion",
@@ -300,6 +282,24 @@
    "away": "AL Khalidiyah",
    "kickoff": "2026-11-04T16:00:00.000Z",
    "league": "AFC Cup"
+  },
+  {
+   "home": "Rayyan SC",
+   "away": "Al Nahda (Oman)",
+   "kickoff": "2026-11-04T16:00:00.000Z",
+   "league": "AFC Cup"
+  },
+  {
+   "home": "Al Kuwait SC",
+   "away": "Nasaf Qarshi",
+   "kickoff": "2026-11-04T16:00:00.000Z",
+   "league": "AFC Cup"
+  },
+  {
+   "home": "Doxa Katokopia",
+   "away": "Olympiakos Nicosia FC",
+   "kickoff": "2026-11-04T16:00:00.000Z",
+   "league": "Cyprus Cup"
   }
  ],
  "jackpots": [],
