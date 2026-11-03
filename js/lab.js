@@ -2,6 +2,7 @@
 import { predict, picks, newState } from '../agent/lib/model.mjs';
 import { valueBet, stakeFor } from '../agent/lib/kelly.mjs';
 import { combineSlips } from '../agent/lib/combine.mjs';
+import { mountMySlips } from './myslips.js';
 (() => {
   const TZ = 'Africa/Nairobi';
   const $ = (s) => document.querySelector(s);
@@ -110,6 +111,7 @@ import { combineSlips } from '../agent/lib/combine.mjs';
 
   let accasData = { items: [], stats: {} };
   const views = {
+    myslips: () => `<div id='ms-root'></div>`,
     matchup() {
       const R = data.ratings;
       if (!R || !Object.keys(R.teams || {}).length) return `<div class="empty">The model has no team ratings yet. They appear after the agent's first run.</div>`;
@@ -243,6 +245,7 @@ import { combineSlips } from '../agent/lib/combine.mjs';
     if (!views[tab]) tab = 'upcoming';
     document.querySelectorAll('.tab').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === tab));
     $('#view').innerHTML = views[tab]();
+    if (tab === 'myslips') mountMySlips(document.getElementById('ms-root'));
     history.replaceState(null, '', '#' + tab);
   }
 
