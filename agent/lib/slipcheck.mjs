@@ -4,6 +4,7 @@ import { calibrate } from './calibration.mjs';
 
 export const CASHOUT_ETA = 0.95; // SportPesa paid ~96% of fair value on the 31 Oct cash-out (one sample): an estimate, not a promise
 const r3 = (x) => Math.round(x * 1000) / 1000;
+const YOUTH = /\b(U-?(1[5-9]|2[0-3])|youth|reserves?)\b|[ ](II|III)$/i; // youth/reserve sides: squads rotate, little reliable history
 const EAT_MS = 3 * 3600e3; // slips show East Africa Time; data is stored in UTC
 const PICKS = {
   '1x2': { home: 'H', away: 'A', draw: 'D' },
@@ -26,8 +27,27 @@ function codeFor(market, pick) {
   return null;
 }
 
+/** An UNPLACED betslip (SportPesa slip page: 'Your Pick: Home', no dates or results). Legs carry no kickoff; checkSlip matches them to upcoming fixtures by team names. */
+export function parseBetslip(text) {
+  let t = String(text || '').split(String.fromCharCode(160)).join(' ').replace(/[[]([^\u005d]*)][(][^)]*[)]/g, ' $1 ');
+  t = t.split(String.fromCharCode(215)).join(' ').split('*').join(' ').split(/\s+/).join(' ').trim();
+  const declared = Number((t.match(/MULTI BET [(]([0-9]+)[)]/i) || [])[1]) || null;
+  const stake = (t.match(/BET AMOUNT [(](?:KSH|KES)[)]:? ([0-9][0-9,]*(?:[.][0-9]+)?)/i) || [])[1];
+  const totalOdds = Number((t.match(/TOTAL ODDS:? ([0-9]+[.][0-9]+)/i) || [])[1]) || null;
+  t = t.replace(/MULTI BET [(][0-9]+[)]/i, ' ').replace(/Share/, ' ').split(/\s+/).join(' ').trim();
+  const N = '((?:(?!Your Pick).){2,60}?)';
+  const re = new RegExp(N + ' [\u2013\u2014-] ' + N + ' (1X2|Double Chance|Both Teams To Score|Total Goals Over/Under - Full Time) Your Pick: ' + PICK + ' ([0-9]{1,3}[.][0-9]{2})', 'gi');
+  const legs = [];
+  for (const m of t.matchAll(re)) {
+    const [, home, away, market, pick, odds] = m, code = codeFor(market.trim(), pick.trim());
+    legs.push({ home: home.trim(), away: away.trim(), odds: Number(odds), market: market.trim(), pick: pick.trim(), code, label: code ? LABEL[code] : market.trim() + ': ' + pick.trim(), kickoff: null });
+  }
+  return { stake: stake ? Number(stake.split(',').join('')) : null, declared, legs, totalOdds, placed: false };
+}
+
 /** Text of a slip (copied from the PDF or the bet page) -> stake, declared leg count and legs. Wrapped names and PDF ligature gaps are handled. */
 export function parseSlip(text) {
+  if (/Your Pick:/i.test(String(text || ''))) return parseBetslip(text);
   const t = String(text || '').replace(new RegExp(String.fromCharCode(160), 'g'), ' ').split(/\s+/).join(' ').replace(/(ffi|ffl|fi|fl) (?=[a-z]{2})/g, '$1').trim();
   const stake = (t.match(/Bet amount:?[ ]*(?:KSH|KES)?[ ]*([0-9,]+(?:[.][0-9]+)?)/i) || [])[1];
   const declared = Number((t.match(/Multi Bet [(]([0-9]+)[)]/i) || [])[1]) || null;
@@ -71,14 +91,15 @@ const prod = (xs) => xs.reduce((a, x) => a * x, 1);
 export function checkSlip(parsed, { preds = [], resolve = () => null, cal = null, now = new Date(), eta = CASHOUT_ETA, stake } = {}) {
   const st = Number(stake ?? parsed.stake) > 0 ? Number(stake ?? parsed.stake) : 0;
   const rows = parsed.legs.map((l) => {
-    const hid = resolve(l.home), aid = resolve(l.away), t0 = Date.parse(l.kickoff);
+    const hid = resolve(l.home), aid = resolve(l.away), t0 = l.kickoff ? Date.parse(l.kickoff) : NaN;
     let pr = null, best = Infinity;
     if (hid && aid) for (const p of preds) {
       if (p.h !== hid || p.a !== aid) continue;
-      const dt = Math.abs(Date.parse(p.kickoff) - t0);
-      if (dt < best && dt <= 48 * 3600e3) { best = dt; pr = p; }
+      if (!Number.isFinite(t0) && p.status !== 'pending') continue; // unplaced slip: only upcoming fixtures
+      const dt = Math.abs(Date.parse(p.kickoff) - (Number.isFinite(t0) ? t0 : now.getTime()));
+      if (dt < best && dt <= (Number.isFinite(t0) ? 48 : 7 * 24) * 3600e3) { best = dt; pr = p; }
     }
-    const row = { ...l, implied: r3(1 / l.odds), matched: !!pr, status: 'unjudged', p: null, praw: null, edge: null, played: t0 <= now.getTime() };
+    const row = { ...l, kickoff: l.kickoff || (pr ? pr.kickoff : ''), youth: YOUTH.test(l.home) || YOUTH.test(l.away), implied: r3(1 / l.odds), matched: !!pr, status: 'unjudged', p: null, praw: null, edge: null, played: t0 <= now.getTime() };
     if (!pr || !l.code) return row;
     const raw = probOf(pr.p, l.code);
     if (raw != null) { row.praw = r3(raw); row.p = r3(calibrate(cal, MKT[l.code], raw)); row.edge = r3(row.p * l.odds - 1); row.status = 'pending'; }
