@@ -1,6 +1,6 @@
 // My slips tab: paste a SportPesa slip -> judged against the model; personal ledger; second-opinion tracker (any source).
 // Everything you enter stays in THIS browser (localStorage). Nothing is uploaded or committed.
-import { parseSlip, checkSlip } from '../agent/lib/slipcheck.mjs';
+import { parseSlip, checkSlip, LABEL } from '../agent/lib/slipcheck.mjs';
 import { Registry } from '../agent/lib/teams.mjs';
 import { newBet, settleBet, ledgerStats, ledgerCsv } from '../agent/lib/ledger.mjs';
 
@@ -27,7 +27,7 @@ export async function mountMySlips(root) {
   if (!root) return;
   let ledger = store.get('pbt.ledger', []);
   let ops = store.get('pbt.opinions', []);
-  let last = null;
+  let last = null, slip = null;
   const q = (s) => root.querySelector(s);
 
   root.innerHTML = `
@@ -42,7 +42,13 @@ export async function mountMySlips(root) {
     if (!last) return '';
     if (last.err) return `<div class='empty'>${esc(last.err)}</div>`;
     const r = last.res;
-    const rows = r.rows.map((x) => `<tr><td>${esc(x.home)} v ${esc(x.away)}</td><td>${esc(x.label || x.pick || '')}</td><td>${esc(x.odds)}</td><td>${esc(x.status)}${x.score ? ' (' + esc(x.score) + ')' : ''}</td><td>${pct(x.p)}</td></tr>`).join('');
+    const GROUPS = [['H', 'D', 'A'], ['D1X', 'DX2', 'D12'], ['O', 'U'], ['B', 'N']];
+    const rows = r.rows.map((x, i) => {
+      const g = GROUPS.find((a) => a.includes(x.code));
+      const pick = g ? `<select data-f='pick' data-i='${i}'>${g.map((c) => `<option value='${c}'${c === x.code ? ' selected' : ''}>${esc(LABEL[c] || c)}</option>`).join('')}</select>` : esc(x.label || x.pick || '');
+      return `<tr><td>${esc(x.home)} v ${esc(x.away)}${x.youth ? ' <strong>(youth/reserve)</strong>' : ''}</td><td>${pick}</td><td><input type='number' step='0.01' min='1.01' value='${esc(x.odds)}' data-f='odds' data-i='${i}' style='width:5em'></td><td>${esc(x.status)}${x.score ? ' (' + esc(x.score) + ')' : ''}${x.matched ? '' : ' (no match found)'}</td><td>${pct(x.p)}</td><td><button data-act='rm' data-i='${i}'>x</button></td></tr>`;
+    }).join('');
+    const youthNote = r.rows.some((x) => x.youth) ? `<p><strong>Youth or reserve sides on this slip.</strong> Squads rotate and there is little reliable history, so any model figure for them is weak.</p>` : '';
     const warn = r.stake > MAX_SAFE_STAKE ? `<p><strong>Stake above KES ${MAX_SAFE_STAKE}.</strong> Your rule: stay at ${MAX_SAFE_STAKE} or less until about 100 settled bets show a profit.</p>` : '';
     const weak = (r.weakest || []).map((x) => `${esc(x.home)} v ${esc(x.away)} (${pct(x.p)})`).join(', ');
     const trims = (r.trims || []).map((t) => `drop ${t.drop} weakest: ${t.legs} legs, odds ${t.odds}, chance ${pct(t.p)}`).join('; ');
@@ -51,8 +57,8 @@ export async function mountMySlips(root) {
     <p>${r.legsN} legs${r.declared && r.declared !== r.legsN ? ` (slip says ${r.declared}; ${r.declared - r.legsN} not read)` : ''}, total odds <strong>${esc(r.odds)}</strong>, stake ${kes(r.stake)}, payout if all win ${kes(r.payout)}.</p>
     ${r.dead ? `<p><strong>Already lost</strong> on ${esc(r.firstLoss)}.</p>` : `<p>Model chance the whole slip wins: <strong>${pct(r.pScratch, 1)}</strong>${r.pScratchBook != null ? ` (bookmaker prices imply ${pct(r.pScratchBook, 1)})` : ''}. Expected result on this stake: <strong>${r.ev == null ? '-' : kes(r.ev)}</strong>.</p>`}
     ${r.cash ? `<p>Cash-out estimate ~${kes(r.cash.offer)} now versus holding, expected ${kes(r.cash.hold)}.</p>` : ''}
-    ${warn}
-    <div style='overflow-x:auto'><table><thead><tr><th>Match</th><th>Pick</th><th>Odds</th><th>Status</th><th>Model</th></tr></thead><tbody>${rows}</tbody></table></div>
+    ${warn}${youthNote}
+    <div style='overflow-x:auto'><table><thead><tr><th>Match</th><th>Pick</th><th>Odds</th><th>Status</th><th>Model</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
     ${weak ? `<p>Weakest legs: ${weak}</p>` : ''}${trims ? `<p>Shorter versions: ${trims}</p>` : ''}${ladder ? `<p>Cash-out ladder: ${ladder}</p>` : ''}
     ${r.unjudged && r.unjudged.length ? `<p class='muted'>Not judged (market or team not matched): ${r.unjudged.map(esc).join(', ')}</p>` : ''}
     ${r.dead ? '' : `<p><button data-act='save'>Save to my ledger</button></p>`}`;
@@ -92,22 +98,42 @@ export async function mountMySlips(root) {
   const saveL = () => store.set('pbt.ledger', ledger);
   const saveO = () => store.set('pbt.opinions', ops);
 
+  async function recheck() {
+    try {
+      const { preds, registry, cal } = await loadEnv();
+      const input = { stake: slip.stake, declared: slip.declared, legs: slip.legs };
+      const resolve = (n) => registry.resolve(n, false), st = slip.stake || undefined;
+      let res;
+      try { res = checkSlip(input, { preds, resolve, cal, stake: st }); } catch (err) { res = checkSlip(input, { preds, resolve, cal: null, stake: st }); }
+      last = { res };
+    } catch (err) { last = { err: 'Could not check this slip: ' + err.message }; }
+    paint();
+  }
+  root.addEventListener('change', async (e) => {
+    const t = e.target;
+    if (t.id === 'ms-stake') { if (slip) { slip.stake = num(t.value) || null; await recheck(); } return; }
+    if (!slip || t.dataset.i === undefined) return;
+    const l = slip.legs[Number(t.dataset.i)]; if (!l) return;
+    if (t.dataset.f === 'odds') { const v = num(t.value); if (v && v > 1) l.odds = v; }
+    if (t.dataset.f === 'pick') { l.code = t.value; l.label = LABEL[t.value] || t.value; }
+    await recheck();
+  });
+
   root.addEventListener('click', async (e) => {
     const b = e.target.closest('button[data-act]'); if (!b) return;
     const act = b.dataset.act, id = b.dataset.id;
     if (act === 'clear') { q('#ms-text').value = ''; last = null; paint(); return; }
     if (act === 'check') {
-      const text = q('#ms-text').value, stake = num(q('#ms-stake').value) || undefined;
-      try {
-        const { preds, registry, cal } = await loadEnv();
-        const parsed = parseSlip(text);
-        if (!parsed.legs.length) { last = { err: 'No legs found. Paste the full bet details text copied from SportPesa.' }; paint(); return; }
-        let res;
-        try { res = checkSlip(parsed, { preds, resolve: (n) => registry.resolve(n, false), cal, stake }); }
-        catch (err) { res = checkSlip(parsed, { preds, resolve: (n) => registry.resolve(n, false), cal: null, stake }); }
-        last = { res, parsed };
-      } catch (err) { last = { err: 'Could not check this slip: ' + err.message }; }
-      paint(); return;
+      const parsed = parseSlip(q('#ms-text').value);
+      if (!parsed.legs.length) { last = { err: 'No legs found. Paste the slip text (a betslip with Your Pick lines, or a placed bet).' }; slip = null; paint(); return; }
+      slip = { stake: num(q('#ms-stake').value) || parsed.stake || null, declared: parsed.declared, legs: parsed.legs };
+      if (slip.stake) q('#ms-stake').value = slip.stake;
+      await recheck(); return;
+    }
+    if (act === 'rm' && slip) {
+      slip.legs.splice(Number(b.dataset.i), 1); slip.declared = null;
+      if (!slip.legs.length) { slip = null; last = null; paint(); return; }
+      await recheck(); return;
     }
     if (act === 'save' && last && last.res) {
       const r = last.res;
