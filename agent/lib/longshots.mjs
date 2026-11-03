@@ -34,14 +34,19 @@ export function buildDay(preds, day, now, cal = null, minP = MIN_LEG_P) {
   const size = Math.min(MAX_LEGS, Math.floor(cands.length / k)), cap = Math.ceil(size / 2);
   const used = new Set(), slips = [];
   for (let s = 0; s < k; s++) {
-    const cnt = {}, picks = [];
-    for (const c of cands) {
-      if (picks.length >= size) break;
-      if (used.has(c.p.id)) continue;
-      const l = c.legs.find((x) => (cnt[x.mkt + x.sel] || 0) < cap);
-      if (!l) continue;
-      cnt[l.mkt + l.sel] = (cnt[l.mkt + l.sel] || 0) + 1; picks.push({ c, l });
-    }
+    const fill = (capN) => {
+      const cnt = {}, got = [];
+      for (const c of cands) {
+        if (got.length >= size) break;
+        if (used.has(c.p.id)) continue;
+        const l = c.legs.find((x) => (cnt[x.mkt + x.sel] || 0) < capN);
+        if (!l) continue;
+        cnt[l.mkt + l.sel] = (cnt[l.mkt + l.sel] || 0) + 1; got.push({ c, l });
+      }
+      return got;
+    };
+    let picks = fill(cap);
+    if (picks.length < MIN_LEGS) picks = fill(size); // too few distinct pick types to fill the slip: allow repeats rather than lose a slip
     if (picks.length < MIN_LEGS) break;
     picks.forEach((x) => used.add(x.c.p.id));
     slips.push(picks);

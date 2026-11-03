@@ -69,3 +69,11 @@ test('a short untouched set is rebuilt when more matches qualify; a started one 
   const later = new Date('2026-11-04T16:30:00Z');
   assert.equal(updateLongShots(first, pool(45), later).items.length, 2);
 });
+
+test('same-type supply still makes two slips (pick-type cap is relaxed rather than dropping a slip)', () => {
+  const same = Array.from({ length: 10 }, (_, i) => mkp(i * 3));
+  const r = updateLongShots({ items: [] }, same, now);
+  assert.equal(r.items.length, 2);
+  const ids = r.items.flatMap((x) => x.legs.map((l) => l.pid));
+  assert.equal(new Set(ids).size, ids.length);
+});
