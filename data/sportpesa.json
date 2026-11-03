@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-03T06:02:00.192Z",
+ "scrapedAt": "2026-11-03T14:05:11.491Z",
  "matches": [
   {
    "home": "Barcelona",
@@ -122,184 +122,184 @@
    "league": "Championship"
   },
   {
-   "home": "Ryukyu",
-   "away": "Gifu",
-   "kickoff": "2026-11-03T07:00:00.000Z",
-   "league": "J.League 3"
-  },
-  {
-   "home": "Newcastle Jets",
-   "away": "Shanghai port",
-   "kickoff": "2026-11-03T07:45:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "Rans Nusantara",
-   "away": "Arema",
-   "kickoff": "2026-11-03T09:00:00.000Z",
+   "home": "Alqana",
+   "away": "Future FC",
+   "kickoff": "2026-11-03T15:00:00.000Z",
    "league": "League Cup"
   },
   {
-   "home": "De Red FC",
-   "away": "PSM Makassar",
-   "kickoff": "2026-11-03T09:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Kashiwa Reysol",
-   "away": "Daejeon Citizen",
-   "kickoff": "2026-11-03T10:00:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "Vissel Kobe",
-   "away": "Ratchaburi",
-   "kickoff": "2026-11-03T10:00:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "Bodoe/Glimt",
-   "away": "Lille Osc U19",
-   "kickoff": "2026-11-03T10:00:00.000Z",
-   "league": "UEFA Youth League"
-  },
-  {
-   "home": "Jeonbuk Hyundai",
-   "away": "Johor Darul Takzim",
-   "kickoff": "2026-11-03T10:00:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "Kendal Tornado FC",
-   "away": "Persebaya Surabaya",
-   "kickoff": "2026-11-03T11:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Galatasaray Youth",
-   "away": "Stuttgart U19",
-   "kickoff": "2026-11-03T11:00:00.000Z",
-   "league": "UEFA Youth League"
-  },
-  {
-   "home": "Estrela Amadora U23",
-   "away": "Santa Clara U23",
-   "kickoff": "2026-11-03T11:00:00.000Z",
+   "home": "Academico Viseu U23",
+   "away": "Torreense U23",
+   "kickoff": "2026-11-03T15:00:00.000Z",
    "league": "U23 Championship"
   },
   {
-   "home": "Psms Medan",
-   "away": "Persija Jakarta",
-   "kickoff": "2026-11-03T11:00:00.000Z",
-   "league": "League Cup"
+   "home": "FC Vizela U23",
+   "away": "Portimonense U23",
+   "kickoff": "2026-11-03T15:00:00.000Z",
+   "league": "U23 Championship"
   },
   {
-   "home": "Persela Lamongan",
-   "away": "Persijap Jepara",
-   "kickoff": "2026-11-03T11:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Dewa United",
-   "away": "Persita Tangerang",
-   "kickoff": "2026-11-03T11:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Mudhar",
-   "away": "Baish",
-   "kickoff": "2026-11-03T11:55:00.000Z",
-   "league": "Second Division"
-  },
-  {
-   "home": "FK Otrant Ulcinj",
-   "away": "FK Arsenal Tivat",
-   "kickoff": "2026-11-03T12:00:00.000Z",
-   "league": "1. CFL"
-  },
-  {
-   "home": "Shakhtar Donetsk U19",
-   "away": "Sporting Lisbon  U19",
-   "kickoff": "2026-11-03T12:00:00.000Z",
+   "home": "Barcelona Youth",
+   "away": "Aston Villa Youth",
+   "kickoff": "2026-11-03T15:00:00.000Z",
    "league": "UEFA Youth League"
   },
   {
-   "home": "Colon FC Reserve",
-   "away": "Albion FC Reserve",
-   "kickoff": "2026-11-03T12:00:00.000Z",
-   "league": "Tercera Division"
+   "home": "Gil Vicente FC U23",
+   "away": "FC Felgueiras 1932 U23",
+   "kickoff": "2026-11-03T15:00:00.000Z",
+   "league": "U23 Championship"
   },
   {
-   "home": "Gornik Leczna W",
-   "away": "Czarni Sosnowiec W",
-   "kickoff": "2026-11-03T12:00:00.000Z",
-   "league": "Ekstraliga, Women"
-  },
-  {
-   "home": "Villarreal Youth",
-   "away": "PSG Youth",
-   "kickoff": "2026-11-03T12:00:00.000Z",
+   "home": "Atletico Madrid Youth",
+   "away": "Bayern Munich U19",
+   "kickoff": "2026-11-03T15:00:00.000Z",
    "league": "UEFA Youth League"
   },
   {
-   "home": "AL Kawkab",
-   "away": "Jerash Club",
-   "kickoff": "2026-11-03T12:10:00.000Z",
-   "league": "Second Division"
+   "home": "CS Maritimo U23",
+   "away": "Moreirense FC U23",
+   "kickoff": "2026-11-03T15:00:00.000Z",
+   "league": "U23 Championship"
   },
   {
-   "home": "AL Washm",
-   "away": "AL Hada",
-   "kickoff": "2026-11-03T12:15:00.000Z",
-   "league": "Second Division"
+   "home": "ABO Qair Semads",
+   "away": "Ceramica Cleopatra",
+   "kickoff": "2026-11-03T15:00:00.000Z",
+   "league": "League Cup"
   },
   {
-   "home": "Cong Anh Nhan Dan",
-   "away": "Kyoto Sanga",
-   "kickoff": "2026-11-03T12:15:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "Port FC",
-   "away": "Beijing Guoan",
-   "kickoff": "2026-11-03T12:15:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "Najran SC",
-   "away": "Jubbah Club",
-   "kickoff": "2026-11-03T12:25:00.000Z",
-   "league": "Second Division"
-  },
-  {
-   "home": "Dhamk",
-   "away": "AL Akhdood",
-   "kickoff": "2026-11-03T12:35:00.000Z",
+   "home": "Al Raed Club",
+   "away": "Al Wehda",
+   "kickoff": "2026-11-03T15:00:00.000Z",
    "league": "Division 1"
   },
   {
-   "home": "Mladost Zdralovi",
-   "away": "NK Slaven Belupo",
-   "kickoff": "2026-11-03T13:00:00.000Z",
+   "home": "AEL Limassol",
+   "away": "Iraklis Gerolakkou",
+   "kickoff": "2026-11-03T16:00:00.000Z",
+   "league": "Cyprus Cup"
+  },
+  {
+   "home": "Hussein Irbid",
+   "away": "Al Shorta",
+   "kickoff": "2026-11-03T16:00:00.000Z",
+   "league": "AFC Cup"
+  },
+  {
+   "home": "Esteghlal Tehran",
+   "away": "Al-Shamal",
+   "kickoff": "2026-11-03T16:00:00.000Z",
+   "league": "AFC Champions League"
+  },
+  {
+   "home": "Jezero",
+   "away": "Decic Tuzi",
+   "kickoff": "2026-11-03T16:00:00.000Z",
+   "league": "1. CFL"
+  },
+  {
+   "home": "Istra 1961",
+   "away": "NK Neretva Metkovic",
+   "kickoff": "2026-11-03T16:00:00.000Z",
    "league": "Croatian Cup"
   },
   {
-   "home": "Baia de Pemba FC",
-   "away": "Ferroviario De Maputo",
-   "kickoff": "2026-11-03T13:00:00.000Z",
-   "league": "ITF Women Denain, France"
+   "home": "Spartak Kostroma",
+   "away": "FC Volna Nizhny Novgorod Oblast",
+   "kickoff": "2026-11-03T16:30:00.000Z",
+   "league": "Russian Cup"
   },
   {
-   "home": "Feyenoord Rotterdam Youth",
-   "away": "Inter Milano U20",
-   "kickoff": "2026-11-03T13:00:00.000Z",
-   "league": "UEFA Youth League"
+   "home": "Karmiotissa",
+   "away": "Ermis Aradippou",
+   "kickoff": "2026-11-03T17:00:00.000Z",
+   "league": "Cyprus Cup"
   },
   {
-   "home": "Manchester Utd Youth",
-   "away": "AS Roma U20",
-   "kickoff": "2026-11-03T13:00:00.000Z",
-   "league": "UEFA Youth League"
+   "home": "Chrobry Glogow",
+   "away": "Arka Gdynia",
+   "kickoff": "2026-11-03T17:00:00.000Z",
+   "league": "I Liga"
+  },
+  {
+   "home": "Lyngby BK",
+   "away": "Randers FC",
+   "kickoff": "2026-11-03T17:00:00.000Z",
+   "league": "DBU Pokalen"
+  },
+  {
+   "home": "Mamelodi Sundowns",
+   "away": "Golden Arrows",
+   "kickoff": "2026-11-03T17:00:00.000Z",
+   "league": "League Cup"
+  },
+  {
+   "home": "Pogon Siedlce",
+   "away": "Ruch Chorzow",
+   "kickoff": "2026-11-03T17:00:00.000Z",
+   "league": "I Liga"
+  },
+  {
+   "home": "Sirius FK",
+   "away": "Halmstads BK",
+   "kickoff": "2026-11-03T18:00:00.000Z",
+   "league": "Allsvenskan"
+  },
+  {
+   "home": "AD Carmopolis SE",
+   "away": "Caninde SE",
+   "kickoff": "2026-11-03T18:00:00.000Z",
+   "league": "Sergipano, Serie A2"
+  },
+  {
+   "home": "Enppi Club",
+   "away": "Asyut Petroleum",
+   "kickoff": "2026-11-03T18:00:00.000Z",
+   "league": "League Cup"
+  },
+  {
+   "home": "Flamengo SE",
+   "away": "Olimpico Esporte Clube",
+   "kickoff": "2026-11-03T18:00:00.000Z",
+   "league": "Sergipano, Serie A2"
+  },
+  {
+   "home": "VSK Aarhus W",
+   "away": "FC Midtjylland W",
+   "kickoff": "2026-11-03T18:00:00.000Z",
+   "league": "Kvindeligaen, Women"
+  },
+  {
+   "home": "Rotherham",
+   "away": "Newcastle U21",
+   "kickoff": "2026-11-03T19:00:00.000Z",
+   "league": "EFL Trophy"
+  },
+  {
+   "home": "Rochdale",
+   "away": "Doncaster",
+   "kickoff": "2026-11-03T19:00:00.000Z",
+   "league": "EFL Trophy"
+  },
+  {
+   "home": "Wealdstone",
+   "away": "Derby County U23",
+   "kickoff": "2026-11-03T19:00:00.000Z",
+   "league": "National League Cup"
+  },
+  {
+   "home": "Scunthorpe",
+   "away": "Wolverhampton U21",
+   "kickoff": "2026-11-03T19:00:00.000Z",
+   "league": "National League Cup"
+  },
+  {
+   "home": "Gillingham FC Reserve",
+   "away": "Huddersfield Town U21",
+   "kickoff": "2026-11-03T19:00:00.000Z",
+   "league": "Premier League Cup"
   }
  ],
  "jackpots": [],

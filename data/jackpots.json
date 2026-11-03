@@ -89,34 +89,34 @@
     "hId": "t:lorient",
     "aId": "t:brest",
     "known": true,
-    "games": 252,
+    "games": 253,
     "modelV": 3,
     "form": [
-     "LWWDL",
-     "LLWDL"
+     "WWDLL",
+     "LWDLW"
     ],
     "p": {
-     "h": 0.4926,
-     "d": 0.2445,
-     "a": 0.2629,
-     "o": 0.6028,
-     "b": 0.6165
+     "h": 0.4398,
+     "d": 0.2535,
+     "a": 0.3067,
+     "o": 0.5907,
+     "b": 0.6178
     },
     "xg": [
-     1.85,
-     1.3
+     1.7,
+     1.39
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.49255991560773354,
+     "x12p": 0.4398183814207432,
      "alt": "A",
-     "altp": 0.2629340864334543,
+     "altp": 0.3066757914255967,
      "dc": "12",
-     "dcp": 0.7554940020411878,
+     "dcp": 0.7464941728463399,
      "ou": "O",
-     "oup": 0.6028367625247097,
+     "oup": 0.5906836344178762,
      "bt": "Y",
-     "btp": 0.6164893471312081
+     "btp": 0.617774766588723
     },
     "pk0": {
      "x12": "H"
@@ -136,6 +136,21 @@
        ]
       }
      }
+    },
+    "result": {
+     "hg": 0,
+     "ag": 2,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": false,
+     "dc": true,
+     "ou": false,
+     "bt": false
+    },
+    "ok0": {
+     "x12": false
     }
    },
    {
@@ -486,34 +501,34 @@
     "hId": "t:lausanne",
     "aId": "t:thun",
     "known": true,
-    "games": 91,
+    "games": 92,
     "modelV": 3,
     "form": [
      "LLLLL",
-     "LLWLL"
+     "LWLLW"
     ],
     "p": {
-     "h": 0.3121,
-     "d": 0.2403,
-     "a": 0.4476,
-     "o": 0.6549,
-     "b": 0.6668
+     "h": 0.2996,
+     "d": 0.2285,
+     "a": 0.4719,
+     "o": 0.7052,
+     "b": 0.7026
     },
     "xg": [
-     1.53,
-     1.87
+     1.62,
+     2.06
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4476133740302518,
+     "x12p": 0.4718943516455874,
      "alt": "H",
-     "altp": 0.3120517863940628,
+     "altp": 0.2996465688286956,
      "dc": "12",
-     "dcp": 0.7596651604243145,
+     "dcp": 0.771540920474283,
      "ou": "O",
-     "oup": 0.6548959031500772,
+     "oup": 0.705195534337066,
      "bt": "Y",
-     "btp": 0.6668419960331794
+     "btp": 0.70259891275521
     },
     "pk0": {
      "x12": "A"
@@ -529,6 +544,21 @@
        "headlines": []
       }
      }
+    },
+    "result": {
+     "hg": 4,
+     "ag": 5,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": true,
+     "bt": true
+    },
+    "ok0": {
+     "x12": true
     }
    },
    {
@@ -975,37 +1005,37 @@
     "hId": "t:valerenga",
     "aId": "t:tromso",
     "known": true,
-    "games": 191,
+    "games": 192,
     "modelV": 3,
     "form": [
-     "LDLWW",
-     "LWDDL"
+     "DLWWW",
+     "WDDLL"
     ],
     "p": {
-     "h": 0.335,
-     "d": 0.2365,
-     "a": 0.4285,
-     "o": 0.6829,
-     "b": 0.6909
+     "h": 0.396,
+     "d": 0.2366,
+     "a": 0.3674,
+     "o": 0.6892,
+     "b": 0.6979
     },
     "xg": [
-     1.66,
-     1.89
+     1.83,
+     1.75
     ],
     "pk": {
-     "x12": "A",
-     "x12p": 0.428546011921935,
-     "alt": "H",
-     "altp": 0.33497167139480977,
+     "x12": "H",
+     "x12p": 0.3960157082770367,
+     "alt": "A",
+     "altp": 0.3673702944027985,
      "dc": "12",
-     "dcp": 0.7635176833167447,
+     "dcp": 0.7633860026798351,
      "ou": "O",
-     "oup": 0.6828611025697495,
+     "oup": 0.6891567714628415,
      "bt": "Y",
-     "btp": 0.6909312275415908
+     "btp": 0.6978589249918224
     },
     "pk0": {
-     "x12": "A"
+     "x12": "H"
     },
     "meta": {
      "news": {
@@ -1018,12 +1048,27 @@
        "headlines": []
       }
      }
+    },
+    "result": {
+     "hg": 4,
+     "ag": 0,
+     "src": "feed",
+     "o": "H"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": true,
+     "bt": false
+    },
+    "ok0": {
+     "x12": true
     }
    }
   ],
   "summary": {
-   "expectedCorrect": 7.13,
-   "pAllCorrect": 0.0000022134092539635456,
+   "expectedCorrect": 7.07,
+   "pAllCorrect": 0.000001925452064794431,
    "unknownTeams": 2
   }
  },
@@ -1049,27 +1094,27 @@
      "DWLDL"
     ],
     "p": {
-     "h": 0.2904,
-     "d": 0.2749,
-     "a": 0.4347,
-     "o": 0.4914,
-     "b": 0.5398
+     "h": 0.2937,
+     "d": 0.2754,
+     "a": 0.4309,
+     "o": 0.4909,
+     "b": 0.5401
     },
     "xg": [
-     1.17,
-     1.49
+     1.18,
+     1.48
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4347332548297691,
+     "x12p": 0.43086008080746635,
      "alt": "H",
-     "altp": 0.29038297316770184,
+     "altp": 0.2937434596969285,
      "dc": "12",
-     "dcp": 0.725116227997471,
+     "dcp": 0.7246035405043949,
      "ou": "U",
-     "oup": 0.5086180438806713,
+     "oup": 0.5090901677412358,
      "bt": "Y",
-     "btp": 0.5397814320180979
+     "btp": 0.5400801935252598
     },
     "pk0": {
      "x12": "A"
@@ -1079,14 +1124,17 @@
       "h": {
        "adj": -20,
        "headlines": [
-        "Mitchell injury blow adds to England’s woes as Northampton sink Gloucester",
         "Prem Rugby: England's Alex Mitchell injured as Northampton Saints, Bath, Saracens, Harlequins pick up victories",
+        "Mitchell injury blow adds to England’s woes as Northampton sink Gloucester",
         "England scrum-half Alex Mitchell injured in Northampton win"
        ]
       },
       "a": {
-       "adj": 0,
-       "headlines": []
+       "adj": -4,
+       "headlines": [
+        "Oldham Athletic Duo To Miss Sheffield Wednesday Clash",
+        "Nicky Adams returns to Oldham saying League One spell made him a better coach"
+       ]
       }
      }
     }
@@ -1137,15 +1185,15 @@
        "headlines": [
         "Stephan confirms QPR injury blow and provides updates on others",
         "Alfie Lloyd: QPR striker set to miss rest of 2026 with hamstring injury",
-        "QPR hope for a triple boost against Southampton as Julien Stephan stays 'quite positive'"
+        "QPR v Burnley early team news: 15 players ruled out"
        ]
       },
       "a": {
        "adj": -14,
        "headlines": [
         "Burnley head coach speaks on Dastan Satpayev’s new injury",
-        "QPR v Burnley early team news: 15 players ruled out",
-        "Burnley handed Zeki Amdouni fitness boost as injury update provided"
+        "Julien Stephan confirms ‘long-term injury’ for QPR forward ahead of Burnley clash",
+        "Meghoma Returns Against Burnley"
        ]
       }
      }
@@ -1165,27 +1213,27 @@
      "WLWDW"
     ],
     "p": {
-     "h": 0.2306,
-     "d": 0.2465,
-     "a": 0.523,
-     "o": 0.5629,
-     "b": 0.5747
+     "h": 0.2369,
+     "d": 0.2484,
+     "a": 0.5147,
+     "o": 0.5611,
+     "b": 0.576
     },
     "xg": [
-     1.14,
-     1.83
+     1.15,
+     1.8
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.5229666601057277,
+     "x12p": 0.5146997124081547,
      "alt": "D",
-     "altp": 0.24646192091094984,
+     "altp": 0.2484464425596701,
      "dc": "X2",
-     "dcp": 0.7694285810166775,
+     "dcp": 0.7631461549678248,
      "ou": "O",
-     "oup": 0.5629454700295119,
+     "oup": 0.5610785066607575,
      "bt": "Y",
-     "btp": 0.5746922175543789
+     "btp": 0.5759686588019969
     },
     "pk0": {
      "x12": "A"
@@ -1193,10 +1241,9 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -16,
+       "adj": -8,
        "headlines": [
-        "SUFC News: United injury state of play v Preston after Phillips, Bamford updates",
-        "SUFC News: United’s Bamford fitness hope v Preston as late injury blow explained"
+        "SUFC News: United injury state of play v Preston after Phillips, Bamford updates"
        ]
       },
       "a": {
@@ -1222,27 +1269,27 @@
      "LLDWL"
     ],
     "p": {
-     "h": 0.1948,
-     "d": 0.2015,
-     "a": 0.6037,
-     "o": 0.7202,
-     "b": 0.6754
+     "h": 0.1885,
+     "d": 0.1988,
+     "a": 0.6127,
+     "o": 0.7224,
+     "b": 0.6734
     },
     "xg": [
-     1.33,
-     2.43
+     1.32,
+     2.46
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.6037350390603372,
+     "x12p": 0.6126994216460407,
      "alt": "D",
-     "altp": 0.2014688182984797,
+     "altp": 0.1987928112378017,
      "dc": "X2",
-     "dcp": 0.8052038573588169,
+     "dcp": 0.8114922328838424,
      "ou": "O",
-     "oup": 0.7201792708079207,
+     "oup": 0.7224311686791468,
      "bt": "Y",
-     "btp": 0.6754240306444743
+     "btp": 0.6733877002795942
     },
     "pk0": {
      "x12": "A"
@@ -1250,10 +1297,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -16,
+       "adj": -24,
        "headlines": [
         "Watford injury latest: Edoardo Bove set for training return",
-        "Clement provides updates on absent Norwich City players after win over Watford"
+        "Clement provides updates on absent Norwich City players after win over Watford",
+        "Watford Injury Latest: Two Face Fitness Tests With Several Others Out"
        ]
       },
       "a": {
@@ -1279,27 +1327,27 @@
      "WLLWW"
     ],
     "p": {
-     "h": 0.3463,
-     "d": 0.2407,
-     "a": 0.413,
-     "o": 0.6656,
-     "b": 0.6789
+     "h": 0.3546,
+     "d": 0.2411,
+     "a": 0.4043,
+     "o": 0.6652,
+     "b": 0.6792
     },
     "xg": [
-     1.64,
-     1.81
+     1.66,
+     1.79
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.41298151427120844,
+     "x12p": 0.40427514391658836,
      "alt": "H",
-     "altp": 0.34634224456647456,
+     "altp": 0.35463346223638287,
      "dc": "12",
-     "dcp": 0.759323758837683,
+     "dcp": 0.7589086061529713,
      "ou": "O",
-     "oup": 0.6655785495647678,
+     "oup": 0.6652448123563922,
      "bt": "Y",
-     "btp": 0.6788770450314826
+     "btp": 0.679161156354297
     },
     "pk0": {
      "x12": "A"
@@ -1309,16 +1357,17 @@
       "h": {
        "adj": -20,
        "headlines": [
-        "Swansea City news: Stephen Eustaquio injury doubt for Portsmouth trip",
         "Portsmouth boss gives latest injury updates on duo",
+        "Swansea City news: Stephen Eustaquio injury doubt for Portsmouth trip",
         "'Best we’ve had in Championship. Harsh': No-nonsense Portsmouth verdict as key duo return for Burnley encounter"
        ]
       },
       "a": {
-       "adj": -16,
+       "adj": -24,
        "headlines": [
-        "Swansea City news: Stephen Eustaquio injury doubt for Portsmouth trip",
-        "Canadians in Europe: Eustáquio scores, but leaves Swansea win with injury"
+        "Swansea City: Burgess ‘progressing well’ in injury recovery",
+        "Canadians in Europe: Eustáquio scores, but leaves Swansea win with injury",
+        "Swansea City news: Stephen Eustaquio injury doubt for Portsmouth trip"
        ]
       }
      }
@@ -1338,27 +1387,27 @@
      "LWDWW"
     ],
     "p": {
-     "h": 0.4224,
-     "d": 0.2666,
-     "a": 0.311,
-     "o": 0.5347,
-     "b": 0.5763
+     "h": 0.4105,
+     "d": 0.2677,
+     "a": 0.3218,
+     "o": 0.5337,
+     "b": 0.5769
     },
     "xg": [
-     1.55,
-     1.29
+     1.52,
+     1.32
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.4224371487232044,
+     "x12p": 0.4105363313884592,
      "alt": "A",
-     "altp": 0.3109946535101228,
+     "altp": 0.3218050055754435,
      "dc": "12",
-     "dcp": 0.7334318022333273,
+     "dcp": 0.7323413369639027,
      "ou": "O",
-     "oup": 0.5346882222126237,
+     "oup": 0.5337023108869832,
      "bt": "Y",
-     "btp": 0.5762659854969087
+     "btp": 0.5769348744686255
     },
     "pk0": {
      "x12": "H"
@@ -1366,19 +1415,19 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -12,
+       "adj": -20,
        "headlines": [
         "Augustus Kargbo: Blackburn Rovers forward nearing full return, says boss Tony Mowbray",
-        "Predicted Stoke City starting XI vs Blackburn Rovers as key man ruled out",
-        "Mark Robins delivers upbeat Stoke City injury update but key man will miss Blackburn Rovers"
+        "Stoke City blow with star man missing for Blackburn Rovers clash",
+        "Predicted Stoke City starting XI vs Blackburn Rovers as key man ruled out"
        ]
       },
       "a": {
-       "adj": -24,
+       "adj": -20,
        "headlines": [
-        "Predicted Stoke City starting XI vs Blackburn Rovers as key man ruled out",
-        "Huge Stoke City injury blow confirmed as Lamine Cisse set for period on sidelines",
-        "Mark Robins delivers upbeat Stoke City injury update but key man will miss Blackburn Rovers"
+        "Stoke City blow with star man missing for Blackburn Rovers clash",
+        "Christmas shopping evening returns to Stoke Mandeville",
+        "Predicted Stoke City starting XI vs Blackburn Rovers as key man ruled out"
        ]
       }
      }
@@ -1428,17 +1477,17 @@
       "h": {
        "adj": -14,
        "headlines": [
-        "Team News: Manchester United vs. Roma injury, suspension list, predicted XIs",
-        "Carrick reflects on Man United 7-1 Roma and has four injury doubts ahead of UCL test",
-        "Manchester United issue injury update on four players as Leny Yoro issue explained"
+        "Nine players set to miss Man United vs Roma after Marcus Rashford injury update",
+        "Man United transfer news: Red Devils handed major January boost as top target 'accepts' mid-season move",
+        "Carrick reflects on Man United 7-1 Roma and has four injury doubts ahead of UCL test"
        ]
       },
       "a": {
        "adj": -16,
        "headlines": [
+        "Nine players set to miss Man United vs Roma after Marcus Rashford injury update",
         "Team News: Manchester United vs. Roma injury, suspension list, predicted XIs",
-        "Carrick reflects on Man United 7-1 Roma and has four injury doubts ahead of UCL test",
-        "Man Utd get big injury boost in training squad vs Roma after Michael Carrick sack decision"
+        "After home debacle against Roma: manager sacked at David Alaba’s club"
        ]
       }
      }
@@ -1458,27 +1507,27 @@
      "WWDWW"
     ],
     "p": {
-     "h": 0.3223,
-     "d": 0.2394,
-     "a": 0.4383,
-     "o": 0.6642,
-     "b": 0.6754
+     "h": 0.3183,
+     "d": 0.2389,
+     "a": 0.4427,
+     "o": 0.6646,
+     "b": 0.6751
     },
     "xg": [
-     1.58,
-     1.87
+     1.57,
+     1.88
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4383200157459455,
+     "x12p": 0.4427398114425486,
      "alt": "H",
-     "altp": 0.3223239760944619,
+     "altp": 0.31833094426024616,
      "dc": "12",
-     "dcp": 0.7606439918404073,
+     "dcp": 0.7610707557027947,
      "ou": "O",
-     "oup": 0.6642127452901894,
+     "oup": 0.6645590972564722,
      "bt": "Y",
-     "btp": 0.6753585554923986
+     "btp": 0.6750654287480634
     },
     "pk0": {
      "x12": "A"
@@ -1488,16 +1537,16 @@
       "h": {
        "adj": -20,
        "headlines": [
-        "Pompey boss provides key injury update on ex-Birmingham City and West Brom duo",
-        "Preview: West Ham aim to return to winning ways as they welcome West Brom",
-        "West Brom Women star facing six months out after suffering serious leg injury"
+        "West Ham: Nuno Espirito Santo sacked by Hammers with club sitting in eighth place in the Championship",
+        "Nuno Espirito Santo sacked by West Ham despite sitting eighth as interim immediately named",
+        "Nuno Espirito Santo sacked by West Ham as their promotion hopes take a huge hit"
        ]
       },
       "a": {
-       "adj": -24,
+       "adj": -20,
        "headlines": [
         "Eckert issues latest update on injured Southampton striker",
-        "QPR eye triple injury boost at Southampton as Julien Stephan stays positive",
+        "5 players set to miss West Brom vs Southampton ft 7-goal star",
         "Halloween party stabbing: Five teenagers seriously injured near Southampton"
        ]
       }
@@ -1515,30 +1564,30 @@
     "modelV": 3,
     "form": [
      "",
-     "WLWLW"
+     "LWLWW"
     ],
     "p": {
-     "h": 0.2756,
-     "d": 0.2615,
-     "a": 0.4629,
-     "o": 0.5377,
-     "b": 0.5714
+     "h": 0.2664,
+     "d": 0.2585,
+     "a": 0.4751,
+     "o": 0.5442,
+     "b": 0.5737
     },
     "xg": [
-     1.21,
-     1.64
+     1.2,
+     1.68
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.4628892270607769,
+     "x12p": 0.47505013288533676,
      "alt": "H",
-     "altp": 0.2755691737997456,
+     "altp": 0.26643898142490635,
      "dc": "12",
-     "dcp": 0.7384584008605225,
+     "dcp": 0.7414891143102431,
      "ou": "O",
-     "oup": 0.5377389338109803,
+     "oup": 0.5441972296761295,
      "bt": "Y",
-     "btp": 0.5714095670593055
+     "btp": 0.5737286132746471
     },
     "pk0": {
      "x12": "A"
@@ -1642,16 +1691,16 @@
        "adj": -12,
        "headlines": [
         "SEC Nation returns to Oxford for Ole Miss vs. Georgia",
-        "Reading FC handed huge injury boost ahead of local derby with Oxford United",
-        "Oxford United Team and Injury News for Visit of Reading"
+        "Oxford United Team and Injury News for Visit of Reading",
+        "Reading FC handed huge injury boost ahead of local derby with Oxford United"
        ]
       },
       "a": {
        "adj": -24,
        "headlines": [
-        "Reading FC handed huge injury boost ahead of local derby with Oxford United",
-        "Berks County man arrested in connection with weekend shooting that left two injured outside Reading house party",
-        "Oxford United Team and Injury News for Visit of Reading"
+        "Man arrested in connection with shooting that left 2 injured outside Reading house party",
+        "Oxford United Team and Injury News for Visit of Reading",
+        "Reading FC handed huge injury boost ahead of local derby with Oxford United"
        ]
       }
      }
@@ -1671,27 +1720,27 @@
      "WLDWL"
     ],
     "p": {
-     "h": 0.5676,
-     "d": 0.2707,
-     "a": 0.1616,
-     "o": 0.3898,
-     "b": 0.4039
+     "h": 0.5712,
+     "d": 0.2693,
+     "a": 0.1595,
+     "o": 0.3912,
+     "b": 0.4032
     },
     "xg": [
-     1.57,
+     1.58,
      0.7
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5676413918055855,
+     "x12p": 0.5712009973351315,
      "alt": "D",
-     "altp": 0.27071245215972073,
+     "altp": 0.26930460582706045,
      "dc": "1X",
-     "dcp": 0.8383538439653062,
+     "dcp": 0.840505603162192,
      "ou": "U",
-     "oup": 0.610207718177709,
+     "oup": 0.6087876033955539,
      "bt": "N",
-     "btp": 0.5961183786592534
+     "btp": 0.5968072091175372
     },
     "pk0": {
      "x12": "H"
@@ -1706,10 +1755,10 @@
        ]
       },
       "a": {
-       "adj": -16,
+       "adj": -20,
        "headlines": [
-        "Injury concerns after McKennie, De Bruyne and Di Lorenzo substitutions in Juventus 2-0 Napoli",
         "Napoli face an injury crisis! Di Lorenzo and Olivera sidelined too as Allegri considers youth players",
+        "Injury concerns after McKennie, De Bruyne and Di Lorenzo substitutions in Juventus 2-0 Napoli",
         "Ekhator returns to Juventus squad for Napoli clash"
        ]
       }
@@ -1730,11 +1779,11 @@
      "DWWWW"
     ],
     "p": {
-     "h": 0.3723,
-     "d": 0.2636,
-     "a": 0.3641,
-     "o": 0.5588,
-     "b": 0.5987
+     "h": 0.3721,
+     "d": 0.2641,
+     "a": 0.3638,
+     "o": 0.5566,
+     "b": 0.597
     },
     "xg": [
      1.48,
@@ -1742,15 +1791,15 @@
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.3723357659592341,
+     "x12p": 0.3720890428925421,
      "alt": "A",
-     "altp": 0.3640698499373506,
+     "altp": 0.3638383380668414,
      "dc": "12",
-     "dcp": 0.7364056158965847,
+     "dcp": 0.7359273809593835,
      "ou": "O",
-     "oup": 0.5588169685485248,
+     "oup": 0.5566245273633261,
      "bt": "Y",
-     "btp": 0.5986834696307934
+     "btp": 0.5970024613859706
     },
     "pk0": {
      "x12": "A"
@@ -1764,8 +1813,8 @@
       "a": {
        "adj": -12,
        "headlines": [
-        "Como edge struggling Venezia to return to Serie A top four",
         "Fabregas: ‘Venezia will be difficult for Como, Kean injury happened with Italy’",
+        "Como edge struggling Venezia to return to Serie A top four",
         "Como: big blow for Moise Kean"
        ]
       }
@@ -1775,7 +1824,7 @@
   ],
   "summary": {
    "expectedCorrect": 6.07,
-   "pAllCorrect": 0.00004338645768329294,
+   "pAllCorrect": 0.00004259230977430828,
    "unknownTeams": 1
   }
  }
