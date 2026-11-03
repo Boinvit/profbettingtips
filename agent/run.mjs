@@ -13,6 +13,7 @@ import { dropDuplicatePending } from './lib/dupes.mjs';
 import { splitHistory, parseBackfill } from './lib/history.mjs';
 import { buildIntel } from './lib/intel.mjs';
 import { buildCalibration } from './lib/calibration.mjs';
+import { reconcile, tierOf, mergeCorrections } from './lib/results.mjs';
 
 const MIN_TUNE_MATCHES = 150, RETUNE_EVERY = 30, DAY = 86400000;
 const dayOf = (iso) => iso.slice(0, 10);
@@ -34,28 +35,29 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   // 1. ingest results from every source; de-duplicate by (home, away, ±1 day), merging odds
   const pairs = new Map();
   for (const m of matches) { const k = pairKey(m.h, m.a); (pairs.get(k) || pairs.set(k, []).get(k)).push(m); }
-  let added = 0;
+  let added = 0; const corrections = [];
   for (const f of feed.finished || []) {
     const h = registry.resolve(f.hn), a = registry.resolve(f.an);
     const ex = near(pairs.get(pairKey(h, a)), f.d, DAY * 1.2);
-    if (ex) { if (!ex.o && f.o) ex.o = f.o; continue; }
-    const m = { id: `${dayOf(f.d)}|${h}|${a}`, c: f.c, d: f.d, h, a, hg: f.hg, ag: f.ag, ...(f.o ? { o: f.o } : {}) };
+    if (ex) { if (!ex.o && f.o) ex.o = f.o; const cr = reconcile(ex, f, now.toISOString()); if (cr) corrections.push(cr); continue; }
+    const m = { id: `${dayOf(f.d)}|${h}|${a}`, c: f.c, d: f.d, h, a, hg: f.hg, ag: f.ag, s: tierOf(f.src), ...(f.o ? { o: f.o } : {}) };
     (pairs.get(pairKey(h, a)) || pairs.set(pairKey(h, a), []).get(pairKey(h, a))).push(m); matches.push(m); added++;
   }
   matches.sort((x, y) => x.d.localeCompare(y.d) || x.id.localeCompare(y.id));
+  { const mc = mergeCorrections(load('corrections.json', []), corrections); if (mc.added) save('corrections.json', mc.list); const n = (a) => corrections.filter((c) => c.action === a).length; log(`results: ${n('overwrite')} corrected, ${n('conflict')} conflict(s), ${n('ignored-lower-tier')} lower-tier ignored`); }
   log(`history: ${matches.length} finished matches (+${added} new), ${Object.keys(registry.names).length} teams`);
 
   // 2. settle frozen predictions against real results
-  let settledNow = 0;
+  let settledNow = 0, resettled = 0;
   for (const p of preds) {
-    if (p.status !== 'pending') continue;
+    if (p.status !== 'pending' && p.status !== 'settled') continue;
     const m = near(pairs.get(pairKey(p.h, p.a)), p.kickoff, DAY * 2);
     if (!m) continue;
+    if (p.status === 'settled') { if (p.result && p.result.hg === m.hg && p.result.ag === m.ag) continue; resettled++; } else settledNow++;
     p.status = 'settled'; p.result = { hg: m.hg, ag: m.ag, o: outcome1x2(m.hg, m.ag) };
     p.ok = grade(p.pk, m.hg, m.ag); if (p.pk0) p.ok0 = { x12: p.pk0.x12 === p.result.o };
-    settledNow++;
   }
-  log(`settled ${settledNow} predictions`);
+  log(`settled ${settledNow} predictions, re-settled ${resettled} after score corrections`);
 
   // 3. learn: re-tune parameters when enough new evidence has arrived
   if (matches.length >= MIN_TUNE_MATCHES && (forceTune || matches.length - (model.tunedOn || 0) >= RETUNE_EVERY)) {
@@ -151,7 +153,10 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   // accumulator leg probabilities by the measured gap. Refreshed whenever 300+ new matches have arrived.
   let cal = load('calibration.json', null);
   try { if (!cal || Math.abs(matches.length - (cal.n || 0)) >= 300) { cal = buildCalibration(matches, model.params, { now }); save('calibration.json', cal); } } catch (e) { log(`calibration: skipped (${e.message})`); cal = null; }
-  const accas = updateAccas(load('accas.json', { items: [] }), preds, now, { cal }); save('accas.json', accas);
+  const accIn = load('accas.json', { items: [] }); let reopened = 0;
+  { const byP = new Map(preds.map((p) => [p.id, p])); for (const a of accIn.items || []) { if (a.status !== 'won' && a.status !== 'lost') continue; if (a.legs.some((l) => { const p = byP.get(l.pid); return p && p.status === 'settled' && p.result && l.res && (l.res.hg !== p.result.hg || l.res.ag !== p.result.ag); })) { a.status = 'pending'; delete a.settled; reopened++; } } }
+  if (reopened) log(`accas: reopened ${reopened} slip(s) whose leg results were corrected`);
+  const accas = updateAccas(accIn, preds, now, { cal }); save('accas.json', accas);
   log(`accumulators: ${accas.items.length} (${accas.stats.pending} pending, ${accas.stats.settled} settled, hit rate ${accas.stats.overall.rate ?? 'n/a'})`);
   const recent = preds.filter((p) => p.status === 'pending' || p.kickoff >= new Date(now - 21 * DAY).toISOString());
   const top = Object.entries(state.elo).filter(([id]) => state.n[id] >= 8).sort((a, b) => b[1] - a[1]).slice(0, 25)
@@ -182,28 +187,28 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const now = new Date(), health = [];
   const feed = { finished: [], upcoming: [], listed: [], scrapedJackpots: [], clubelo: [], health };
   if (!args.has('--offline')) {
-    const merge = (r) => { feed.finished.push(...r.finished); feed.upcoming.push(...r.upcoming); };
+    const merge = (r, src) => { for (const f of r.finished) if (src) f.src = src; feed.finished.push(...r.finished); feed.upcoming.push(...r.upcoming); };
     // a) football-data.co.uk: results + odds, 22 divisions + 16 extra leagues
-    try { const { fetchFduk } = await import('./lib/sources/fduk.mjs'); merge(await fetchFduk({ now, backfill: backfillN || false, health })); }
+    try { const { fetchFduk } = await import('./lib/sources/fduk.mjs'); merge(await fetchFduk({ now, backfill: backfillN || false, health }), 'fduk'); }
     catch (e) { health.push({ source: 'football-data.co.uk', ok: false, detail: e.message }); }
     // b) football-data.org API (optional key): fresher results
     if (process.env.FOOTBALL_DATA_API_KEY) {
       try {
         const { fetchWindow } = await import('./lib/sources/footballdata.mjs');
         const day = (n) => new Date(Date.now() + n * DAY).toISOString().slice(0, 10);
-        const r = await fetchWindow({ key: process.env.FOOTBALL_DATA_API_KEY, from: day(-2), to: day(7) });
-        merge(r); health.push({ source: 'football-data.org', ok: true, detail: `${r.finished.length} results, ${r.upcoming.length} fixtures` });
+        const r = await fetchWindow({ key: process.env.FOOTBALL_DATA_API_KEY, from: day(-3), to: day(7) });
+        merge(r, 'fdorg'); health.push({ source: 'football-data.org', ok: true, detail: `${r.finished.length} results, ${r.upcoming.length} fixtures` });
       } catch (e) { health.push({ source: 'football-data.org', ok: false, detail: e.message }); }
     } else health.push({ source: 'football-data.org', ok: false, detail: 'no API key (optional)' });
     // c) API-Football: broad fixture/results coverage when an API-Sports key is configured
     try {
       const { fetchApiFootball } = await import('./lib/sources/api-football.mjs');
-      merge(await fetchApiFootball({ key: process.env.API_FOOTBALL_KEY, now, health }));
+      merge(await fetchApiFootball({ key: process.env.API_FOOTBALL_KEY, now, health }), 'apif');
     } catch (e) { health.push({ source: 'API-Football', ok: false, detail: e.message }); }
     // d) OpenLigaDB: free supplemental German Bundesliga feed
     try {
       const { fetchOpenLigaDB } = await import('./lib/sources/openligadb.mjs');
-      merge(await fetchOpenLigaDB({ now, health }));
+      merge(await fetchOpenLigaDB({ now, health }), 'oldb');
     } catch (e) { health.push({ source: 'OpenLigaDB', ok: false, detail: e.message }); }
     // d2) openfootball: public-domain full-season fixtures/results for EPL, Championship, La Liga, Serie A
     try {
