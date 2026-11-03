@@ -20,6 +20,7 @@ export async function mountLongShots(root) {
     return `<div class='card' style='margin:1em 0'>
       <h3>${esc(a.day)} - Long shot ${esc(a.n)}: ${a.legs.length} legs, total odds ${esc(a.odds)}</h3>
       <p>Chance every leg wins (model): <strong>${pct(a.pAll, 1)}</strong>. KES 10 would pay about <strong>${kes(10 * a.odds)}</strong>. Expected result per KES 10: <strong>${a.ev10 >= 0 ? '+' : ''}${a.ev10} KES</strong>.</p>
+      ${a.floor && a.floor < 0.66 ? `<p class='muted'>Fewer than 3 slips cleared 66% on this day, so legs down to ${pct(a.floor)} were allowed.</p>` : ''}
       <div style='overflow-x:auto'><table><thead><tr><th>EAT</th><th>Match</th><th>Pick</th><th>Chance</th><th>Odds</th></tr></thead><tbody>${rows}</tbody></table></div>
       ${a.modelPriced ? `<p class='muted'>${a.modelPriced} of ${a.legs.length} odds are the model's own estimate (marked est.). Real SportPesa odds differ: paste the slip into My slips to see the true figures.</p>` : ''}</div>`;
   };
@@ -27,7 +28,7 @@ export async function mountLongShots(root) {
     ? `<h3>Track record</h3><p>${st.won} of ${st.settled} settled slips won (the model expected about ${st.expectedWins}). Single legs: ${st.legsWon} of ${st.legsSettled} won, against ${pct(st.legClaimed)} claimed on average.</p>`
     : `<p class='muted'>No settled long shots yet. Once some have, this shows whether the 66% legs really win about two thirds of the time.</p>`;
   root.innerHTML = `<h2>Long shots</h2>
-  <p><strong>For fun, tiny stakes only (KES 10 to 20).</strong> Every leg is at least 66% by the calibrated model, no match is used twice, and youth, reserve and thin-data games are left out. But chaining many legs multiplies the risk: each card shows the whole-slip chance, and on the model's own numbers these slips lose money on average. Keep them out of your serious betting budget.</p>
+  <p><strong>For fun, tiny stakes only (KES 10 to 20).</strong> Every leg is at least 66% by the calibrated model (60% on days when too few matches clear 66%), no match is used twice, and youth, reserve and thin-data games are left out. But chaining many legs multiplies the risk: each card shows the whole-slip chance, and on the model's own numbers these slips lose money on average. Keep them out of your serious betting budget.</p>
   ${short}${open.length ? open.map(card).join('') : `<div class='empty'>No long shots yet. They are created when enough matches clear 66%, so check back after the next agent run.</div>`}
   ${hist}`;
 }

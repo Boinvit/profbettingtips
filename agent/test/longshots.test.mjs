@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildDay, updateLongShots, MIN_LEG_P } from '../lib/longshots.mjs';
+import { buildDay, buildDayAdaptive, updateLongShots, MIN_LEG_P } from '../lib/longshots.mjs';
 
 const now = new Date('2026-11-04T06:00:00Z');
 const mkp = (i, over = {}) => {
@@ -49,4 +49,23 @@ test('a day is frozen once created, and slips settle against results', () => {
   const c = updateLongShots(b, done, new Date('2026-11-04T23:00:00Z'));
   assert.equal(c.stats.settled, 3); assert.ok(c.stats.legsSettled >= 18);
   assert.ok(c.items.every((s) => s.status === 'won' || s.status === 'lost'));
+});
+
+test('quiet day: floor drops to 60% only when 66% cannot fill 3 slips; busy day keeps 66%', () => {
+  const weak = (i) => mkp(i, { pk: { x12: 'H', x12p: 0.4, dc: i % 2 ? '1X' : 'X2', dcp: 0.62, ou: 'O', oup: 0.5, bt: 'Y', btp: 0.5 } });
+  const quiet = Array.from({ length: 30 }, (_, i) => weak(i));
+  assert.equal(buildDay(quiet, '2026-11-04', now).length, 0);
+  const slips = buildDayAdaptive(quiet, '2026-11-04', now);
+  assert.equal(slips.length, 3);
+  for (const s of slips) { assert.equal(s.floor, 0.6); assert.ok(s.legs.every((l) => l.p >= 0.6)); }
+  assert.ok(buildDayAdaptive(pool(45), '2026-11-04', now).every((s) => s.floor === MIN_LEG_P));
+});
+
+test('a short untouched set is rebuilt when more matches qualify; a started one is left alone', () => {
+  const first = updateLongShots({ items: [] }, pool(10), now);
+  assert.equal(first.items.length, 2);
+  const more = updateLongShots(first, pool(45), now);
+  assert.equal(more.items.length, 3);
+  const later = new Date('2026-11-04T16:30:00Z');
+  assert.equal(updateLongShots(first, pool(45), later).items.length, 2);
 });
