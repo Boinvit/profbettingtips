@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T14:05:36.127Z",
+ "updated": "2026-11-03T20:58:43.234Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "73 results, 117 fixtures"
+   "detail": "75 results, 108 fixtures"
   },
   {
    "source": "API-Football",
@@ -24,12 +24,12 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 54 fixtures next 14d"
+   "detail": "264 results, 45 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "8 events fetched, 7 with 1X2 odds"
+   "detail": "27 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,42 +39,48 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-03T14:05:11.491Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-03T20:58:17.889Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "136 teams fetched, 0 failed"
+   "detail": "117 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "LASK Linz vs Slovan Bratislava",
-  "Shakhtar Donetsk vs Sporting Lisbon",
-  "Smouha Club vs Pyramids FC",
-  "Al Hilal Riyadh vs Shabab AL Ahli Dubai Club",
-  "Alqana vs Future FC",
-  "Academico Viseu U23 vs Torreense U23",
-  "Gil Vicente FC U23 vs FC Felgueiras 1932 U23",
-  "Atletico Madrid Youth vs Bayern Munich U19",
-  "ABO Qair Semads vs Ceramica Cleopatra",
-  "Al Raed Club vs Al Wehda",
-  "AEL Limassol vs Iraklis Gerolakkou",
-  "Hussein Irbid vs Al Shorta",
-  "Esteghlal Tehran vs Al-Shamal",
-  "Jezero vs Decic Tuzi",
-  "Istra 1961 vs NK Neretva Metkovic",
-  "Spartak Kostroma vs FC Volna Nizhny Novgorod Oblast",
-  "Karmiotissa vs Ermis Aradippou",
-  "Chrobry Glogow vs Arka Gdynia",
-  "Mamelodi Sundowns vs Golden Arrows",
-  "Pogon Siedlce vs Ruch Chorzow",
-  "Sirius FK vs Halmstads BK",
-  "AD Carmopolis SE vs Caninde SE",
-  "Enppi Club vs Asyut Petroleum",
-  "Flamengo SE vs Olimpico Esporte Clube",
-  "Rotherham vs Newcastle U21",
-  "Wealdstone vs Derby County U23",
-  "Scunthorpe vs Wolverhampton U21"
+  "AEK Athens vs Real Madrid",
+  "Slavia Prague vs Arsenal",
+  "Viking vs Sabah",
+  "Club Xelaju vs CD Marquense",
+  "Monagas SC vs Caracas FC",
+  "Desportivo Aurora vs Independiente Petrolero",
+  "Deportivo Pasto vs Jaguares de Cordoba",
+  "Deportivo Tachira vs Academia Puerto Cabello",
+  "Sporting San Jose vs Perez Zeledon",
+  "Alianza Lima vs Club Cienciano",
+  "Real Cartagena vs Deportes Quindio",
+  "FC Osaka vs Roasso Kumamoto",
+  "Melbourne Victory vs Persib Bandung",
+  "FC Seoul vs CLB Viettel",
+  "AEK Athens U19 vs Real Madrid Youth",
+  "Pohang Steelers vs Gamba Osaka",
+  "Mladost Lucani vs FK IMT Youth",
+  "KF Drita vs FC Prishtina",
+  "Cukaricki Youth vs Partizan Belgrad Youth",
+  "Persik Kediri vs Persis Solo",
+  "Porto U19 vs SSC Napoli U20",
+  "Buriram Utd vs Kashima Antlers",
+  "OFK Belgrade vs TSC Backa Topola",
+  "PSV Youth vs Club Brugge Youth",
+  "Defensor Sporting vs Torque",
+  "Zanaco vs FC Muza",
+  "Red Arrows vs Nkwazi",
+  "Arkadag FK vs GOL Gohar",
+  "East Bengal FC vs Hwacheon Kspo W",
+  "UD Leiria U23 vs Estoril Praia U23",
+  "ZED vs Talaea El Gaish",
+  "Ghazl El Mahallah vs El Ittihad Alexandria",
+  "AL Wahda Scc (UAE) vs AL Khalidiyah"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
