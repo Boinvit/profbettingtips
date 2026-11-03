@@ -30,18 +30,32 @@ async function grab(name, url) {
       bodies.push(JSON.parse(t)); seenUrls.push({ url: res.url().slice(0, 200), bytes: t.length });
     } catch {}
   });
-  let status = 'ok', text = '';
+  let status = 'ok', text = '', ui = [], clicked = [];
   try {
     await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
     for (let i = 0; i < 6; i++) { await page.mouse.wheel(0, 2500); await page.waitForTimeout(700); } // lazy lists
     text = await page.evaluate(() => document.body.innerText);
+    try { // best effort: record the page's tabs, then click day filters (Tomorrow, weekdays) so later days load into the captured JSON
+      ui = await page.evaluate(() => [...new Set([...document.querySelectorAll('button,a,[role=tab],li,span')].map((e) => (e.innerText || '').trim().replace(/\s+/g, ' ')).filter((t) => t && t.length < 22))].slice(0, 90));
+      for (const re of [/^tomorrow$/i, /^next 24 hours$/i, /^(mon|tue|wed|thu|fri|sat|sun)[a-z]*[ ,]*[0-9]{0,2}$/i]) {
+        let els = []; try { els = await page.getByText(re).all(); } catch {}
+        for (const el of els.slice(0, 8)) {
+          try {
+            const label = (await el.innerText({ timeout: 800 })).trim().slice(0, 20);
+            await el.click({ timeout: 1500 }); clicked.push(label); await page.waitForTimeout(900);
+            for (let i = 0; i < 4; i++) { await page.mouse.wheel(0, 2500); await page.waitForTimeout(600); }
+          } catch {}
+        }
+      }
+      text = await page.evaluate(() => document.body.innerText);
+    } catch {}
     if (/just a moment|verify you are human|access denied|attention required/i.test(text.slice(0, 600))) status = 'blocked (bot challenge)';
   } catch (e) { status = 'error: ' + e.message.split('\n')[0]; }
   const found = status === 'ok' ? bestFixtures(bodies, text) : { matches: [] };
   fs.writeFileSync(path.join(DEBUG, `sportpesa-${name.replace(/\W+/g, '_')}.json`), JSON.stringify({ url, status, seenUrls, textHead: text.slice(0, 3000), found: found.matches.slice(0, 40) }, null, 1));
   await page.close();
   console.log(`${name}: ${status}, ${found.matches.length} matches via ${found.source || 'n/a'}`);
-  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length };
+  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length, ui, clicked, apis: seenUrls.slice(0, 12).map((u) => u.bytes + ' ' + u.url.slice(0, 150)) };
 }
 
 const result = { scrapedAt: new Date().toISOString(), matches: [], jackpots: [], diagnostics: [] };
@@ -52,7 +66,7 @@ for (const j of JACKPOTS) {
 }
 for (const l of LISTS) {
   const r = await grab(l.name, l.url);
-  result.diagnostics.push({ page: l.name, status: r.status, found: r.matches.length });
+  result.diagnostics.push({ page: l.name, status: r.status, found: r.matches.length, days: r.matches.reduce((a, m) => { const k = (m.kickoff || 'none').slice(0, 10); a[k] = (a[k] || 0) + 1; return a; }, {}), clicked: r.clicked, ui: r.ui, apis: r.apis });
   result.matches.push(...r.matches);
 }
 await browser.close();
