@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T16:17:06.671Z",
+ "updated": "2026-11-03T01:02:38.985Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "65 results, 125 fixtures"
+   "detail": "29 results, 120 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-01: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-02: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,7 +24,7 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 57 fixtures next 14d"
+   "detail": "264 results, 54 fixtures next 14d"
   },
   {
    "source": "The Odds API",
@@ -39,49 +39,24 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-02T16:16:38.718Z"
+   "detail": "25 listed games, 0 jackpot(s), scraped 2026-11-03T01:02:13.334Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "159 teams fetched, 0 failed"
+   "detail": "112 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Al Ahly Cairo vs Arab Contractors",
-  "Jong Ajax vs Vitesse Arnhem",
-  "Jong PSV vs NAC Breda",
-  "Universitatea Cluj vs Steaua Bucuresti",
-  "Triglav vs Krka",
-  "AS Nordia Jerusalem vs MK KFAR Saba 1928",
-  "Deportivo Maldonado Reserve vs Boston River",
-  "ZR Temouchent vs US Biskra",
-  "Maccabi Yavne vs Shimshon Tel Aviv",
-  "Progreso vs Racing Club Montevideo Reserve",
-  "Valerenga W vs Lyn W",
-  "Montevideo Wanderers vs Cerro Largo FC",
-  "Hapoel Raanana vs MS Football Hapoel Kiryat Yam",
-  "Metalac vs FK Jedinstvo UB",
-  "Maccabi Jaffa vs Hapoel Kfar Saba",
-  "Chojnice vs Avia Swidnik",
-  "Hapoel Kfar Shelem vs Ironi Modiin",
-  "Kayserispor vs Muglaspor",
-  "FC Ashdod vs Bnei Yehuda",
-  "Radnicki Nis vs FK Zeleznicar Pancevo",
-  "Mladost Lucani vs Radnik Surduluca",
-  "Kopparbergs Go W vs Kristianstads W",
-  "Polonia Bytom SA vs OKS Odra Opole",
-  "Maccabi Ironi Kiryat Malakhi vs FC Holon Yirmiyahu",
-  "Jaen vs Algeciras",
-  "Kalamata FC vs PO Triglias",
-  "Cape Town City vs Magesi FC",
-  "Teuta Durres vs Partizani Tirana",
-  "El Fahem vs Maccabi Nujeidat Ahmad",
-  "Defensores Unidos vs Deportivo Laferrere",
-  "Comunicaciones vs Talleres RDE",
-  "Osters IF vs Helsingborg",
-  "Atletico Rafaela vs Patronato Parana",
-  "Argentino De Quilmes vs Brown Adrogue"
+  "Defensor Sporting vs Torque",
+  "Leon W vs Atletico San Luis W",
+  "Atletico Bucaramanga vs Atletico Nacional",
+  "Suchitepequez vs Deportivo Malacateco",
+  "Halcones Negros FC vs Real Apodaca FC",
+  "Shakhtar Donetsk vs Sporting Lisbon",
+  "Smouha Club vs Pyramids FC",
+  "Al Hilal Riyadh vs Shabab AL Ahli Dubai Club",
+  "LASK Linz vs Slovan Bratislava"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
