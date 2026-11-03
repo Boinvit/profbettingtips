@@ -9,6 +9,7 @@ import { computeStats } from './lib/stats.mjs';
 import { Registry } from './lib/teams.mjs';
 import { parseInbox, buildJackpots } from './lib/jackpot.mjs';
 import { updateAccas } from './lib/accas.mjs';
+import { updateLongShots } from './lib/longshots.mjs';
 import { dropDuplicatePending } from './lib/dupes.mjs';
 import { splitHistory, parseBackfill } from './lib/history.mjs';
 import { buildIntel } from './lib/intel.mjs';
@@ -157,6 +158,7 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   { const byP = new Map(preds.map((p) => [p.id, p])); for (const a of accIn.items || []) { if (a.status !== 'won' && a.status !== 'lost') continue; if (a.legs.some((l) => { const p = byP.get(l.pid); return p && p.status === 'settled' && p.result && l.res && (l.res.hg !== p.result.hg || l.res.ag !== p.result.ag); })) { a.status = 'pending'; delete a.settled; reopened++; } } }
   if (reopened) log(`accas: reopened ${reopened} slip(s) whose leg results were corrected`);
   const accas = updateAccas(accIn, preds, now, { cal }); save('accas.json', accas);
+  { const ls = updateLongShots(load('longshots.json', { items: [] }), preds, now, { cal }); save('longshots.json', ls); log(`long shots: ${ls.stats.pending} pending, ${ls.stats.settled} settled, ${ls.stats.won} won (model expected ${ls.stats.expectedWins})`); }
   log(`accumulators: ${accas.items.length} (${accas.stats.pending} pending, ${accas.stats.settled} settled, hit rate ${accas.stats.overall.rate ?? 'n/a'})`);
   const recent = preds.filter((p) => p.status === 'pending' || p.kickoff >= new Date(now - 21 * DAY).toISOString());
   const top = Object.entries(state.elo).filter(([id]) => state.n[id] >= 8).sort((a, b) => b[1] - a[1]).slice(0, 25)
