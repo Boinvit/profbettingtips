@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T22:26:59.054Z",
+ "updated": "2026-11-04T01:19:55.081Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "91 results, 99 fixtures"
+   "detail": "51 results, 97 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-02: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-03: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
+   "detail": "9 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,23 +39,18 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-03T22:26:20.527Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T01:19:18.717Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "2 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "AEK Athens vs Real Madrid",
   "Slavia Prague vs Arsenal",
   "Viking vs Sabah",
-  "Desportivo Aurora vs Independiente Petrolero",
-  "Deportivo Pasto vs Jaguares de Cordoba",
-  "Deportivo Tachira vs Academia Puerto Cabello",
-  "Sporting San Jose vs Perez Zeledon",
-  "Alianza Lima vs Club Cienciano",
   "Real Cartagena vs Deportes Quindio",
   "FC Osaka vs Roasso Kumamoto",
   "Melbourne Victory vs Persib Bandung",
@@ -81,7 +76,15 @@
   "AL Wahda Scc (UAE) vs AL Khalidiyah",
   "Rayyan SC vs Al Nahda (Oman)",
   "Al Kuwait SC vs Nasaf Qarshi",
-  "Doxa Katokopia vs Olympiakos Nicosia FC"
+  "Doxa Katokopia vs Olympiakos Nicosia FC",
+  "Dukla Banska Bystrica vs AS Trencin",
+  "Etihad AL Gharafa vs Umm Salal SC",
+  "FC Penafiel U23 vs FC Famalicao U23",
+  "SK Artis Brno vs Bohemians",
+  "Flora Tallinn vs JK Welco Elekter",
+  "SK Rapid Wien vs St.polten-Spratzern W",
+  "CA San Carlos vs CA Boston River",
+  "Al Masry Club vs Petrojet FC"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
