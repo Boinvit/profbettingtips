@@ -37,7 +37,7 @@ async function grab(name, url) {
     text = await page.evaluate(() => document.body.innerText);
     try { // best effort: record the page's tabs, then click day filters (Tomorrow, weekdays) so later days load into the captured JSON
       ui = await page.evaluate(() => [...new Set([...document.querySelectorAll('button,a,[role=tab],li,span')].map((e) => (e.innerText || '').trim().replace(/\s+/g, ' ')).filter((t) => t && t.length < 22))].slice(0, 90));
-      for (const re of [/^tomorrow$/i, /^next 24 hours$/i, /^(mon|tue|wed|thu|fri|sat|sun)[a-z]*[ ,]*[0-9]{0,2}$/i]) {
+      for (const re of [/^upcoming$/i, /^tomorrow$/i, /^next 24 hours$/i, /^(mon|tue|wed|thu|fri|sat|sun)[a-z]*[ ,]*[0-9]{0,2}$/i]) {
         let els = []; try { els = await page.getByText(re).all(); } catch {}
         for (const el of els.slice(0, 8)) {
           try {
@@ -47,6 +47,8 @@ async function grab(name, url) {
           } catch {}
         }
       }
+      const after = await page.evaluate(() => [...new Set([...document.querySelectorAll('button,a,[role=tab],li,span')].map((e) => (e.innerText || '').trim().replace(/\s+/g, ' ')).filter((t) => t && t.length < 22))].slice(0, 120));
+      ui = [...ui.slice(0, 20), '=== after clicks ===', ...after.slice(45, 110)];
       text = await page.evaluate(() => document.body.innerText);
     } catch {}
     if (/just a moment|verify you are human|access denied|attention required/i.test(text.slice(0, 600))) status = 'blocked (bot challenge)';
@@ -55,7 +57,7 @@ async function grab(name, url) {
   fs.writeFileSync(path.join(DEBUG, `sportpesa-${name.replace(/\W+/g, '_')}.json`), JSON.stringify({ url, status, seenUrls, textHead: text.slice(0, 3000), found: found.matches.slice(0, 40) }, null, 1));
   await page.close();
   console.log(`${name}: ${status}, ${found.matches.length} matches via ${found.source || 'n/a'}`);
-  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length, ui, clicked, apis: seenUrls.slice(0, 12).map((u) => u.bytes + ' ' + u.url.slice(0, 150)) };
+  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length, ui, clicked, apis: seenUrls.filter((u) => !u.url.includes('/i18n/')).slice(0, 14).map((u) => u.bytes + ' ' + u.url.slice(0, 150)) };
 }
 
 const result = { scrapedAt: new Date().toISOString(), matches: [], jackpots: [], diagnostics: [] };
