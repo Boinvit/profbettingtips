@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-04T01:19:18.717Z",
+ "scrapedAt": "2026-11-04T04:35:52.617Z",
  "matches": [
   {
    "home": "AEK Athens",
@@ -32,14 +32,14 @@
    "league": "UEFA Champions League"
   },
   {
-   "home": "PSV Eindhoven",
-   "away": "Brugge",
+   "home": "Borussia Dortmund",
+   "away": "Betis",
    "kickoff": "2026-11-04T20:00:00.000Z",
    "league": "UEFA Champions League"
   },
   {
-   "home": "Borussia Dortmund",
-   "away": "Betis",
+   "home": "Viking",
+   "away": "Sabah",
    "kickoff": "2026-11-04T20:00:00.000Z",
    "league": "UEFA Champions League"
   },
@@ -50,10 +50,16 @@
    "league": "UEFA Champions League"
   },
   {
-   "home": "Viking",
-   "away": "Sabah",
+   "home": "PSV Eindhoven",
+   "away": "Brugge",
    "kickoff": "2026-11-04T20:00:00.000Z",
    "league": "UEFA Champions League"
+  },
+  {
+   "home": "Rennes",
+   "away": "Olympiakos",
+   "kickoff": "2026-11-04T15:30:00.000Z",
+   "league": "UEFA Europa League"
   },
   {
    "home": "Wrexham",
@@ -74,28 +80,16 @@
    "league": "Championship"
   },
   {
-   "home": "Rennes",
-   "away": "Olympiakos",
-   "kickoff": "2026-11-04T15:30:00.000Z",
-   "league": "UEFA Europa League"
-  },
-  {
-   "home": "Kortrijk",
-   "away": "Mechelen",
-   "kickoff": "2026-11-04T19:30:00.000Z",
-   "league": "First Division A"
-  },
-  {
    "home": "Oxford Utd",
    "away": "Reading",
    "kickoff": "2026-11-04T19:45:00.000Z",
    "league": "League One"
   },
   {
-   "home": "Real Cartagena",
-   "away": "Deportes Quindio",
-   "kickoff": "2026-11-04T01:30:00.000Z",
-   "league": "Primera B"
+   "home": "Kortrijk",
+   "away": "Mechelen",
+   "kickoff": "2026-11-04T19:30:00.000Z",
+   "league": "First Division A"
   },
   {
    "home": "FC Osaka",
@@ -300,6 +294,12 @@
    "away": "Petrojet FC",
    "kickoff": "2026-11-04T18:00:00.000Z",
    "league": "League Cup"
+  },
+  {
+   "home": "Al Muharraq SC",
+   "away": "Jazira Abu Dhabi",
+   "kickoff": "2026-11-04T18:15:00.000Z",
+   "league": "AFC Cup"
   }
  ],
  "jackpots": [],
@@ -340,31 +340,7 @@
     "Goal Rush",
     "NEW!",
     "Lucky Numbers",
-    "More",
-    "Live Scores",
-    "Blog",
-    "News",
-    "Results",
-    "Apps",
-    "Sports App",
-    "Casino App",
-    "SP Score App",
-    "Search",
-    "Help",
-    "04:19:48 EAT",
-    "BETSLIP",
-    "0",
-    "Close",
-    "Betslip",
-    "Login",
-    "Register",
-    "Live",
-    "Football",
-    "eFootball",
-    "Basketball",
-    "Tennis",
-    "Rugby Union",
-    "Ice Hockey",
+    "=== after clicks ===",
     "Volleyball",
     "Handball",
     "Cricket",
@@ -409,21 +385,41 @@
     "Australia",
     "Japan ›",
     "Japan",
-    "USA ›"
+    "USA ›",
+    "USA",
+    "International Youth ›",
+    "International Youth",
+    "Algeria ›",
+    "Algeria",
+    "Angola ›",
+    "Angola",
+    "Argentina ›",
+    "Argentina",
+    "Armenia ›",
+    "Armenia",
+    "Austria ›",
+    "Austria",
+    "Austria Amateur ›",
+    "Austria Amateur",
+    "Belarus ›",
+    "Belarus",
+    "Bolivia ›",
+    "Bolivia",
+    "Bosnia & Herzegovina"
    ],
    "apis": [
-    "1391 https://www.ke.sportpesa.com/i18n/navigation/main/en.json?v4.2.3.5",
-    "14531 https://www.ke.sportpesa.com/i18n/lbs/betslip/en.json?v4.2.3.5",
-    "2 https://www.ke.sportpesa.com/i18n/navigation/main/en-ke.json?v4.2.3.5",
-    "5963 https://www.ke.sportpesa.com/i18n/main/en-ke.json?v4.2.3.5",
-    "2714 https://www.ke.sportpesa.com/i18n/lbs/betslip/en-ke.json?v4.2.3.5",
     "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
-    "2 https://www.ke.sportpesa.com/i18n/markets/en-ke.json?v4.2.3.5",
     "970 https://www.ke.sportpesa.com/api/jackpots/multi",
-    "10264 https://www.ke.sportpesa.com/i18n/markets/en.json?v4.2.3.5",
-    "62439 https://www.ke.sportpesa.com/i18n/main/en.json?v4.2.3.5",
     "12126 https://www.ke.sportpesa.com/api/banners/top",
-    "408 https://www.ke.sportpesa.com/api/banners/central"
+    "408 https://www.ke.sportpesa.com/api/banners/central",
+    "20802 https://www.ke.sportpesa.com/api/highlights/1",
+    "74 https://ucd-web.api.useinsider.com/v1/get",
+    "733 https://aryuder.api.useinsider.com/v3/status",
+    "2 https://www.ke.sportpesa.com/api/live/score",
+    "89 https://www.ke.sportpesa.com/api/top/teams",
+    "28 https://www.ke.sportpesa.com/api/feature_flags",
+    "61558 https://www.ke.sportpesa.com/api/games/markets?games=9395735,9398259,9398263,9398261,9398267,9398247,9398255,9395745,9398265,9402047,9426389,9426267,9",
+    "733 https://aryuder.api.useinsider.com/v3/status"
    ]
   }
  ]

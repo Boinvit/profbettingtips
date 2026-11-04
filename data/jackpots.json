@@ -1094,27 +1094,27 @@
      "DWLDL"
     ],
     "p": {
-     "h": 0.3074,
-     "d": 0.2772,
-     "a": 0.4155,
-     "o": 0.4893,
-     "b": 0.5411
+     "h": 0.3248,
+     "d": 0.2788,
+     "a": 0.3964,
+     "o": 0.4878,
+     "b": 0.5421
     },
     "xg": [
-     1.21,
-     1.45
+     1.25,
+     1.4
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.41545160195782105,
+     "x12p": 0.39640337143821575,
      "alt": "H",
-     "altp": 0.3073607082333994,
+     "altp": 0.3247615265369021,
      "dc": "12",
-     "dcp": 0.7228123101912205,
+     "dcp": 0.7211648979751178,
      "ou": "U",
-     "oup": 0.5107345067375124,
+     "oup": 0.5122397697403731,
      "bt": "Y",
-     "btp": 0.5411218553829537
+     "btp": 0.5420769495965437
     },
     "pk0": {
      "x12": "A"
@@ -1122,17 +1122,18 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -4,
+       "adj": 8,
        "headlines": [
-        "Mitchell injury blow adds to England’s woes as Northampton sink Gloucester",
+        "Sip, Bid & Boogie returns to Northampton to support people with disabilities",
         "IN PICTURES: Northampton town centre comes alive with colour as spectacular Diwali Festival of Lights returns"
        ]
       },
       "a": {
-       "adj": -4,
+       "adj": -12,
        "headlines": [
         "Oldham Athletic Duo To Miss Sheffield Wednesday Clash",
-        "Nicky Adams returns to Oldham saying League One spell made him a better coach"
+        "South Oldham girls soccer blanks Highlands, returns to KHSAA state final - The Courier-Journal",
+        "Mellon celebrates first away win as Oldham Athletic respond to red-card appeal blow"
        ]
       }
      }
@@ -1227,27 +1228,27 @@
      "LWDWW"
     ],
     "p": {
-     "h": 0.2293,
-     "d": 0.2451,
-     "a": 0.5256,
-     "o": 0.5674,
-     "b": 0.5775
+     "h": 0.2324,
+     "d": 0.2461,
+     "a": 0.5214,
+     "o": 0.5665,
+     "b": 0.5781
     },
     "xg": [
-     1.14,
-     1.84
+     1.15,
+     1.83
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.5255899719273618,
+     "x12p": 0.5214443995147612,
      "alt": "D",
-     "altp": 0.24509603118997952,
+     "altp": 0.2461111288537848,
      "dc": "X2",
-     "dcp": 0.7706860031173413,
+     "dcp": 0.767555528368546,
      "ou": "O",
-     "oup": 0.5674323678995575,
+     "oup": 0.566476965600283,
      "bt": "Y",
-     "btp": 0.5774800352285862
+     "btp": 0.5781372410051102
     },
     "pk0": {
      "x12": "A"
@@ -1255,9 +1256,10 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -8,
+       "adj": -4,
        "headlines": [
-        "SUFC News: United injury state of play v Preston after Phillips, Bamford updates"
+        "SUFC News: United injury state of play v Preston after Phillips, Bamford updates",
+        "Heat for Preston returns to help county residents with winter heating bills, hosts community dinners"
        ]
       },
       "a": {
@@ -1321,7 +1323,7 @@
        "adj": -16,
        "headlines": [
         "USC Fan Suffers Serious Injury During Field Storm After Lincoln Riley’s Upset Win Over Ohio State",
-        "USC’s Lincoln Riley gets revenge on doubters with massive top-5 win over Ohio State"
+        "USC’s Lincoln Riley takes different tack regarding blowup with Ohio State AD"
        ]
       }
      }
@@ -1448,7 +1450,7 @@
        "headlines": [
         "Augustus Kargbo: Blackburn Rovers forward nearing full return, says boss Tony Mowbray",
         "Stoke City blow with star man missing for Blackburn Rovers clash",
-        "Predicted Stoke City starting XI vs Blackburn Rovers as key man ruled out"
+        "Stoke City team news: Galbraith suspended for Blackburn trip as Robins waits on Gallagher return"
        ]
       },
       "a": {
@@ -1456,7 +1458,7 @@
        "headlines": [
         "Stoke City blow with star man missing for Blackburn Rovers clash",
         "Christmas shopping evening returns to Stoke Mandeville",
-        "Predicted Stoke City starting XI vs Blackburn Rovers as key man ruled out"
+        "Stoke City team news: Galbraith suspended for Blackburn trip as Robins waits on Gallagher return"
        ]
       }
      }
@@ -1719,27 +1721,27 @@
      "WLWWD"
     ],
     "p": {
-     "h": 0.3606,
+     "h": 0.357,
      "d": 0.2818,
-     "a": 0.3576,
+     "a": 0.3612,
      "o": 0.4797,
-     "b": 0.5375
+     "b": 0.5374
     },
     "xg": [
-     1.31,
+     1.3,
      1.31
     ],
     "pk": {
-     "x12": "H",
-     "x12p": 0.3606132220511078,
-     "alt": "A",
-     "altp": 0.35760049169189906,
+     "x12": "A",
+     "x12p": 0.3612442519675213,
+     "alt": "H",
+     "altp": 0.35697178447684613,
      "dc": "12",
-     "dcp": 0.7182137137430069,
+     "dcp": 0.7182160364443675,
      "ou": "U",
-     "oup": 0.5202668074974284,
+     "oup": 0.520264696096835,
      "bt": "Y",
-     "btp": 0.5374510359628066
+     "btp": 0.5374497066716513
     },
     "pk0": {
      "x12": "H"
@@ -1747,11 +1749,11 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -16,
+       "adj": -20,
        "headlines": [
         "Reading handed big boost amid three injury blows for Oxford United contest",
         "SEC Nation returns to Oxford for Ole Miss vs. Georgia",
-        "Victorian Christmas Market returning to Oxford with 50 stalls"
+        "Oxford United Team and Injury News for Visit of Reading"
        ]
       },
       "a": {
@@ -1777,27 +1779,27 @@
      "WLDWL"
     ],
     "p": {
-     "h": 0.5641,
-     "d": 0.2721,
-     "a": 0.1638,
-     "o": 0.3884,
-     "b": 0.4046
+     "h": 0.5534,
+     "d": 0.2762,
+     "a": 0.1704,
+     "o": 0.3843,
+     "b": 0.4065
     },
     "xg": [
-     1.56,
-     0.71
+     1.53,
+     0.72
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5640794482579087,
+     "x12p": 0.5533822139641928,
      "alt": "D",
-     "altp": 0.27210494813799685,
+     "altp": 0.27618782874459225,
      "dc": "1X",
-     "dcp": 0.8361843963959055,
+     "dcp": 0.8295700427087851,
      "ou": "U",
-     "oup": 0.6116059567241932,
+     "oup": 0.6156694589389669,
      "bt": "N",
-     "btp": 0.595438699196181
+     "btp": 0.593455118485041
     },
     "pk0": {
      "x12": "H"
@@ -1805,19 +1807,19 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -8,
+       "adj": -20,
        "headlines": [
+        "Napoli lose two more, with two doubts for Porto visit",
         "Vergara, familiar Champions League returns: against Porto a new chance to convince Allegri",
-        "Banrisul stock returns as shirt sponsor for Porto Alegre rivals - ad-hoc-news.de",
-        "Zaidu declared fit for FC Porto's crucial UCL clash against Napoli after injury scare"
+        "Porto host Napoli amid visitors' squad crisis"
        ]
       },
       "a": {
        "adj": -16,
        "headlines": [
+        "Lazio Receive Triple Injury Boost Ahead of Napoli Clash",
         "Ekhator returns to Juventus squad for Napoli clash",
-        "Injury concerns after McKennie, De Bruyne and Di Lorenzo substitutions in Juventus 2-0 Napoli",
-        "Napoli face an injury crisis! Di Lorenzo and Olivera sidelined too as Allegri considers youth players"
+        "Napoli star Scott McTominay returns to Scotland squad for do-or-die Nations League deciders"
        ]
       }
      }
@@ -1880,8 +1882,8 @@
    }
   ],
   "summary": {
-   "expectedCorrect": 5.9,
-   "pAllCorrect": 0.000029704567571509037,
+   "expectedCorrect": 5.86,
+   "pAllCorrect": 0.000027634097896414167,
    "unknownTeams": 1
   }
  }
