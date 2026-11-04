@@ -2,6 +2,7 @@
 // slips 1-4 use every match's 1st, 2nd, 3rd and 4th most probable outcome; slip 5 mixes ranks across matches.
 // Entertainment tier: tiny stakes only. The honest whole-slip chance and expected result are always stored beside the payout.
 import { legsFor, dayKey, settleAcca } from './accas.mjs';
+import { isTrusted } from './sure.mjs';
 
 export const MIN_MATCH_P = 0.60, MAX_LEGS = 24, MIN_LEGS = 4, MIN_GAMES = 20, LEAD_MS = 45 * 60e3;
 const YOUTH = /\b(U-?(1[5-9]|2[0-3])|youth|reserves?)\b|[ ](II|III)$/i; // squads rotate, little reliable history
@@ -13,9 +14,8 @@ export function dayMatches(preds, day, now, cal = null) {
   for (const p of preds) {
     if (p.status !== 'pending' || !p.pk) continue;
     if (dayKey(p.kickoff) !== day || Date.parse(p.kickoff) < now.getTime() + LEAD_MS) continue;
-    if (p.listed === false || (p.games != null && p.games < MIN_GAMES)) continue;
-    if (YOUTH.test(p.home) || YOUTH.test(p.away)) continue;
-    const legs = legsFor(p, cal).sort((a, b) => b.p - a.p);
+    if (p.listed === false || !isTrusted(p)) continue;
+    const legs = legsFor(p, cal, { sure: true }).sort((a, b) => b.p - a.p);
     if (legs.length && legs[0].p >= MIN_MATCH_P) out.push({ p, legs });
   }
   return out.sort((a, b) => b.legs[0].p - a.legs[0].p).slice(0, MAX_LEGS);

@@ -1,3 +1,4 @@
+import { isTrusted, marketCapped } from './sure.mjs';
 // Accumulator builder: daily / weekend slips made of the model's safest selections. Probabilities are the model's own estimates and
 // legs from different matches are treated as independent, so the combined probability is an estimate, not a guarantee.
 // Slips freeze once any match kicks off and are then settled from real scores.
@@ -29,7 +30,7 @@ export function legWins(mkt, sel, hg, ag) {
   return sel === (hg > 0 && ag > 0 ? 'Y' : 'N');
 }
 /** Candidate selections for one prediction. Bookmaker odds are used where the agent has them (1X2 and double chance). */
-export function legsFor(p, cal = null) {
+export function legsFor(p, cal = null, { sure = false } = {}) {
   const k = p.pk; if (!k) return [];
   const o = p.ctx?.odds, book = Array.isArray(o) && o.length === 3 && o.every((x) => +x > 1) ? o.map(Number) : null;
   const priced = (q) => Math.max(1.01, r2(MARGIN / q));
@@ -40,7 +41,8 @@ export function legsFor(p, cal = null) {
     { mkt: 'ou', sel: k.ou, p: k.oup, odds: priced(k.oup), src: 'model' },
     { mkt: 'bt', sel: k.bt, p: k.btp, odds: priced(k.btp), src: 'model' },
   ];
-  return legs.filter((l) => l.p > 0 && l.odds >= 1.05).map((l) => ({ ...l, ...(cal ? { praw: l.p, p: calibrate(cal, l.mkt, l.p) } : {}), label: legLabel(l.mkt, l.sel, p.home, p.away) }));
+  const out = legs.filter((l) => l.p > 0 && l.odds >= 1.05).map((l) => ({ ...l, ...(cal ? { praw: l.p, p: calibrate(cal, l.mkt, l.p) } : {}), label: legLabel(l.mkt, l.sel, p.home, p.away) }));
+  return sure ? out.map((l) => marketCapped(p, l)) : out; // sure: never claim more than the bookmaker does
 }
 /** Highest-probability slip (one selection per match) whose combined odds fall in [lo, hi] with minN..maxN legs. */
 export function bestInBand(cands, { lo, hi, minN = 2, maxN = 8 }) {
@@ -75,7 +77,7 @@ export function windows(now) {
 }
 const gradeOf = (legs, prob = 0) => { const m = Math.min(...legs.map((l) => l.p)); return prob >= 0.5 && m >= 0.75 ? 'banker' : prob >= 0.3 && m >= 0.65 ? 'solid' : 'risky'; };
 export function buildWindow(w, pool, now = new Date(), cal = null, exclude = new Set()) {
-  const cands = pool.map((p) => ({ p, legs: legsFor(p, cal).filter((l) => l.p >= LEG_FLOOR) })).filter((c) => c.legs.length)
+  const cands = pool.map((p) => ({ p, legs: legsFor(p, cal, { sure: true }).filter((l) => l.p >= LEG_FLOOR) })).filter((c) => c.legs.length)
     .sort((a, b) => Math.max(...b.legs.map((l) => l.p)) - Math.max(...a.legs.map((l) => l.p))).slice(0, 40);
   if (cands.length < 2) return [];
   const out = new Map();
@@ -133,7 +135,7 @@ export function updateAccas(prev, preds, now = new Date(), { cal = null } = {}) 
   for (const a of items.values()) if (a.status === 'pending' && a.legs.some((l) => new Date(l.kickoff) <= now)) for (const l of a.legs) taken.add(l.pid);
   for (const w of [...windows(now)].sort((x, y) => (x.kind === 'daily' ? 0 : 1) - (y.kind === 'daily' ? 0 : 1))) {
     rebuilt.add(w.id);
-    const pool = pending.filter((p) => w.days.includes(dayKey(p.kickoff)));
+    const pool = pending.filter((p) => w.days.includes(dayKey(p.kickoff)) && isTrusted(p));
     for (const a of buildWindow(w, pool, now, cal, taken)) {
       built.add(a.id);
       for (const l of a.legs) taken.add(l.pid);
