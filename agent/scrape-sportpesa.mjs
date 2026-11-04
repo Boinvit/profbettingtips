@@ -38,6 +38,11 @@ async function grab(name, url) {
     try { // best effort: record the page's tabs, then click day filters (Tomorrow, weekdays) so later days load into the captured JSON
       ui = await page.evaluate(() => [...new Set([...document.querySelectorAll('button,a,[role=tab],li,span')].map((e) => (e.innerText || '').trim().replace(/\s+/g, ' ')).filter((t) => t && t.length < 22))].slice(0, 90));
       try { await page.getByText(/^accept$/i).first().click({ timeout: 2000 }); await page.waitForTimeout(600); clicked.push('cookies accepted'); } catch {} // the cookie banner can swallow clicks
+      try { // the visible click failed (element hidden): click through the page script instead, then scroll to load the list
+        const n = await page.evaluate(() => { const els = [...document.querySelectorAll('button,a,li,span,div,[role=tab]')].filter((e) => e.children.length === 0 && /^upcoming$/i.test((e.textContent || '').trim())); els.forEach((e) => e.click()); return els.length; });
+        clicked.push('js-click upcoming x' + n); await page.waitForTimeout(1500);
+        for (let i = 0; i < 6; i++) { await page.mouse.wheel(0, 2500); await page.waitForTimeout(700); }
+      } catch (e) { clicked.push('ERR js ' + String(e.message).slice(0, 80)); }
       for (const re of [/^upcoming$/i, /^tomorrow$/i, /^next 24 hours$/i, /^(mon|tue|wed|thu|fri|sat|sun)[a-z]*[ ,]*[0-9]{0,2}$/i]) {
         let els = []; try { els = await page.getByText(re).all(); } catch {}
         clicked.push(String(re).slice(0, 18) + ' x' + els.length);
@@ -59,7 +64,7 @@ async function grab(name, url) {
   fs.writeFileSync(path.join(DEBUG, `sportpesa-${name.replace(/\W+/g, '_')}.json`), JSON.stringify({ url, status, seenUrls, textHead: text.slice(0, 3000), found: found.matches.slice(0, 40) }, null, 1));
   await page.close();
   console.log(`${name}: ${status}, ${found.matches.length} matches via ${found.source || 'n/a'}`);
-  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length, ui, clicked, apis: seenUrls.filter((u) => !u.url.includes('/i18n/')).slice(0, 14).map((u) => u.bytes + ' ' + u.url.slice(0, 150)) };
+  return { status, ...found, head: text.replace(/\s+/g, ' ').slice(0, 400), seen: seenUrls.length, ui, clicked, apis: [...seenUrls.filter((u) => /game|event|match|upcoming|fixture|sport/i.test(u.url) && !u.url.includes('/i18n/')), ...seenUrls.filter((u) => !u.url.includes('/i18n/'))].slice(0, 16).map((u) => u.bytes + ' ' + u.url.slice(0, 150)) };
 }
 
 const result = { scrapedAt: new Date().toISOString(), matches: [], jackpots: [], diagnostics: [] };
