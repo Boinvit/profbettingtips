@@ -37,14 +37,16 @@ async function grab(name, url) {
     text = await page.evaluate(() => document.body.innerText);
     try { // best effort: record the page's tabs, then click day filters (Tomorrow, weekdays) so later days load into the captured JSON
       ui = await page.evaluate(() => [...new Set([...document.querySelectorAll('button,a,[role=tab],li,span')].map((e) => (e.innerText || '').trim().replace(/\s+/g, ' ')).filter((t) => t && t.length < 22))].slice(0, 90));
+      try { await page.getByText(/^accept$/i).first().click({ timeout: 2000 }); await page.waitForTimeout(600); clicked.push('cookies accepted'); } catch {} // the cookie banner can swallow clicks
       for (const re of [/^upcoming$/i, /^tomorrow$/i, /^next 24 hours$/i, /^(mon|tue|wed|thu|fri|sat|sun)[a-z]*[ ,]*[0-9]{0,2}$/i]) {
         let els = []; try { els = await page.getByText(re).all(); } catch {}
+        clicked.push(String(re).slice(0, 18) + ' x' + els.length);
         for (const el of els.slice(0, 8)) {
           try {
             const label = (await el.innerText({ timeout: 800 })).trim().slice(0, 20);
-            await el.click({ timeout: 1500 }); clicked.push(label); await page.waitForTimeout(900);
+            await el.click({ timeout: 2500, force: true }); clicked.push(label); await page.waitForTimeout(900);
             for (let i = 0; i < 4; i++) { await page.mouse.wheel(0, 2500); await page.waitForTimeout(600); }
-          } catch {}
+          } catch (e) { clicked.push('ERR ' + String(e.message).split(String.fromCharCode(10))[0].slice(0, 90)); }
         }
       }
       const after = await page.evaluate(() => [...new Set([...document.querySelectorAll('button,a,[role=tab],li,span')].map((e) => (e.innerText || '').trim().replace(/\s+/g, ' ')).filter((t) => t && t.length < 22))].slice(0, 120));
