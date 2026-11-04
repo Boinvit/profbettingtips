@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T10:19:56.279Z",
+ "updated": "2026-11-04T10:52:14.343Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "51 results, 97 fixtures"
+   "detail": "52 results, 97 fixtures"
   },
   {
    "source": "API-Football",
@@ -39,12 +39,12 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T10:19:02.316Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T10:51:22.742Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "117 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [

@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-04T10:19:02.316Z",
+ "scrapedAt": "2026-11-04T10:51:22.742Z",
  "matches": [
   {
    "home": "AEK Athens",
@@ -309,7 +309,7 @@
    "status": "ok",
    "found": 2,
    "seen": 16,
-   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 13:19:24 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
+   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 13:51:43 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
   },
   {
    "page": "Football",
@@ -420,22 +420,22 @@
     "Brazil ›"
    ],
    "apis": [
+    "12126 https://www.ke.sportpesa.com/api/banners/top",
     "970 https://www.ke.sportpesa.com/api/jackpots/multi",
-    "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
+    "408 https://www.ke.sportpesa.com/api/banners/central",
     "28 https://www.ke.sportpesa.com/api/feature_flags",
     "20764 https://www.ke.sportpesa.com/api/highlights/1",
-    "12126 https://www.ke.sportpesa.com/api/banners/top",
-    "408 https://www.ke.sportpesa.com/api/banners/central",
-    "89 https://www.ke.sportpesa.com/api/top/teams",
+    "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
     "2 https://www.ke.sportpesa.com/api/live/score",
+    "89 https://www.ke.sportpesa.com/api/top/teams",
     "61556 https://www.ke.sportpesa.com/api/games/markets?games=9395735,9398259,9398263,9398261,9398267,9398247,9398255,9395745,9398265,9402047,9426389,9426267,9",
     "408 https://www.ke.sportpesa.com/api/banners/central",
-    "10978 https://www.ke.sportpesa.com/api/upcoming/games?type=prematch&sportId=1&section=upcoming&markets_layout=multiple&o=leagues&pag_count=15&pag_min=1",
-    "2 https://www.ke.sportpesa.com/api/live/score",
-    "12925 https://www.ke.sportpesa.com/api/games/markets?games=9426267,9426389,9426383,9426301,9450089,9451579,9451943,9448687,9449805,9451227,9451259,9395735,9",
     "89 https://www.ke.sportpesa.com/api/top/teams",
+    "12674 https://www.ke.sportpesa.com/api/games/markets?games=9426267,9426389,9426383,9426301,9450089,9451943,9448687,9449805,9451227,9451259,9395735,9398261,9",
+    "2 https://www.ke.sportpesa.com/api/live/score",
     "408 https://www.ke.sportpesa.com/api/banners/central",
-    "89 https://www.ke.sportpesa.com/api/top/teams"
+    "89 https://www.ke.sportpesa.com/api/top/teams",
+    "2 https://www.ke.sportpesa.com/api/live/score"
    ]
   }
  ]
