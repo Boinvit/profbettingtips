@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T04:44:02.427Z",
+ "updated": "2026-11-04T05:14:01.863Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -39,7 +39,7 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T04:43:30.969Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T05:13:08.691Z"
   },
   {
    "source": "Google News RSS",
@@ -51,7 +51,6 @@
   "AEK Athens vs Real Madrid",
   "Slavia Prague vs Arsenal",
   "Viking vs Sabah",
-  "FC Osaka vs Roasso Kumamoto",
   "Melbourne Victory vs Persib Bandung",
   "FC Seoul vs CLB Viettel",
   "AEK Athens U19 vs Real Madrid Youth",
@@ -84,7 +83,8 @@
   "SK Rapid Wien vs St.polten-Spratzern W",
   "CA San Carlos vs CA Boston River",
   "Al Masry Club vs Petrojet FC",
-  "Al Muharraq SC vs Jazira Abu Dhabi"
+  "Al Muharraq SC vs Jazira Abu Dhabi",
+  "Al Taawon vs Faisaly Amman"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

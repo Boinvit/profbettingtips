@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-04T04:43:30.969Z",
+ "scrapedAt": "2026-11-04T05:13:08.691Z",
  "matches": [
   {
    "home": "AEK Athens",
@@ -90,12 +90,6 @@
    "away": "Mechelen",
    "kickoff": "2026-11-04T19:30:00.000Z",
    "league": "First Division A"
-  },
-  {
-   "home": "FC Osaka",
-   "away": "Roasso Kumamoto",
-   "kickoff": "2026-11-04T05:00:00.000Z",
-   "league": "J.League 3"
   },
   {
    "home": "Melbourne Victory",
@@ -300,6 +294,12 @@
    "away": "Jazira Abu Dhabi",
    "kickoff": "2026-11-04T18:15:00.000Z",
    "league": "AFC Cup"
+  },
+  {
+   "home": "Al Taawon",
+   "away": "Faisaly Amman",
+   "kickoff": "2026-11-04T18:15:00.000Z",
+   "league": "AFC Cup"
   }
  ],
  "jackpots": [],
@@ -309,7 +309,7 @@
    "status": "ok",
    "found": 2,
    "seen": 16,
-   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 07:43:49 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
+   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 08:13:30 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
   },
   {
    "page": "Football",
@@ -319,15 +319,16 @@
     "2026-11-04": 50
    },
    "clicked": [
+    "js-click upcoming x1",
     "/^upcoming$/i x1",
     "ERR locator.click: Element is not visible",
     "/^tomorrow$/i x0",
     "/^next 24 hours$/i x0",
     "/^(mon|tue|wed|thu x4",
-    "ERR locator.click: Element is not visible",
-    "ERR locator.click: Element is not visible",
-    "ERR locator.click: Element is not visible",
-    "ERR locator.click: Element is not visible"
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
    ],
    "ui": [
     "Cookies Policy",
@@ -418,18 +419,22 @@
     "Bosnia & Herzegovina"
    ],
    "apis": [
-    "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
     "970 https://www.ke.sportpesa.com/api/jackpots/multi",
     "12126 https://www.ke.sportpesa.com/api/banners/top",
-    "101 https://ucd-web.api.useinsider.com/v1/get",
-    "733 https://aryuder.api.useinsider.com/v3/status",
+    "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
     "408 https://www.ke.sportpesa.com/api/banners/central",
     "28 https://www.ke.sportpesa.com/api/feature_flags",
-    "20802 https://www.ke.sportpesa.com/api/highlights/1",
+    "20812 https://www.ke.sportpesa.com/api/highlights/1",
     "2 https://www.ke.sportpesa.com/api/live/score",
     "89 https://www.ke.sportpesa.com/api/top/teams",
     "61558 https://www.ke.sportpesa.com/api/games/markets?games=9395735,9398259,9398263,9398261,9398267,9398247,9398255,9395745,9398265,9402047,9426389,9426267,9",
-    "733 https://aryuder.api.useinsider.com/v3/status"
+    "408 https://www.ke.sportpesa.com/api/banners/central",
+    "89 https://www.ke.sportpesa.com/api/top/teams",
+    "2 https://www.ke.sportpesa.com/api/live/score",
+    "12994 https://www.ke.sportpesa.com/api/games/markets?games=9426267,9426389,9426383,9426301,9450089,9451587,9451579,9451943,9448687,9449805,9451227,9395735,9",
+    "11024 https://www.ke.sportpesa.com/api/upcoming/games?type=prematch&sportId=1&section=upcoming&markets_layout=multiple&o=leagues&pag_count=15&pag_min=1&from",
+    "408 https://www.ke.sportpesa.com/api/banners/central",
+    "441 https://www.ke.sportpesa.com/api/top/teams"
    ]
   }
  ]
