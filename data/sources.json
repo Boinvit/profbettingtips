@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T05:14:01.863Z",
+ "updated": "2026-11-04T10:19:56.279Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "52 results, 97 fixtures"
+   "detail": "51 results, 97 fixtures"
   },
   {
    "source": "API-Football",
@@ -39,22 +39,18 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T05:13:08.691Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T10:19:02.316Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "117 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
   "AEK Athens vs Real Madrid",
   "Slavia Prague vs Arsenal",
   "Viking vs Sabah",
-  "Melbourne Victory vs Persib Bandung",
-  "FC Seoul vs CLB Viettel",
-  "AEK Athens U19 vs Real Madrid Youth",
-  "Pohang Steelers vs Gamba Osaka",
   "Mladost Lucani vs FK IMT Youth",
   "KF Drita vs FC Prishtina",
   "Cukaricki Youth vs Partizan Belgrad Youth",
@@ -84,7 +80,9 @@
   "CA San Carlos vs CA Boston River",
   "Al Masry Club vs Petrojet FC",
   "Al Muharraq SC vs Jazira Abu Dhabi",
-  "Al Taawon vs Faisaly Amman"
+  "Al Taawon vs Faisaly Amman",
+  "Francs Borains vs FCV Dender EH",
+  "MC Alger vs MC Oran"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

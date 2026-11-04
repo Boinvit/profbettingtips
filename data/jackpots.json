@@ -1094,27 +1094,27 @@
      "DWLDL"
     ],
     "p": {
-     "h": 0.3248,
-     "d": 0.2788,
-     "a": 0.3964,
-     "o": 0.4878,
-     "b": 0.5421
+     "h": 0.3178,
+     "d": 0.2783,
+     "a": 0.404,
+     "o": 0.4883,
+     "b": 0.5417
     },
     "xg": [
-     1.25,
-     1.4
+     1.23,
+     1.42
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.39640337143821575,
+     "x12p": 0.40399225023135765,
      "alt": "H",
-     "altp": 0.3247615265369021,
+     "altp": 0.31775209912046665,
      "dc": "12",
-     "dcp": 0.7211648979751178,
+     "dcp": 0.7217443493518243,
      "ou": "U",
-     "oup": 0.5122397697403731,
+     "oup": 0.511711083943009,
      "bt": "Y",
-     "btp": 0.5420769495965437
+     "btp": 0.541741328788073
     },
     "pk0": {
      "x12": "A"
@@ -1122,8 +1122,9 @@
     "meta": {
      "news": {
       "h": {
-       "adj": 8,
+       "adj": 0,
        "headlines": [
+        "Mitchell injury blow adds to England’s woes as Northampton sink Gloucester",
         "Sip, Bid & Boogie returns to Northampton to support people with disabilities",
         "IN PICTURES: Northampton town centre comes alive with colour as spectacular Diwali Festival of Lights returns"
        ]
@@ -1131,8 +1132,8 @@
       "a": {
        "adj": -12,
        "headlines": [
-        "Oldham Athletic Duo To Miss Sheffield Wednesday Clash",
         "South Oldham girls soccer blanks Highlands, returns to KHSAA state final - The Courier-Journal",
+        "Oldham Athletic Duo To Miss Sheffield Wednesday Clash",
         "Mellon celebrates first away win as Oldham Athletic respond to red-card appeal blow"
        ]
       }
@@ -1228,27 +1229,27 @@
      "LWDWW"
     ],
     "p": {
-     "h": 0.2324,
-     "d": 0.2461,
-     "a": 0.5214,
-     "o": 0.5665,
-     "b": 0.5781
+     "h": 0.2262,
+     "d": 0.2441,
+     "a": 0.5297,
+     "o": 0.5684,
+     "b": 0.5768
     },
     "xg": [
-     1.15,
-     1.83
+     1.13,
+     1.85
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.5214443995147612,
+     "x12p": 0.5297352108835034,
      "alt": "D",
-     "altp": 0.2461111288537848,
+     "altp": 0.24405841065244882,
      "dc": "X2",
-     "dcp": 0.767555528368546,
+     "dcp": 0.7737936215359522,
      "ou": "O",
-     "oup": 0.566476965600283,
+     "oup": 0.5684116999244367,
      "bt": "Y",
-     "btp": 0.5781372410051102
+     "btp": 0.5768067940250097
     },
     "pk0": {
      "x12": "A"
@@ -1256,9 +1257,10 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -4,
+       "adj": -12,
        "headlines": [
         "SUFC News: United injury state of play v Preston after Phillips, Bamford updates",
+        "Pedestrian seriously injured in Preston collision as police appeal for witnesses",
         "Heat for Preston returns to help county residents with winter heating bills, hosts community dinners"
        ]
       },
@@ -1285,27 +1287,27 @@
      "LLDWL"
     ],
     "p": {
-     "h": 0.2141,
-     "d": 0.2235,
-     "a": 0.5624,
-     "o": 0.6451,
-     "b": 0.6283
+     "h": 0.2205,
+     "d": 0.2258,
+     "a": 0.5537,
+     "o": 0.643,
+     "b": 0.6299
     },
     "xg": [
-     1.24,
-     2.11
+     1.25,
+     2.09
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.562422674096062,
+     "x12p": 0.5537290939627866,
      "alt": "D",
-     "altp": 0.22352268954906265,
+     "altp": 0.22581715406146183,
      "dc": "X2",
-     "dcp": 0.7859453636451246,
+     "dcp": 0.7795462480242484,
      "ou": "O",
-     "oup": 0.6450885797549011,
+     "oup": 0.6430199264771921,
      "bt": "Y",
-     "btp": 0.6282917081125116
+     "btp": 0.6299067909433592
     },
     "pk0": {
      "x12": "A"
@@ -1320,10 +1322,11 @@
        ]
       },
       "a": {
-       "adj": -16,
+       "adj": -24,
        "headlines": [
-        "USC Fan Suffers Serious Injury During Field Storm After Lincoln Riley’s Upset Win Over Ohio State",
-        "USC’s Lincoln Riley takes different tack regarding blowup with Ohio State AD"
+        "Lincoln City Injury Latest: Double Boost Ahead of QPR Clash",
+        "USC’s Lincoln Riley takes different tack regarding blowup with Ohio State AD",
+        "USC Fan Suffers Serious Injury During Field Storm After Lincoln Riley’s Upset Win Over Ohio State"
        ]
       }
      }
@@ -1450,14 +1453,14 @@
        "headlines": [
         "Augustus Kargbo: Blackburn Rovers forward nearing full return, says boss Tony Mowbray",
         "Stoke City blow with star man missing for Blackburn Rovers clash",
-        "Stoke City team news: Galbraith suspended for Blackburn trip as Robins waits on Gallagher return"
+        "'Ryan gets injured in every game' - Blackburn coach gives worrying update on Super Eagles RB"
        ]
       },
       "a": {
        "adj": -20,
        "headlines": [
-        "Stoke City blow with star man missing for Blackburn Rovers clash",
         "Christmas shopping evening returns to Stoke Mandeville",
+        "Stoke City blow with star man missing for Blackburn Rovers clash",
         "Stoke City team news: Galbraith suspended for Blackburn trip as Robins waits on Gallagher return"
        ]
       }
@@ -1779,27 +1782,27 @@
      "WLDWL"
     ],
     "p": {
-     "h": 0.5534,
-     "d": 0.2762,
-     "a": 0.1704,
-     "o": 0.3843,
-     "b": 0.4065
+     "h": 0.5569,
+     "d": 0.2748,
+     "a": 0.1682,
+     "o": 0.3857,
+     "b": 0.4059
     },
     "xg": [
-     1.53,
-     0.72
+     1.54,
+     0.71
     ],
     "pk": {
      "x12": "H",
-     "x12p": 0.5533822139641928,
+     "x12p": 0.5569495974244619,
      "alt": "D",
-     "altp": 0.27618782874459225,
+     "altp": 0.2748428843159179,
      "dc": "1X",
-     "dcp": 0.8295700427087851,
+     "dcp": 0.8317924817403799,
      "ou": "U",
-     "oup": 0.6156694589389669,
+     "oup": 0.6143368214928027,
      "bt": "N",
-     "btp": 0.593455118485041
+     "btp": 0.5941070147180016
     },
     "pk0": {
      "x12": "H"
@@ -1807,11 +1810,10 @@
     "meta": {
      "news": {
       "h": {
-       "adj": -20,
+       "adj": -16,
        "headlines": [
-        "Napoli lose two more, with two doubts for Porto visit",
-        "Vergara, familiar Champions League returns: against Porto a new chance to convince Allegri",
-        "Porto host Napoli amid visitors' squad crisis"
+        "Zaidu declared fit for FC Porto's crucial UCL clash against Napoli after injury scare",
+        "Injury crisis hits Napoli ahead of Porto clash"
        ]
       },
       "a": {
@@ -1839,27 +1841,27 @@
      "DWWWW"
     ],
     "p": {
-     "h": 0.3643,
-     "d": 0.2641,
-     "a": 0.3716,
-     "o": 0.5566,
+     "h": 0.3604,
+     "d": 0.264,
+     "a": 0.3755,
+     "o": 0.5567,
      "b": 0.597
     },
     "xg": [
-     1.46,
-     1.48
+     1.45,
+     1.49
     ],
     "pk": {
      "x12": "A",
-     "x12p": 0.3716181300968564,
+     "x12p": 0.37552895732681846,
      "alt": "H",
-     "altp": 0.3643058387292411,
+     "altp": 0.360435742872028,
      "dc": "12",
-     "dcp": 0.7359239688260975,
+     "dcp": 0.7359647001988465,
      "ou": "O",
-     "oup": 0.5566214970761321,
+     "oup": 0.5566576720062789,
      "bt": "Y",
-     "btp": 0.597004600498373
+     "btp": 0.5969790645237887
     },
     "pk0": {
      "x12": "A"
@@ -1871,8 +1873,9 @@
        "headlines": []
       },
       "a": {
-       "adj": -4,
+       "adj": 0,
        "headlines": [
+        "Inter Predicted Lineup vs Como: Bastoni Returns, 3-5-2",
         "Como edge struggling Venezia to return to Serie A top four",
         "Como: big blow for Moise Kean"
        ]
@@ -1882,8 +1885,8 @@
    }
   ],
   "summary": {
-   "expectedCorrect": 5.86,
-   "pAllCorrect": 0.000027634097896414167,
+   "expectedCorrect": 5.88,
+   "pAllCorrect": 0.000028648611449452662,
    "unknownTeams": 1
   }
  }
