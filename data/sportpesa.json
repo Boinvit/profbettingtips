@@ -1,5 +1,5 @@
 {
- "scrapedAt": "2026-11-04T04:35:52.617Z",
+ "scrapedAt": "2026-11-04T04:43:30.969Z",
  "matches": [
   {
    "home": "AEK Athens",
@@ -309,7 +309,7 @@
    "status": "ok",
    "found": 2,
    "seen": 16,
-   "head": "To give you the best experience possible, this website uses cookies. By viewing our content, you are accepting the use of cookies. If you want to learn more about the cookies that we use, view our Cookies Policy. Accept SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots"
+   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 07:43:49 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
   },
   {
    "page": "Football",
@@ -318,7 +318,17 @@
    "days": {
     "2026-11-04": 50
    },
-   "clicked": [],
+   "clicked": [
+    "/^upcoming$/i x1",
+    "ERR locator.click: Element is not visible",
+    "/^tomorrow$/i x0",
+    "/^next 24 hours$/i x0",
+    "/^(mon|tue|wed|thu x4",
+    "ERR locator.click: Element is not visible",
+    "ERR locator.click: Element is not visible",
+    "ERR locator.click: Element is not visible",
+    "ERR locator.click: Element is not visible"
+   ],
    "ui": [
     "Cookies Policy",
     "Accept",
@@ -411,13 +421,13 @@
     "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
     "970 https://www.ke.sportpesa.com/api/jackpots/multi",
     "12126 https://www.ke.sportpesa.com/api/banners/top",
-    "408 https://www.ke.sportpesa.com/api/banners/central",
-    "20802 https://www.ke.sportpesa.com/api/highlights/1",
-    "74 https://ucd-web.api.useinsider.com/v1/get",
+    "101 https://ucd-web.api.useinsider.com/v1/get",
     "733 https://aryuder.api.useinsider.com/v3/status",
+    "408 https://www.ke.sportpesa.com/api/banners/central",
+    "28 https://www.ke.sportpesa.com/api/feature_flags",
+    "20802 https://www.ke.sportpesa.com/api/highlights/1",
     "2 https://www.ke.sportpesa.com/api/live/score",
     "89 https://www.ke.sportpesa.com/api/top/teams",
-    "28 https://www.ke.sportpesa.com/api/feature_flags",
     "61558 https://www.ke.sportpesa.com/api/games/markets?games=9395735,9398259,9398263,9398261,9398267,9398247,9398255,9395745,9398265,9402047,9426389,9426267,9",
     "733 https://aryuder.api.useinsider.com/v3/status"
    ]
