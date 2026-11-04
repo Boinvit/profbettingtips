@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T10:52:14.343Z",
+ "updated": "2026-11-04T19:43:46.999Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "52 results, 97 fixtures"
+   "detail": "54 results, 95 fixtures"
   },
   {
    "source": "API-Football",
@@ -24,12 +24,12 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 45 fixtures next 14d"
+   "detail": "264 results, 44 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
+   "detail": "14 events fetched, 11 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,50 +39,43 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T10:51:22.742Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T19:42:54.853Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "171 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "AEK Athens vs Real Madrid",
   "Slavia Prague vs Arsenal",
   "Viking vs Sabah",
-  "Mladost Lucani vs FK IMT Youth",
-  "KF Drita vs FC Prishtina",
-  "Cukaricki Youth vs Partizan Belgrad Youth",
-  "Persik Kediri vs Persis Solo",
-  "Porto U19 vs SSC Napoli U20",
-  "Buriram Utd vs Kashima Antlers",
-  "OFK Belgrade vs TSC Backa Topola",
-  "PSV Youth vs Club Brugge Youth",
-  "Defensor Sporting vs Torque",
-  "Zanaco vs FC Muza",
-  "Red Arrows vs Nkwazi",
-  "Arkadag FK vs GOL Gohar",
-  "East Bengal FC vs Hwacheon Kspo W",
-  "UD Leiria U23 vs Estoril Praia U23",
-  "ZED vs Talaea El Gaish",
-  "Ghazl El Mahallah vs El Ittihad Alexandria",
-  "AL Wahda Scc (UAE) vs AL Khalidiyah",
-  "Rayyan SC vs Al Nahda (Oman)",
-  "Al Kuwait SC vs Nasaf Qarshi",
-  "Doxa Katokopia vs Olympiakos Nicosia FC",
-  "Dukla Banska Bystrica vs AS Trencin",
-  "Etihad AL Gharafa vs Umm Salal SC",
-  "FC Penafiel U23 vs FC Famalicao U23",
-  "SK Artis Brno vs Bohemians",
-  "Flora Tallinn vs JK Welco Elekter",
-  "SK Rapid Wien vs St.polten-Spratzern W",
-  "CA San Carlos vs CA Boston River",
-  "Al Masry Club vs Petrojet FC",
-  "Al Muharraq SC vs Jazira Abu Dhabi",
-  "Al Taawon vs Faisaly Amman",
-  "Francs Borains vs FCV Dender EH",
-  "MC Alger vs MC Oran"
+  "FAR Rabat vs Raja Casablanca",
+  "Olancho FC vs Lobos Upnfm",
+  "AC Milan vs Ferencvaros TC",
+  "Sparta Prague vs Bournemouth",
+  "Sunderland vs Dinamo Zagreb",
+  "Atalanta vs Kairat Almaty",
+  "FC Copenhagen vs Saburtalo Tbilisi",
+  "Celta Vigo vs Union Saint Gilloise",
+  "Hapoel Beer Sheva vs OFI Crete",
+  "AGF Aarhus vs Sporting Braga",
+  "Panathinaikos vs CSKA Sofia",
+  "Portuguesa FC vs Deportivo La Guaira",
+  "Sportivo Ameliano vs Club Guarani",
+  "Union La Calera vs Coquimbo",
+  "Libertad Asuncion vs Cerro Porteno",
+  "Nacional Potosi vs Oriente Petrolero",
+  "Flamengo vs Gremio",
+  "Atletico Pr vs Vasco da Gama",
+  "Venados vs Atletico Morelia",
+  "CD Estrella Roja vs CD Motagua",
+  "Cucuta Deportivo vs Independiente Santa Fe",
+  "Metropolitanos vs Carabobo FC",
+  "FC Puntarenas vs AD San Carlos",
+  "LDU Quito vs Univ Catolica",
+  "Ferro Carril FC vs Nacional (URU)",
+  "Olimpia Asuncion vs CD Recoleta"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",

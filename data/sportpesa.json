@@ -1,12 +1,6 @@
 {
- "scrapedAt": "2026-11-04T10:51:22.742Z",
+ "scrapedAt": "2026-11-04T19:42:54.853Z",
  "matches": [
-  {
-   "home": "AEK Athens",
-   "away": "Real Madrid",
-   "kickoff": "2026-11-04T17:45:00.000Z",
-   "league": "UEFA Champions League"
-  },
   {
    "home": "Slavia Prague",
    "away": "Arsenal",
@@ -17,12 +11,6 @@
    "home": "RB Leipzig",
    "away": "Manchester City",
    "kickoff": "2026-11-04T20:00:00.000Z",
-   "league": "UEFA Champions League"
-  },
-  {
-   "home": "Fenerbahce",
-   "away": "Liverpool",
-   "kickoff": "2026-11-04T17:45:00.000Z",
    "league": "UEFA Champions League"
   },
   {
@@ -56,12 +44,6 @@
    "league": "UEFA Champions League"
   },
   {
-   "home": "Rennes",
-   "away": "Olympiakos",
-   "kickoff": "2026-11-04T15:30:00.000Z",
-   "league": "UEFA Europa League"
-  },
-  {
    "home": "Wrexham",
    "away": "Middlesbrough",
    "kickoff": "2026-11-04T19:45:00.000Z",
@@ -86,220 +68,238 @@
    "league": "League One"
   },
   {
-   "home": "Kortrijk",
-   "away": "Mechelen",
-   "kickoff": "2026-11-04T19:30:00.000Z",
-   "league": "First Division A"
-  },
-  {
-   "home": "Fenerbahce U19",
-   "away": "Liverpool Youth",
-   "kickoff": "2026-11-04T11:00:00.000Z",
-   "league": "UEFA Youth League"
-  },
-  {
-   "home": "Mladost Lucani",
-   "away": "FK IMT Youth",
-   "kickoff": "2026-11-04T12:00:00.000Z",
-   "league": "U19 League"
-  },
-  {
-   "home": "KF Drita",
-   "away": "FC Prishtina",
-   "kickoff": "2026-11-04T12:00:00.000Z",
-   "league": "Superliga"
-  },
-  {
-   "home": "Cukaricki Youth",
-   "away": "Partizan Belgrad Youth",
-   "kickoff": "2026-11-04T12:00:00.000Z",
-   "league": "U19 League"
-  },
-  {
-   "home": "Persik Kediri",
-   "away": "Persis Solo",
-   "kickoff": "2026-11-04T12:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Porto U19",
-   "away": "SSC Napoli U20",
-   "kickoff": "2026-11-04T12:00:00.000Z",
-   "league": "UEFA Youth League"
-  },
-  {
-   "home": "Buriram Utd",
-   "away": "Kashima Antlers",
-   "kickoff": "2026-11-04T12:15:00.000Z",
-   "league": "AFC Champions League"
-  },
-  {
-   "home": "OFK Belgrade",
-   "away": "TSC Backa Topola",
-   "kickoff": "2026-11-04T12:30:00.000Z",
-   "league": "U19 League"
-  },
-  {
-   "home": "PSV Youth",
-   "away": "Club Brugge Youth",
-   "kickoff": "2026-11-04T13:00:00.000Z",
-   "league": "UEFA Youth League"
-  },
-  {
-   "home": "Defensor Sporting",
-   "away": "Torque",
-   "kickoff": "2026-11-04T13:00:00.000Z",
-   "league": "Tercera Division"
-  },
-  {
-   "home": "Zanaco",
-   "away": "FC Muza",
-   "kickoff": "2026-11-04T13:00:00.000Z",
-   "league": "Super League"
-  },
-  {
-   "home": "Red Arrows",
-   "away": "Nkwazi",
-   "kickoff": "2026-11-04T13:00:00.000Z",
-   "league": "Super League"
-  },
-  {
-   "home": "Arkadag FK",
-   "away": "GOL Gohar",
-   "kickoff": "2026-11-04T13:45:00.000Z",
-   "league": "AFC Cup"
-  },
-  {
-   "home": "East Bengal FC",
-   "away": "Hwacheon Kspo W",
-   "kickoff": "2026-11-04T14:30:00.000Z",
-   "league": "AFC Women's Champions League"
-  },
-  {
-   "home": "UD Leiria U23",
-   "away": "Estoril Praia U23",
-   "kickoff": "2026-11-04T15:00:00.000Z",
-   "league": "U23 Championship"
-  },
-  {
-   "home": "ZED",
-   "away": "Talaea El Gaish",
-   "kickoff": "2026-11-04T15:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Ghazl El Mahallah",
-   "away": "El Ittihad Alexandria",
-   "kickoff": "2026-11-04T15:00:00.000Z",
-   "league": "Egypt Cup"
-  },
-  {
-   "home": "AL Wahda Scc (UAE)",
-   "away": "AL Khalidiyah",
-   "kickoff": "2026-11-04T16:00:00.000Z",
-   "league": "AFC Cup"
-  },
-  {
-   "home": "Rayyan SC",
-   "away": "Al Nahda (Oman)",
-   "kickoff": "2026-11-04T16:00:00.000Z",
-   "league": "AFC Cup"
-  },
-  {
-   "home": "Al Kuwait SC",
-   "away": "Nasaf Qarshi",
-   "kickoff": "2026-11-04T16:00:00.000Z",
-   "league": "AFC Cup"
-  },
-  {
-   "home": "Doxa Katokopia",
-   "away": "Olympiakos Nicosia FC",
-   "kickoff": "2026-11-04T16:00:00.000Z",
-   "league": "Cyprus Cup"
-  },
-  {
-   "home": "Dukla Banska Bystrica",
-   "away": "AS Trencin",
-   "kickoff": "2026-11-04T16:00:00.000Z",
-   "league": "Slovensky Pohar"
-  },
-  {
-   "home": "Etihad AL Gharafa",
-   "away": "Umm Salal SC",
-   "kickoff": "2026-11-04T16:30:00.000Z",
-   "league": "2nd Division League"
-  },
-  {
-   "home": "FC Penafiel U23",
-   "away": "FC Famalicao U23",
-   "kickoff": "2026-11-04T17:00:00.000Z",
-   "league": "U23 Championship"
-  },
-  {
-   "home": "SK Artis Brno",
-   "away": "Bohemians",
-   "kickoff": "2026-11-04T17:00:00.000Z",
-   "league": "1. Liga"
-  },
-  {
-   "home": "Flora Tallinn",
-   "away": "JK Welco Elekter",
-   "kickoff": "2026-11-04T17:00:00.000Z",
-   "league": "Cup"
-  },
-  {
-   "home": "SK Rapid Wien",
-   "away": "St.polten-Spratzern W",
-   "kickoff": "2026-11-04T18:00:00.000Z",
-   "league": "Bundesliga, Women"
-  },
-  {
-   "home": "CA San Carlos",
-   "away": "CA Boston River",
-   "kickoff": "2026-11-04T18:00:00.000Z",
-   "league": "Copa Uruguay"
-  },
-  {
-   "home": "Al Masry Club",
-   "away": "Petrojet FC",
-   "kickoff": "2026-11-04T18:00:00.000Z",
-   "league": "League Cup"
-  },
-  {
-   "home": "Al Muharraq SC",
-   "away": "Jazira Abu Dhabi",
-   "kickoff": "2026-11-04T18:15:00.000Z",
-   "league": "AFC Cup"
-  },
-  {
-   "home": "Al Taawon",
-   "away": "Faisaly Amman",
-   "kickoff": "2026-11-04T18:15:00.000Z",
-   "league": "AFC Cup"
-  },
-  {
-   "home": "Francs Borains",
-   "away": "FCV Dender EH",
-   "kickoff": "2026-11-04T19:00:00.000Z",
-   "league": "First Division B"
-  },
-  {
-   "home": "MC Alger",
-   "away": "MC Oran",
-   "kickoff": "2026-11-04T19:00:00.000Z",
-   "league": "Ligue 1"
-  },
-  {
-   "home": "Hibernian W",
-   "away": "Celtic W",
-   "kickoff": "2026-11-04T19:30:00.000Z",
-   "league": "Premier League 1, Women"
-  },
-  {
    "home": "Aberdeen W",
    "away": "Spartans W",
    "kickoff": "2026-11-04T19:45:00.000Z",
    "league": "Premier League 1, Women"
+  },
+  {
+   "home": "FAR Rabat",
+   "away": "Raja Casablanca",
+   "kickoff": "2026-11-04T20:00:00.000Z",
+   "league": "Botola"
+  },
+  {
+   "home": "Olancho FC",
+   "away": "Lobos Upnfm",
+   "kickoff": "2026-11-04T21:00:00.000Z",
+   "league": "Liga Nacional. Apertura"
+  },
+  {
+   "home": "AC Milan",
+   "away": "Ferencvaros TC",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "SL Benfica",
+   "away": "Lech Poznan",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Sparta Prague",
+   "away": "Bournemouth",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Bayer Leverkusen",
+   "away": "Marseille",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Sunderland",
+   "away": "Dinamo Zagreb",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Atalanta",
+   "away": "Kairat Almaty",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "FC Copenhagen",
+   "away": "Saburtalo Tbilisi",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "Crystal Palace",
+   "away": "Hoffenheim",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "AZ Alkmaar",
+   "away": "Juventus",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Getafe",
+   "away": "Brighton",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "Monaco",
+   "away": "FC Nordsjalland",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "Real Sociedad",
+   "away": "Lyon",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Celtic",
+   "away": "Besiktas",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Celta Vigo",
+   "away": "Union Saint Gilloise",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Hapoel Beer Sheva",
+   "away": "OFI Crete",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "Anderlecht",
+   "away": "RB Salzburg",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa League"
+  },
+  {
+   "home": "FC Midtjylland",
+   "away": "Ajax",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "FC Thun",
+   "away": "Hearts",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "AGF Aarhus",
+   "away": "Sporting Braga",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "Panathinaikos",
+   "away": "CSKA Sofia",
+   "kickoff": "2026-11-05T20:00:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "Trabzonspor",
+   "away": "SC Freiburg",
+   "kickoff": "2026-11-05T17:45:00.000Z",
+   "league": "UEFA Europa Conference League"
+  },
+  {
+   "home": "Portuguesa FC",
+   "away": "Deportivo La Guaira",
+   "kickoff": "2026-11-04T21:30:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "Sportivo Ameliano",
+   "away": "Club Guarani",
+   "kickoff": "2026-11-04T22:00:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Union La Calera",
+   "away": "Coquimbo",
+   "kickoff": "2026-11-04T22:00:00.000Z",
+   "league": "Copa Chile"
+  },
+  {
+   "home": "Libertad Asuncion",
+   "away": "Cerro Porteno",
+   "kickoff": "2026-11-04T22:00:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "Nacional Potosi",
+   "away": "Oriente Petrolero",
+   "kickoff": "2026-11-04T22:00:00.000Z",
+   "league": "Copa Division Profesional"
+  },
+  {
+   "home": "Flamengo",
+   "away": "Gremio",
+   "kickoff": "2026-11-04T22:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Atletico Pr",
+   "away": "Vasco da Gama",
+   "kickoff": "2026-11-04T22:30:00.000Z",
+   "league": "Brasileiro Serie A"
+  },
+  {
+   "home": "Venados",
+   "away": "Atletico Morelia",
+   "kickoff": "2026-11-04T23:00:00.000Z",
+   "league": "Liga de Ascenso, Apertura"
+  },
+  {
+   "home": "CD Estrella Roja",
+   "away": "CD Motagua",
+   "kickoff": "2026-11-04T23:15:00.000Z",
+   "league": "Liga Nacional. Apertura"
+  },
+  {
+   "home": "Cucuta Deportivo",
+   "away": "Independiente Santa Fe",
+   "kickoff": "2026-11-04T23:30:00.000Z",
+   "league": "Primera A, Apertura"
+  },
+  {
+   "home": "Metropolitanos",
+   "away": "Carabobo FC",
+   "kickoff": "2026-11-04T23:30:00.000Z",
+   "league": "Primera Division"
+  },
+  {
+   "home": "FC Puntarenas",
+   "away": "AD San Carlos",
+   "kickoff": "2026-11-05T00:00:00.000Z",
+   "league": "Primera Division, Apertura"
+  },
+  {
+   "home": "LDU Quito",
+   "away": "Univ Catolica",
+   "kickoff": "2026-11-05T00:00:00.000Z",
+   "league": "Copa Ecuador"
+  },
+  {
+   "home": "Ferro Carril FC",
+   "away": "Nacional (URU)",
+   "kickoff": "2026-11-05T00:00:00.000Z",
+   "league": "Copa Uruguay"
+  },
+  {
+   "home": "Olimpia Asuncion",
+   "away": "CD Recoleta",
+   "kickoff": "2026-11-05T00:15:00.000Z",
+   "league": "Primera Division, Apertura"
   }
  ],
  "jackpots": [],
@@ -309,14 +309,15 @@
    "status": "ok",
    "found": 2,
    "seen": 16,
-   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 13:51:43 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
+   "head": "SportPesa Language Mobile Password REGISTER Already using SportPesa via SMS or USSD? – Forgot your password? Tools & Navigation Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers More Apps Search Help 22:43:16 EAT BETSLIP 0 Sports Live Games Aviator Casino 1 Virtuals Jackpots Goal Rush NEW! Lucky Numbers Account Deposit Withdraw Casino Transfer Bet History Transactio"
   },
   {
    "page": "Football",
    "status": "ok",
    "found": 50,
    "days": {
-    "2026-11-04": 50
+    "2026-11-04": 25,
+    "2026-11-05": 25
    },
    "clicked": [
     "js-click upcoming x1",
@@ -324,8 +325,7 @@
     "ERR locator.click: Element is not visible",
     "/^tomorrow$/i x0",
     "/^next 24 hours$/i x0",
-    "/^(mon|tue|wed|thu x5",
-    "ERR locator.click: Element is not visible",
+    "/^(mon|tue|wed|thu x4",
     "Thursday",
     "Friday",
     "Saturday",
@@ -356,6 +356,7 @@
     "Volleyball",
     "Handball",
     "Cricket",
+    "Baseball",
     "Boxing",
     "MMA",
     "American Football",
@@ -398,12 +399,6 @@
     "Japan",
     "USA ›",
     "USA",
-    "International Youth ›",
-    "International Youth",
-    "Algeria ›",
-    "Algeria",
-    "Angola ›",
-    "Angola",
     "Argentina ›",
     "Argentina",
     "Armenia ›",
@@ -417,24 +412,29 @@
     "Bolivia ›",
     "Bolivia",
     "Bosnia & Herzegovina",
-    "Brazil ›"
+    "Brazil ›",
+    "Brazil",
+    "Chile ›",
+    "Chile",
+    "China ›",
+    "China"
    ],
    "apis": [
-    "12126 https://www.ke.sportpesa.com/api/banners/top",
-    "970 https://www.ke.sportpesa.com/api/jackpots/multi",
-    "408 https://www.ke.sportpesa.com/api/banners/central",
-    "28 https://www.ke.sportpesa.com/api/feature_flags",
-    "20764 https://www.ke.sportpesa.com/api/highlights/1",
     "2281 https://www.ke.sportpesa.com/api/bets/restrictions",
-    "2 https://www.ke.sportpesa.com/api/live/score",
-    "89 https://www.ke.sportpesa.com/api/top/teams",
-    "61556 https://www.ke.sportpesa.com/api/games/markets?games=9395735,9398259,9398263,9398261,9398267,9398247,9398255,9395745,9398265,9402047,9426389,9426267,9",
+    "970 https://www.ke.sportpesa.com/api/jackpots/multi",
+    "12126 https://www.ke.sportpesa.com/api/banners/top",
+    "28 https://www.ke.sportpesa.com/api/feature_flags",
     "408 https://www.ke.sportpesa.com/api/banners/central",
-    "89 https://www.ke.sportpesa.com/api/top/teams",
-    "12674 https://www.ke.sportpesa.com/api/games/markets?games=9426267,9426389,9426383,9426301,9450089,9451943,9448687,9449805,9451227,9451259,9395735,9398261,9",
+    "20938 https://www.ke.sportpesa.com/api/highlights/1",
     "2 https://www.ke.sportpesa.com/api/live/score",
+    "129 https://www.ke.sportpesa.com/api/top/teams",
+    "61556 https://www.ke.sportpesa.com/api/games/markets?games=9398259,9398263,9398267,9398247,9398255,9395745,9398265,9426389,9426267,9426383,9426301,9443527,9",
     "408 https://www.ke.sportpesa.com/api/banners/central",
-    "89 https://www.ke.sportpesa.com/api/top/teams",
+    "129 https://www.ke.sportpesa.com/api/top/teams",
+    "2 https://www.ke.sportpesa.com/api/live/score",
+    "13681 https://www.ke.sportpesa.com/api/games/markets?games=9426267,9426389,9426383,9426301,9395745,9398247,9398255,9398259,9398263,9398265,9398267,9443527,9",
+    "408 https://www.ke.sportpesa.com/api/banners/central",
+    "129 https://www.ke.sportpesa.com/api/top/teams",
     "2 https://www.ke.sportpesa.com/api/live/score"
    ]
   }

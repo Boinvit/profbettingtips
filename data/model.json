@@ -447,16 +447,16 @@
    "def": 0.73
   },
   {
+   "team": "Real Madrid",
+   "elo": 1845,
+   "att": 1.7,
+   "def": 0.68
+  },
+  {
    "team": "Club Brugge",
    "elo": 1844,
    "att": 1.91,
    "def": 0.7
-  },
-  {
-   "team": "Real Madrid",
-   "elo": 1841,
-   "att": 1.69,
-   "def": 0.64
   },
   {
    "team": "St. Gilloise",
@@ -513,18 +513,18 @@
    "def": 0.52
   },
   {
+   "team": "Fenerbahce",
+   "elo": 1783,
+   "att": 1.66,
+   "def": 0.87
+  },
+  {
    "team": "Como",
    "elo": 1777,
    "att": 1.4,
    "def": 0.61
-  },
-  {
-   "team": "Fenerbahce",
-   "elo": 1776,
-   "att": 1.64,
-   "def": 0.85
   }
  ],
- "matches": 89337,
- "updated": "2026-11-04T10:52:14.343Z"
+ "matches": 89339,
+ "updated": "2026-11-04T19:43:46.999Z"
 }
