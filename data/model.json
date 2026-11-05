@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 89317,
+ "tunedOn": 89362,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -371,6 +371,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-05T01:28:36.385Z",
+   "n": 89362,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0136,
+    1.0136
+   ],
+   "acc": [
+    0.4948,
+    0.4948
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -412,9 +436,15 @@
   },
   {
    "team": "Porto",
-   "elo": 1869,
-   "att": 1.59,
+   "elo": 1871,
+   "att": 1.63,
    "def": 0.46
+  },
+  {
+   "team": "Arsenal",
+   "elo": 1868,
+   "att": 1.2,
+   "def": 0.47
   },
   {
    "team": "Celtic",
@@ -423,28 +453,22 @@
    "def": 0.73
   },
   {
-   "team": "Arsenal",
-   "elo": 1865,
-   "att": 1.21,
-   "def": 0.47
-  },
-  {
    "team": "Galatasaray",
    "elo": 1863,
    "att": 1.62,
    "def": 0.73
   },
   {
-   "team": "PSV Eindhoven",
+   "team": "Man City",
    "elo": 1861,
-   "att": 1.93,
-   "def": 0.77
+   "att": 1.47,
+   "def": 0.76
   },
   {
-   "team": "Man City",
-   "elo": 1854,
-   "att": 1.45,
-   "def": 0.73
+   "team": "PSV Eindhoven",
+   "elo": 1845,
+   "att": 1.85,
+   "def": 0.79
   },
   {
    "team": "Real Madrid",
@@ -489,22 +513,22 @@
    "def": 0.61
   },
   {
+   "team": "Dortmund",
+   "elo": 1810,
+   "att": 1.23,
+   "def": 0.56
+  },
+  {
    "team": "Roma",
    "elo": 1809,
    "att": 1.72,
    "def": 0.84
   },
   {
-   "team": "Dortmund",
-   "elo": 1808,
-   "att": 1.23,
-   "def": 0.56
-  },
-  {
    "team": "Viking",
-   "elo": 1789,
-   "att": 1.62,
-   "def": 0.7
+   "elo": 1792,
+   "att": 1.65,
+   "def": 0.69
   },
   {
    "team": "AEK",
@@ -525,6 +549,6 @@
    "def": 0.61
   }
  ],
- "matches": 89339,
- "updated": "2026-11-04T19:43:46.999Z"
+ "matches": 89362,
+ "updated": "2026-11-05T01:28:36.385Z"
 }

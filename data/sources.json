@@ -1,20 +1,20 @@
 {
- "updated": "2026-11-04T19:43:46.999Z",
+ "updated": "2026-11-05T01:28:36.385Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 4110 results, 29 fixtures"
+   "detail": "40 files ok, 0 failed; 4127 results, 29 fixtures"
   },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "54 results, 95 fixtures"
+   "detail": "42 results, 81 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-03: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-04: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,12 +24,12 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 44 fixtures next 14d"
+   "detail": "264 results, 42 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "14 events fetched, 11 with 1X2 odds"
+   "detail": "10 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -39,43 +39,53 @@
   {
    "source": "SportPesa",
    "ok": true,
-   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-04T19:42:54.853Z"
+   "detail": "50 listed games, 0 jackpot(s), scraped 2026-11-05T01:27:41.397Z"
   },
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "171 teams fetched, 0 failed"
+   "detail": "159 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
-  "Slavia Prague vs Arsenal",
-  "Viking vs Sabah",
-  "FAR Rabat vs Raja Casablanca",
-  "Olancho FC vs Lobos Upnfm",
   "AC Milan vs Ferencvaros TC",
-  "Sparta Prague vs Bournemouth",
   "Sunderland vs Dinamo Zagreb",
+  "Sparta Prague vs Bournemouth",
   "Atalanta vs Kairat Almaty",
   "FC Copenhagen vs Saburtalo Tbilisi",
   "Celta Vigo vs Union Saint Gilloise",
   "Hapoel Beer Sheva vs OFI Crete",
   "AGF Aarhus vs Sporting Braga",
   "Panathinaikos vs CSKA Sofia",
-  "Portuguesa FC vs Deportivo La Guaira",
-  "Sportivo Ameliano vs Club Guarani",
-  "Union La Calera vs Coquimbo",
-  "Libertad Asuncion vs Cerro Porteno",
-  "Nacional Potosi vs Oriente Petrolero",
-  "Flamengo vs Gremio",
-  "Atletico Pr vs Vasco da Gama",
-  "Venados vs Atletico Morelia",
-  "CD Estrella Roja vs CD Motagua",
-  "Cucuta Deportivo vs Independiente Santa Fe",
-  "Metropolitanos vs Carabobo FC",
-  "FC Puntarenas vs AD San Carlos",
-  "LDU Quito vs Univ Catolica",
-  "Ferro Carril FC vs Nacional (URU)",
-  "Olimpia Asuncion vs CD Recoleta"
+  "Millonarios FC vs America De Cali",
+  "CD Olimpia vs Juticalpa",
+  "Universitario vs Sport Boys Association",
+  "CD Escorpiones Belen vs LD Alajuelense",
+  "Auckland United FC vs West Coast Rangers FC",
+  "Sydney Olympic vs Oakleigh Cannons",
+  "Pakistan vs India",
+  "Machida Zelvia vs Shanghai Shenhua",
+  "Kitchee vs Phnom Penh",
+  "Home United vs Adelaide United",
+  "Churchill Brothers vs Northeast United",
+  "KF Trepca Mitrovice vs Istogu",
+  "AS Far Rabat W vs Usfas W",
+  "Svay Rieng vs Tampines",
+  "Bangkok Glass vs Wofoo Tai PO FC",
+  "EL Gouna FC vs Ittihad El Shorta",
+  "Fanja Club vs Mussanah Club",
+  "Shams Azar Qazvin vs Sanat Naft Abadan FC",
+  "Mutondo Stars vs Mufulira Wanderers",
+  "Chirundu United vs Green Eagles",
+  "AL Kahraba vs Zakho FC",
+  "Green Buffaloes vs Zesco United",
+  "Hay AL Amir Hassan vs Al Sareeh",
+  "Satsaid W vs CA Banfield W",
+  "Bunyodkor vs PFK Xorazm",
+  "Diyala FC vs AL Minaa",
+  "FK Vozdovac vs FK Novi Pazar",
+  "ATK Mohun Bagan vs Delhi Dynamos",
+  "Qatar U23 vs Khor SC"
  ],
  "unknownJackpotTeams": [
   "Panaitolikos Agrinio",
