@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T10:47:32.643Z",
+ "updated": "2026-11-05T19:54:38.682Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
+   "detail": "12 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -44,7 +44,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "159 teams fetched, 0 failed"
+   "detail": "187 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [

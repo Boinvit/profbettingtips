@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T10:51:06.024Z",
+ "updated": "2026-11-05T19:58:43.315Z",
  "settled": 389,
  "enhanced": {
   "n": 389,
@@ -498,9 +498,9 @@
    "id": "sportpesa-midweek-jackpot-11s7r1",
    "name": "SportPesa Midweek Jackpot",
    "total": 13,
-   "settled": 9,
-   "correct": 4,
-   "correctDC": 5,
+   "settled": 10,
+   "correct": 5,
+   "correctDC": 6,
    "closes": "2026-11-04T20:00:00.000Z"
   }
  ]
