@@ -1374,3 +1374,45 @@ h1, h2, h3, h4 {
 
 /* Open mode (PREMIUM_GATING=false): hide accounts, checkout and locked content */
 .gate-hidden { display: none !important; }
+
+/* ---- Theme: dark (default), light, or follow the device (set by js/theme.js) ---- */
+:root { color-scheme: dark; }
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #F6F7FB; --bg-2: #EDF0F7; --bg-3: #E2E7F1; --bg-card: #FFFFFF; --border: #D5DBE8; --border-2: #BFC8DB;
+  --gold: #9A6700; --gold-dim: #7A5200; --gold-glow: rgba(154,103,0,0.16);
+  --cyan: #0E7490; --cyan-dim: rgba(14,116,144,0.10); --red: #DC2626; --green: #15803D;
+  --text: #0F172A; --text-2: #334155; --text-3: #64748B;
+  --shadow: 0 4px 24px rgba(15,23,42,0.12); --shadow-gold: 0 0 24px rgba(154,103,0,0.18);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    color-scheme: light;
+    --bg: #F6F7FB; --bg-2: #EDF0F7; --bg-3: #E2E7F1; --bg-card: #FFFFFF; --border: #D5DBE8; --border-2: #BFC8DB;
+    --gold: #9A6700; --gold-dim: #7A5200; --gold-glow: rgba(154,103,0,0.16);
+    --cyan: #0E7490; --cyan-dim: rgba(14,116,144,0.10); --red: #DC2626; --green: #15803D;
+    --text: #0F172A; --text-2: #334155; --text-3: #64748B;
+    --shadow: 0 4px 24px rgba(15,23,42,0.12); --shadow-gold: 0 0 24px rgba(154,103,0,0.18);
+  }
+}
+#theme-toggle { position: fixed; right: 12px; bottom: 12px; z-index: 9999; padding: 9px 13px; font: 600 13px/1 var(--font-body, sans-serif); color: var(--text); background: var(--bg-card); border: 1px solid var(--border-2); border-radius: 999px; box-shadow: var(--shadow); cursor: pointer; opacity: 0.93; }
+#theme-toggle:hover { opacity: 1; }
+@media print { #theme-toggle { display: none; } }
+
+/* ---- Light theme overrides for colours that were hardcoded (generated) ---- */
+:root[data-theme='light'] .navbar { background: rgba(246,247,251,0.92); }
+:root[data-theme='light'] .nav-logo-icon { background: linear-gradient(135deg, #FFFFFF, #EEF2FA); }
+:root[data-theme='light'] .btn-gold:hover { background: #7A5200; }
+:root[data-theme='light'] .lock-overlay { background: rgba(246,247,251,0.65); }
+:root[data-theme='light'] .price-card.featured-plan { background: linear-gradient(135deg, #FFFFFF, #131d2e); }
+:root[data-theme='light'] .fb-cta-section { background: linear-gradient(135deg, #0f1520 0%, #E2E7F1 100%); }
+:root[data-theme='light'] .mobile-nav { background: linear-gradient(180deg, rgba(13,17,28,0.96) 0%, rgba(246,247,251,0.98) 100%); }
+@media (prefers-color-scheme: light) {
+:root:not([data-theme='dark']) .navbar { background: rgba(246,247,251,0.92); }
+:root:not([data-theme='dark']) .nav-logo-icon { background: linear-gradient(135deg, #FFFFFF, #EEF2FA); }
+:root:not([data-theme='dark']) .btn-gold:hover { background: #7A5200; }
+:root:not([data-theme='dark']) .lock-overlay { background: rgba(246,247,251,0.65); }
+:root:not([data-theme='dark']) .price-card.featured-plan { background: linear-gradient(135deg, #FFFFFF, #131d2e); }
+:root:not([data-theme='dark']) .fb-cta-section { background: linear-gradient(135deg, #0f1520 0%, #E2E7F1 100%); }
+:root:not([data-theme='dark']) .mobile-nav { background: linear-gradient(180deg, rgba(13,17,28,0.96) 0%, rgba(246,247,251,0.98) 100%); }
+}

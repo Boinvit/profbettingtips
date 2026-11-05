@@ -66,3 +66,9 @@ svg.chart { width:100%; height:auto; aspect-ratio:640/180; display:block; }
 .cmb-bar { position:sticky; top:0; z-index:5; }
 .cmb-bar #cmb-out { margin-top:8px; font-size:13px; line-height:1.6; }
 .cmb-bar .warn { color:#e8a33d; font-weight:600; }
+
+/* ---- Light theme overrides for colours that were hardcoded (generated) ---- */
+
+@media (prefers-color-scheme: light) {
+
+}
