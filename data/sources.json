@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T19:54:38.682Z",
+ "updated": "2026-11-06T01:31:29.074Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "44 results, 81 fixtures"
+   "detail": "37 results, 79 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-04: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-05: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "12 events fetched, 8 with 1X2 odds"
+   "detail": "9 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
