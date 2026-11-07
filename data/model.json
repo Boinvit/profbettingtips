@@ -483,12 +483,6 @@
    "def": 0.73
   },
   {
-   "team": "Man City",
-   "elo": 1861,
-   "att": 1.47,
-   "def": 0.76
-  },
-  {
    "team": "PSV Eindhoven",
    "elo": 1845,
    "att": 1.85,
@@ -505,6 +499,12 @@
    "elo": 1844,
    "att": 1.91,
    "def": 0.7
+  },
+  {
+   "team": "Man City",
+   "elo": 1842,
+   "att": 1.44,
+   "def": 0.87
   },
   {
    "team": "St. Gilloise",
@@ -531,6 +531,12 @@
    "def": 0.4
   },
   {
+   "team": "Roma",
+   "elo": 1813,
+   "att": 1.74,
+   "def": 0.79
+  },
+  {
    "team": "Dortmund",
    "elo": 1812,
    "att": 1.24,
@@ -541,12 +547,6 @@
    "elo": 1811,
    "att": 1.59,
    "def": 0.61
-  },
-  {
-   "team": "Roma",
-   "elo": 1809,
-   "att": 1.72,
-   "def": 0.84
   },
   {
    "team": "Viking",
@@ -573,6 +573,6 @@
    "def": 0.65
   }
  ],
- "matches": 89406,
- "updated": "2026-11-07T17:44:33.908Z"
+ "matches": 89414,
+ "updated": "2026-11-07T21:45:51.355Z"
 }
