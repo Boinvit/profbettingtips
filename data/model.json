@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 89362,
+ "tunedOn": 89406,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -395,14 +395,38 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-07T17:44:33.908Z",
+   "n": 89406,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0136,
+    1.0136
+   ],
+   "acc": [
+    0.4949,
+    0.4949
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1941,
-   "att": 2.02,
-   "def": 0.65
+   "elo": 1943,
+   "att": 1.99,
+   "def": 0.66
   },
   {
    "team": "Inter",
@@ -442,9 +466,9 @@
   },
   {
    "team": "Arsenal",
-   "elo": 1868,
-   "att": 1.2,
-   "def": 0.47
+   "elo": 1870,
+   "att": 1.19,
+   "def": 0.44
   },
   {
    "team": "Celtic",
@@ -507,16 +531,16 @@
    "def": 0.4
   },
   {
+   "team": "Dortmund",
+   "elo": 1812,
+   "att": 1.24,
+   "def": 0.57
+  },
+  {
    "team": "Bodo/Glimt",
    "elo": 1811,
    "att": 1.59,
    "def": 0.61
-  },
-  {
-   "team": "Dortmund",
-   "elo": 1810,
-   "att": 1.23,
-   "def": 0.56
   },
   {
    "team": "Roma",
@@ -549,6 +573,6 @@
    "def": 0.65
   }
  ],
- "matches": 89383,
- "updated": "2026-11-07T09:59:53.039Z"
+ "matches": 89406,
+ "updated": "2026-11-07T17:44:33.908Z"
 }

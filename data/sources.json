@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T09:59:53.039Z",
+ "updated": "2026-11-07T17:44:33.908Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,7 +9,7 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "28 results, 72 fixtures"
+   "detail": "51 results, 44 fixtures"
   },
   {
    "source": "API-Football",
@@ -19,7 +19,7 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "73 results, 9 fixtures (German Bundesliga)"
+   "detail": "77 results, 10 fixtures (German Bundesliga)"
   },
   {
    "source": "openfootball",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "9 events fetched, 8 with 1X2 odds"
+   "detail": "34 events fetched, 10 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -44,7 +44,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "502 teams fetched, 0 failed"
+   "detail": "353 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
