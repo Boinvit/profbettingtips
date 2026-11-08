@@ -442,9 +442,9 @@
   },
   {
    "team": "Paris SG",
-   "elo": 1898,
-   "att": 1.76,
-   "def": 0.63
+   "elo": 1899,
+   "att": 1.7,
+   "def": 0.6
   },
   {
    "team": "Sp Lisbon",
@@ -483,16 +483,16 @@
    "def": 0.73
   },
   {
+   "team": "Real Madrid",
+   "elo": 1850,
+   "att": 1.74,
+   "def": 0.64
+  },
+  {
    "team": "PSV Eindhoven",
    "elo": 1845,
    "att": 1.85,
    "def": 0.79
-  },
-  {
-   "team": "Real Madrid",
-   "elo": 1845,
-   "att": 1.7,
-   "def": 0.68
   },
   {
    "team": "Club Brugge",
@@ -573,6 +573,6 @@
    "def": 0.65
   }
  ],
- "matches": 89414,
- "updated": "2026-11-07T21:45:51.355Z"
+ "matches": 89418,
+ "updated": "2026-11-08T05:55:46.290Z"
 }
