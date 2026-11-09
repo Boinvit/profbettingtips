@@ -453,16 +453,16 @@
    "def": 0.66
   },
   {
+   "team": "Barcelona",
+   "elo": 1911,
+   "att": 2.17,
+   "def": 0.72
+  },
+  {
    "team": "Inter",
    "elo": 1905,
    "att": 1.87,
    "def": 0.87
-  },
-  {
-   "team": "Barcelona",
-   "elo": 1905,
-   "att": 2.2,
-   "def": 0.71
   },
   {
    "team": "Paris SG",
@@ -484,9 +484,9 @@
   },
   {
    "team": "Porto",
-   "elo": 1871,
-   "att": 1.63,
-   "def": 0.46
+   "elo": 1874,
+   "att": 1.65,
+   "def": 0.49
   },
   {
    "team": "Arsenal",
@@ -597,6 +597,6 @@
    "def": 0.65
   }
  ],
- "matches": 89440,
- "updated": "2026-11-08T19:39:44.850Z"
+ "matches": 89452,
+ "updated": "2026-11-09T00:50:24.427Z"
 }

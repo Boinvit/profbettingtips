@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:39:44.850Z",
+ "updated": "2026-11-09T00:50:24.427Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,17 +9,17 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "70 results, 11 fixtures"
+   "detail": "79 results, 2 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-07: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-08: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "80 results, 9 fixtures (German Bundesliga)"
+   "detail": "81 results, 9 fixtures (German Bundesliga)"
   },
   {
    "source": "openfootball",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "24 events fetched, 8 with 1X2 odds"
+   "detail": "10 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -44,7 +44,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "76 teams fetched, 0 failed"
+   "detail": "62 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
