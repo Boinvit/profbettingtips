@@ -309,7 +309,7 @@
    "status": "blocked (bot challenge)",
    "found": 0,
    "seen": 0,
-   "head": "Access Denied You don't have permission to access \"http://www.ke.sportpesa.com/en/mega-jackpot-pro\" on this server. Reference #18.b551c317.1794223479.49ad9150 https://errors.edgesuite.net/18.b551c317.1794223479.49ad9150"
+   "head": "Access Denied You don't have permission to access \"http://www.ke.sportpesa.com/en/mega-jackpot-pro\" on this server. Reference #18.6b6c3817.1794262659.7dc69028 https://errors.edgesuite.net/18.6b6c3817.1794262659.7dc69028"
   },
   {
    "page": "Football",
@@ -329,5 +329,5 @@
    "apis": []
   }
  ],
- "lastAttempt": "2026-11-09T11:24:39.612Z"
+ "lastAttempt": "2026-11-09T22:17:39.385Z"
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T11:25:05.289Z",
+ "updated": "2026-11-09T22:18:04.958Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -24,7 +24,7 @@
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 40 fixtures next 14d"
+   "detail": "264 results, 42 fixtures next 14d"
   },
   {
    "source": "The Odds API",
@@ -44,7 +44,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "62 teams fetched, 0 failed"
+   "detail": "60 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
