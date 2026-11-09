@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-09T00:50:24.427Z",
+ "updated": "2026-11-09T11:25:05.289Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 4138 results, 271 fixtures"
+   "detail": "40 files ok, 0 failed; 4296 results, 271 fixtures"
   },
   {
    "source": "football-data.org",
@@ -29,7 +29,7 @@
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "10 events fetched, 8 with 1X2 odds"
+   "detail": "8 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
