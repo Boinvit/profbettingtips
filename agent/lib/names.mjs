@@ -9,6 +9,8 @@ export const ALIASES = {
   'brøndby if': 'brondby', 'brøndby': 'brondby', 'brondby if': 'brondby', 'agf': 'aarhus', 'fc nordsjælland': 'nordsjaelland', 'nordsjælland': 'nordsjaelland',
   'sønderjyske fodbold': 'sonderjyske', 'sønderjyske': 'sonderjyske', 'sonderjyske fodbold': 'sonderjyske', 'hamarkameratene': 'hamkam',
   'red bull new york': 'new york red bulls', 'lafc': 'los angeles',
+  // the matcher turns letters like o-slash and ae into spaces, so these are the spaced forms it actually sees
+  'nordsj lland': 'nordsjaelland', 's nderjyske fodbold': 'sonderjyske', 's nderjyske': 'sonderjyske', 'k benhavn': 'copenhagen', 'f c k benhavn': 'copenhagen', 'br ndby': 'brondby',
   // SportPesa / bookmaker spellings -> the spelling of the id that holds the match history (verified against data/teams.json, Nov 2026)
   'basaksehir': 'buyuksehyr', 'istanbul basaksehir': 'buyuksehyr', 'red bull salzburg': 'salzburg', 'rb salzburg': 'salzburg',
   'austria lustenau': 'a lustenau', 'sheffield wednesday': 'sheffield weds', 'sheffield wed': 'sheffield weds', 'oh leuven': 'oud heverlee leuven',
