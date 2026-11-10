@@ -2,6 +2,13 @@
 // football-data.co.uk, ClubElo all spell teams differently).
 const STOP = new Set(['fc', 'afc', 'cf', 'sc', 'ac', 'as', 'ss', 'us', 'club', 'de', 'the', 'calcio', 'cd', 'ud', 'sv', 'vfl', 'vfb', 'fk', 'bk', 'if', '1', '04', '05', '1899', 'and']);
 export const ALIASES = {
+  // ESPN spellings -> the spelling of the id that holds the match history
+  'gimnasia la plata': 'gimnasia lp', 'argentinos juniors': 'argentinos jrs', 'sv josko ried': 'ried', 'josko ried': 'ried',
+  'central cordoba santiago del estero': 'central cordoba', 'tokyo verdy 1969': 'tokyo verdy', 'urawa red diamonds': 'urawa reds',
+  'f c københavn': 'copenhagen', 'f c kobenhavn': 'copenhagen', 'fc københavn': 'copenhagen', 'fc kobenhavn': 'copenhagen', 'københavn': 'copenhagen', 'kobenhavn': 'copenhagen',
+  'brøndby if': 'brondby', 'brøndby': 'brondby', 'brondby if': 'brondby', 'agf': 'aarhus', 'fc nordsjælland': 'nordsjaelland', 'nordsjælland': 'nordsjaelland',
+  'sønderjyske fodbold': 'sonderjyske', 'sønderjyske': 'sonderjyske', 'sonderjyske fodbold': 'sonderjyske', 'hamarkameratene': 'hamkam',
+  'red bull new york': 'new york red bulls', 'lafc': 'los angeles',
   // SportPesa / bookmaker spellings -> the spelling of the id that holds the match history (verified against data/teams.json, Nov 2026)
   'basaksehir': 'buyuksehyr', 'istanbul basaksehir': 'buyuksehyr', 'red bull salzburg': 'salzburg', 'rb salzburg': 'salzburg',
   'austria lustenau': 'a lustenau', 'sheffield wednesday': 'sheffield weds', 'sheffield wed': 'sheffield weds', 'oh leuven': 'oud heverlee leuven',

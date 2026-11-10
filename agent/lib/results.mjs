@@ -2,7 +2,7 @@
 // tier 1: authoritative (football-data.co.uk, football-data.org, API-Football)
 // tier 2: supplemental, finished-only (OpenLigaDB, openfootball)
 // tier 3: anything else. tier 0 (ex.s absent): legacy record with no provenance.
-export const TIER = { fduk: 1, fdorg: 1, apif: 1, oldb: 2, ofb: 2 };
+export const TIER = { fduk: 1, fdorg: 1, apif: 1, oldb: 2, ofb: 2, espn: 2 };
 export const tierOf = (src) => TIER[src] || 3;
 
 /** Compare an incoming finished result `f` with stored match `ex`. Mutates ex only on an allowed overwrite.

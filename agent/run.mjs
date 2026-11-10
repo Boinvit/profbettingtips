@@ -212,6 +212,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       const { fetchOpenLigaDB } = await import('./lib/sources/openligadb.mjs');
       merge(await fetchOpenLigaDB({ now, health }), 'oldb');
     } catch (e) { health.push({ source: 'OpenLigaDB', ok: false, detail: e.message }); }
+    // d3) ESPN public scoreboards: fast results for any league, used only for matches we have overdue predictions on
+    try {
+      const { fetchEspn } = await import('./lib/sources/espn.mjs');
+      merge(await fetchEspn({ now, preds: load('predictions.json', []), registry: new Registry(load('teams.json', {}), load('aliases.json', {})), health }), 'espn');
+    } catch (e) { health.push({ source: 'ESPN', ok: false, detail: e.message }); }
     // d2) openfootball: public-domain full-season fixtures/results for EPL, Championship, La Liga, Serie A
     try {
       const { fetchOpenFootball } = await import('./lib/sources/openfootball.mjs');
