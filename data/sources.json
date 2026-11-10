@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T22:18:04.958Z",
+ "updated": "2026-11-10T04:43:44.778Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,17 +9,22 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "79 results, 2 fixtures"
+   "detail": "69 results, 2 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-08: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-09: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
    "ok": true,
    "detail": "81 results, 9 fixtures (German Bundesliga)"
+  },
+  {
+   "source": "ESPN",
+   "ok": true,
+   "detail": "107 of 200 overdue settled; 15/15 days read; names to alias: Rubio Ñú | Baylor | Sporting Jax | Dux Logroño | Madrid CFF | Forward Madison FC | Vancouver Rise FC | FC Nordsjælland | Sønderjyske Fodbold | Atlético Goianiense | Deportivo Pasto | Deportivo Cali"
   },
   {
    "source": "openfootball",

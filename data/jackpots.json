@@ -1916,6 +1916,21 @@
        ]
       }
      }
+    },
+    "result": {
+     "hg": 4,
+     "ag": 1,
+     "src": "feed",
+     "o": "H"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": false,
+     "bt": false
+    },
+    "ok0": {
+     "x12": true
     }
    },
    {
@@ -1970,6 +1985,21 @@
        ]
       }
      }
+    },
+    "result": {
+     "hg": 1,
+     "ag": 9,
+     "src": "feed",
+     "o": "A"
+    },
+    "ok": {
+     "x12": true,
+     "dc": true,
+     "ou": true,
+     "bt": true
+    },
+    "ok0": {
+     "x12": true
     }
    }
   ],
