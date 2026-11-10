@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-10T07:11:41.945Z",
+ "updated": "2026-11-10T17:00:39.580Z",
  "health": [
   {
    "source": "football-data.co.uk",
    "ok": true,
-   "detail": "40 files ok, 0 failed; 4296 results, 271 fixtures"
+   "detail": "40 files ok, 0 failed; 4409 results, 271 fixtures"
   },
   {
    "source": "football-data.org",
@@ -24,12 +24,12 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "4 of 93 overdue settled; 15/15 days read; names to alias: Madrid CFF | Atlético Goianiense | Deportivo Pasto | Aucas | Liga de Quito | Real España | TSV Eintracht Braunschweig | Real Tomayapo | Levski Sofia | Heart of Midlothian | Iberia 1999 | Kauno Zalgiris"
+   "detail": "0 of 89 overdue settled; 15/15 days read; names to alias: Madrid CFF | Atlético Goianiense | Deportivo Pasto | Aucas | Liga de Quito | Real España | TSV Eintracht Braunschweig | Real Tomayapo | Levski Sofia | Heart of Midlothian | Kauno Zalgiris | CD Choloma"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 42 fixtures next 14d"
+   "detail": "264 results, 48 fixtures next 14d"
   },
   {
    "source": "The Odds API",
@@ -49,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "60 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
