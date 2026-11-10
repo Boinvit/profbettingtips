@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T04:43:44.778Z",
+ "updated": "2026-11-10T07:11:41.945Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -24,7 +24,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "107 of 200 overdue settled; 15/15 days read; names to alias: Rubio Ñú | Baylor | Sporting Jax | Dux Logroño | Madrid CFF | Forward Madison FC | Vancouver Rise FC | FC Nordsjælland | Sønderjyske Fodbold | Atlético Goianiense | Deportivo Pasto | Deportivo Cali"
+   "detail": "4 of 93 overdue settled; 15/15 days read; names to alias: Madrid CFF | Atlético Goianiense | Deportivo Pasto | Aucas | Liga de Quito | Real España | TSV Eintracht Braunschweig | Real Tomayapo | Levski Sofia | Heart of Midlothian | Iberia 1999 | Kauno Zalgiris"
   },
   {
    "source": "openfootball",
@@ -49,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "60 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
