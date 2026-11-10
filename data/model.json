@@ -520,8 +520,8 @@
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1947,
-   "att": 2,
+   "elo": 1957,
+   "att": 1.97,
    "def": 0.65
   },
   {
@@ -538,9 +538,9 @@
   },
   {
    "team": "Paris SG",
-   "elo": 1899,
-   "att": 1.7,
-   "def": 0.6
+   "elo": 1890,
+   "att": 1.64,
+   "def": 0.65
   },
   {
    "team": "Porto",
@@ -580,9 +580,9 @@
   },
   {
    "team": "Real Madrid",
-   "elo": 1856,
-   "att": 1.75,
-   "def": 0.64
+   "elo": 1861,
+   "att": 1.78,
+   "def": 0.6
   },
   {
    "team": "Club Brugge",
@@ -633,16 +633,16 @@
    "def": 0.58
   },
   {
+   "team": "Roma",
+   "elo": 1815,
+   "att": 1.72,
+   "def": 0.79
+  },
+  {
    "team": "Bodo/Glimt",
    "elo": 1815,
    "att": 1.48,
    "def": 0.54
-  },
-  {
-   "team": "Roma",
-   "elo": 1813,
-   "att": 1.74,
-   "def": 0.79
   },
   {
    "team": "Viking",
@@ -669,6 +669,6 @@
    "def": 0.53
   }
  ],
- "matches": 89725,
- "updated": "2026-11-10T17:00:39.580Z"
+ "matches": 89732,
+ "updated": "2026-11-10T23:15:54.142Z"
 }

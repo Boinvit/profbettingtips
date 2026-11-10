@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T17:00:39.580Z",
+ "updated": "2026-11-10T23:15:54.142Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -24,12 +24,12 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "0 of 89 overdue settled; 15/15 days read; names to alias: Madrid CFF | Atlético Goianiense | Deportivo Pasto | Aucas | Liga de Quito | Real España | TSV Eintracht Braunschweig | Real Tomayapo | Levski Sofia | Heart of Midlothian | Kauno Zalgiris | CD Choloma"
+   "detail": "7 of 53 overdue settled; 16/16 days read; names to alias: Madrid CFF | Atlético Goianiense | Liga de Quito | AFC Rushden & Diamonds | Harborough Town | TSV Eintracht Braunschweig | Levski Sofia | Heart of Midlothian | Japan Soccer College | London City Lionesses | FC Badalona | One Knoxville"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 48 fixtures next 14d"
+   "detail": "264 results, 50 fixtures next 14d"
   },
   {
    "source": "The Odds API",
@@ -49,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "60 teams fetched, 0 failed"
+   "detail": "56 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
