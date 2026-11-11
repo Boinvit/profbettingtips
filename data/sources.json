@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T23:15:54.142Z",
+ "updated": "2026-11-11T06:06:35.551Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -9,12 +9,12 @@
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "69 results, 2 fixtures"
+   "detail": "34 results, 6 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-09: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-10: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,7 +24,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "7 of 53 overdue settled; 16/16 days read; names to alias: Madrid CFF | Atlético Goianiense | Liga de Quito | AFC Rushden & Diamonds | Harborough Town | TSV Eintracht Braunschweig | Levski Sofia | Heart of Midlothian | Japan Soccer College | London City Lionesses | FC Badalona | One Knoxville"
+   "detail": "0 of 46 overdue settled; 16/16 days read; names to alias: Madrid CFF | Atlético Goianiense | Liga de Quito | TSV Eintracht Braunschweig | Levski Sofia | Heart of Midlothian | Japan Soccer College | London City Lionesses | FC Badalona | One Knoxville | Juventud | Hill of Beath Hawthorn"
   },
   {
    "source": "openfootball",
