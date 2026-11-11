@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T06:06:35.551Z",
+ "updated": "2026-11-11T21:54:45.024Z",
  "health": [
   {
    "source": "football-data.co.uk",
@@ -24,17 +24,17 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "0 of 46 overdue settled; 16/16 days read; names to alias: Madrid CFF | Atlético Goianiense | Liga de Quito | TSV Eintracht Braunschweig | Levski Sofia | Heart of Midlothian | Japan Soccer College | London City Lionesses | FC Badalona | One Knoxville | Juventud | Hill of Beath Hawthorn"
+   "detail": "1 of 42 overdue settled; 16/16 days read; names to alias: Madrid CFF | Atlético Goianiense | Liga de Quito | TSV Eintracht Braunschweig | Heart of Midlothian | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn | Macará | Denver | San Francisco"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 50 fixtures next 14d"
+   "detail": "264 results, 54 fixtures next 14d"
   },
   {
    "source": "The Odds API",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
+   "detail": "9 events fetched, 8 with 1X2 odds"
   },
   {
    "source": "ClubElo",
@@ -49,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "56 teams fetched, 0 failed"
+   "detail": "55 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
