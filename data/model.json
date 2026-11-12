@@ -532,8 +532,8 @@
   },
   {
    "team": "Barcelona",
-   "elo": 1911,
-   "att": 2.17,
+   "elo": 1908,
+   "att": 2.08,
    "def": 0.72
   },
   {
@@ -561,16 +561,16 @@
    "def": 0.68
   },
   {
+   "team": "Arsenal",
+   "elo": 1872,
+   "att": 1.16,
+   "def": 0.46
+  },
+  {
    "team": "Celtic",
    "elo": 1871,
    "att": 1.5,
    "def": 0.71
-  },
-  {
-   "team": "Arsenal",
-   "elo": 1869,
-   "att": 1.19,
-   "def": 0.44
   },
   {
    "team": "Galatasaray",
@@ -669,6 +669,6 @@
    "def": 0.53
   }
  ],
- "matches": 89734,
- "updated": "2026-11-12T19:05:57.403Z"
+ "matches": 89735,
+ "updated": "2026-11-12T23:34:25.508Z"
 }
