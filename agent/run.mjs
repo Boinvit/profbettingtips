@@ -186,12 +186,13 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = new Set(process.argv.slice(2));
   const backfillN = parseBackfill(args);
+  const resultsOnly = args.has('--results-only'); // hourly light run: results feeds only, no odds calls, no 40-file fduk download, no ClubElo
   const now = new Date(), health = [];
   const feed = { finished: [], upcoming: [], listed: [], scrapedJackpots: [], clubelo: [], health };
   if (!args.has('--offline')) {
     const merge = (r, src) => { for (const f of r.finished) if (src) f.src = src; feed.finished.push(...r.finished); feed.upcoming.push(...r.upcoming); };
     // a) football-data.co.uk: results + odds, 22 divisions + 16 extra leagues
-    try { const { fetchFduk } = await import('./lib/sources/fduk.mjs'); merge(await fetchFduk({ now, backfill: backfillN || false, health }), 'fduk'); }
+    if (!resultsOnly) try { const { fetchFduk } = await import('./lib/sources/fduk.mjs'); merge(await fetchFduk({ now, backfill: backfillN || false, health }), 'fduk'); }
     catch (e) { health.push({ source: 'football-data.co.uk', ok: false, detail: e.message }); }
     // b) football-data.org API (optional key): fresher results
     if (process.env.FOOTBALL_DATA_API_KEY) {
@@ -223,12 +224,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       merge(await fetchOpenFootball({ now, health }));
     } catch (e) { health.push({ source: 'openfootball', ok: false, detail: e.message }); }
     // e) The Odds API: bookmaker 1X2 odds; merges into matching fixtures by team pair/date
-    try {
+    if (!resultsOnly) try {
       const { fetchOddsApi } = await import('./lib/sources/odds-api.mjs');
       merge(await fetchOddsApi({ key: process.env.THE_ODDS_API_KEY, now, health }));
     } catch (e) { health.push({ source: 'The Odds API', ok: false, detail: e.message }); }
     // f) ClubElo ratings
-    const { fetchClubElo } = await import('./lib/sources/clubelo.mjs'); feed.clubelo = await fetchClubElo({ now, health });
+    const { fetchClubElo } = await import('./lib/sources/clubelo.mjs'); feed.clubelo = resultsOnly ? [] : await fetchClubElo({ now, health });
+    if (resultsOnly) health.push({ source: 'Run mode', ok: true, detail: 'results-only: football-data.co.uk, The Odds API and ClubElo skipped this run' });
     // d) team news
     const { fetchTeamNews } = await import('./lib/sources/news.mjs'); let newsOk = 0, newsFail = 0;
     feed.news = async (name) => { try { const r = await fetchTeamNews(name, { now }); newsOk++; await new Promise((r) => setTimeout(r, 400)); return r; } catch (e) { newsFail++; throw e; } };

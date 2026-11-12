@@ -1,0 +1,45 @@
+name: Results (hourly)
+
+# Light run: results feeds only (football-data.org, API-Football, OpenLigaDB, ESPN, openfootball).
+# No odds calls (The Odds API key is deliberately not passed), no football-data.co.uk download, no ClubElo.
+# Shares a concurrency group with the full agent so the two never commit at the same time.
+on:
+  schedule:
+    - cron: '40 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prediction-agent
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Results-only agent run
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node agent/run.mjs --results-only
+
+      - name: Commit data
+        run: |
+          git config user.name  "pbt-agent"
+          git config user.email "pbt-agent@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "data: results update $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for i in 1 2 3; do
+            git pull --rebase origin ${{ github.ref_name }} && git push && exit 0
+            sleep 5
+          done
+          exit 1
