@@ -3,6 +3,7 @@
 const STOP = new Set(['fc', 'afc', 'cf', 'sc', 'ac', 'as', 'ss', 'us', 'club', 'de', 'the', 'calcio', 'cd', 'ud', 'sv', 'vfl', 'vfb', 'fk', 'bk', 'if', '1', '04', '05', '1899', 'and']);
 export const ALIASES = {
   // ESPN spellings -> the spelling of the id that holds the match history
+  'heart of midlothian': 'hearts', 'atletico goianiense': 'atletico go',
   'gimnasia la plata': 'gimnasia lp', 'argentinos juniors': 'argentinos jrs', 'sv josko ried': 'ried', 'josko ried': 'ried',
   'central cordoba santiago del estero': 'central cordoba', 'tokyo verdy 1969': 'tokyo verdy', 'urawa red diamonds': 'urawa reds',
   'f c københavn': 'copenhagen', 'f c kobenhavn': 'copenhagen', 'fc københavn': 'copenhagen', 'fc kobenhavn': 'copenhagen', 'københavn': 'copenhagen', 'kobenhavn': 'copenhagen',

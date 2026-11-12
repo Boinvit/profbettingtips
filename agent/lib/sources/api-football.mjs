@@ -18,6 +18,7 @@ async function request(url, key) {
   return json.response || [];
 }
 export async function fetchApiFootball({ key, now = new Date(), daysBack = 1, daysAhead = 1, leagues = AF_LEAGUES, health = [], log = console.log, request: req = request } = {}) {
+  key = typeof key === 'string' ? key.trim() : key; // a stray space or newline in the secret makes the API report a missing key
   if (!key) { health.push({ source: 'API-Football', ok: false, detail: 'no API_FOOTBALL_KEY (optional)' }); return { finished: [], upcoming: [] }; }
   const finished = [], upcoming = [], bad = [];
   for (let i = -daysBack; i <= daysAhead; i++) {

@@ -21,6 +21,7 @@ export async function mountLongShots(root) {
       <h3>${esc(a.day)} - ${esc(TITLES[a.key] || 'Long shot ' + a.n)} (${a.legs.length} legs, total odds ${esc(a.odds)})</h3>
       <p>Chance every leg wins (model): <strong>${chance(a.pAll)}</strong>. KES 10 would pay about <strong>${kes(10 * a.odds)}</strong>. Expected result per KES 10: <strong>${a.ev10 >= 0 ? '+' : ''}${a.ev10} KES</strong>.</p>
       <div style='overflow-x:auto'><table><thead><tr><th>EAT</th><th>Match</th><th>Pick</th><th>Rank</th><th>Chance</th><th>Odds</th></tr></thead><tbody>${rows}</tbody></table></div>
+      ${a.unconfirmed ? `<p class='muted'><strong>Not confirmed on SportPesa:</strong> the SportPesa list could not be read recently, so check each match is offered before betting.</p>` : ''}
       ${a.modelPriced ? `<p class='muted'>${a.modelPriced} of ${a.legs.length} odds are the model's own estimate (marked est.). Real SportPesa odds differ: paste the slip into My slips to see the true figures.</p>` : ''}</div>`;
   };
   const days = [...new Set(open.map((a) => a.day))];

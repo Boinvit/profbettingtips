@@ -9,12 +9,12 @@ const YOUTH = /\b(U-?(1[5-9]|2[0-3])|youth|reserves?)\b|[ ](II|III)$/i; // squad
 const r2 = (x) => Math.round(x * 100) / 100, r4 = (x) => Math.round(x * 10000) / 10000, sig = (x) => Number(x.toPrecision(3));
 
 /** Matches for one EAT day whose most probable outcome is at least MIN_MATCH_P. Excludes started games, youth/reserve sides, thin-data and unlisted matches. Best first, capped at MAX_LEGS. */
-export function dayMatches(preds, day, now, cal = null) {
+export function dayMatches(preds, day, now, cal = null, { requireListed = true } = {}) {
   const out = [];
   for (const p of preds) {
     if (p.status !== 'pending' || !p.pk) continue;
     if (dayKey(p.kickoff) !== day || Date.parse(p.kickoff) < now.getTime() + LEAD_MS) continue;
-    if (p.listed === false || !isTrusted(p)) continue;
+    if ((requireListed && p.listed === false) || !isTrusted(p)) continue;
     const legs = legsFor(p, cal, { sure: true }).sort((a, b) => b.p - a.p);
     if (legs.length && legs[0].p >= MIN_MATCH_P) out.push({ p, legs });
   }
@@ -24,12 +24,12 @@ export function dayMatches(preds, day, now, cal = null) {
 function mk(day, key, picks, now) {
   const legs = picks.map(({ c, l, r }) => ({ pid: c.p.id, home: c.p.home, away: c.p.away, comp: c.p.comp, kickoff: c.p.kickoff, mkt: l.mkt, sel: l.sel, label: l.label, p: r4(l.p), odds: l.odds, src: l.src, rank: r })).sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   const odds = legs.reduce((a, l) => a * l.odds, 1), pAll = legs.reduce((a, l) => a * l.p, 1);
-  return { id: `ls:${day}:${key}`, kind: 'longshot', day, key, n: key === 'mix' ? 5 : Number(key), status: 'pending', created: now.toISOString(), legs, odds: r2(odds), pAll: sig(pAll), ev10: r2(10 * (pAll * odds - 1)), modelPriced: legs.filter((l) => l.src === 'model').length };
+  return { id: `ls:${day}:${key}`, kind: 'longshot', day, key, n: key === 'mix' ? 5 : Number(key), status: 'pending', created: now.toISOString(), legs, odds: r2(odds), pAll: sig(pAll), ev10: r2(10 * (pAll * odds - 1)), modelPriced: legs.filter((l) => l.src === 'model').length, unconfirmed: picks.some(({ c }) => c.p.listed === false) };
 }
 
 /** Slips 1-4: the k-th most probable outcome of each match. Slip 5: outcome rank cycles 1,2,3,4 down the kickoff order. */
-export function buildDay(preds, day, now, cal = null) {
-  const ms = dayMatches(preds, day, now, cal);
+export function buildDay(preds, day, now, cal = null, opts = {}) {
+  const ms = dayMatches(preds, day, now, cal, opts);
   if (ms.length < MIN_LEGS) return [];
   const slips = [];
   for (let r = 0; r < 4; r++) {
@@ -58,7 +58,7 @@ export function longShotStats(items) {
 }
 
 /** Settle existing slips, then build the day's five slips for today and tomorrow (EAT). A set that is untouched (nothing settled, nothing kicked off) is rebuilt only when it can get longer; a started set never changes. */
-export function updateLongShots(prev, preds, now = new Date(), { cal = null } = {}) {
+export function updateLongShots(prev, preds, now = new Date(), { cal = null, requireListed = true } = {}) {
   const items = [...(prev.items || [])], byId = new Map(preds.map((p) => [p.id, p]));
   for (const a of items) settleAcca(a, byId, now);
   const today = dayKey(now.toISOString());
@@ -66,7 +66,7 @@ export function updateLongShots(prev, preds, now = new Date(), { cal = null } = 
     const have = items.filter((i) => i.day === day);
     const untouched = have.every((a) => a.status === 'pending' && a.legs.every((l) => Date.parse(l.kickoff) > now.getTime() + LEAD_MS));
     if (have.length && !untouched) continue;
-    const built = buildDay(preds, day, now, cal);
+    const built = buildDay(preds, day, now, cal, { requireListed });
     if (!built.length) continue;
     const modern = have.length > 0 && have.every((a) => a.key);
     const oldLen = have.length ? Math.max(...have.map((a) => a.legs.length)) : 0, newLen = Math.max(...built.map((a) => a.legs.length));

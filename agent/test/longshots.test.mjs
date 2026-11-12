@@ -60,3 +60,11 @@ test('an old-format untouched day is replaced by the new five-slip layout', () =
   const r = updateLongShots(legacy, pool(8), now);
   assert.ok(r.items.length >= 4 && r.items.every((s) => s.key));
 });
+
+test('a stale SportPesa list: unlisted matches still make slips, flagged unconfirmed; a fresh list keeps the strict rule', () => {
+  const unl = Array.from({ length: 8 }, (_, i) => mkp(i, { listed: false }));
+  assert.equal(updateLongShots({ items: [] }, unl, now).items.length, 0);
+  const r = updateLongShots({ items: [] }, unl, now, { requireListed: false });
+  assert.ok(r.items.length >= 4 && r.items.every((s) => s.unconfirmed === true));
+  assert.ok(updateLongShots({ items: [] }, pool(8), now, { requireListed: false }).items.every((s) => s.unconfirmed === false));
+});
