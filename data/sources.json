@@ -1,20 +1,15 @@
 {
- "updated": "2026-11-12T23:34:25.508Z",
+ "updated": "2026-11-13T00:40:28.863Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4409 results, 271 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "0 results, 10 fixtures"
+   "detail": "0 results, 13 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-11: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-12: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "1 of 41 overdue settled; 15/15 days read; names to alias: Mlada Boleslav | OL Lyonnes | Loyola Marymount | Madrid CFF | Liga de Quito | TSV Eintracht Braunschweig | Slavia Prague | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn | Deportivo Merlo"
+   "detail": "0 of 40 overdue settled; 14/14 days read; names to alias: Mlada Boleslav | OL Lyonnes | Loyola Marymount | Madrid CFF | Liga de Quito | TSV Eintracht Braunschweig | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn | Macará | Denver"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 54 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "10 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "62 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
