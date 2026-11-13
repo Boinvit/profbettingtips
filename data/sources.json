@@ -1,11 +1,6 @@
 {
- "updated": "2026-11-13T07:03:14.562Z",
+ "updated": "2026-11-13T15:20:23.934Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4409 results, 271 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "138 upcoming fixtures; 0 of 40 overdue settled; 21/21 days read; names to alias: Mlada Boleslav | OL Lyonnes | Loyola Marymount | Madrid CFF | Liga de Quito | TSV Eintracht Braunschweig | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn | Macará | Denver"
+   "detail": "138 upcoming fixtures; 2 of 42 overdue settled; 21/21 days read; names to alias: Mlada Boleslav | OL Lyonnes | Loyola Marymount | Madrid CFF | Liga de Quito | TSV Eintracht Braunschweig | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn | Macará | Denver"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 54 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "142 teams fetched, 0 failed"
+   "detail": "202 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
