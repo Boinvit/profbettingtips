@@ -96,7 +96,7 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
 
   // 5. fixtures to predict: SportPesa-listed games (primary) + other upcoming fixtures from data feeds
   const feedUp = []; // resolve feed fixtures to ids
-  for (const f of feed.upcoming || []) if (new Date(f.d) > now) feedUp.push({ ...f, h: registry.resolve(f.hn), a: registry.resolve(f.an) });
+  for (const f of feed.upcoming || []) if (new Date(f.d) > now) feedUp.push({ ...f, h: registry.resolve(f.hn), a: registry.resolve(f.an), c: f.c || leagueOf.get(registry.resolve(f.hn)) || 'X' });
   const upIdx = new Map(); for (const f of feedUp) (upIdx.get(pairKey(f.h, f.a)) || upIdx.set(pairKey(f.h, f.a), []).get(pairKey(f.h, f.a))).push(f);
   const targets = new Map(); const unmatched = [];
   for (const l of feed.listed || []) {
@@ -216,7 +216,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     // d3) ESPN public scoreboards: fast results for any league, used only for matches we have overdue predictions on
     try {
       const { fetchEspn } = await import('./lib/sources/espn.mjs');
-      merge(await fetchEspn({ now, preds: load('predictions.json', []), registry: new Registry(load('teams.json', {}), load('aliases.json', {})), health }), 'espn');
+      merge(await fetchEspn({ now, preds: load('predictions.json', []), registry: new Registry(load('teams.json', {}), load('aliases.json', {})), health, upcomingDays: 7 }), 'espn');
     } catch (e) { health.push({ source: 'ESPN', ok: false, detail: e.message }); }
     // d2) openfootball: public-domain full-season fixtures/results for EPL, Championship, La Liga, Serie A
     try {

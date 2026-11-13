@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { overdueFor, datesFor, matchEvents, fetchEspn } from '../lib/sources/espn.mjs';
+import { overdueFor, datesFor, matchEvents, fetchEspn, upcomingFrom, datesAhead } from '../lib/sources/espn.mjs';
 import { tierOf } from '../lib/results.mjs';
 
 const now = new Date('2026-11-10T06:00:00Z');
@@ -53,3 +53,12 @@ test('fetchEspn reads each day once, tolerates failures and reports a health lin
 });
 
 test('espn is a tier-2 (supplemental, finished-only) source', () => { assert.equal(tierOf('espn'), 2); });
+
+test('upcomingFrom keeps scheduled future fixtures between known teams only', () => {
+  const ev = (id, date, st, h, a) => ({ id, date, competitions: [{ status: { type: { name: st, completed: false } }, competitors: [{ homeAway: 'home', team: { displayName: h } }, { homeAway: 'away', team: { displayName: a } }] }] });
+  const now = new Date('2026-11-13T10:00:00Z');
+  const known = new Set(['A', 'B', 'C']);
+  const r = upcomingFrom([ev('1', '2026-11-14T15:00:00Z', 'STATUS_SCHEDULED', 'A', 'B'), ev('2', '2026-11-14T15:00:00Z', 'STATUS_SCHEDULED', 'A', 'Z'), ev('3', '2026-11-13T09:00:00Z', 'STATUS_SCHEDULED', 'A', 'C'), ev('4', '2026-11-14T15:00:00Z', 'STATUS_FULL_TIME', 'B', 'C'), ev('1', '2026-11-14T15:00:00Z', 'STATUS_SCHEDULED', 'A', 'B')], (n) => known.has(n) && n, now);
+  assert.deepEqual(r.map((x) => x.hn + x.an), ['AB']);
+  assert.equal(datesAhead(now, 3).join(','), '20261113,20261114,20261115');
+});

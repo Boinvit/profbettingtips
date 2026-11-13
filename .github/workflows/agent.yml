@@ -68,5 +68,8 @@ jobs:
           git add data
           git diff --cached --quiet && echo "no changes" && exit 0
           git commit -m "data: agent update $(date -u +'%Y-%m-%d %H:%M') UTC"
-          git pull --rebase origin ${{ github.ref_name }} || true
-          git push
+          for i in 1 2 3; do
+            git pull --rebase origin ${{ github.ref_name }} && git push && exit 0
+            sleep 5
+          done
+          exit 1
