@@ -1,10 +1,15 @@
 {
- "updated": "2026-11-13T00:40:28.863Z",
+ "updated": "2026-11-13T06:35:41.820Z",
  "health": [
+  {
+   "source": "football-data.co.uk",
+   "ok": true,
+   "detail": "40 files ok, 0 failed; 4409 results, 271 fixtures"
+  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "0 results, 13 fixtures"
+   "detail": "0 results, 14 fixtures"
   },
   {
    "source": "API-Football",
@@ -27,9 +32,14 @@
    "detail": "264 results, 54 fixtures next 14d"
   },
   {
-   "source": "Run mode",
+   "source": "The Odds API",
    "ok": true,
-   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
+   "detail": "8 events fetched, 8 with 1X2 odds"
+  },
+  {
+   "source": "ClubElo",
+   "ok": false,
+   "detail": "HTTP 502"
   },
   {
    "source": "SportPesa",
@@ -39,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "62 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
