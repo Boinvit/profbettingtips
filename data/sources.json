@@ -1,20 +1,15 @@
 {
- "updated": "2026-11-13T23:30:47.397Z",
+ "updated": "2026-11-14T01:47:59.115Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4409 results, 54 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "0 results, 14 fixtures"
+   "detail": "0 results, 59 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-12: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-13: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "129 upcoming fixtures; 1 of 42 overdue settled; 21/21 days read; names to alias: FC Blau-Weiß Linz | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Madrid CFF | Liga de Quito | RC Celta Fortuna | TSV Eintracht Braunschweig | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn"
+   "detail": "165 upcoming fixtures; 0 of 41 overdue settled; 22/22 days read; names to alias: FC Blau-Weiß Linz | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Madrid CFF | Liga de Quito | TSV Eintracht Braunschweig | Japan Soccer College | FC Badalona | One Knoxville | Hill of Beath Hawthorn | Macará"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 55 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "46 teams fetched, 0 failed"
+   "detail": "0 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
