@@ -1,11 +1,6 @@
 {
- "updated": "2026-11-15T10:46:16.462Z",
+ "updated": "2026-11-15T15:37:33.520Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4409 results, 54 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
@@ -19,27 +14,22 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "81 results, 15 fixtures (German Bundesliga)"
+   "detail": "81 results, 16 fixtures (German Bundesliga)"
   },
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "250 upcoming fixtures; 0 of 63 overdue settled; 22/22 days read; names to alias: Inverness Caledonian Thistle | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Nottingham Forest U21 | Madrid CFF | Liga de Quito | Guiseley | TSV Eintracht Braunschweig | Airdrieonians | Ayr United | Formartine United"
+   "detail": "230 upcoming fixtures; 8 of 66 overdue settled; 22/22 days read; names to alias: Moneyfields | SJR Worksop | Inverness Caledonian Thistle | Mlada Boleslav | OL Lyonnes | Feberbache | Loyola Marymount | Nottingham Forest U21 | Guiseley | Alvechurch | TSV Eintracht Braunschweig | Airdrieonians"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 75 fixtures next 14d"
+   "detail": "264 results, 96 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "3 teams fetched, 0 failed"
+   "detail": "71 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
