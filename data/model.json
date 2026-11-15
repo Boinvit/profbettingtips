@@ -562,9 +562,9 @@
   },
   {
    "team": "Paris SG",
-   "elo": 1890,
-   "att": 1.64,
-   "def": 0.65
+   "elo": 1900,
+   "att": 1.63,
+   "def": 0.61
   },
   {
    "team": "Porto",
@@ -615,16 +615,16 @@
    "def": 0.69
   },
   {
+   "team": "PSV Eindhoven",
+   "elo": 1839,
+   "att": 1.77,
+   "def": 0.81
+  },
+  {
    "team": "St. Gilloise",
    "elo": 1838,
    "att": 1.51,
    "def": 0.53
-  },
-  {
-   "team": "PSV Eindhoven",
-   "elo": 1838,
-   "att": 1.81,
-   "def": 0.83
   },
   {
    "team": "Rangers",
@@ -693,6 +693,6 @@
    "def": 0.53
   }
  ],
- "matches": 89774,
- "updated": "2026-11-14T20:41:16.576Z"
+ "matches": 89783,
+ "updated": "2026-11-15T01:00:44.027Z"
 }
