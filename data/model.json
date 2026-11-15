@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 89771,
+ "tunedOn": 89809,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -539,6 +539,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-15T18:48:10.371Z",
+   "n": 89809,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0135,
+    1.0135
+   ],
+   "acc": [
+    0.495,
+    0.495
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -616,9 +640,9 @@
   },
   {
    "team": "PSV Eindhoven",
-   "elo": 1839,
-   "att": 1.77,
-   "def": 0.81
+   "elo": 1846,
+   "att": 1.7,
+   "def": 0.76
   },
   {
    "team": "St. Gilloise",
@@ -633,16 +657,16 @@
    "def": 0.76
   },
   {
+   "team": "Zenit",
+   "elo": 1831,
+   "att": 1.57,
+   "def": 0.4
+  },
+  {
    "team": "Man City",
    "elo": 1830,
    "att": 1.35,
    "def": 0.87
-  },
-  {
-   "team": "Zenit",
-   "elo": 1823,
-   "att": 1.53,
-   "def": 0.4
   },
   {
    "team": "Olympiakos",
@@ -693,6 +717,6 @@
    "def": 0.53
   }
  ],
- "matches": 89798,
- "updated": "2026-11-15T15:37:33.520Z"
+ "matches": 89809,
+ "updated": "2026-11-15T18:48:10.371Z"
 }
