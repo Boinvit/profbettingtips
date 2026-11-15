@@ -1,15 +1,10 @@
 {
- "updated": "2026-11-15T01:00:44.027Z",
+ "updated": "2026-11-15T07:49:20.199Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4409 results, 54 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "1 results, 81 fixtures"
+   "detail": "2 results, 81 fixtures"
   },
   {
    "source": "API-Football",
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "251 upcoming fixtures; 8 of 74 overdue settled; 22/22 days read; names to alias: Inverness Caledonian Thistle | Deportivo Pereira | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Nottingham Forest U21 | Madrid CFF | Vancouver Rise FC | Deportivo Cali | Liga de Quito | Guiseley | Saint-Malo"
+   "detail": "252 upcoming fixtures; 7 of 70 overdue settled; 22/22 days read; names to alias: Inverness Caledonian Thistle | Deportivo Pereira | Oregon State | Utah Valley | Mlada Boleslav | OL Lyonnes | Missouri State | Denver | UAB | Boise State | Loyola Marymount | Nottingham Forest U21"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 75 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "10 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "100 teams fetched, 0 failed"
+   "detail": "94 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
