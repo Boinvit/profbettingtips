@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-15T20:35:15.098Z",
+ "updated": "2026-11-16T00:21:28.080Z",
  "health": [
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "2 results, 81 fixtures"
+   "detail": "2 results, 87 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-14: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-15: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -19,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "223 upcoming fixtures; 3 of 61 overdue settled; 21/21 days read; names to alias: Moneyfields | SJR Worksop | Chester-le-Street Town | Inverness Caledonian Thistle | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Tavernes de la Valldigna | Nottingham Forest U21 | Deportivo | Guiseley | TSV Eintracht Braunschweig"
+   "detail": "309 upcoming fixtures; 0 of 58 overdue settled; 22/22 days read; names to alias: Moneyfields | SJR Worksop | Chester-le-Street Town | Inverness Caledonian Thistle | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Nottingham Forest U21 | Guiseley | TSV Eintracht Braunschweig | Airdrieonians | Ayr United"
   },
   {
    "source": "openfootball",
@@ -39,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "10 teams fetched, 0 failed"
+   "detail": "74 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
