@@ -29,6 +29,8 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}   # branch tip at job start, not the stale commit from scheduling time
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -37,6 +39,7 @@ jobs:
         run: node --test agent/test/jackpot.test.mjs agent/test/sources.test.mjs agent/test/more-sources.test.mjs agent/test/results-merge.test.mjs
 
       - name: Install browser for SportPesa scrape
+        continue-on-error: true      # a transient apt/DNS failure must not lose the whole run
         run: |
           npm install --no-save --no-package-lock playwright@1.49.1
           npx playwright install --with-deps chromium
@@ -65,11 +68,19 @@ jobs:
         run: |
           git config user.name  "pbt-agent"
           git config user.email "pbt-agent@users.noreply.github.com"
-          git add data
+          git add -A data
           git diff --cached --quiet && echo "no changes" && exit 0
-          git commit -m "data: agent update $(date -u +'%Y-%m-%d %H:%M') UTC"
-          for i in 1 2 3; do
-            git pull --rebase origin ${{ github.ref_name }} && git push && exit 0
+          # Keep only the files this run changed, replay them on the newest branch tip. No merge, so no conflicts.
+          git diff --cached --name-only --diff-filter=AM > /tmp/changed.txt
+          tar -cf /tmp/ours.tar -T /tmp/changed.txt
+          for i in 1 2 3 4; do
+            git fetch -q origin ${{ github.ref_name }}
+            git reset -q --hard origin/${{ github.ref_name }}
+            tar -xf /tmp/ours.tar
+            git add -A data
+            git diff --cached --quiet && echo "already up to date" && exit 0
+            git commit -q -m "data: agent update $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push -q origin HEAD:${{ github.ref_name }} && exit 0
             sleep 5
           done
           exit 1
