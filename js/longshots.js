@@ -1,4 +1,4 @@
-// Long shots tab: up to 24 matches a day as five slips (1st, 2nd, 3rd, 4th most likely outcome of each match, then a mix). Entertainment only.
+// Long shots tab: up to 6 matches a day as five slips (1st, 2nd, 3rd, 4th most likely outcome of each match, then a mix). Entertainment only.
 const esc = (s) => String(s ?? '').replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 const pct = (x, d = 0) => (Number.isFinite(x) ? (x * 100).toFixed(d) + '%' : '-');
 const chance = (p) => (p >= 0.01 ? pct(p, 1) : p > 0 ? 'about 1 in ' + Math.round(1 / p).toLocaleString('en-KE') : '-');
@@ -32,7 +32,7 @@ export async function mountLongShots(root) {
     ? `<h3>Track record</h3><p>${st.won} of ${st.settled} settled slips won (the model expected about ${st.expectedWins}). Single legs: ${st.legsWon} of ${st.legsSettled} won, against ${pct(st.legClaimed)} claimed on average.</p>${rankRows ? `<ul>${rankRows}</ul>` : ''}`
     : `<p class='muted'>No settled long shots yet. Once some have, this shows how often each outcome rank really wins compared with what the model claims.</p>`;
   root.innerHTML = `<h2>Long shots</h2>
-  <p><strong>For fun, tiny stakes only.</strong> Up to 24 of the day's most likely matches (60% or better for the top outcome; youth, reserve and thin-data games are left out), laid out as five slips: the most likely outcome of every match, then the second, third and fourth most likely, then a mix. Stake them in that order, as you plan. The slips share the same matches, so one surprise result can sink several at once. A 24-leg slip almost never lands, and on the model's own numbers the set loses money on average, so keep the total across all five small.</p>
+  <p><strong>For fun, tiny stakes only.</strong> Up to 6 of the day's most likely matches (60% or better for the top outcome; youth, reserve and thin-data games are left out), laid out as five slips: the most likely outcome of every match, then the second, third and fourth most likely, then a mix. Stake them in that order, as you plan. The slips share the same matches, so one surprise result can sink several at once. A 24-leg slip almost never lands, and on the model's own numbers the set loses money on average, so keep the total across all five small.</p>
   ${open.length ? sums + open.map(card).join('') : `<div class='empty'>No long shots yet. They are built when at least 4 matches clear 60%, so check back after the next agent run.</div>`}
   ${hist}`;
 }

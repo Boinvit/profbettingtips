@@ -9,7 +9,7 @@ const mkp = (i, over = {}) => ({
 });
 const pool = (n) => Array.from({ length: n }, (_, i) => mkp(i));
 
-test('up to 24 matches, five slips from the same matches; rank k uses each match k-th best outcome', () => {
+test('up to MAX_LEGS matches, five slips from the same matches; rank k uses each match k-th best outcome', () => {
   const slips = buildDay(pool(30), '2026-11-04', now);
   assert.ok(slips.length >= 3 && slips.some((s) => s.key === 'mix'));
   const first = slips.find((s) => s.key === '1');
@@ -25,7 +25,7 @@ test('up to 24 matches, five slips from the same matches; rank k uses each match
 
 test('the mix slip cycles outcome ranks down the kickoff order', () => {
   const mix = buildDay(pool(12), '2026-11-04', now).find((s) => s.key === 'mix');
-  assert.equal(mix.legs.length, 12);
+  assert.equal(mix.legs.length, MAX_LEGS);
   assert.ok(new Set(mix.legs.map((l) => l.rank)).size >= 2);
 });
 
@@ -42,17 +42,17 @@ test('too few qualifying matches: nothing is built', () => {
 });
 
 test('a started set is never changed; an untouched set only grows; settling fills the track record by rank', () => {
-  const a = updateLongShots({ items: [] }, pool(6), now);
+  const a = updateLongShots({ items: [] }, pool(4), now);
   const len = (r) => Math.max(...r.items.map((s) => s.legs.length));
-  assert.equal(len(a), 6);
-  assert.equal(len(updateLongShots(a, pool(6), now)), 6);
-  assert.equal(len(updateLongShots(a, pool(10), now)), 10);
-  assert.equal(len(updateLongShots(a, pool(10), new Date('2026-11-04T16:30:00Z'))), 6);
+  assert.equal(len(a), 4);
+  assert.equal(len(updateLongShots(a, pool(4), now)), 4);
+  assert.equal(len(updateLongShots(a, pool(10), now)), MAX_LEGS);
+  assert.equal(len(updateLongShots(a, pool(10), new Date('2026-11-04T16:30:00Z'))), 4);
   const done = pool(6).map((p) => ({ ...p, status: 'settled', result: { hg: 3, ag: 0 } }));
   const c = updateLongShots(a, done, new Date('2026-11-04T23:00:00Z'));
   assert.ok(c.stats.settled >= 3 && c.stats.legsSettled > 0);
   assert.ok(c.items.every((s) => s.status === 'won' || s.status === 'lost'));
-  assert.ok(c.stats.byRank[1] && c.stats.byRank[1].n === 6);
+  assert.ok(c.stats.byRank[1] && c.stats.byRank[1].n === 4);
 });
 
 test('an old-format untouched day is replaced by the new five-slip layout', () => {
@@ -67,4 +67,11 @@ test('a stale SportPesa list: unlisted matches still make slips, flagged unconfi
   const r = updateLongShots({ items: [] }, unl, now, { requireListed: false });
   assert.ok(r.items.length >= 4 && r.items.every((s) => s.unconfirmed === true));
   assert.ok(updateLongShots({ items: [] }, pool(8), now, { requireListed: false }).items.every((s) => s.unconfirmed === false));
+});
+
+test('slips stay short: never more than MAX_LEGS legs (6) even with many qualifying matches', () => {
+  assert.equal(MAX_LEGS, 6);
+  const r = updateLongShots({ items: [] }, pool(30), now);
+  assert.ok(r.items.length >= 4);
+  assert.ok(r.items.every((s) => s.legs.length <= MAX_LEGS));
 });

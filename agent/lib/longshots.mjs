@@ -1,10 +1,10 @@
-// Long shots: up to MAX_LEGS matches a day (the most probable first), laid out as FIVE slips built from the SAME matches:
+// Long shots: up to MAX_LEGS (6) matches a day, the most probable first; short slips so the whole-slip chance stays meaningful, laid out as FIVE slips built from the SAME matches:
 // slips 1-4 use every match's 1st, 2nd, 3rd and 4th most probable outcome; slip 5 mixes ranks across matches.
 // Entertainment tier: tiny stakes only. The honest whole-slip chance and expected result are always stored beside the payout.
 import { legsFor, dayKey, settleAcca } from './accas.mjs';
 import { isTrusted } from './sure.mjs';
 
-export const MIN_MATCH_P = 0.60, MAX_LEGS = 24, MIN_LEGS = 4, MIN_GAMES = 20, LEAD_MS = 45 * 60e3;
+export const MIN_MATCH_P = 0.60, MAX_LEGS = 6, MIN_LEGS = 4, MIN_GAMES = 20, LEAD_MS = 45 * 60e3;
 const YOUTH = /\b(U-?(1[5-9]|2[0-3])|youth|reserves?)\b|[ ](II|III)$/i; // squads rotate, little reliable history
 const r2 = (x) => Math.round(x * 100) / 100, r4 = (x) => Math.round(x * 10000) / 10000, sig = (x) => Number(x.toPrecision(3));
 
