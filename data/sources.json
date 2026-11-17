@@ -1,20 +1,15 @@
 {
- "updated": "2026-11-16T21:58:00.273Z",
+ "updated": "2026-11-17T01:04:10.898Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4462 results, 54 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "2 results, 87 fixtures"
+   "detail": "2 results, 105 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-15: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-16: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "302 upcoming fixtures; 0 of 56 overdue settled; 21/21 days read; names to alias: Moneyfields | SJR Worksop | Chester-le-Street Town | Inverness Caledonian Thistle | Mlada Boleslav | OL Lyonnes | Loyola Marymount | Nottingham Forest U21 | Guiseley | TSV Eintracht Braunschweig | Airdrieonians | Ayr United"
+   "detail": "325 upcoming fixtures; 0 of 29 overdue settled; 22/22 days read; names to alias: Moneyfields | Mlada Boleslav | OL Lyonnes | Loyola Marymount | TSV Eintracht Braunschweig"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 96 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "9 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "3 teams fetched, 4 failed"
+   "detail": "55 teams fetched, 43 failed"
   }
  ],
  "unmatchedListed": [
