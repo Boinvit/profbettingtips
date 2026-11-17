@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T09:10:30.558Z",
+ "updated": "2026-11-17T12:35:09.027Z",
  "health": [
   {
    "source": "football-data.org",
@@ -19,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "325 upcoming fixtures; 0 of 28 overdue settled; 22/22 days read; names to alias: Moneyfields | Mlada Boleslav | OL Lyonnes | Loyola Marymount | TSV Eintracht Braunschweig"
+   "detail": "325 upcoming fixtures; 0 of 27 overdue settled; 22/22 days read; names to alias: Moneyfields | Mlada Boleslav | OL Lyonnes | TSV Eintracht Braunschweig"
   },
   {
    "source": "openfootball",
@@ -39,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "64 teams fetched, 1 failed"
+   "detail": "7 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
