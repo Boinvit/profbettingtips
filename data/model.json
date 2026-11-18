@@ -598,9 +598,9 @@
   },
   {
    "team": "Inter",
-   "elo": 1923,
-   "att": 1.82,
-   "def": 0.77
+   "elo": 1910,
+   "att": 1.76,
+   "def": 0.85
   },
   {
    "team": "Barcelona",
@@ -633,6 +633,12 @@
    "def": 0.68
   },
   {
+   "team": "Real Madrid",
+   "elo": 1874,
+   "att": 1.8,
+   "def": 0.61
+  },
+  {
    "team": "Celtic",
    "elo": 1871,
    "att": 1.5,
@@ -643,12 +649,6 @@
    "elo": 1865,
    "att": 1.69,
    "def": 0.81
-  },
-  {
-   "team": "Real Madrid",
-   "elo": 1861,
-   "att": 1.77,
-   "def": 0.6
   },
   {
    "team": "Arsenal",
@@ -669,6 +669,12 @@
    "def": 0.76
   },
   {
+   "team": "Man City",
+   "elo": 1839,
+   "att": 1.36,
+   "def": 0.82
+  },
+  {
    "team": "St. Gilloise",
    "elo": 1838,
    "att": 1.51,
@@ -685,12 +691,6 @@
    "elo": 1831,
    "att": 1.57,
    "def": 0.4
-  },
-  {
-   "team": "Man City",
-   "elo": 1830,
-   "att": 1.35,
-   "def": 0.87
   },
   {
    "team": "Olympiakos",
@@ -741,6 +741,6 @@
    "def": 0.53
   }
  ],
- "matches": 89845,
- "updated": "2026-11-18T18:02:04.614Z"
+ "matches": 89848,
+ "updated": "2026-11-18T20:27:22.552Z"
 }
