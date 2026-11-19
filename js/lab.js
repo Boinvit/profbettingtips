@@ -154,7 +154,7 @@ import { mountLongShots } from './longshots.js';
       const groups = {};
       for (const a of items) (groups[a.key] ||= []).push(a);
       let out = `<div class="panel"><h3>Accumulators</h3><p class="note">Built from the model's safest selections (double chance, 1X2, goals). The chance shown assumes the matches are independent: it is an estimate, not a promise, and longer slips lose more often. Slips are locked once the first match kicks off. *Starred odds are estimated by the model (about 7% bookmaker margin) because live prices are not available for every leg, so always check the real price before you bet. Record so far: ${o.n ? `${o.won} of ${o.n} won (model expected ${pct(o.expected, 0)})` : 'no settled slips yet'}.${A.updated ? ` Updated ${esc(day(A.updated))} ${esc(time(A.updated))}.` : ''}</p></div>`;
-      for (const k of Object.keys(groups).sort().reverse()) {
+      for (const k of Object.keys(groups).sort((x, y) => { const [kx, dx] = x.split(':'), [ky, dy] = y.split(':'); return dy.localeCompare(dx) || ky.localeCompare(kx); })) { // newest date first, then older played days; a weekend slip sits above that day's dailies
         const [kind, d] = k.split(':');
         out += `<div class="day">${kind === 'weekend' ? 'Weekend' : 'Daily'} · ${esc(day(d + 'T12:00:00Z'))}</div>` + groups[k].sort((x, y) => x.odds - y.odds).map(card).join('');
       }
