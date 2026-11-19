@@ -1,15 +1,10 @@
 {
- "updated": "2026-11-19T20:30:09.354Z",
+ "updated": "2026-11-19T23:48:56.381Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4463 results, 60 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "6 results, 114 fixtures"
+   "detail": "6 results, 112 fixtures"
   },
   {
    "source": "API-Football",
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "378 upcoming fixtures; 2 of 20 overdue settled; 21/21 days read; names to alias: Moneyfields | Salamanca UDS | SR Donaufeld | Mlada Boleslav | OL Lyonnes | Deportivo | TSV Eintracht Braunschweig"
+   "detail": "376 upcoming fixtures; 2 of 21 overdue settled; 21/21 days read; names to alias: OL Lyonnes | London City Lionesses | Moneyfields | Deportivo | Comunicaciones | Mlada Boleslav | Madrid CFF | Liga de Quito | TSV Eintracht Braunschweig"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 106 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "11 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "30 teams fetched, 3 failed"
+   "detail": "463 teams fetched, 6 failed"
   }
  ],
  "unmatchedListed": [

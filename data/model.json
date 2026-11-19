@@ -597,16 +597,16 @@
    "def": 0.61
   },
   {
+   "team": "Barcelona",
+   "elo": 1911,
+   "att": 2.2,
+   "def": 0.67
+  },
+  {
    "team": "Inter",
    "elo": 1910,
    "att": 1.76,
    "def": 0.85
-  },
-  {
-   "team": "Barcelona",
-   "elo": 1908,
-   "att": 2.08,
-   "def": 0.72
   },
   {
    "team": "Paris SG",
@@ -627,12 +627,6 @@
    "def": 0.66
   },
   {
-   "team": "Benfica",
-   "elo": 1881,
-   "att": 1.84,
-   "def": 0.68
-  },
-  {
    "team": "Real Madrid",
    "elo": 1874,
    "att": 1.8,
@@ -643,6 +637,12 @@
    "elo": 1871,
    "att": 1.5,
    "def": 0.71
+  },
+  {
+   "team": "Benfica",
+   "elo": 1869,
+   "att": 1.82,
+   "def": 0.77
   },
   {
    "team": "Galatasaray",
@@ -693,6 +693,12 @@
    "def": 0.4
   },
   {
+   "team": "Roma",
+   "elo": 1827,
+   "att": 1.75,
+   "def": 0.83
+  },
+  {
    "team": "Olympiakos",
    "elo": 1823,
    "att": 1.2,
@@ -703,12 +709,6 @@
    "elo": 1818,
    "att": 1.24,
    "def": 0.58
-  },
-  {
-   "team": "Roma",
-   "elo": 1815,
-   "att": 1.72,
-   "def": 0.79
   },
   {
    "team": "Bodo/Glimt",
@@ -741,6 +741,6 @@
    "def": 0.53
   }
  ],
- "matches": 89863,
- "updated": "2026-11-19T20:30:09.354Z"
+ "matches": 89865,
+ "updated": "2026-11-19T23:48:56.381Z"
 }
