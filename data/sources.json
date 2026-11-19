@@ -1,20 +1,15 @@
 {
- "updated": "2026-11-18T20:27:22.552Z",
+ "updated": "2026-11-19T00:18:48.788Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4463 results, 60 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "0 results, 119 fixtures"
+   "detail": "0 results, 116 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-17: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-18: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "354 upcoming fixtures; 3 of 19 overdue settled; 20/20 days read; names to alias: Moneyfields | FC Badalona | Mlada Boleslav | OL Lyonnes | TSV Eintracht Braunschweig"
+   "detail": "385 upcoming fixtures; 6 of 22 overdue settled; 21/21 days read; names to alias: Moneyfields | Danubio | Mlada Boleslav | OL Lyonnes | Durham | Deportes Concepcion | TSV Eintracht Braunschweig"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 106 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "15 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "35 teams fetched, 0 failed"
+   "detail": "348 teams fetched, 2 failed"
   }
  ],
  "unmatchedListed": [
