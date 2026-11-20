@@ -616,8 +616,8 @@
  "top": [
   {
    "team": "Bayern Munich",
-   "elo": 1960,
-   "att": 1.97,
+   "elo": 1952,
+   "att": 1.89,
    "def": 0.61
   },
   {
@@ -723,6 +723,12 @@
    "def": 0.83
   },
   {
+   "team": "Bodo/Glimt",
+   "elo": 1824,
+   "att": 1.49,
+   "def": 0.56
+  },
+  {
    "team": "Olympiakos",
    "elo": 1823,
    "att": 1.2,
@@ -733,12 +739,6 @@
    "elo": 1818,
    "att": 1.24,
    "def": 0.58
-  },
-  {
-   "team": "Bodo/Glimt",
-   "elo": 1815,
-   "att": 1.48,
-   "def": 0.54
   },
   {
    "team": "Viking",
@@ -765,6 +765,6 @@
    "def": 0.53
   }
  ],
- "matches": 89874,
- "updated": "2026-11-20T20:18:17.488Z"
+ "matches": 89889,
+ "updated": "2026-11-20T22:39:46.744Z"
 }

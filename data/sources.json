@@ -1,15 +1,10 @@
 {
- "updated": "2026-11-20T20:18:17.488Z",
+ "updated": "2026-11-20T22:39:46.744Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4472 results, 283 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "9 results, 117 fixtures"
+   "detail": "10 results, 119 fixtures"
   },
   {
    "source": "API-Football",
@@ -19,12 +14,12 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "81 results, 18 fixtures (German Bundesliga)"
+   "detail": "82 results, 18 fixtures (German Bundesliga)"
   },
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "369 upcoming fixtures; 0 of 19 overdue settled; 21/21 days read; names to alias: OL Lyonnes | London City Lionesses | Moneyfields | Comunicaciones | Mlada Boleslav"
+   "detail": "367 upcoming fixtures; 15 of 41 overdue settled; 21/21 days read; names to alias: OL Lyonnes | London City Lionesses | Saint-Die Kellermann | Moneyfields | Selongey | St-Ouen L'Aumone | FC Lourdes | Helmond Sport | Comunicaciones | Mlada Boleslav | FC Fleury 91 | MVV Maastricht"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 107 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "21 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "HTTP 502"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "218 teams fetched, 9 failed"
+   "detail": "395 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
