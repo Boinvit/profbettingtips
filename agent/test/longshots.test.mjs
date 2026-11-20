@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildDay, updateLongShots, dayMatches, MIN_MATCH_P, MAX_LEGS } from '../lib/longshots.mjs';
+import { buildDay, updateLongShots, dayMatches, MIN_MATCH_P, MAX_LEGS, MAX_SLIPS, learnCalibration, adjustP, topLegSamples, backtest, adviceFor } from '../lib/longshots.mjs';
 
 const now = new Date('2026-11-04T06:00:00Z');
 const mkp = (i, over = {}) => ({
@@ -9,69 +9,98 @@ const mkp = (i, over = {}) => ({
 });
 const pool = (n) => Array.from({ length: n }, (_, i) => mkp(i));
 
-test('up to MAX_LEGS matches, five slips from the same matches; rank k uses each match k-th best outcome', () => {
-  const slips = buildDay(pool(30), '2026-11-04', now);
-  assert.ok(slips.length >= 3 && slips.some((s) => s.key === 'mix'));
-  const first = slips.find((s) => s.key === '1');
-  assert.equal(first.legs.length, MAX_LEGS);
-  const ids = (s) => new Set(s.legs.map((l) => l.pid));
-  for (const s of slips) for (const id of ids(s)) assert.ok(ids(first).has(id));
-  const second = slips.find((s) => s.key === '2');
-  for (const l of first.legs) assert.equal(l.rank, 1);
-  for (const l of second.legs) { assert.equal(l.rank, 2); const f = first.legs.find((x) => x.pid === l.pid); assert.ok(l.p <= f.p); }
-  assert.ok(first.legs.every((l) => l.p >= MIN_MATCH_P));
-  assert.ok(first.pAll > 0 && first.pAll < 1 && first.odds > 1);
+test('dayMatches keeps only trusted, listed matches at or above the floor, most reliable first', () => {
+  const ms = dayMatches([...pool(5), mkp(90, { listed: false }), mkp(91, { games: 8 })], '2026-11-04', now);
+  assert.equal(ms.length, 5);
+  assert.ok(ms.every((c) => c.legs[0].p >= MIN_MATCH_P));
+  assert.ok(ms.every((c, i) => i === 0 || ms[i - 1].legs[0].p >= c.legs[0].p));
 });
 
-test('the mix slip cycles outcome ranks down the kickoff order', () => {
-  const mix = buildDay(pool(12), '2026-11-04', now).find((s) => s.key === 'mix');
-  assert.equal(mix.legs.length, MAX_LEGS);
-  assert.ok(new Set(mix.legs.map((l) => l.rank)).size >= 2);
+test('one slip of the most reliable matches, capped, with extra slips from separate matches', () => {
+  const few = buildDay(pool(6), '2026-11-04', now);
+  assert.equal(few.length, 1);
+  assert.equal(few[0].key, 'A');
+  assert.equal(few[0].legs.length, 6);
+  const many = buildDay(pool(20), '2026-11-04', now);
+  assert.equal(many.length, MAX_SLIPS);
+  assert.ok(many.every((s) => s.legs.length <= MAX_LEGS && s.legs.length >= 4));
+  const ids = many.flatMap((s) => s.legs.map((l) => l.pid));
+  assert.equal(new Set(ids).size, ids.length);
+  assert.ok(many[0].pAll >= many[1].pAll);
+  assert.deepEqual(buildDay(pool(3), '2026-11-04', now), []);
 });
 
-test('youth, thin-data, unlisted and started matches are never used', () => {
-  const bad = [mkp(100, { home: 'Roma U20' }), mkp(101, { games: 5 }), mkp(102, { listed: false }), mkp(103, { away: 'Lille Youth' }), mkp(104, { kickoff: '2026-11-04T06:10:00.000Z' })];
-  const ids = new Set(dayMatches([...bad, ...pool(10)], '2026-11-04', now).map((c) => c.p.id));
-  for (const b of bad) assert.ok(!ids.has(b.id));
-});
-
-test('too few qualifying matches: nothing is built', () => {
-  assert.equal(buildDay(pool(3), '2026-11-04', now).length, 0);
-  const weak = Array.from({ length: 10 }, (_, i) => mkp(i, { pk: { x12: 'H', x12p: 0.4, dc: '1X', dcp: 0.55, ou: 'O', oup: 0.5, bt: 'Y', btp: 0.5 } }));
-  assert.equal(buildDay(weak, '2026-11-04', now).length, 0);
-});
-
-test('a started set is never changed; an untouched set only grows; settling fills the track record by rank', () => {
+test('an untouched set can grow; a started set never changes', () => {
   const a = updateLongShots({ items: [] }, pool(4), now);
-  const len = (r) => Math.max(...r.items.map((s) => s.legs.length));
-  assert.equal(len(a), 4);
-  assert.equal(len(updateLongShots(a, pool(4), now)), 4);
-  assert.equal(len(updateLongShots(a, pool(10), now)), MAX_LEGS);
-  assert.equal(len(updateLongShots(a, pool(10), new Date('2026-11-04T16:30:00Z'))), 4);
-  const done = pool(6).map((p) => ({ ...p, status: 'settled', result: { hg: 3, ag: 0 } }));
-  const c = updateLongShots(a, done, new Date('2026-11-04T23:00:00Z'));
-  assert.ok(c.stats.settled >= 3 && c.stats.legsSettled > 0);
-  assert.ok(c.items.every((s) => s.status === 'won' || s.status === 'lost'));
-  assert.ok(c.stats.byRank[1] && c.stats.byRank[1].n === 4);
+  assert.equal(a.items.length, 1);
+  assert.equal(updateLongShots(a, pool(4), now).items[0].legs.length, 4);
+  assert.equal(updateLongShots(a, pool(10), now).items.length, 2);
+  assert.equal(updateLongShots(a, pool(10), new Date('2026-11-04T16:30:00Z')).items.length, 1);
 });
 
-test('an old-format untouched day is replaced by the new five-slip layout', () => {
-  const legacy = { items: [{ id: 'ls:2026-11-04:1', day: '2026-11-04', status: 'pending', pAll: 0.3, legs: [{ pid: 'zz', mkt: 'x12', sel: 'H', kickoff: '2026-11-04T16:00:00Z', p: 0.8 }] }] };
-  const r = updateLongShots(legacy, pool(8), now);
-  assert.ok(r.items.length >= 4 && r.items.every((s) => s.key));
+test('slips never exceed MAX_LEGS legs even with many matches', () => {
+  assert.equal(MAX_LEGS, 6);
+  const r = updateLongShots({ items: [] }, pool(30), now);
+  assert.equal(r.items.length, MAX_SLIPS);
+  assert.ok(r.items.every((s) => s.legs.length <= MAX_LEGS));
 });
 
-test('a stale SportPesa list: unlisted matches still make slips, flagged unconfirmed; a fresh list keeps the strict rule', () => {
+test('a stale SportPesa list: unlisted matches still make a slip, flagged unconfirmed; a fresh list keeps the strict rule', () => {
   const unl = Array.from({ length: 8 }, (_, i) => mkp(i, { listed: false }));
   assert.equal(updateLongShots({ items: [] }, unl, now).items.length, 0);
   const r = updateLongShots({ items: [] }, unl, now, { requireListed: false });
-  assert.ok(r.items.length >= 4 && r.items.every((s) => s.unconfirmed === true));
+  assert.equal(r.items.length, 1);
+  assert.ok(r.items.every((s) => s.unconfirmed === true));
   assert.ok(updateLongShots({ items: [] }, pool(8), now, { requireListed: false }).items.every((s) => s.unconfirmed === false));
 });
 
-test('slips stay short: never more than MAX_LEGS legs (6) even with many qualifying matches', () => {
-  assert.equal(MAX_LEGS, 6);
-  const r = updateLongShots({ items: [] }, pool(30), now);
-  assert.ok(r.items.length >= 4);
-  assert.ok(r.items.every((s) => s.legs.length <= MAX_LEGS));
+test('learnCalibration and adjustP pull a claim toward what really happened, in proportion to the evidence', () => {
+  const s = Array.from({ length: 60 }, (_, i) => ({ p: 0.72, ok: i < 30 }));
+  const L = learnCalibration(s);
+  assert.equal(adjustP(0.72, null), 0.72);
+  const adj = adjustP(0.72, L);
+  assert.ok(adj < 0.72 && adj > 0.5);
+  const capped = adjustP(0.9, L);
+  assert.ok(capped > 0.5 && capped <= 0.61);
+  assert.equal(adjustP(0.55, L), 0.55);
+  const thin = learnCalibration(Array.from({ length: 6 }, (_, i) => ({ p: 0.72, ok: i < 3 })));
+  assert.ok(adjustP(0.72, thin) > adj);
+});
+
+test('topLegSamples records the top outcome of settled trusted matches and whether it landed', () => {
+  const s = topLegSamples([mkp(1, { status: 'settled', result: { hg: 2, ag: 0 } }), mkp(2, { status: 'settled', result: { hg: 0, ag: 3 } }), mkp(3)]);
+  assert.equal(s.length, 2);
+  assert.equal(s[0].ok, true);
+  assert.equal(s[1].ok, false);
+});
+
+test('backtest replays the rule day by day and prices it at the odds', () => {
+  const day = (d, ok) => Array.from({ length: 4 }, () => ({ day: d, p: 0.8, odds: 1.3, ok }));
+  const bt = backtest([...day('2026-10-01', true), ...day('2026-10-02', false), ...day('2026-10-03', true)]);
+  assert.equal(bt.slips, 3);
+  assert.equal(bt.won, 2);
+  assert.equal(bt.stake, 30);
+  assert.ok(Math.abs(bt.returned - 2 * 10 * 1.3 ** 4) < 0.1);
+});
+
+test('adviceFor: wait without evidence, no when it loses, small stake only with a proven edge', () => {
+  assert.equal(adviceFor({ slips: 0 }, null).verdict, 'wait');
+  assert.equal(adviceFor({ slips: 20, won: 1, expectedWins: 4, roi: -0.6 }, null).verdict, 'no');
+  assert.equal(adviceFor({ slips: 40, won: 12, expectedWins: 9, roi: 0.2 }, null).verdict, 'tiny');
+  assert.equal(adviceFor({ slips: 3, won: 0, expectedWins: 1 }, { slips: 40, won: 3, expected: 9, roi: -0.5 }).verdict, 'no');
+  assert.equal(adviceFor({ slips: 20, won: 6, expectedWins: 6, roi: 0.05 }, null).verdict, 'wait');
+});
+
+test('slips settle, and the summary counts them with an honest verdict', () => {
+  const a = updateLongShots({ items: [] }, pool(4), now);
+  assert.equal(a.items.length, 1);
+  const later = new Date('2026-11-05T06:00:00Z');
+  const won = updateLongShots(a, pool(4).map((p) => ({ ...p, status: 'settled', result: { hg: 2, ag: 0 } })), later);
+  assert.equal(won.items[0].status, 'won');
+  assert.equal(won.summary.periods.all.won, 1);
+  assert.equal(won.summary.advice.verdict, 'wait');
+  const a2 = updateLongShots({ items: [] }, pool(4), now);
+  const lost = updateLongShots(a2, pool(4).map((p, i) => ({ ...p, status: 'settled', result: i ? { hg: 2, ag: 0 } : { hg: 0, ag: 2 } })), later);
+  assert.equal(lost.items[0].status, 'lost');
+  assert.equal(lost.summary.form, 'L');
 });
