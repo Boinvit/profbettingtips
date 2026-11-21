@@ -5,7 +5,7 @@ import { buildDay, updateLongShots, dayMatches, MIN_MATCH_P, MAX_LEGS, MAX_SLIPS
 const now = new Date('2026-11-04T06:00:00Z');
 const mkp = (i, over = {}) => ({
   id: 'm' + i, h: 't:h' + i, a: 't:a' + i, home: 'Home ' + i, away: 'Away ' + i, comp: 'X', kickoff: '2026-11-04T16:00:00.000Z', status: 'pending', listed: true, games: 60,
-  pk: { x12: 'H', x12p: 0.5, dc: '1X', dcp: 0.85 - i * 0.004, ou: 'O', oup: 0.56, bt: 'Y', btp: 0.52 }, ...over,
+  pk: { x12: 'H', x12p: 0.5, dc: '1X', dcp: 0.88 - i * 0.002, ou: 'O', oup: 0.56, bt: 'Y', btp: 0.52 }, ...over,
 });
 const pool = (n) => Array.from({ length: n }, (_, i) => mkp(i));
 

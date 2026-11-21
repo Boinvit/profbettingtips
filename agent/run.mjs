@@ -7,6 +7,8 @@ import { DEFAULT_PARAMS, replay, predict, picks, grade, outcome1x2 } from './lib
 import { tune } from './lib/learn.mjs';
 import { computeStats } from './lib/stats.mjs';
 import { Registry } from './lib/teams.mjs';
+import { bestInfo, bestWon, BEST_MIN_P } from './lib/best.mjs';
+import { adjustP, topLegSamples, learnCalibration } from './lib/longshots.mjs';
 import { parseInbox, buildJackpots } from './lib/jackpot.mjs';
 import { updateAccas } from './lib/accas.mjs';
 import { updateLongShots } from './lib/longshots.mjs';
@@ -158,7 +160,15 @@ export async function runOnce({ feed = {}, now = new Date(), log = console.log, 
   { const byP = new Map(preds.map((p) => [p.id, p])); for (const a of accIn.items || []) { if (a.status !== 'won' && a.status !== 'lost') continue; if (a.legs.some((l) => { const p = byP.get(l.pid); return p && p.status === 'settled' && p.result && l.res && (l.res.hg !== p.result.hg || l.res.ag !== p.result.ag); })) { a.status = 'pending'; delete a.settled; reopened++; } } }
   if (reopened) log(`accas: reopened ${reopened} slip(s) whose leg results were corrected`);
   const accas = updateAccas(accIn, preds, now, { cal }); save('accas.json', accas);
-  { const spj = load('sportpesa.json', {}); const listFresh = !!spj.scrapedAt && now - new Date(spj.scrapedAt) < 2 * DAY; const ls = updateLongShots(load('longshots.json', { items: [] }), preds, now, { cal, requireListed: listFresh }); if (!listFresh) log('long shots: SportPesa list stale, slips built from all trusted matches and flagged unconfirmed'); save('longshots.json', ls); log(`long shots: ${ls.stats.pending} pending, ${ls.stats.settled} settled, ${ls.stats.won} won (model expected ${ls.stats.expectedWins})`); }
+  { const bs = topLegSamples(preds, cal), bl = bs.length >= 60 ? learnCalibration(bs) : null; let nb = 0, np = 0;
+    for (const p of preds) {
+      if (p.status === 'pending') { const b = bestInfo(p, bl, cal); p.best = b.best; if (b.pick) p.bestPick = b.pick; else delete p.bestPick; np++; if (b.best) nb++; }
+      else if (p.status === 'settled' && p.bestPick && typeof p.bestOk !== 'boolean') { const ok = bestWon(p); if (typeof ok === 'boolean') p.bestOk = ok; }
+    }
+    const hist = bs.filter((s) => adjustP(s.p, bl) >= BEST_MIN_P);
+    save('best.json', { generated: now.toISOString(), minP: BEST_MIN_P, pending: np, best: nb, history: { n: hist.length, landed: hist.filter((s) => s.ok).length } });
+    log('best matches: ' + nb + ' of ' + np + ' pending pass the quality rule'); }
+    { const spj = load('sportpesa.json', {}); const listFresh = !!spj.scrapedAt && now - new Date(spj.scrapedAt) < 2 * DAY; const ls = updateLongShots(load('longshots.json', { items: [] }), preds, now, { cal, requireListed: listFresh }); if (!listFresh) log('long shots: SportPesa list stale, slips built from all trusted matches and flagged unconfirmed'); save('longshots.json', ls); log(`long shots: ${ls.stats.pending} pending, ${ls.stats.settled} settled, ${ls.stats.won} won (model expected ${ls.stats.expectedWins})`); }
   log(`accumulators: ${accas.items.length} (${accas.stats.pending} pending, ${accas.stats.settled} settled, hit rate ${accas.stats.overall.rate ?? 'n/a'})`);
   const recent = preds.filter((p) => p.status === 'pending' || p.kickoff >= new Date(now - 21 * DAY).toISOString());
   const top = Object.entries(state.elo).filter(([id]) => state.n[id] >= 8).sort((a, b) => b[1] - a[1]).slice(0, 25)

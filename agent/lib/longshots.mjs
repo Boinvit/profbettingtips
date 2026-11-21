@@ -5,7 +5,7 @@ import { legWins as _legWins } from './accas.mjs';
 import { legsFor, dayKey, settleAcca } from './accas.mjs';
 import { isTrusted } from './sure.mjs';
 
-export const MIN_MATCH_P = 0.60, MAX_LEGS = 6, MIN_LEGS = 4, MIN_GAMES = 20, LEAD_MS = 45 * 60e3;
+export const MIN_MATCH_P = 0.80, MAX_LEGS = 6, MIN_LEGS = 4, MIN_GAMES = 20, LEAD_MS = 45 * 60e3;
 const YOUTH = /\b(U-?(1[5-9]|2[0-3])|youth|reserves?)\b|[ ](II|III)$/i; // squads rotate, little reliable history
 const r2 = (x) => Math.round(x * 100) / 100, r4 = (x) => Math.round(x * 10000) / 10000, sig = (x) => Number(x.toPrecision(3));
 

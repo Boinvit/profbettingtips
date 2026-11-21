@@ -13,7 +13,10 @@ import { mountLongShots } from './longshots.js';
     E0: 'Premier League', E1: 'Championship', E2: 'League One', E3: 'League Two', EC: 'National League', SC0: 'Scottish Premiership', SC1: 'Scottish Championship', SC2: 'Scottish League One', SC3: 'Scottish League Two',
     D1: 'Bundesliga', D2: '2. Bundesliga', I1: 'Serie A', I2: 'Serie B', SP1: 'La Liga', SP2: 'La Liga 2', F1: 'Ligue 1', F2: 'Ligue 2', N1: 'Eredivisie', B1: 'Belgian Pro League', P1: 'Primeira Liga', T1: 'Süper Lig', G1: 'Super League Greece',
     ARG: 'Argentina', AUT: 'Austria', BRA: 'Brazil Série A', CHN: 'China', DNK: 'Denmark', FIN: 'Finland', IRL: 'Ireland', JPN: 'Japan', MEX: 'Mexico', NOR: 'Norway', POL: 'Poland', ROU: 'Romania', RUS: 'Russia', SWE: 'Sweden', SWZ: 'Switzerland', USA: 'USA MLS' };
-  let filter = 'all';
+  let filter = 'best';
+  let bestRec = null;
+  fetch('data/best.json?t=' + Date.now()).then((r) => (r.ok ? r.json() : null)).then((j) => { bestRec = j; try { if (data && data.recent) show(location.hash.slice(1) || 'upcoming'); } catch (e) { /* page still loading */ } }).catch(() => {});
+  const bestNote = () => (filter === 'best' && bestRec ? '<p class="note">Best matches only: complete data (20+ games each, five-result form, not youth) and a corrected chance of at least ' + Math.round(bestRec.minP * 100) + '% for the top outcome. Matches like these: the top outcome landed ' + (bestRec.history && bestRec.history.n ? Math.round(100 * bestRec.history.landed / bestRec.history.n) + '% of ' + bestRec.history.n : 'n/a') + '. Not a guarantee.</p>' : '');
   const PICK = { H: 'Home', D: 'Draw', A: 'Away' };
   const MKT = { x12: '1X2', dc: 'Double chance', ou: 'Over/Under 2.5', bt: 'Both teams score' };
   const data = {};
@@ -130,8 +133,10 @@ import { mountLongShots } from './longshots.js';
       const now = Date.now();
       const all = data.recent.filter((p) => p.status === 'pending' && new Date(p.kickoff) > now);
       const nL = all.filter((p) => p.listed).length;
-      const list = filter === 'listed' ? all.filter((p) => p.listed) : all;
-      const bar = `<div class="filters" role="group" aria-label="Filter"><button class="chip ${filter === 'all' ? 'main' : ''}" data-filter="all">All (${all.length})</button> <button class="chip ${filter === 'listed' ? 'main' : ''}" data-filter="listed">SportPesa listed (${nL})</button> ${bankBox()}</div>`;
+      const nB = all.filter((p) => p.best).length;
+      const list = filter === 'best' ? all.filter((p) => p.best) : filter === 'listed' ? all.filter((p) => p.listed) : all;
+      const bar = `<div class="filters" role="group" aria-label="Filter"><button class="chip ${filter === 'best' ? 'main' : ''}" data-filter="best">★ Best (${nB})</button> <button class="chip ${filter === 'all' ? 'main' : ''}" data-filter="all">All (${all.length})</button> <button class="chip ${filter === 'listed' ? 'main' : ''}" data-filter="listed">SportPesa listed (${nL})</button> ${bankBox()}</div>${bestNote()}`;
+      if (filter === 'best' && !list.length) return bar + '<div class="empty">No upcoming match passes the quality rule right now. That is deliberate: only complete data and a corrected chance of 80% or more qualify. Tap All to see the rest.</div>';
       if (!list.length) return all.length ? bar + `<div class="empty">No SportPesa-listed games with predictions yet. See Accuracy → Data sources.</div>` : `<div class="empty">No upcoming predictions yet. The agent publishes them after each run once fixtures are available.</div>`;
       let out = bar, cur = '';
       for (const p of list) {
