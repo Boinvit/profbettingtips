@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-21T19:16:30.151Z",
+ "updated": "2026-11-21T23:48:37.753Z",
  "health": [
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "39 results, 124 fixtures"
+   "detail": "55 results, 111 fixtures"
   },
   {
    "source": "API-Football",
@@ -14,17 +14,17 @@
   {
    "source": "OpenLigaDB",
    "ok": true,
-   "detail": "87 results, 18 fixtures (German Bundesliga)"
+   "detail": "88 results, 18 fixtures (German Bundesliga)"
   },
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "260 upcoming fixtures; 1 of 82 overdue settled; 21/21 days read; names to alias: Deportivo | Felgueiras 1932 | Amed SFK | Sint-Truidense | TSV Eintracht Braunschweig | Coquimbo Unido | Montevideo Wanderers | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Moneyfields | SJR Worksop"
+   "detail": "238 upcoming fixtures; 30 of 128 overdue settled; 21/21 days read; names to alias: Deportivo | Dux Logroño | Felgueiras 1932 | Amed SFK | Sint-Truidense | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | Génesis PN | Montevideo Wanderers | Central Español Fútbol Club | Macará"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 103 fixtures next 14d"
+   "detail": "264 results, 102 fixtures next 14d"
   },
   {
    "source": "Run mode",
@@ -39,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "0 teams fetched, 0 failed"
+   "detail": "50 teams fetched, 2 failed"
   }
  ],
  "unmatchedListed": [

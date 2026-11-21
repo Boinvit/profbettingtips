@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 89977,
+ "tunedOn": 90016,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -659,6 +659,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-21T23:48:37.753Z",
+   "n": 90016,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0134,
+    1.0134
+   ],
+   "acc": [
+    0.495,
+    0.495
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -700,9 +724,9 @@
   },
   {
    "team": "Real Madrid",
-   "elo": 1874,
-   "att": 1.8,
-   "def": 0.61
+   "elo": 1876,
+   "att": 1.77,
+   "def": 0.63
   },
   {
    "team": "Celtic",
@@ -729,16 +753,22 @@
    "def": 0.76
   },
   {
-   "team": "Arsenal",
-   "elo": 1851,
-   "att": 1.13,
-   "def": 0.61
-  },
-  {
    "team": "Club Brugge",
    "elo": 1848,
    "att": 1.79,
    "def": 0.69
+  },
+  {
+   "team": "Arsenal",
+   "elo": 1848,
+   "att": 1.16,
+   "def": 0.67
+  },
+  {
+   "team": "Roma",
+   "elo": 1841,
+   "att": 1.93,
+   "def": 0.81
   },
   {
    "team": "St. Gilloise",
@@ -747,22 +777,16 @@
    "def": 0.53
   },
   {
-   "team": "Roma",
-   "elo": 1833,
-   "att": 1.84,
-   "def": 0.82
+   "team": "Rangers",
+   "elo": 1836,
+   "att": 1.46,
+   "def": 0.75
   },
   {
    "team": "Man City",
    "elo": 1833,
    "att": 1.33,
    "def": 0.81
-  },
-  {
-   "team": "Rangers",
-   "elo": 1831,
-   "att": 1.47,
-   "def": 0.76
   },
   {
    "team": "Bodo/Glimt",
@@ -813,6 +837,6 @@
    "def": 0.7
   }
  ],
- "matches": 89979,
- "updated": "2026-11-21T19:16:30.151Z"
+ "matches": 90016,
+ "updated": "2026-11-21T23:48:37.753Z"
 }
