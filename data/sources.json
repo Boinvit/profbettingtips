@@ -1,10 +1,15 @@
 {
- "updated": "2026-11-22T18:47:50.214Z",
+ "updated": "2026-11-22T19:32:25.745Z",
  "health": [
+  {
+   "source": "football-data.co.uk",
+   "ok": true,
+   "detail": "40 files ok, 0 failed; 4472 results, 283 fixtures"
+  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "63 results, 131 fixtures"
+   "detail": "69 results, 126 fixtures"
   },
   {
    "source": "API-Football",
@@ -19,7 +24,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "292 upcoming fixtures; 100 of 159 overdue settled (56 by fuzzy names); 21/21 days read; names to alias: FC Fleury 91 | De Graafschap | Deportivo | Dux Logroño | Amed SFK | Sint-Truidense | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | Universidad Católica (Quito) | Montevideo Wanderers | OL Lyonnes"
+   "detail": "289 upcoming fixtures; 3 of 63 overdue settled (0 by fuzzy names); 21/21 days read; names to alias: Olympiacos | Deportivo | Dux Logroño | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Moneyfields | Hajduk Split | Bacau"
   },
   {
    "source": "openfootball",
@@ -27,9 +32,14 @@
    "detail": "264 results, 109 fixtures next 14d"
   },
   {
-   "source": "Run mode",
+   "source": "The Odds API",
    "ok": true,
-   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
+   "detail": "19 events fetched, 8 with 1X2 odds"
+  },
+  {
+   "source": "ClubElo",
+   "ok": false,
+   "detail": "HTTP 502"
   },
   {
    "source": "SportPesa",
@@ -39,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "18 teams fetched, 0 failed"
+   "detail": "14 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
