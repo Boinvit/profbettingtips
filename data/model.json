@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 90016,
+ "tunedOn": 90139,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -683,6 +683,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-22T18:47:50.214Z",
+   "n": 90139,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0135,
+    1.0135
+   ],
+   "acc": [
+    0.495,
+    0.495
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -694,9 +718,9 @@
   },
   {
    "team": "Barcelona",
-   "elo": 1911,
+   "elo": 1913,
    "att": 2.2,
-   "def": 0.67
+   "def": 0.73
   },
   {
    "team": "Inter",
@@ -747,22 +771,22 @@
    "def": 0.8
   },
   {
-   "team": "PSV Eindhoven",
-   "elo": 1853,
-   "att": 1.71,
-   "def": 0.76
-  },
-  {
    "team": "Club Brugge",
-   "elo": 1848,
-   "att": 1.79,
+   "elo": 1854,
+   "att": 1.88,
    "def": 0.69
   },
   {
+   "team": "PSV Eindhoven",
+   "elo": 1853,
+   "att": 1.64,
+   "def": 0.71
+  },
+  {
    "team": "Arsenal",
-   "elo": 1848,
-   "att": 1.16,
-   "def": 0.67
+   "elo": 1841,
+   "att": 1.09,
+   "def": 0.63
   },
   {
    "team": "Roma",
@@ -772,9 +796,9 @@
   },
   {
    "team": "St. Gilloise",
-   "elo": 1838,
-   "att": 1.51,
-   "def": 0.53
+   "elo": 1840,
+   "att": 1.46,
+   "def": 0.5
   },
   {
    "team": "Rangers",
@@ -820,9 +844,9 @@
   },
   {
    "team": "AEK",
-   "elo": 1789,
-   "att": 1.59,
-   "def": 0.53
+   "elo": 1793,
+   "att": 1.54,
+   "def": 0.5
   },
   {
    "team": "Fenerbahce",
@@ -837,6 +861,6 @@
    "def": 0.7
   }
  ],
- "matches": 90031,
- "updated": "2026-11-22T14:55:13.627Z"
+ "matches": 90139,
+ "updated": "2026-11-22T18:47:50.214Z"
 }
