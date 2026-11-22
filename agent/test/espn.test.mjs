@@ -62,3 +62,29 @@ test('upcomingFrom keeps scheduled future fixtures between known teams only', ()
   assert.deepEqual(r.map((x) => x.hn + x.an), ['AB']);
   assert.equal(datesAhead(now, 3).join(','), '20261113,20261114,20261115');
 });
+
+import { fuzzySame } from '../lib/sources/espn.mjs';
+const fev = (id, date, h, a, hg, ag) => ({ id, date, competitions: [{ status: { type: { name: 'STATUS_FULL_TIME', completed: true } }, competitors: [{ homeAway: 'home', score: String(hg), team: { displayName: h } }, { homeAway: 'away', score: String(ag), team: { displayName: a } }] }] });
+const fp = (over = {}) => ({ id: 'p1', h: 't:a', a: 't:b', home: 'Bielefeld', away: 'Magdeburg', comp: 'D2', kickoff: '2026-11-07T14:00:00.000Z', ...over });
+
+test('fuzzySame joins spellings of one club but never men with women or first team with youth', () => {
+  assert.equal(fuzzySame('Arminia Bielefeld', 'Bielefeld'), true);
+  assert.equal(fuzzySame('Atletico de San Luis', 'Atl. San Luis'), true);
+  assert.equal(fuzzySame('Real Madrid', 'Real Betis'), false);
+  assert.equal(fuzzySame('OL Lyonnes', 'Lyon'), false);
+  assert.equal(fuzzySame('Barcelona B', 'Barcelona'), false);
+  assert.equal(fuzzySame('Chelsea U21', 'Chelsea'), false);
+});
+
+test('matchEvents falls back to strict fuzzy names: unique match with a close kickoff settles; anything doubtful does not', () => {
+  const none = () => null;
+  const ok = matchEvents([fev('1', '2026-11-07T14:00:00Z', 'Arminia Bielefeld', '1. FC Magdeburg', 1, 2)], [fp()], none);
+  assert.equal(ok.finished.length, 1);
+  assert.equal(ok.finished[0].hg, 1);
+  assert.equal(ok.finished[0].ag, 2);
+  assert.equal(ok.fuzzy, 1);
+  assert.equal(matchEvents([fev('1', '2026-11-07T17:30:00Z', 'Arminia Bielefeld', '1. FC Magdeburg', 1, 2)], [fp()], none).finished.length, 0);
+  assert.equal(matchEvents([fev('1', '2026-11-07T14:00:00Z', 'Arminia Bielefeld', '1. FC Magdeburg', 1, 2), fev('2', '2026-11-07T14:00:00Z', 'Bielefeld Reserves', 'Magdeburg II', 0, 0)], [fp()], none).finished.length, 1);
+  assert.equal(matchEvents([fev('1', '2026-11-07T14:00:00Z', 'Arminia Bielefeld', '1. FC Magdeburg', 1, 2), fev('2', '2026-11-07T14:10:00Z', 'DSC Bielefeld', 'FC Magdeburg', 0, 0)], [fp()], none).finished.length, 0);
+  assert.equal(matchEvents([fev('1', '2026-11-07T14:00:00Z', 'Arminia Bielefeld Women', '1. FC Magdeburg Women', 1, 2)], [fp()], none).finished.length, 0);
+});

@@ -1,3 +1,4 @@
+import { norm as nameNorm } from '../names.mjs';
 // ESPN public scoreboards: fast, free results for any league, used ONLY to settle matches we already have overdue predictions on.
 // One 'all soccer' scoreboard per day. Full-time scores only, so live or extra-time scores are never stored.
 const UA = 'Mozilla/5.0 (compatible; prediction-agent)';
@@ -38,6 +39,22 @@ export const datesAhead = (now, n) => Array.from({ length: n }, (_, i) => ymd(no
 
 /** Finished ESPN events that match an overdue prediction (same teams, same orientation, within 2 days). Emits our own team names so ids line up.
  *  partial = ESPN names to alias: one side matched a team we have an overdue prediction on, the other did not. */
+const GENERIC = new Set(['fc', 'cf', 'sc', 'ac', 'afc', 'fk', 'sk', 'sv', 'tsv', 'vfb', 'vfl', 'fsv', 'club', 'de', 'del', 'la', 'le', 'los', 'las', 'the', 'and']);
+const WOMEN = new Set(['women', 'womens', 'ladies', 'feminine', 'femenino', 'feminin', 'frauen', 'lyonnes']);
+const YOUTH = new Set(['youth', 'junior', 'juniors', 'reserve', 'reserves', 'ii', 'iii']);
+const toks = (n) => nameNorm(n).split(' ').filter((t) => t.length >= 3 && !GENERIC.has(t) && t.split('').some((ch) => ch < '0' || ch > '9'));
+const has = (l, t) => l.some((x) => x === t || (t.length >= 3 && x.startsWith(t)) || (x.length >= 3 && t.startsWith(x)));
+const kind = (n) => { const t = nameNorm(n).split(' '); return (t.some((x) => WOMEN.has(x)) ? 'w' : '') + (t.some((x) => YOUTH.has(x) || /^u[0-9]{2}$/.test(x)) || (t.length > 1 && t[t.length - 1] === 'b') ? 'y' : ''); };
+
+/** Do two spellings plausibly name the same side? Every distinctive word of the shorter name inside the longer (at most one extra word), and the same kind of side: never men with women, first team with youth or reserves. */
+export function fuzzySame(a, b) {
+  if (kind(a) !== kind(b)) return false;
+  const A = toks(a), B = toks(b);
+  if (!A.length || !B.length) return false;
+  const [s, l] = A.length <= B.length ? [A, B] : [B, A];
+  return s.every((t) => has(l, t)) && l.length - s.length <= 1;
+}
+
 export function matchEvents(events, overdue, resolve) {
   const byPair = new Map();
   for (const p of overdue) { const k = p.h + '|' + p.a; if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(p); }
@@ -58,7 +75,33 @@ export function matchEvents(events, overdue, resolve) {
       }
     } else if ((hId && teams.has(hId)) || (aId && teams.has(aId))) partial.add(hId ? an : hn);
   }
-  return { finished, partial: [...partial] };
+  // Fallback: the same match under other spellings (Bielefeld / Arminia Bielefeld). Strict on purpose: fuzzySame on both sides, kickoff within 100 minutes when ours has a real time, and exactly one candidate each way.
+  let fuzzy = 0;
+  const left = overdue.filter((p) => !seen.has(p.id));
+  if (left.length) {
+    const evs = [];
+    for (const e of events) {
+      const c = e.competitions && e.competitions[0];
+      if (!c || !c.status || !c.status.type || !c.status.type.completed || !FINAL.has(c.status.type.name)) continue;
+      const h = (c.competitors || []).find((x) => x.homeAway === 'home'), a = (c.competitors || []).find((x) => x.homeAway === 'away');
+      if (!h || !a) continue;
+      const hg = Number(h.score), ag = Number(a.score);
+      if (!Number.isInteger(hg) || !Number.isInteger(ag)) continue;
+      evs.push({ d: e.date, t: Date.parse(e.date), hn: h.team.displayName, an: a.team.displayName, hg, ag });
+    }
+    const pick = new Map(), used = new Map();
+    for (const p of left) {
+      const kt = Date.parse(p.kickoff), timed = p.kickoff.slice(11, 16) !== '00:00';
+      const c = evs.filter((x) => Math.abs(x.t - kt) <= 2 * DAY && (!timed || Math.abs(x.t - kt) <= 100 * 60000) && fuzzySame(x.hn, p.home) && fuzzySame(x.an, p.away));
+      if (c.length === 1) { pick.set(p.id, [p, c[0]]); used.set(c[0], (used.get(c[0]) || 0) + 1); }
+    }
+    for (const [p, x] of pick.values()) {
+      if (used.get(x) !== 1) continue;
+      seen.add(p.id); fuzzy++;
+      finished.push({ c: p.comp, d: x.d, hn: p.home, an: p.away, hg: x.hg, ag: x.ag });
+    }
+  }
+  return { finished, partial: [...partial], fuzzy };
 }
 
 export async function fetchEspn({ now = new Date(), preds = [], registry, health = [], log = console.log, fetchImpl = globalThis.fetch, upcomingDays = 0 } = {}) {
@@ -73,9 +116,9 @@ export async function fetchEspn({ now = new Date(), preds = [], registry, health
     } catch (e) { failed++; }
     await new Promise((res) => setTimeout(res, 120));
   }
-  const { finished, partial } = matchEvents(events, overdue, (n) => registry.resolve(n, false));
+  const { finished, partial, fuzzy } = matchEvents(events, overdue, (n) => registry.resolve(n, false));
   const upcoming = upcomingDays ? upcomingFrom(events, (n) => registry.resolve(n, false), now) : [];
-  const detail = (upcomingDays ? upcoming.length + " upcoming fixtures; " : "") + `${finished.length} of ${overdue.length} overdue settled; ${dates.length - failed}/${dates.length} days read; names to alias: ${partial.slice(0, 12).join(' | ') || 'none'}`;
+  const detail = (upcomingDays ? upcoming.length + " upcoming fixtures; " : "") + `${finished.length} of ${overdue.length} overdue settled (${fuzzy} by fuzzy names); ${dates.length - failed}/${dates.length} days read; names to alias: ${partial.slice(0, 12).join(' | ') || 'none'}`;
   health.push({ source: 'ESPN', ok: failed < dates.length, detail }); log('  ESPN: ' + detail);
   return { finished, upcoming };
 }
