@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T01:41:39.940Z",
+ "updated": "2026-11-23T09:48:19.935Z",
  "health": [
   {
    "source": "football-data.org",
@@ -19,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "362 upcoming fixtures; 1 of 61 overdue settled (1 by fuzzy names); 22/22 days read; names to alias: Olympiacos | Deportivo | Dux Logroño | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Moneyfields | Bacau | Pogon Grodzisk Mazowiecki"
+   "detail": "362 upcoming fixtures; 4 of 64 overdue settled (1 by fuzzy names); 22/22 days read; names to alias: Olympiacos | Wisconsin | Deportivo | Dux Logroño | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | Lehigh | London City Lionesses | Stade Castelbourgeois | Moneyfields"
   },
   {
    "source": "openfootball",
@@ -39,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "7 teams fetched, 0 failed"
+   "detail": "227 teams fetched, 4 failed"
   }
  ],
  "unmatchedListed": [
