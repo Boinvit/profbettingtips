@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 90172,
+ "tunedOn": 90208,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -731,6 +731,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-24T02:11:05.644Z",
+   "n": 90208,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0134,
+    1.0134
+   ],
+   "acc": [
+    0.4951,
+    0.4951
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -831,16 +855,16 @@
    "def": 0.75
   },
   {
+   "team": "Olympiakos",
+   "elo": 1826,
+   "att": 1.39,
+   "def": 0.54
+  },
+  {
    "team": "Bodo/Glimt",
    "elo": 1824,
    "att": 1.49,
    "def": 0.56
-  },
-  {
-   "team": "Olympiakos",
-   "elo": 1823,
-   "att": 1.2,
-   "def": 0.48
   },
   {
    "team": "Dortmund",
@@ -885,6 +909,6 @@
    "def": 0.7
   }
  ],
- "matches": 90181,
- "updated": "2026-11-23T22:01:24.486Z"
+ "matches": 90208,
+ "updated": "2026-11-24T02:11:05.644Z"
 }

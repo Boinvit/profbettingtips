@@ -1,15 +1,20 @@
 {
- "updated": "2026-11-23T22:01:24.486Z",
+ "updated": "2026-11-24T02:11:05.644Z",
  "health": [
+  {
+   "source": "football-data.co.uk",
+   "ok": true,
+   "detail": "40 files ok, 0 failed; 4660 results, 283 fixtures"
+  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "75 results, 122 fixtures"
+   "detail": "74 results, 120 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-22: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-23: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -19,7 +24,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "351 upcoming fixtures; 7 of 69 overdue settled (1 by fuzzy names); 21/21 days read; names to alias: Asteras Tripoli | Olympiacos | Deportivo | Dux Logroño | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | CD Samper | London City Lionesses | Stade Castelbourgeois | Moneyfields"
+   "detail": "360 upcoming fixtures; 6 of 69 overdue settled (1 by fuzzy names); 22/22 days read; names to alias: Lusitania | Olympiacos | Deportivo | Dux Logroño | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | Isidro Metapán | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Moneyfields"
   },
   {
    "source": "openfootball",
@@ -27,9 +32,14 @@
    "detail": "264 results, 106 fixtures next 14d"
   },
   {
-   "source": "Run mode",
+   "source": "The Odds API",
    "ok": true,
-   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
+   "detail": "10 events fetched, 8 with 1X2 odds"
+  },
+  {
+   "source": "ClubElo",
+   "ok": false,
+   "detail": "fetch failed"
   },
   {
    "source": "SportPesa",
@@ -39,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "232 teams fetched, 0 failed"
+   "detail": "3 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
