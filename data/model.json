@@ -10,7 +10,7 @@
   "temp": 1,
   "wOdds": 0.9749
  },
- "tunedOn": 90238,
+ "tunedOn": 90286,
  "history": [
   {
    "at": "2026-10-28T18:17:44.491Z",
@@ -779,6 +779,30 @@
     "temp": 1,
     "wOdds": 0.9749
    }
+  },
+  {
+   "at": "2026-11-24T23:52:51.779Z",
+   "n": 90286,
+   "adopted": false,
+   "v": 3,
+   "logloss": [
+    1.0134,
+    1.0134
+   ],
+   "acc": [
+    0.4951,
+    0.4951
+   ],
+   "params": {
+    "k": 17.375,
+    "homeAdv": 77.5,
+    "eloScale": 654.1667,
+    "wAD": 0.25,
+    "adAlpha": 0.0587,
+    "drawBoost": 0.1,
+    "temp": 1,
+    "wOdds": 0.9749
+   }
   }
  ],
  "top": [
@@ -807,10 +831,16 @@
    "def": 0.7
   },
   {
+   "team": "Real Madrid",
+   "elo": 1892,
+   "att": 1.94,
+   "def": 0.63
+  },
+  {
    "team": "Porto",
-   "elo": 1884,
-   "att": 1.68,
-   "def": 0.51
+   "elo": 1890,
+   "att": 1.62,
+   "def": 0.48
   },
   {
    "team": "Sp Lisbon",
@@ -819,28 +849,22 @@
    "def": 0.66
   },
   {
-   "team": "Real Madrid",
-   "elo": 1881,
-   "att": 1.88,
-   "def": 0.63
-  },
-  {
    "team": "Celtic",
    "elo": 1873,
    "att": 1.57,
    "def": 0.71
   },
   {
+   "team": "Galatasaray",
+   "elo": 1870,
+   "att": 1.61,
+   "def": 0.76
+  },
+  {
    "team": "Benfica",
    "elo": 1869,
    "att": 1.82,
    "def": 0.77
-  },
-  {
-   "team": "Galatasaray",
-   "elo": 1867,
-   "att": 1.67,
-   "def": 0.8
   },
   {
    "team": "Club Brugge",
@@ -850,15 +874,9 @@
   },
   {
    "team": "PSV Eindhoven",
-   "elo": 1853,
-   "att": 1.64,
-   "def": 0.71
-  },
-  {
-   "team": "Arsenal",
-   "elo": 1841,
-   "att": 1.09,
-   "def": 0.63
+   "elo": 1842,
+   "att": 1.57,
+   "def": 0.84
   },
   {
    "team": "Roma",
@@ -873,10 +891,16 @@
    "def": 0.5
   },
   {
+   "team": "Arsenal",
+   "elo": 1839,
+   "att": 1.06,
+   "def": 0.62
+  },
+  {
    "team": "Rangers",
-   "elo": 1836,
-   "att": 1.46,
-   "def": 0.75
+   "elo": 1838,
+   "att": 1.49,
+   "def": 0.78
   },
   {
    "team": "Olympiakos",
@@ -892,8 +916,8 @@
   },
   {
    "team": "Dortmund",
-   "elo": 1821,
-   "att": 1.21,
+   "elo": 1823,
+   "att": 1.17,
    "def": 0.54
   },
   {
@@ -904,9 +928,9 @@
   },
   {
    "team": "Man City",
-   "elo": 1810,
-   "att": 1.29,
-   "def": 0.9
+   "elo": 1801,
+   "att": 1.31,
+   "def": 0.95
   },
   {
    "team": "Como",
@@ -933,6 +957,6 @@
    "def": 0.7
   }
  ],
- "matches": 90238,
- "updated": "2026-11-24T17:35:55.878Z"
+ "matches": 90286,
+ "updated": "2026-11-24T23:52:51.779Z"
 }
