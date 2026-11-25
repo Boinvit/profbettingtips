@@ -1,11 +1,6 @@
 {
- "updated": "2026-11-25T08:24:11.080Z",
+ "updated": "2026-11-25T10:28:29.368Z",
  "health": [
-  {
-   "source": "football-data.co.uk",
-   "ok": true,
-   "detail": "40 files ok, 0 failed; 4755 results, 59 fixtures"
-  },
   {
    "source": "football-data.org",
    "ok": true,
@@ -24,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "362 upcoming fixtures; 1 of 24 overdue settled (0 by fuzzy names); 22/22 days read; names to alias: TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Stockton | Inverness Caledonian Thistle | FC Wacker Innsbruck | Durham"
+   "detail": "355 upcoming fixtures; 0 of 23 overdue settled (0 by fuzzy names); 22/22 days read; names to alias: TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Stockton | Inverness Caledonian Thistle | FC Wacker Innsbruck | Durham"
   },
   {
    "source": "openfootball",
@@ -32,14 +27,9 @@
    "detail": "264 results, 106 fixtures next 14d"
   },
   {
-   "source": "The Odds API",
+   "source": "Run mode",
    "ok": true,
-   "detail": "8 events fetched, 8 with 1X2 odds"
-  },
-  {
-   "source": "ClubElo",
-   "ok": false,
-   "detail": "fetch failed"
+   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
   },
   {
    "source": "SportPesa",
@@ -49,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "203 teams fetched, 2 failed"
+   "detail": "2 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
