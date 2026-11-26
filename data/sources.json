@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-25T20:10:24.969Z",
+ "updated": "2026-11-26T03:05:47.021Z",
  "health": [
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "51 results, 99 fixtures"
+   "detail": "38 results, 109 fixtures"
   },
   {
    "source": "API-Football",
    "ok": false,
-   "detail": "0 results, 0 fixtures (issues: 2026-11-24: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
+   "detail": "0 results, 0 fixtures (issues: 2026-11-25: {\"token\":\"Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.\"}; 2026-1)"
   },
   {
    "source": "OpenLigaDB",
@@ -19,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "336 upcoming fixtures; 0 of 23 overdue settled (0 by fuzzy names); 20/20 days read; names to alias: TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Stockton | Inverness Caledonian Thistle | WYVERN | FC Wacker Innsbruck"
+   "detail": "382 upcoming fixtures; 23 of 48 overdue settled (8 by fuzzy names); 21/21 days read; names to alias: Once Caldas | Saint-Malo | Uniao da Serra | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | Universidad Católica (Quito) | Oriente Petrolero | Génesis PN | Montevideo Wanderers | Macará | OL Lyonnes"
   },
   {
    "source": "openfootball",
@@ -39,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "31 teams fetched, 0 failed"
+   "detail": "358 teams fetched, 10 failed"
   }
  ],
  "unmatchedListed": [
