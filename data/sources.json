@@ -1,6 +1,11 @@
 {
- "updated": "2026-11-26T03:05:47.021Z",
+ "updated": "2026-11-26T03:31:13.970Z",
  "health": [
+  {
+   "source": "football-data.co.uk",
+   "ok": true,
+   "detail": "40 files ok, 0 failed; 4755 results, 59 fixtures"
+  },
   {
    "source": "football-data.org",
    "ok": true,
@@ -19,7 +24,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "382 upcoming fixtures; 23 of 48 overdue settled (8 by fuzzy names); 21/21 days read; names to alias: Once Caldas | Saint-Malo | Uniao da Serra | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | Universidad Católica (Quito) | Oriente Petrolero | Génesis PN | Montevideo Wanderers | Macará | OL Lyonnes"
+   "detail": "381 upcoming fixtures; 2 of 24 overdue settled (0 by fuzzy names); 21/21 days read; names to alias: Once Caldas | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | Universidad Católica (Quito) | Oriente Petrolero | Génesis PN | Macará | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Deportivo"
   },
   {
    "source": "openfootball",
@@ -27,9 +32,14 @@
    "detail": "264 results, 106 fixtures next 14d"
   },
   {
-   "source": "Run mode",
+   "source": "The Odds API",
    "ok": true,
-   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
+   "detail": "9 events fetched, 8 with 1X2 odds"
+  },
+  {
+   "source": "ClubElo",
+   "ok": false,
+   "detail": "fetch failed"
   },
   {
    "source": "SportPesa",
@@ -39,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "358 teams fetched, 10 failed"
+   "detail": "14 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
