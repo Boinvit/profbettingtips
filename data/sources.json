@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-28T04:43:21.254Z",
+ "updated": "2026-11-28T14:08:11.858Z",
  "health": [
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "24 results, 148 fixtures"
+   "detail": "24 results, 146 fixtures"
   },
   {
    "source": "API-Football",
@@ -19,7 +19,7 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "368 upcoming fixtures; 1 of 28 overdue settled (0 by fuzzy names); 22/22 days read; names to alias: Olympiacos | Jong PSV | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | FC Den Bosch | Montevideo Wanderers | Central Español Fútbol Club | OL Lyonnes | London City Lionesses | Stade Castelbourgeois | Danubio"
+   "detail": "338 upcoming fixtures; 6 of 32 overdue settled (2 by fuzzy names); 21/21 days read; names to alias: Olympiacos | Cong An Ha Noi | Jong PSV | Wake Forest | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | FC Den Bosch | Montevideo Wanderers | Central Español Fútbol Club | OL Lyonnes | London City Lionesses"
   },
   {
    "source": "openfootball",
@@ -39,7 +39,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "8 teams fetched, 0 failed"
+   "detail": "432 teams fetched, 4 failed"
   }
  ],
  "unmatchedListed": [
