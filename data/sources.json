@@ -1,10 +1,15 @@
 {
- "updated": "2026-11-28T14:08:11.858Z",
+ "updated": "2026-11-28T15:27:10.704Z",
  "health": [
+  {
+   "source": "football-data.co.uk",
+   "ok": true,
+   "detail": "40 files ok, 0 failed; 4813 results, 261 fixtures"
+  },
   {
    "source": "football-data.org",
    "ok": true,
-   "detail": "24 results, 146 fixtures"
+   "detail": "25 results, 132 fixtures"
   },
   {
    "source": "API-Football",
@@ -19,17 +24,22 @@
   {
    "source": "ESPN",
    "ok": true,
-   "detail": "338 upcoming fixtures; 6 of 32 overdue settled (2 by fuzzy names); 21/21 days read; names to alias: Olympiacos | Cong An Ha Noi | Jong PSV | Wake Forest | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | FC Den Bosch | Montevideo Wanderers | Central Español Fútbol Club | OL Lyonnes | London City Lionesses"
+   "detail": "281 upcoming fixtures; 11 of 41 overdue settled (6 by fuzzy names); 21/21 days read; names to alias: Olympiacos | Egnatia | Cong An Ha Noi | Jong PSV | Lye Town | TSV Eintracht Braunschweig | Comunicaciones | Coquimbo Unido | FC Den Bosch | Montevideo Wanderers | Central Español Fútbol Club | OL Lyonnes"
   },
   {
    "source": "openfootball",
    "ok": true,
-   "detail": "264 results, 106 fixtures next 14d"
+   "detail": "264 results, 107 fixtures next 14d"
   },
   {
-   "source": "Run mode",
+   "source": "The Odds API",
    "ok": true,
-   "detail": "results-only: football-data.co.uk, The Odds API and ClubElo skipped this run"
+   "detail": "59 events fetched, 8 with 1X2 odds"
+  },
+  {
+   "source": "ClubElo",
+   "ok": false,
+   "detail": "fetch failed"
   },
   {
    "source": "SportPesa",
@@ -39,7 +49,7 @@
   {
    "source": "Google News RSS",
    "ok": true,
-   "detail": "432 teams fetched, 4 failed"
+   "detail": "73 teams fetched, 0 failed"
   }
  ],
  "unmatchedListed": [
